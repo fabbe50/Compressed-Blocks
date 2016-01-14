@@ -171,6 +171,16 @@
       </item>
     </group>
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="fabbe50">
+      <words>
+        <w>compressedblocks</w>
+        <w>fabbe</w>
+        <w>postinit</w>
+        <w>preinit</w>
+      </words>
+    </dictionary>
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Compressed-Blocks-2.0.iml" filepath="$PROJECT_DIR$/Compressed-Blocks-2.0.iml" />
