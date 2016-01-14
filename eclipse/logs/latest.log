@@ -1,12 +1,28 @@
-[22:19:08] [main/INFO]: Setting user: Player390
-[22:19:09] [Client thread/INFO]: LWJGL Version: 2.9.1
-[22:19:09] [Client thread/ERROR]: Couldn't initialize twitch stream
-[22:19:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks
-[22:19:18] [Sound Library Loader/INFO]: Sound engine started
-[22:19:19] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[22:19:19] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[22:19:19] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks
-[22:19:19] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[22:19:19] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[22:19:20] [Sound Library Loader/INFO]: Sound engine started
-[22:20:00] [Client thread/INFO]: Stopping!
+[00:44:23] [main/INFO]: Setting user: Player465
+[00:44:24] [Client thread/INFO]: LWJGL Version: 2.9.1
+[00:44:24] [Client thread/ERROR]: Couldn't initialize twitch stream
+[00:44:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks
+[00:44:33] [Sound Library Loader/INFO]: Sound engine started
+[00:44:34] [Client thread/INFO]: Created: 32x32 textures/blocks-atlas
+[00:44:34] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[00:44:34] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks
+[00:44:35] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
+[00:44:35] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[00:44:36] [Sound Library Loader/INFO]: Sound engine started
+[00:44:39] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[00:44:39] [Server thread/INFO]: Generating keypair
+[00:44:40] [Server thread/INFO]: Preparing start region for level 0
+[00:44:40] [Server thread/INFO]: Changing view distance to 8, from 10
+[00:44:41] [Server thread/INFO]: Player465[local:E:68aa27b5] logged in with entity id 159 at (-28.212405073572025, 4.0, 448.80163200502096)
+[00:44:41] [Server thread/INFO]: Player465 joined the game
+[00:44:56] [Server thread/INFO]: Saving and pausing game...
+[00:44:56] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[00:44:56] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[00:44:56] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[00:44:57] [Server thread/INFO]: Stopping server
+[00:44:57] [Server thread/INFO]: Saving players
+[00:44:57] [Server thread/INFO]: Saving worlds
+[00:44:57] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[00:44:57] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[00:44:57] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[00:45:00] [Client thread/INFO]: Stopping!

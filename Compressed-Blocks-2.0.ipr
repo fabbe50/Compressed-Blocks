@@ -175,9 +175,11 @@
     <dictionary name="fabbe50">
       <words>
         <w>compressedblocks</w>
+        <w>endgamium</w>
         <w>fabbe</w>
         <w>postinit</w>
         <w>preinit</w>
+        <w>resync</w>
       </words>
     </dictionary>
   </component>
