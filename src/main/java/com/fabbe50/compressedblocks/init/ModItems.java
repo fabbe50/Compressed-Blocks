@@ -6,6 +6,7 @@ import com.fabbe50.compressedblocks.item.ItemEndgamiumSword;
 import com.fabbe50.compressedblocks.reference.Reference;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.item.Item;
 
 /**
  * Created by fabbe50 on 14/01/2016.

@@ -1,10 +1,12 @@
 package com.fabbe50.compressedblocks.init;
 
 import com.fabbe50.compressedblocks.utility.LogHelper;
+import cpw.mods.fml.common.ModAPIManager;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+
 
 /**
  * Created by fabbe50 on 15/01/2016.
