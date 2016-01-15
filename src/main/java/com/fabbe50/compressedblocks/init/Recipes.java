@@ -18,8 +18,5 @@ public class Recipes {
         GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.endgamiumblock), "sss", "sss", "sss", 's', new ItemStack(ModItems.endgamium));
         GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.endgamiumblockc), "sss", "sss", "sss", 's', new ItemStack(ModBlocks.endgamiumblock));
         LogHelper.info("Done!");
-
-        //GameRegistry.addRecipe(new ItemStack(ModItems.endgamium), "qdd", "ddd", "ddd", 'q', new ItemStack());
-
     }
 }

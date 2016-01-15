@@ -1,6 +1,8 @@
 package com.fabbe50.compressedblocks.init;
 
+import com.fabbe50.compressedblocks.handler.ConfigurationHandler;
 import com.fabbe50.compressedblocks.item.ItemCB;
+import com.fabbe50.compressedblocks.item.ItemDummy;
 import com.fabbe50.compressedblocks.item.ItemEndgamium;
 import com.fabbe50.compressedblocks.item.ItemEndgamiumSword;
 import com.fabbe50.compressedblocks.reference.Reference;
@@ -13,6 +15,7 @@ import net.minecraft.item.Item;
  */
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModItems {
+    public static final ItemCB dummyitem = new ItemDummy();
     public static final ItemCB endgamium = new ItemEndgamium();
     public static final ItemCB endgamiumsword = new ItemEndgamiumSword();
 
@@ -21,5 +24,10 @@ public class ModItems {
         GameRegistry.registerItem(endgamium, "endgamium");
         GameRegistry.registerItem(endgamiumsword, "endgamiumsword");
         LogHelper.info("Done!");
+
+        if (ConfigurationHandler.enableDebugItems == true){
+            LogHelper.info("Adding Debug Items");
+            GameRegistry.registerItem(dummyitem, "dummyitem");
+        }
     }
 }
