@@ -9,16 +9,11 @@ import net.minecraft.item.Item;
  * Created by fabbe50 on 15/01/2016.
  */
 public class CreativeTabCB {
-    public static final CreativeTabs CB_TAB = new CreativeTabs(Reference.MOD_ID) {
+    public static final CreativeTabs CB_TAB = new CreativeTabs(Reference.MOD_ID.toLowerCase()) {
 
         @Override
         public Item getTabIconItem() {
             return ModItems.endgamium;
-        }
-
-        @Override
-        public String getTranslatedTabLabel() {
-            return "Compressed Blocks";
         }
     };
 }

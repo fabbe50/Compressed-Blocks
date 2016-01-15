@@ -1,3 +1,12 @@
 item.compressedblocks:endgamium.name=Endgamium
+item.compressedblocks:endgamiumsword.name=Endgamium Sword
+
+
+
 tile.compressedblocks:comprstarblock.name=Compressed Nether Star Block
 tile.compressedblocks:endgamiumblock.name=Endgamium Block
+tile.compressedblocks:endgamiumblockc.name=Compressed Endgamium Block
+
+
+
+itemGroup.compressedblocks=Compressed Blocks

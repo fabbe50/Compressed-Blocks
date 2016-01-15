@@ -12,6 +12,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
  * Created by fabbe50 on 15/01/2016.
  */
 public class BlockCB extends Block{
+
     public BlockCB(Material material) {
         super(material);
         this.setCreativeTab(CreativeTabCB.CB_TAB);
