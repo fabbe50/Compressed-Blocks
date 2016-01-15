@@ -1,5 +1,6 @@
 package com.fabbe50.compressedblocks.item;
 
+import com.fabbe50.compressedblocks.creativetab.CreativeTabCB;
 import com.fabbe50.compressedblocks.reference.Textures;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -14,6 +15,7 @@ import net.minecraft.item.ItemStack;
 public class ItemCB extends Item {
     public ItemCB() {
         super();
+        this.setCreativeTab(CreativeTabCB.CB_TAB);
     }
 
     @Override
