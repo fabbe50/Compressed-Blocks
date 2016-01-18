@@ -17,12 +17,12 @@ import net.minecraft.item.Item;
 public class ModItems {
     public static final ItemCB dummyitem = new ItemDummy();
     public static final ItemCB endgamium = new ItemEndgamium();
-    public static final ItemCB endgamiumsword = new ItemEndgamiumSword();
+    //public static final ItemCB endgamiumsword = new ItemEndgamiumSword();
 
     public static void init() {
         LogHelper.info("Adding Items");
         GameRegistry.registerItem(endgamium, "endgamium");
-        GameRegistry.registerItem(endgamiumsword, "endgamiumsword");
+        //GameRegistry.registerItem(endgamiumsword, "endgamiumsword");
         LogHelper.info("Done!");
 
         if (ConfigurationHandler.enableDebugItems == true){

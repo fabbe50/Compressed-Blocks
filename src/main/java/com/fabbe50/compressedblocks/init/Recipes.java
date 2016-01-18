@@ -14,7 +14,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 public class Recipes {
     public static void init() {
         LogHelper.info("Adding Standalone Recipes");
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.endgamiumsword), " s ", " s ", " t ", 's', new ItemStack(ModItems.endgamium), 't', "stickWood"));
+        //GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.endgamiumsword), " s ", " s ", " t ", 's', new ItemStack(ModItems.endgamium), 't', "stickWood"));
         GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.endgamiumblock), "sss", "sss", "sss", 's', new ItemStack(ModItems.endgamium));
         GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.endgamiumblockc), "sss", "sss", "sss", 's', new ItemStack(ModBlocks.endgamiumblock));
         LogHelper.info("Done!");

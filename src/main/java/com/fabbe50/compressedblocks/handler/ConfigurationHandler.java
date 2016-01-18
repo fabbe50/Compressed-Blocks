@@ -25,6 +25,7 @@ public class ConfigurationHandler {
         //Create Config-object from Config File
         if (configuration == null) {
             configuration = new Configuration(configFile);
+            loadConfiguration();
             LogHelper.info("Config File Created!");
         }
     }
@@ -37,7 +38,7 @@ public class ConfigurationHandler {
         }
     }
 
-    public void loadConfiguration() {
+    public static void loadConfiguration() {
         enableDebugItems = configuration.getBoolean("enableDebugItems", Configuration.CATEGORY_GENERAL, false, "Do you want to enable debug items?");
         areBeaconBlocks = configuration.getBoolean("areBeaconBlocks", Configuration.CATEGORY_GENERAL, true, "Can compressed blocks be used for beacons?");
         lightLevelForEndgamium = configuration.getFloat("endgamiumLightLevel", Configuration.CATEGORY_GENERAL, 1.0f, 0.0f, 1.0f, "What light level does an Endgamium Block give?");
