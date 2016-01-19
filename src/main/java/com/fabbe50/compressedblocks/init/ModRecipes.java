@@ -24,7 +24,7 @@ public class ModRecipes {
     @GameRegistry.ObjectHolder("ForbiddenMagic:StarBlock")
     public static final Item starBlock = null;
     @GameRegistry.ObjectHolder("Botania:manaResource:14")
-    public static final Item terraSteel = null;
+    public static final Item gaiaIngot = null;
     @GameRegistry.ObjectHolder("witchery:ingredient:96")
     public static final Item brewOfFlowingSpirit = null;
     @GameRegistry.ObjectHolder("IC2:itemPartIridium")
@@ -33,15 +33,23 @@ public class ModRecipes {
     public static final Item tesseract = null;
 
     public static void init() {
-        if (compr7cobble == null || crystalCluster == null || unstableBlock == null || ichorium == null || starBlock == null || terraSteel == null || brewOfFlowingSpirit == null || iridium == null || tesseract == null) {
-            LogHelper.info("GogglesRev is Null");
+        if (compr7cobble == null || crystalCluster == null || unstableBlock == null || ichorium == null || starBlock == null || gaiaIngot == null || brewOfFlowingSpirit == null || iridium == null || tesseract == null) {
+            LogHelper.info("Mod_Components Missing, recipeEndgamium not registred");
         }
         else {
             GameRegistry.addShapelessRecipe(new ItemStack(ModItems.endgamium),
                     new ItemStack(compr7cobble), new ItemStack(crystalCluster), new ItemStack(unstableBlock),
-                    new ItemStack(ichorium), new ItemStack(starBlock), new ItemStack(terraSteel),
+                    new ItemStack(ichorium), new ItemStack(starBlock), new ItemStack(gaiaIngot),
                     new ItemStack(brewOfFlowingSpirit), new ItemStack(iridium), new ItemStack(tesseract));
+            LogHelper.info("recipeEndgamium Registred");
         }
 
+        if (starBlock == null) {
+            LogHelper.info("Mod_Components Missing, recipeStarBlock not registred");
+        }
+        else {
+            GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.comprstarblock), "sss", "sss", "sss", 's', new ItemStack(starBlock));
+            LogHelper.info("recipeStarBlock Registred");
+        }
     }
 }
