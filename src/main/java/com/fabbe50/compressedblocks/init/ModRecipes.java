@@ -1,5 +1,7 @@
 package com.fabbe50.compressedblocks.init;
 
+import com.fabbe50.compressedblocks.handler.RecipeHandler;
+import com.fabbe50.compressedblocks.reference.ModItemLibrary;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import cpw.mods.fml.common.ModAPIManager;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -13,43 +15,32 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
  */
 public class ModRecipes {
 
-    @GameRegistry.ObjectHolder("ExtraUtilities:cobblestone_compressed:7")
-    public static final Item compr7cobble = null;
-    @GameRegistry.ObjectHolder("AWWayofTime:blockCrystal")
-    public static final Item crystalCluster = null;
-    @GameRegistry.ObjectHolder("ExtraUtilities:decorativeBlock1")
-    public static final Item unstableBlock = null;
-    @GameRegistry.ObjectHolder("ThaumicTinkerer:kamiResource:2")
-    public static final Item ichorium = null;
-    @GameRegistry.ObjectHolder("ForbiddenMagic:StarBlock")
-    public static final Item starBlock = null;
-    @GameRegistry.ObjectHolder("Botania:manaResource:14")
-    public static final Item gaiaIngot = null;
-    @GameRegistry.ObjectHolder("witchery:ingredient:96")
-    public static final Item brewOfFlowingSpirit = null;
-    @GameRegistry.ObjectHolder("IC2:itemPartIridium")
-    public static final Item iridium = null;
-    @GameRegistry.ObjectHolder("ThermalExpansion:Tesseract")
-    public static final Item tesseract = null;
+
 
     public static void init() {
-        if (compr7cobble == null || crystalCluster == null || unstableBlock == null || ichorium == null || starBlock == null || gaiaIngot == null || brewOfFlowingSpirit == null || iridium == null || tesseract == null) {
-            LogHelper.info("Mod_Components Missing, recipeEndgamium not registred");
+        if (ModItemLibrary.compr7cobble == null || ModItemLibrary.crystalCluster == null || ModItemLibrary.unstableBlock == null ||
+                ModItemLibrary.ichorium == null || ModItemLibrary.starBlock == null || ModItemLibrary.gaiaIngot == null ||
+                ModItemLibrary.brewOfFlowingSpirit == null || ModItemLibrary.iridium == null || ModItemLibrary.tesseract == null) {
+            LogHelper.warn("Mod_Components Missing, recipeEndgamium not registred");
+            RecipeHandler.isEndgamiumCompat = false;
         }
         else {
             GameRegistry.addShapelessRecipe(new ItemStack(ModItems.endgamium),
-                    new ItemStack(compr7cobble), new ItemStack(crystalCluster), new ItemStack(unstableBlock),
-                    new ItemStack(ichorium), new ItemStack(starBlock), new ItemStack(gaiaIngot),
-                    new ItemStack(brewOfFlowingSpirit), new ItemStack(iridium), new ItemStack(tesseract));
+                    new ItemStack(ModItemLibrary.compr7cobble, 1, 7), new ItemStack(ModItemLibrary.crystalCluster), new ItemStack(ModItemLibrary.unstableBlock),
+                    new ItemStack(ModItemLibrary.ichorium, 1, 2), new ItemStack(ModItemLibrary.starBlock), new ItemStack(ModItemLibrary.gaiaIngot, 1, 96),
+                    new ItemStack(ModItemLibrary.brewOfFlowingSpirit), new ItemStack(ModItemLibrary.iridium), new ItemStack(ModItemLibrary.tesseract));
+            RecipeHandler.isEndgamiumCompat = true;
             LogHelper.info("recipeEndgamium Registred");
         }
 
-        if (starBlock == null) {
-            LogHelper.info("Mod_Components Missing, recipeStarBlock not registred");
+        if (ModItemLibrary.starBlock == null) {
+            LogHelper.warn("Mod_Components Missing, recipeStarBlock not registred");
+            RecipeHandler.isStarblockCompat = false;
         }
         else {
-            GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.comprstarblock), "sss", "sss", "sss", 's', new ItemStack(starBlock));
+            GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.comprstarblock), "sss", "sss", "sss", 's', new ItemStack(ModItemLibrary.starBlock));
             LogHelper.info("recipeStarBlock Registred");
+            RecipeHandler.isStarblockCompat = true;
         }
     }
 }
