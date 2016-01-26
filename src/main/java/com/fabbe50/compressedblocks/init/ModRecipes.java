@@ -18,29 +18,29 @@ public class ModRecipes {
 
 
     public static void init() {
-        if (ModItemLibrary.compr7cobble == null || ModItemLibrary.crystalCluster == null || ModItemLibrary.unstableBlock == null ||
-                ModItemLibrary.ichorium == null || ModItemLibrary.starBlock == null || ModItemLibrary.gaiaIngot == null ||
-                ModItemLibrary.brewOfFlowingSpirit == null || ModItemLibrary.iridium == null || ModItemLibrary.tesseract == null) {
-            LogHelper.warn("Mod_Components Missing, recipeEndgamium not registred");
-            RecipeHandler.isEndgamiumCompat = false;
-        }
-        else {
+        //if (ModItemLibrary.compr7cobble == null || ModItemLibrary.crystalCluster == null || ModItemLibrary.unstableBlock == null ||
+        //        ModItemLibrary.ichorium == null || ModItemLibrary.starBlock == null || ModItemLibrary.gaiaIngot == null ||
+        //        ModItemLibrary.brewOfFlowingSpirit == null || ModItemLibrary.iridium == null || ModItemLibrary.tesseract == null) {
+        //    LogHelper.warn("Mod_Components Missing, recipeEndgamium not registred");
+        //    RecipeHandler.isEndgamiumCompat = false;
+        //}
+        //else {
             GameRegistry.addShapelessRecipe(new ItemStack(ModItems.endgamium),
-                    new ItemStack(ModItemLibrary.compr7cobble, 1, 7), new ItemStack(ModItemLibrary.crystalCluster), new ItemStack(ModItemLibrary.unstableBlock),
-                    new ItemStack(ModItemLibrary.ichorium, 1, 2), new ItemStack(ModItemLibrary.starBlock), new ItemStack(ModItemLibrary.gaiaIngot, 1, 96),
+                    new ItemStack(ModItemLibrary.compr7cobble), new ItemStack(ModItemLibrary.crystalCluster), new ItemStack(ModItemLibrary.unstableBlock),
+                    new ItemStack(ModItemLibrary.ichorium), new ItemStack(ModItemLibrary.starBlock), new ItemStack(ModItemLibrary.gaiaIngot),
                     new ItemStack(ModItemLibrary.brewOfFlowingSpirit), new ItemStack(ModItemLibrary.iridium), new ItemStack(ModItemLibrary.tesseract));
-            RecipeHandler.isEndgamiumCompat = true;
+            //RecipeHandler.isEndgamiumCompat = true;
             LogHelper.info("recipeEndgamium Registred");
-        }
+        //}
 
-        if (ModItemLibrary.starBlock == null) {
-            LogHelper.warn("Mod_Components Missing, recipeStarBlock not registred");
-            RecipeHandler.isStarblockCompat = false;
-        }
-        else {
+        //if (ModItemLibrary.starBlock == null) {
+        //    LogHelper.warn("Mod_Components Missing, recipeStarBlock not registred");
+        //    RecipeHandler.isStarblockCompat = false;
+        //}
+        //else {
             GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.comprstarblock), "sss", "sss", "sss", 's', new ItemStack(ModItemLibrary.starBlock));
             LogHelper.info("recipeStarBlock Registred");
-            RecipeHandler.isStarblockCompat = true;
-        }
+            //RecipeHandler.isStarblockCompat = true;
+        //}
     }
 }

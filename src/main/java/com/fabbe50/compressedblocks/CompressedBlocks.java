@@ -37,7 +37,7 @@ public class CompressedBlocks {
     public void init(FMLInitializationEvent event) {
         LogHelper.info("Initializing");
         //Init Starts Here
-        ModRecipes.init();
+
         Recipes.init();
         //Init Ends Here
         LogHelper.info("Initialization Complete");
@@ -46,6 +46,7 @@ public class CompressedBlocks {
     public void postinit(FMLPostInitializationEvent event) {
         LogHelper.info("Post-Initializing");
         //PostInit Starts Here
+        ModRecipes.init();
         //PostInit Ends Here
         LogHelper.info("Post-Initialization Complete");
     }

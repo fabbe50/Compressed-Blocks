@@ -7,22 +7,22 @@ import net.minecraft.item.Item;
  * Created by fabbe50 on 25/01/2016.
  */
 public class ModItemLibrary {
-    @GameRegistry.ObjectHolder("ExtraUtilities:cobblestone_compressed"/*DamageValue7*/)
+    @GameRegistry.ItemStackHolder(value = "ExtraUtilities:cobblestone_compressed", meta = 7)
     public static final Item compr7cobble = null;
-    @GameRegistry.ObjectHolder("AWWayofTime:blockCrystal")
+    @GameRegistry.ItemStackHolder(value = "AWWayofTime:blockCrystal", meta = 0)
     public static final Item crystalCluster = null;
-    @GameRegistry.ObjectHolder("ExtraUtilities:decorativeBlock1")
+    @GameRegistry.ItemStackHolder(value = "ExtraUtilities:decorativeBlock1", meta = 5)
     public static final Item unstableBlock = null;
-    @GameRegistry.ObjectHolder("ThaumicTinkerer:kamiResource"/*DamageValue2*/)
+    @GameRegistry.ItemStackHolder(value = "ThaumicTinkerer:kamiResource", meta = 2)
     public static final Item ichorium = null;
-    @GameRegistry.ObjectHolder("ForbiddenMagic:StarBlock")
+    @GameRegistry.ItemStackHolder(value = "ForbiddenMagic:StarBlock")
     public static final Item starBlock = null;
-    @GameRegistry.ObjectHolder("Botania:manaResource"/*DamageValue14*/)
+    @GameRegistry.ItemStackHolder(value = "Botania:manaResource", meta = 14)
     public static final Item gaiaIngot = null;
-    @GameRegistry.ObjectHolder("witchery:ingredient" /*DamageValue96*/)
+    @GameRegistry.ItemStackHolder(value = "witchery:ingredient", meta = 96)
     public static final Item brewOfFlowingSpirit = null;
-    @GameRegistry.ObjectHolder("IC2:itemPartIridium")
+    @GameRegistry.ItemStackHolder(value = "IC2:itemPartIridium")
     public static final Item iridium = null;
-    @GameRegistry.ObjectHolder("ThermalExpansion:Tesseract")
+    @GameRegistry.ItemStackHolder(value = "ThermalExpansion:Tesseract", meta = 0)
     public static final Item tesseract = null;
 }

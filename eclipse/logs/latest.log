@@ -1,30 +1,12 @@
-[22:38:46] [main/INFO]: Setting user: Player907
-[22:38:46] [Client thread/INFO]: LWJGL Version: 2.9.1
-[22:38:47] [Client thread/ERROR]: Couldn't initialize twitch stream
-[22:38:55] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
-[22:38:57] [Sound Library Loader/INFO]: Sound engine started
-[22:38:58] [Client thread/INFO]: Created: 32x32 textures/blocks-atlas
-[22:38:58] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[22:38:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
-[22:39:00] [Client thread/INFO]: Created: 1024x1024 textures/blocks-atlas
-[22:39:00] [Client thread/INFO]: Created: 512x512 textures/items-atlas
-[22:39:01] [Sound Library Loader/INFO]: Sound engine started
-[22:39:05] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[22:39:05] [Server thread/INFO]: Generating keypair
-[22:39:06] [Server thread/INFO]: Preparing start region for level 0
-[22:39:06] [Server thread/INFO]: Changing view distance to 8, from 10
-[22:39:06] [Server thread/INFO]: Player907[local:E:f324026b] logged in with entity id 177 at (-15.048994501357678, 4.0, 469.15211953463506)
-[22:39:06] [Server thread/INFO]: Player907 joined the game
-[22:39:47] [Server thread/INFO]: Saving and pausing game...
-[22:39:47] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[22:39:47] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:39:47] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[22:39:47] [Server thread/INFO]: Saving chunks for level 'New World'/The Outer Lands
-[22:39:48] [Server thread/INFO]: Stopping server
-[22:39:48] [Server thread/INFO]: Saving players
-[22:39:48] [Server thread/INFO]: Saving worlds
-[22:39:48] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[22:39:48] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:39:48] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[22:39:48] [Server thread/INFO]: Saving chunks for level 'New World'/The Outer Lands
-[22:39:49] [Client thread/INFO]: Stopping!
+[01:53:10] [main/INFO]: Setting user: Player359
+[01:53:11] [Client thread/INFO]: LWJGL Version: 2.9.1
+[01:53:12] [Client thread/ERROR]: Couldn't initialize twitch stream
+[01:53:20] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
+[01:53:22] [Sound Library Loader/INFO]: Sound engine started
+[01:53:23] [Client thread/INFO]: Created: 32x32 textures/blocks-atlas
+[01:53:23] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[01:53:23] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
+[01:53:24] [Client thread/INFO]: Created: 1024x1024 textures/blocks-atlas
+[01:53:24] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[01:53:25] [Sound Library Loader/INFO]: Sound engine started
+[01:53:57] [Client thread/INFO]: Stopping!
