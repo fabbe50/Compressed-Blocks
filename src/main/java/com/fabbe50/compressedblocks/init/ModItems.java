@@ -22,12 +22,8 @@ public class ModItems {
     public static void init() {
         LogHelper.info("Adding Items");
         GameRegistry.registerItem(endgamium, "endgamium");
+        GameRegistry.registerItem(dummyitem, "dummyitem");
         //GameRegistry.registerItem(endgamiumsword, "endgamiumsword");
         LogHelper.info("Done!");
-
-        if (ConfigurationHandler.enableDebugItems == true){
-            LogHelper.info("Adding Debug Items");
-            GameRegistry.registerItem(dummyitem, "dummyitem");
-        }
     }
 }

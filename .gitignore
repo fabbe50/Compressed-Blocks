@@ -45,10 +45,16 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-eclipse/saves/New World/session.lock
-eclipse/saves/New World/session.lock
+eclipse/saves/*
+eclipse/logs/*
+eclipse/crash-reports/*
+eclipse/config/*
+.gradle/*
+out/*
 *.mca
 *.gz
 *.gz
 *.log
 *.dat
+eclipse/usernamecache.json
+.gradle/gradle.log

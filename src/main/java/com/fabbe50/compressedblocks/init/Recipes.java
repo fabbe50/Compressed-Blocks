@@ -22,7 +22,7 @@ public class Recipes {
         LogHelper.info("Done!");
 
         LogHelper.info("Adding Standalone Recipes");
-        if (!RecipeHandler.isStarblockCompat == false) {
+        if (RecipeHandler.isStarblockCompat == false) {
             //Temp Recipe
             GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.comprstarblock), "sss", "sds", "sss", 's', new ItemStack(Items.nether_star), 'd', new ItemStack(Blocks.diamond_block));
             LogHelper.info("Created Recipe for 'ModBlocks.comprstarblock'");
@@ -30,7 +30,7 @@ public class Recipes {
         else if (RecipeHandler.isStarblockCompat == true) {
             LogHelper.info("Mod Items Present. Standalone Recipe for 'ModBlocks.comprstarblock' not needed");
         }
-        if (!RecipeHandler.isEndgamiumCompat == false) {
+        if (RecipeHandler.isEndgamiumCompat == false) {
             //Temp Recipe
             GameRegistry.addShapedRecipe(new ItemStack(ModItems.endgamium), "sss", "bdb", "ndn", 's', new ItemStack(Items.nether_star), 'b', new ItemStack(Items.blaze_rod), 'd', new ItemStack(Blocks.diamond_block), 'n', new ItemStack(Blocks.nether_brick));
             LogHelper.info("Created Recipe for 'ModItems.endgamium'");

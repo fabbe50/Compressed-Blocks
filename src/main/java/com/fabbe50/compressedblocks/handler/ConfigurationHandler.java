@@ -16,7 +16,7 @@ import java.io.File;
 public class ConfigurationHandler {
     public static Configuration configuration;
 
-    public static boolean enableDebugItems = false;
+    public static boolean noSafeRecipe = false;
     public static boolean areBeaconBlocks = false;
     public static float lightLevelForEndgamium = 1.0f;
     public static float lightLevelForStarblock = 0.85f;
@@ -39,7 +39,7 @@ public class ConfigurationHandler {
     }
 
     public static void loadConfiguration() {
-        enableDebugItems = configuration.getBoolean("enableDebugItems", Configuration.CATEGORY_GENERAL, false, "Do you want to enable debug items?");
+        noSafeRecipe = configuration.getBoolean("noSafeRecipe", Configuration.CATEGORY_GENERAL, false, "Is the game allowed to fall back on a Vanilla Minecraft recipe if it can't find all the mod items?");
         areBeaconBlocks = configuration.getBoolean("areBeaconBlocks", Configuration.CATEGORY_GENERAL, true, "Can compressed blocks be used for beacons?");
         lightLevelForEndgamium = configuration.getFloat("endgamiumLightLevel", Configuration.CATEGORY_GENERAL, 1.0f, 0.0f, 1.0f, "What light level does an Endgamium Block give?");
         lightLevelForStarblock = configuration.getFloat("comprstarLightLevel", Configuration.CATEGORY_GENERAL, 0.85f, 0.0f, 1.0f, "What light level does a Compressed Nether Star Block Give?");
