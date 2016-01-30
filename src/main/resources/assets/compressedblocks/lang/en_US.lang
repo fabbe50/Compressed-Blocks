@@ -8,6 +8,13 @@ tile.compressedblocks:comprstarblock.name=Compressed Nether Star Block
 tile.compressedblocks:endgamiumblock.name=Endgamium Block
 tile.compressedblocks:endgamiumblockc.name=Compressed Endgamium Block
 
-
+tile.compressedblocks:comprpotato.single.name=Compressed Potato
+tile.compressedblocks:comprpotato.double.name=Double Compressed Potato
+tile.compressedblocks:comprpotato.triple.name=Triple Compressed Potato
+tile.compressedblocks:comprpotato.quadruple.name=Quadruple Compressed Potato
+tile.compressedblocks:comprpotato.quintuple.name=Quintuple Compressed Potato
+tile.compressedblocks:comprpotato.sextuple.name=Sextuple Compressed Potato
+tile.compressedblocks:comprpotato.septuple.name=Septuple Compressed Potato
+tile.compressedblocks:comprpotato.octuple.name=Octuple Compressed Potato
 
 itemGroup.compressedblocks=Compressed Blocks

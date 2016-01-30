@@ -25,7 +25,7 @@ public class MetaBlocks extends ItemBlock {
         {
             case 0:
             {
-                name = "";
+                name = "single";
                 break;
             }
             case 1:
@@ -66,12 +66,16 @@ public class MetaBlocks extends ItemBlock {
             default:
                 name = "";
         }
-        return Textures.RESOURCE_PREFIX + getUnlocalizedName() + "." + name;
+        return String.format("tile.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()) + "." + name);
     }
 
     @Override
     public int getMetadata(int par1)
     {
         return par1;
+    }
+
+    protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
+        return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
 }

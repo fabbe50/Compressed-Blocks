@@ -1,19 +1,34 @@
-[13:58:21] [main/INFO]: Setting user: Player733
-[13:58:21] [Client thread/INFO]: LWJGL Version: 2.9.1
-[13:58:22] [Client thread/ERROR]: Couldn't initialize twitch stream
-[13:58:30] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
-[13:58:32] [Sound Library Loader/INFO]: Sound engine started
-[13:58:33] [Client thread/INFO]: Created: 32x32 textures/blocks-atlas
-[13:58:33] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[13:58:34] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
-[13:58:35] [Client thread/INFO]: Created: 1024x1024 textures/blocks-atlas
-[13:58:35] [Client thread/INFO]: Created: 512x512 textures/items-atlas
-[13:58:36] [Sound Library Loader/INFO]: Sound engine started
-[13:58:40] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[13:58:40] [Server thread/INFO]: Generating keypair
-[13:58:40] [Server thread/INFO]: Preparing start region for level 0
-[13:58:40] [Server thread/INFO]: Changing view distance to 8, from 10
-[13:58:41] [Server thread/INFO]: Player733[local:E:754c7cb3] logged in with entity id 184 at (-19.298475679576796, 4.0, 470.8906044712104)
-[13:58:41] [Server thread/INFO]: Player733 joined the game
-[13:58:43] [Server thread/INFO]: Player733 has just earned the achievement [Taking Inventory]
-[13:58:43] [Client thread/INFO]: [CHAT] Player733 has just earned the achievement [Taking Inventory]
+[08:51:42] [main/INFO]: Setting user: Player10
+[08:51:43] [Client thread/INFO]: LWJGL Version: 2.9.1
+[08:51:44] [Client thread/ERROR]: Couldn't initialize twitch stream
+[08:51:51] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
+[08:51:53] [Sound Library Loader/INFO]: Sound engine started
+[08:51:54] [Client thread/INFO]: Created: 32x32 textures/blocks-atlas
+[08:51:54] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[08:51:55] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Compressed Blocks, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
+[08:51:56] [Client thread/INFO]: Created: 1024x1024 textures/blocks-atlas
+[08:51:56] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[08:51:57] [Sound Library Loader/INFO]: Sound engine started
+[08:52:02] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[08:52:02] [Server thread/INFO]: Generating keypair
+[08:52:02] [Server thread/INFO]: Preparing start region for level 0
+[08:52:02] [Server thread/INFO]: Changing view distance to 8, from 10
+[08:52:03] [Server thread/INFO]: Player10[local:E:c4b992a8] logged in with entity id 177 at (-15.71748189248029, 4.0, 480.7469774274918)
+[08:52:03] [Server thread/INFO]: Player10 joined the game
+[08:52:19] [Server thread/INFO]: Player10 has just earned the achievement [Taking Inventory]
+[08:52:19] [Client thread/INFO]: [CHAT] Player10 has just earned the achievement [Taking Inventory]
+[08:52:48] [Server thread/INFO]: Player10 fell out of the world
+[08:52:48] [Client thread/INFO]: [CHAT] Player10 fell out of the world
+[08:53:21] [Server thread/INFO]: Saving and pausing game...
+[08:53:21] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[08:53:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[08:53:21] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[08:53:21] [Server thread/INFO]: Saving chunks for level 'New World'/The Outer Lands
+[08:53:22] [Client thread/INFO]: Stopping!
+[08:53:22] [Server thread/INFO]: Stopping server
+[08:53:22] [Server thread/INFO]: Saving players
+[08:53:22] [Server thread/INFO]: Saving worlds
+[08:53:22] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[08:53:22] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[08:53:22] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[08:53:22] [Server thread/INFO]: Saving chunks for level 'New World'/The Outer Lands
