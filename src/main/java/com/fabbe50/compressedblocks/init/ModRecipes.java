@@ -29,7 +29,7 @@ public class ModRecipes {
         else {
             GameRegistry.addShapelessRecipe(new ItemStack(ModItems.endgamium),
                     new ItemStack(ModItemLibrary.compr8cobble,1,7), new ItemStack(ModItemLibrary.crystalCluster), new ItemStack(ModItemLibrary.unstableBlock,1,5),
-                    new ItemStack(ModBlocks.comprpotato,1,7), new ItemStack(ModItemLibrary.starBlock), new ItemStack(ModItemLibrary.gaiaIngot),
+                    new ItemStack(ModBlocks.comprpotatoblock,1,7), new ItemStack(ModItemLibrary.starBlock), new ItemStack(ModItemLibrary.gaiaIngot),
                     new ItemStack(ModItemLibrary.brewOfFlowingSpirit,1,96), new ItemStack(ModItemLibrary.iridium), new ItemStack(ModItemLibrary.enderium,1,12));
             RecipeHandler.isEndgamiumCompat = true;
             LogHelper.info("recipeEndgamium Registered");
