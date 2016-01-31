@@ -15,7 +15,7 @@ public class ModBlocks {
     public static final BlockCB comprstarblock = new BlockStar();
     public static final BlockCB endgamiumblock = new BlockEndgamium();
     public static final BlockCB endgamiumblockc = new BlockEndgamiumC();
-    //public static final BlockCB potatoblock = new
+
 
     //Blocks with Metadata
     public static BlockPotatoCompr comprpotatoblock  = new BlockPotatoCompr();

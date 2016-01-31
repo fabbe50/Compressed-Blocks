@@ -21,8 +21,8 @@ public class ModRecipes {
 
     public static void init() {
         if ((ModItemLibrary.compr8cobble == null || ModItemLibrary.crystalCluster == null || ModItemLibrary.unstableBlock == null ||
-                /*ModItemLibrary.xpDrainFoci == null ||*/ ModItemLibrary.starBlock == null || ModItemLibrary.gaiaIngot == null ||
-                ModItemLibrary.brewOfFlowingSpirit == null || ModItemLibrary.iridium == null || ModItemLibrary.enderium == null) && ConfigurationHandler.noSafeRecipe) {
+                ModItemLibrary.starBlock == null || ModItemLibrary.gaiaIngot == null || ModItemLibrary.brewOfFlowingSpirit == null ||
+                ModItemLibrary.iridium == null || ModItemLibrary.enderium == null) && ConfigurationHandler.noSafeRecipe) {
             LogHelper.warn("Mod_Components Missing, recipeEndgamium not registered");
             RecipeHandler.isEndgamiumCompat = false;
         }

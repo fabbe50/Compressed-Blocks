@@ -1,13 +1,23 @@
+#############################################################################
+#                                   Items                                   #
+#############################################################################
+#Item Names
 item.compressedblocks:endgamium.name=Endgamium Ingot
 item.compressedblocks:endgamiumsword.name=Endgamium Sword
 item.compressedblocks:dummyitem.name=Dummy Item
 
-
-
+#############################################################################
+#                                   Blocks                                  #
+#############################################################################
+#Block Names
 tile.compressedblocks:comprstarblock.name=Compressed Nether Star Block
 tile.compressedblocks:endgamiumblock.name=Endgamium Block
 tile.compressedblocks:endgamiumblockc.name=Compressed Endgamium Block
 
+#############################################################################
+#                                Meta Blocks                                #
+#############################################################################
+#Compressed Potato Names
 tile.compressedblocks:comprpotato_single.name=Compressed Potato
 tile.compressedblocks:comprpotato_double.name=Double Compressed Potato
 tile.compressedblocks:comprpotato_triple.name=Triple Compressed Potato
@@ -17,4 +27,9 @@ tile.compressedblocks:comprpotato_sextuple.name=Sextuple Compressed Potato
 tile.compressedblocks:comprpotato_septuple.name=Septuple Compressed Potato
 tile.compressedblocks:comprpotato_octuple.name=Octuple Compressed Potato
 
+#############################################################################
+#                               Miscellaneous                               #
+#############################################################################
+#Creative Tab Name
 itemGroup.compressedblocks=Compressed Blocks
+
