@@ -17,9 +17,6 @@ public class ItemImport {
         if (ModItemLibrary.unstableBlock == null) {
             LogHelper.warn("unstableBlock is null");
         }
-        if (ModItemLibrary.xpDrainFoci == null) {
-            LogHelper.warn("xpDrainFoci is null");
-        }
         if (ModItemLibrary.starBlock == null) {
             LogHelper.warn("starBlock is null");
         }
@@ -34,6 +31,36 @@ public class ItemImport {
         }
         if (ModItemLibrary.enderium == null) {
             LogHelper.warn("enderium is null");
+        }
+        if (ModItemLibrary.angelRing == null) {
+            LogHelper.warn("angelRing is null");
+        }
+        if (ModItemLibrary.barley == null) {
+            LogHelper.warn("barley is null");
+        }
+        if (ModItemLibrary.barleyBag == null) {
+            LogHelper.warn("berleyBag is null");
+        }
+        if (ModItemLibrary.boneBag == null) {
+            LogHelper.warn("boneBag is null");
+        }
+        if (ModItemLibrary.carrotBag == null) {
+            LogHelper.warn("carrotBag is null");
+        }
+        if (ModItemLibrary.cottonBag == null) {
+            LogHelper.warn("cottonBag is null");
+        }
+        if (ModItemLibrary.heartCanist == null) {
+            LogHelper.warn("heartCanist is null");
+        }
+        if (ModItemLibrary.potatoBag == null) {
+            LogHelper.warn("potatoBag is null");
+        }
+        if (ModItemLibrary.wartBag == null) {
+            LogHelper.warn("wartBag is null");
+        }
+        if (ModItemLibrary.wheatBag == null) {
+            LogHelper.warn("wheatBag is null");
         }
     }
 }

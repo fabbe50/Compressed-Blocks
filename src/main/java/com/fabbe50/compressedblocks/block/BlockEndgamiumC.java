@@ -15,5 +15,7 @@ public class BlockEndgamiumC extends BlockCB{
         this.setResistance(2500.0f);
         this.setHardness(90.0f);
         this.setStepSound(soundTypeMetal);
+
+        this.setBeaconBase();
     }
 }
