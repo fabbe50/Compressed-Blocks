@@ -32,19 +32,22 @@ public class RecipeReplacers {
     static ItemStack compr8cobble = new ItemStack(ModItemLibrary.compr8cobble, 1, 7);
     static ItemStack diamondBlock = new ItemStack(Blocks.diamond_block);
 
+    //Item ID's
+    static String[] itemNames;
+
     static String r = "sss";
     static String t = "sis";
 
     public static void init() {
+        addItemsToThing();
         try {
-            RecipeRemoval.RemoveRecipe("Natura:barleyBag");
-            RecipeRemoval.RemoveRecipe("Natura:carrotBag");
-            RecipeRemoval.RemoveRecipe("Natura:potatoBag");
-            RecipeRemoval.RemoveRecipe("Natura:wheatBag");
-            RecipeRemoval.RemoveRecipe("Natura:wartBag");
-            RecipeRemoval.RemoveRecipe("Natura:cottonBag");
-            RecipeRemoval.RemoveRecipe("Natura:boneBag");
-            RecipeRemoval.RemoveRecipe("ExtraUtilities:angelRing");
+            for (int i = 0; i < itemNames.length; i++) {
+                try {
+                    RecipeRemoval.RemoveRecipe(itemNames[i]);
+                } catch (Exception e) {
+                    LogHelper.error(e);
+                }
+            }
         }
         catch (Exception e) {
             LogHelper.error(e);
@@ -74,5 +77,20 @@ public class RecipeReplacers {
         //Tinkers' Construct
         GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.heartCanist, 1, 5), "sts", "sys", "sts", 's', new ItemStack(ModItemLibrary.heartCanist,1,3), 't', new ItemStack(Items.dye,1,10), 'y', new ItemStack(ModItemLibrary.starBlock));
         GameRegistry.addShapelessRecipe(new ItemStack(ModItemLibrary.heartCanist, 1, 6), new ItemStack(ModItemLibrary.heartCanist, 1, 4), new ItemStack(ModItemLibrary.heartCanist, 1, 5), new ItemStack(ModItems.endgamium), new ItemStack(ModItemLibrary.starBlock));
+    }
+
+    private static void addItemsToThing () {
+        itemNames = new String[8];
+        //Natura
+        itemNames[0] = "Natura:barleyBag";
+        itemNames[1] = "Natura:carrotBag";
+        itemNames[2] = "Natura:potatoBag";
+        itemNames[3] = "Natura:wheatBag";
+        itemNames[4] = "Natura:wartBag";
+        itemNames[5] = "Natura:cottonBag";
+        itemNames[6] = "Natura:boneBag";
+        itemNames[7] = "ExtraUtilities:angelRing";
+
+
     }
 }
