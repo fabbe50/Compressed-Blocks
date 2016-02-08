@@ -59,3 +59,4 @@ out/*
 eclipse/usernamecache.json
 .gradle/gradle.log
 Compressed-Blocks-2.0.iws
+*.dat

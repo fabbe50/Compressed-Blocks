@@ -31,5 +31,5 @@ tile.compressedblocks:comprpotato_octuple.name=Octuple Compressed Potato
 #                               Miscellaneous                               #
 #############################################################################
 #Creative Tab Name
-itemGroup.compressedblocks=Compressed Blocks
+itemGroup.compressedblocks=Compressed Blocks 2
 

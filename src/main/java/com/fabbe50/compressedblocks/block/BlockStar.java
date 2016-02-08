@@ -17,5 +17,7 @@ public class BlockStar extends BlockCB{
         this.setResistance(1700.0f);
         this.setHardness(40.0f);
         this.setStepSound(soundTypeMetal);
+
+        this.setBeaconBase();
     }
 }
