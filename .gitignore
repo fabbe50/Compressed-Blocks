@@ -60,3 +60,5 @@ eclipse/usernamecache.json
 .gradle/gradle.log
 Compressed-Blocks-2.0.iws
 *.dat
+*.dat
+eclipse/saves/New World/level.dat_old
