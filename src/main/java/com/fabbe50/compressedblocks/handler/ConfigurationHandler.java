@@ -42,7 +42,7 @@ public class ConfigurationHandler {
         noSafeRecipe = configuration.getBoolean("noSafeRecipe", Configuration.CATEGORY_GENERAL, false, "Is the game allowed to fall back on a Vanilla Minecraft recipe if it can't find all the mod items?");
         lightLevelForEndgamium = configuration.getFloat("endgamiumLightLevel", Configuration.CATEGORY_GENERAL, 1.0f, 0.0f, 1.0f, "What light level does an Endgamium Block give?");
         lightLevelForStarblock = configuration.getFloat("comprstarLightLevel", Configuration.CATEGORY_GENERAL, 0.85f, 0.0f, 1.0f, "What light level does a Compressed Nether Star Block Give?");
-        textureAlternative = configuration.getInt("textureAlt", Configuration.CATEGORY_GENERAL, 0, 0, Reference.RESOURCES, "Choose an alternative texture!");
+        //textureAlternative = configuration.getInt("textureAlt", Configuration.CATEGORY_GENERAL, 0, 0, Reference.RESOURCES, "Choose an alternative texture!");
 
         if (configuration.hasChanged()){
             configuration.save();
