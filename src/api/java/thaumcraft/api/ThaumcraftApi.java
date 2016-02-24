@@ -101,11 +101,11 @@ public class ThaumcraftApi {
 	
 	/**
 	 * This is used to add aspects to entities which you can then scan using a thaumometer.
-	 * Also used to calculate vis drops from mobs.
+	 * Also used to calculate vis drops from entities.
 	 * @param entityName
 	 * @param aspects
 	 * @param nbt you can specify certain nbt keys and their values 
-	 * 			  to differentiate between mobs. <br>For example the normal and wither skeleton:
+	 * 			  to differentiate between entities. <br>For example the normal and wither skeleton:
 	 * 	<br>ThaumcraftApi.registerEntityTag("Skeleton", (new AspectList()).add(Aspect.DEATH, 5));
 	 * 	<br>ThaumcraftApi.registerEntityTag("Skeleton", (new AspectList()).add(Aspect.DEATH, 8), new NBTTagByte("SkeletonType",(byte) 1));
 	 */

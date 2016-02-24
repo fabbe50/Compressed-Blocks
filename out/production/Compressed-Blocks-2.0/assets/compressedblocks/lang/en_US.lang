@@ -28,6 +28,11 @@ tile.compressedblocks:comprpotato_septuple.name=Septuple Compressed Potato
 tile.compressedblocks:comprpotato_octuple.name=Octuple Compressed Potato
 
 #############################################################################
+#                                   Mobs                                    #
+#############################################################################
+entity.corgi.name=Corgi
+
+#############################################################################
 #                               Miscellaneous                               #
 #############################################################################
 #Creative Tab Name

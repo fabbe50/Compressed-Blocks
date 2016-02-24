@@ -3,6 +3,8 @@ package com.fabbe50.compressedblocks;
 import com.fabbe50.compressedblocks.handler.ConfigurationHandler;
 import com.fabbe50.compressedblocks.init.*;
 import com.fabbe50.compressedblocks.lib.DataCompressed;
+import com.fabbe50.compressedblocks.entities.ModEntities;
+import com.fabbe50.compressedblocks.proxy.ClientProxy;
 import com.fabbe50.compressedblocks.proxy.IProxy;
 import com.fabbe50.compressedblocks.reference.Dependencies;
 import com.fabbe50.compressedblocks.reference.Reference;
@@ -29,6 +31,7 @@ public class CompressedBlocks {
         DataCompressed.init();
         ModItems.init();
         ModBlocks.init();
+        ModEntities.mainRegistry();
         //PreInit Ends Here
         LogHelper.info("Pre-Initialization Complete");
     }
@@ -47,7 +50,7 @@ public class CompressedBlocks {
     public void postinit(FMLPostInitializationEvent event) {
         LogHelper.info("Post-Initializing");
         //PostInit Starts Here
-        //DebugHelper.init();
+        ClientProxy.registerRenderingThings();
         //PostInit Ends Here
         LogHelper.info("Post-Initialization Complete");
     }
