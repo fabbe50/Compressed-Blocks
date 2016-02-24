@@ -1,5 +1,6 @@
 package com.fabbe50.compressedblocks.entities.renders;
 
+import com.fabbe50.compressedblocks.entities.EnumCorgiTypes;
 import com.fabbe50.compressedblocks.entities.tamables.EntityCorgi;
 import com.fabbe50.compressedblocks.reference.Textures;
 import net.minecraft.client.model.ModelBase;
@@ -19,11 +20,13 @@ public class RenderCorgi extends RenderLiving{
         private ResourceLocation tamedCorgiTextures = new ResourceLocation(corgiPath + "corgi_tame.png");
         private ResourceLocation anrgyCorgiTextures = new ResourceLocation(corgiPath + "corgi_angry.png");
         private ResourceLocation corgiCollarTextures = new ResourceLocation(corgiPath + "corgi_collar.png");
-        private static final String __OBFID = "CL_00001036";
+
+    private ResourceLocation[] corgisTextures;
 
         public RenderCorgi(ModelBase p_i1269_1_, ModelBase p_i1269_2_, float p_i1269_3_)
         {
             super(p_i1269_1_, p_i1269_3_);
+            corgisTextures = new ResourceLocation[EnumCorgiTypes.values().length];
             this.setRenderPassModel(p_i1269_2_);
         }
 

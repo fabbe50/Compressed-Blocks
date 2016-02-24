@@ -30,14 +30,14 @@ public class EntityAIBegDecoy extends EntityAIBase {
      */
     public boolean shouldExecute() {
         this.thePlayer = this.worldObject.getClosestPlayerToEntity(this.theCorgi, (double) this.minPlayerDistance);
-        return this.thePlayer == null ? false : this.hasPlayerGotBoneInHand(this.thePlayer);
+        return this.thePlayer == null ? false : this.hasPlayerGotPotatoInHand(this.thePlayer);
     }
 
     /**
      * Returns whether an in-progress EntityAIBase should continue executing
      */
     public boolean continueExecuting() {
-        return !this.thePlayer.isEntityAlive() ? false : (this.theCorgi.getDistanceSqToEntity(this.thePlayer) > (double) (this.minPlayerDistance * this.minPlayerDistance) ? false : this.field_75384_e > 0 && this.hasPlayerGotBoneInHand(this.thePlayer));
+        return !this.thePlayer.isEntityAlive() ? false : (this.theCorgi.getDistanceSqToEntity(this.thePlayer) > (double) (this.minPlayerDistance * this.minPlayerDistance) ? false : this.field_75384_e > 0 && this.hasPlayerGotPotatoInHand(this.thePlayer));
     }
 
     /**
@@ -67,9 +67,9 @@ public class EntityAIBegDecoy extends EntityAIBase {
     /**
      * Gets if the Player has the Bone in the hand.
      */
-    private boolean hasPlayerGotBoneInHand(EntityPlayer p_75382_1_) {
+    private boolean hasPlayerGotPotatoInHand(EntityPlayer p_75382_1_) {
         ItemStack itemstack = p_75382_1_.inventory.getCurrentItem();
-        return itemstack == null ? false : (!this.theCorgi.isTamed() && itemstack.getItem() == Items.bone ? true : this.theCorgi.isBreedingItem(itemstack));
+        return itemstack == null ? false : (!this.theCorgi.isTamed() && itemstack.getItem() == Items.baked_potato ? true : this.theCorgi.isBreedingItem(itemstack));
     }
 }
 

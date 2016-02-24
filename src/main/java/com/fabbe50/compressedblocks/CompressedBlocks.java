@@ -2,6 +2,7 @@ package com.fabbe50.compressedblocks;
 
 import com.fabbe50.compressedblocks.handler.ConfigurationHandler;
 import com.fabbe50.compressedblocks.init.*;
+import com.fabbe50.compressedblocks.item.ItemCorgiFood;
 import com.fabbe50.compressedblocks.lib.DataCompressed;
 import com.fabbe50.compressedblocks.entities.ModEntities;
 import com.fabbe50.compressedblocks.proxy.ClientProxy;
@@ -40,6 +41,7 @@ public class CompressedBlocks {
         LogHelper.info("Initializing");
         //Init Starts Here
         ItemImport.init();
+        ItemCorgiFood.registerFoodTypes();
         RecipeReplacers.init();
         ModRecipes.init();
         Recipes.init();

@@ -1,6 +1,7 @@
 package com.fabbe50.compressedblocks.entities.tamables;
 
 import com.fabbe50.compressedblocks.entities.ai.EntityAIBegDecoy;
+import com.fabbe50.compressedblocks.item.ItemCorgiFood;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -372,7 +373,7 @@ public class EntityCorgi extends EntityTameable {
                 {
                     ItemFood itemfood = (ItemFood)itemstack.getItem();
 
-                    if (itemfood.isWolfsFavoriteMeat() && this.dataWatcher.getWatchableObjectFloat(18) < 20.0F)
+                    if (ItemCorgiFood.isCorgisFavoriteFood(itemfood) && this.dataWatcher.getWatchableObjectFloat(18) < 20.0F)
                     {
                         if (!p_70085_1_.capabilities.isCreativeMode)
                         {
@@ -481,7 +482,7 @@ public class EntityCorgi extends EntityTameable {
      */
     public boolean isBreedingItem(ItemStack p_70877_1_)
     {
-        return p_70877_1_ == null ? false : (!(p_70877_1_.getItem() instanceof ItemFood) ? false : (((ItemFood) p_70877_1_.getItem()).isWolfsFavoriteMeat()));
+        return p_70877_1_ == null ? false : (!(p_70877_1_.getItem() instanceof ItemFood) ? false : (ItemCorgiFood.isCorgisFavoriteFood(p_70877_1_.getItem())));
     }
 
     /**
