@@ -1,7 +1,10 @@
 package com.fabbe50.compressedblocks.entities.tamables;
 
+import com.fabbe50.compressedblocks.entities.EnumCorgiTypes;
 import com.fabbe50.compressedblocks.entities.ai.EntityAIBegDecoy;
 import com.fabbe50.compressedblocks.item.ItemCorgiFood;
+import com.fabbe50.compressedblocks.lib.DataCorgi;
+import com.fabbe50.compressedblocks.utility.LogHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -38,7 +41,6 @@ public class EntityCorgi extends EntityTameable {
     /** This time increases while corgi is shaking and emitting water particles. */
     private float timeCorgiIsShaking;
     private float prevTimeCorgiIsShaking;
-    private static final String __OBFID = "CL_00001654";
 
     public EntityCorgi(World p_i1696_1_)
     {
@@ -126,11 +128,11 @@ public class EntityCorgi extends EntityTameable {
     /**
      * (abstract) Protected helper method to write subclass entity data to NBT.
      */
-    public void writeEntityToNBT(NBTTagCompound p_70014_1_)
+    public void writeEntityToNBT(NBTTagCompound tag)
     {
-        super.writeEntityToNBT(p_70014_1_);
-        p_70014_1_.setBoolean("Angry", this.isAngry());
-        p_70014_1_.setByte("CollarColor", (byte)this.getCollarColor());
+        super.writeEntityToNBT(tag);
+        tag.setBoolean("Angry", this.isAngry());
+        tag.setByte("CollarColor", (byte)this.getCollarColor());
     }
 
     /**
@@ -617,5 +619,11 @@ public class EntityCorgi extends EntityTameable {
         {
             return false;
         }
+    }
+
+    public int getCorgiType () {
+        int i = rand.nextInt(EnumCorgiTypes.count() - 1);
+        //LogHelper.info("Selected Corgi Nr: " + i);
+        return i;
     }
 }

@@ -2,6 +2,7 @@ package com.fabbe50.compressedblocks.entities;
 
 import com.fabbe50.compressedblocks.CompressedBlocks;
 import com.fabbe50.compressedblocks.entities.tamables.EntityCorgi;
+import com.fabbe50.compressedblocks.reference.Reference;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
@@ -16,7 +17,7 @@ public class ModEntities {
     }
 
     public static void registerEntity() {
-        createEntity(EntityCorgi.class, "corgi", 0xedc67d, 0x8f6830);
+        createEntity(EntityCorgi.class, Reference.MOB_PREFIX + "corgi", 0xedc67d, 0x8f6830);
     }
 
     public static void createEntity(Class entityClass, String entityName, int solidColor, int spotColor) {

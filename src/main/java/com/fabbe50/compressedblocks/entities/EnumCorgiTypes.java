@@ -23,4 +23,8 @@ public enum EnumCorgiTypes {
     public String getCorgiName () {
         return corgiName;
     }
+
+    public static int count() {
+        return values().length;
+    }
 }

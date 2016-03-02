@@ -5,6 +5,9 @@
 item.compressedblocks:endgamium.name=Endgamium Ingot
 item.compressedblocks:endgamiumsword.name=Endgamium Sword
 item.compressedblocks:dummyitem.name=Dummy Item
+item.compressedblocks:endgamium_nugget.name=Endgamium Nugget
+item.compressedblocks:infusedbone.name=Endgamium Infused Bone
+item.compressedblocks:potatobone.name=Potato on a Bone
 
 #############################################################################
 #                                   Blocks                                  #
@@ -30,7 +33,7 @@ tile.compressedblocks:comprpotato_octuple.name=Octuple Compressed Potato
 #############################################################################
 #                                   Mobs                                    #
 #############################################################################
-entity.corgi.name=Corgi
+entity.compressedblocks:corgi.name=Corgi
 
 #############################################################################
 #                               Miscellaneous                               #

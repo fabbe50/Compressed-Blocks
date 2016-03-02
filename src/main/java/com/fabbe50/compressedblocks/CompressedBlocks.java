@@ -42,7 +42,6 @@ public class CompressedBlocks {
         //Init Starts Here
         ItemImport.init();
         ItemCorgiFood.registerFoodTypes();
-        RecipeReplacers.init();
         ModRecipes.init();
         Recipes.init();
         //Init Ends Here
@@ -52,6 +51,7 @@ public class CompressedBlocks {
     public void postinit(FMLPostInitializationEvent event) {
         LogHelper.info("Post-Initializing");
         //PostInit Starts Here
+        RecipeReplacers.init();
         ClientProxy.registerRenderingThings();
         //PostInit Ends Here
         LogHelper.info("Post-Initialization Complete");

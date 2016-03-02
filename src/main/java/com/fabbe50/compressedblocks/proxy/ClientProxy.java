@@ -5,6 +5,7 @@ import com.fabbe50.compressedblocks.entities.tamables.EntityCorgi;
 import com.fabbe50.compressedblocks.entities.models.ModelCorgi;
 import com.fabbe50.compressedblocks.entities.renders.RenderCorgi;
 import cpw.mods.fml.client.registry.RenderingRegistry;
+import net.minecraft.client.renderer.entity.RenderWolf;
 
 /**
  * Created by fabbe50 on 14/01/2016.

@@ -12,5 +12,6 @@ public class Reference {
     public static final String CLIENT_PROXY_CLASS = "com.fabbe50.compressedblocks.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "com.fabbe50.compressedblocks.proxy.ServerProxy";
     public static final String GUI_FACTORY_CLASS = "com.fabbe50.compressedblocks.client.gui.GuiFactory";
-    public static final int RESOURCES = 3;
+
+    public static final String MOB_PREFIX = MOD_ID.toLowerCase() + ":";
 }

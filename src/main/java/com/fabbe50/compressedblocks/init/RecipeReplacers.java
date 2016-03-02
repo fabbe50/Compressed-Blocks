@@ -90,7 +90,5 @@ public class RecipeReplacers {
         itemNames[5] = "Natura:cottonBag";
         itemNames[6] = "Natura:boneBag";
         itemNames[7] = "ExtraUtilities:angelRing";
-
-
     }
 }
