@@ -1,11 +1,13 @@
 package com.fabbe50.compressedblocks.init;
 
 import com.fabbe50.compressedblocks.reference.ModItemLibrary;
-import com.fabbe50.compressedblocks.utility.RecipeRemoval;
+import com.fabbe50.compressedblocks.utility.ItemRecipeRemoval;
 import com.fabbe50.compressedblocks.utility.LogHelper;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 /**
@@ -33,7 +35,7 @@ public class RecipeReplacers {
     static ItemStack diamondBlock = new ItemStack(Blocks.diamond_block);
 
     //Item ID's
-    static String[] itemNames;
+    static Item[] itemNames;
 
     static String r = "sss";
     static String t = "sis";
@@ -43,7 +45,7 @@ public class RecipeReplacers {
         try {
             for (int i = 0; i < itemNames.length; i++) {
                 try {
-                    RecipeRemoval.RemoveRecipe(itemNames[i]);
+                    ItemRecipeRemoval.RemoveRecipe(itemNames[i]);
                 } catch (Exception e) {
                     LogHelper.error(e);
                 }
@@ -58,37 +60,41 @@ public class RecipeReplacers {
     }
 
     private static void addRecipeReplacements() {
-        //Natura Recipes
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.potatoBag), r, t, r, 's', potato, 'i', chest);
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.carrotBag), r, t, r, 's', carrot, 'i', chest);
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.barleyBag), r, t, r, 's', barleyseed, 'i', chest);
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.cottonBag), r, t, r, 's', cottonseed, 'i', chest);
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.wheatBag), r, t, r, 's', wheatseed, 'i', chest);
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.wartBag), r, t, r, 's', netherwart, 'i', chest);
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.boneBag), r, t, r, 's', bonemeal, 'i', chest);
-
-        //Extra Utilities Recipes
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.angelRing, 1, 0), "tut", "ere", "yey", 'e', endgamium, 'r', starblock, 't', glass, 'y', compr8cobble, 'u', diamondBlock); //Invisible Wings
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.angelRing, 1, 1), "tut", "ere", "yey", 'e', endgamium, 'r', starblock, 't', feather, 'y', compr8cobble, 'u', diamondBlock); //Feathery Wings
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.angelRing, 1, 2), "tui", "ere", "yey", 'e', endgamium, 'r', starblock, 't', magenta, 'i', purple, 'y', compr8cobble, 'u', diamondBlock); //Fairy Wings
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.angelRing, 1, 3), "tut", "ere", "yey", 'e', endgamium, 'r', starblock, 't', lava, 'y', compr8cobble, 'u', diamondBlock); //Dragon Wings
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.angelRing, 1, 4), "tut", "ere", "yey", 'e', endgamium, 'r', starblock, 't', gold, 'y', compr8cobble, 'u', diamondBlock); //Golden Wings
-
-        //Tinkers' Construct
-        GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.heartCanist, 1, 5), "sts", "sys", "sts", 's', new ItemStack(ModItemLibrary.heartCanist,1,3), 't', new ItemStack(Items.dye,1,10), 'y', new ItemStack(ModItemLibrary.starBlock));
-        GameRegistry.addShapelessRecipe(new ItemStack(ModItemLibrary.heartCanist, 1, 6), new ItemStack(ModItemLibrary.heartCanist, 1, 4), new ItemStack(ModItemLibrary.heartCanist, 1, 5), new ItemStack(ModItems.endgamium), new ItemStack(ModItemLibrary.starBlock));
+        if (Loader.isModLoaded("Natura")) {
+            //Natura Recipes
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.potatoBag), r, t, r, 's', potato, 'i', chest);
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.carrotBag), r, t, r, 's', carrot, 'i', chest);
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.barleyBag), r, t, r, 's', barleyseed, 'i', chest);
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.cottonBag), r, t, r, 's', cottonseed, 'i', chest);
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.wheatBag), r, t, r, 's', wheatseed, 'i', chest);
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.wartBag), r, t, r, 's', netherwart, 'i', chest);
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.boneBag), r, t, r, 's', bonemeal, 'i', chest);
+        }
+        if (Loader.isModLoaded("ExtraUtilities")) {
+            //Extra Utilities Recipes
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.angelRing, 1, 0), "tut", "ere", "yey", 'e', endgamium, 'r', starblock, 't', glass, 'y', compr8cobble, 'u', diamondBlock); //Invisible Wings
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.angelRing, 1, 1), "tut", "ere", "yey", 'e', endgamium, 'r', starblock, 't', feather, 'y', compr8cobble, 'u', diamondBlock); //Feathery Wings
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.angelRing, 1, 2), "tui", "ere", "yey", 'e', endgamium, 'r', starblock, 't', magenta, 'i', purple, 'y', compr8cobble, 'u', diamondBlock); //Fairy Wings
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.angelRing, 1, 3), "tut", "ere", "yey", 'e', endgamium, 'r', starblock, 't', lava, 'y', compr8cobble, 'u', diamondBlock); //Dragon Wings
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.angelRing, 1, 4), "tut", "ere", "yey", 'e', endgamium, 'r', starblock, 't', gold, 'y', compr8cobble, 'u', diamondBlock); //Golden Wings
+        }
+        if (Loader.isModLoaded("TConstruct")) {
+            //Tinkers' Construct
+            GameRegistry.addShapedRecipe(new ItemStack(ModItemLibrary.heartCanist, 1, 5), "sts", "sys", "sts", 's', new ItemStack(ModItemLibrary.heartCanist, 1, 3), 't', new ItemStack(Items.dye, 1, 10), 'y', new ItemStack(ModItemLibrary.starBlock));
+            GameRegistry.addShapelessRecipe(new ItemStack(ModItemLibrary.heartCanist, 1, 6), new ItemStack(ModItemLibrary.heartCanist, 1, 4), new ItemStack(ModItemLibrary.heartCanist, 1, 5), new ItemStack(ModItems.endgamium), new ItemStack(ModItemLibrary.starBlock));
+        }
     }
 
     private static void addItemsToThing () {
-        itemNames = new String[8];
+        itemNames = new Item[8];
         //Natura
-        itemNames[0] = "Natura:barleyBag";
-        itemNames[1] = "Natura:carrotBag";
-        itemNames[2] = "Natura:potatoBag";
-        itemNames[3] = "Natura:wheatBag";
-        itemNames[4] = "Natura:wartBag";
-        itemNames[5] = "Natura:cottonBag";
-        itemNames[6] = "Natura:boneBag";
-        itemNames[7] = "ExtraUtilities:angelRing";
+        itemNames[0] = ModItemLibrary.barleyBag;
+        itemNames[1] = ModItemLibrary.carrotBag;
+        itemNames[2] = ModItemLibrary.potatoBag;
+        itemNames[3] = ModItemLibrary.wheatBag;
+        itemNames[4] = ModItemLibrary.wartBag;
+        itemNames[5] = ModItemLibrary.cottonBag;
+        itemNames[6] = ModItemLibrary.boneBag;
+        itemNames[7] = ModItemLibrary.angelRing;
     }
 }

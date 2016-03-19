@@ -27,6 +27,7 @@ public class Recipes {
         ItemStack potato = new ItemStack(Items.potato);
         ItemStack bone = new ItemStack(Items.bone);
         ItemStack bakedpotato = new ItemStack(Items.baked_potato);
+        ItemStack stick = new ItemStack(Items.stick);
 
         //ItemStacks Compressed Blocks
         ItemStack endgamium = new ItemStack(ModItems.endgamium);
@@ -35,6 +36,8 @@ public class Recipes {
         ItemStack infusedbone = new ItemStack(ModItems.infusedbone);
         ItemStack potatobone = new ItemStack(ModItems.potatobone);
         ItemStack endgamiumnugget = new ItemStack(ModItems.endgamiumnugget);
+        ItemStack endgamiumsword = new ItemStack(ModItems.endgamiumsword);
+        ItemStack potatoblock = new ItemStack(ModBlocks.potatoblock);
 
         //ItemStack Array Apply
         for (int i = 0; i < potatoes.length; i++) {
@@ -48,38 +51,33 @@ public class Recipes {
         GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.endgamiumblock, 9), endgamiumbc);
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.endgamium, 9), endgamiumb);
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.endgamiumnugget, 9), endgamium);
+        GameRegistry.addShapelessRecipe(new ItemStack(Items.potato, 9), potatoblock);
 
         //Standard Shaped Recipes
+        GameRegistry.addShapedRecipe(endgamiumsword, "e", "e", "b", 'e', endgamium, 'b', infusedbone);
 
         //Full Block Recipes
         GameRegistry.addShapedRecipe(endgamium, r, r, r, 's', endgamiumnugget);
         GameRegistry.addShapedRecipe(endgamiumb, r, r, r, 's', endgamium);
         GameRegistry.addShapedRecipe(endgamiumbc, r, r, r, 's', endgamiumb);
+        GameRegistry.addShapedRecipe(potatoblock, r, r, r, 's', potato);
 
         //Full Block Recipes Array
         for (int i = 0; i < potatoes.length; i++) {
             if (i == 0) {
-                GameRegistry.addShapedRecipe(potatoes[i], r, r, r, 's', potato);}
+                GameRegistry.addShapedRecipe(potatoes[i], r, r, r, 's', potatoblock);}
             else {
                 GameRegistry.addShapedRecipe(potatoes[i], r, r, r, 's', potatoes[i-1]);}
         }
-
-        LogHelper.info("Done!");
-
-
-        LogHelper.info("Adding Standalone Recipes");
-        if (RecipeHandler.isStarblockCompat == false) {//Temp Recipe
-            GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.comprstarblock), "sss", "sds", "sss", 's', new ItemStack(Items.nether_star), 'd', new ItemStack(Blocks.diamond_block));
-            LogHelper.info("Created Recipe for 'ModBlocks.comprstarblock'");
-        } else {
-            LogHelper.info("Mod Items Present. Standalone Recipe for 'ModBlocks.comprstarblock' not needed");
+        for (int i = 7; i >= 0; i--) {
+            if (i == 0) {
+                GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.potatoblock, 9), potatoes[i]);
+            }
+            else {
+                GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.comprpotatoblock, 9, i-1), potatoes[i]);
+            }
         }
-        if (RecipeHandler.isEndgamiumCompat == false) {//Temp Recipe
-            GameRegistry.addShapedRecipe(new ItemStack(ModItems.endgamium), "sss", "bdb", "ndn", 's', new ItemStack(Items.nether_star), 'b', new ItemStack(Items.blaze_rod), 'd', new ItemStack(Blocks.diamond_block), 'n', new ItemStack(Blocks.nether_brick));
-            LogHelper.info("Created Recipe for 'ModItems.endgamium'");
-        } else {
-            LogHelper.info("Mod Items Present. Standalone Recipe for 'ModItems.endgamium' not needed");
-        }
+
         LogHelper.info("Done!");
     }
 }

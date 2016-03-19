@@ -2,6 +2,10 @@ package com.fabbe50.compressedblocks.block;
 
 import com.fabbe50.compressedblocks.creativetab.CreativeTabCB;
 import com.fabbe50.compressedblocks.handler.ConfigurationHandler;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+
+import java.util.List;
 
 /**
  * Created by fabbe50 on 15/01/2016.

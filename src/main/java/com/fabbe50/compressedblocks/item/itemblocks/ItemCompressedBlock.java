@@ -1,21 +1,25 @@
-package com.fabbe50.compressedblocks.item;
+package com.fabbe50.compressedblocks.item.itemblocks;
 
+import com.fabbe50.compressedblocks.block.BlockCompressed;
 import com.fabbe50.compressedblocks.lib.DataCompressed;
 import com.fabbe50.compressedblocks.lib.EnumCompressed;
 import com.fabbe50.compressedblocks.reference.Textures;
+import com.fabbe50.compressedblocks.utility.ColorHelper;
+import cpw.mods.fml.common.Loader;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
 
 import java.util.List;
 
 /**
- * Created by fabbe50 on 27/01/2016.
+ * Created by fabbe50 on 09/03/2016.
  */
-public class ItemPotatoBlock extends ItemBlock {
-    public ItemPotatoBlock(Block block) {
+public class ItemCompressedBlock extends ItemBlock{
+
+    public ItemCompressedBlock(Block block) {
         super(block);
         this.setHasSubtypes(true);
         setMaxDamage(0);
@@ -28,8 +32,8 @@ public class ItemPotatoBlock extends ItemBlock {
 
     @Override
     public String getUnlocalizedName (ItemStack itemStack) {                //Return a name that looks like tile.modid:blockid_metaname.name
-        EnumCompressed potato = EnumCompressed.values()[itemStack.getItemDamage()];
-        return String.format("tile.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()) + "_" + potato.getName().toLowerCase());
+        EnumCompressed block = EnumCompressed.values()[itemStack.getItemDamage()];
+        return String.format("tile.%s", getUnwrappedUnlocalizedName(super.getUnlocalizedName()) + "_" + block.getName().toLowerCase());
     }
 
     protected String getUnwrappedUnlocalizedName(String unlocalizedName) {  //Removes all mumbo jumbo from the Unlocalized name
@@ -41,7 +45,6 @@ public class ItemPotatoBlock extends ItemBlock {
     {
         int meta = stack.getItemDamage();
 
-        list.add(DataCompressed.getCompression(meta) + " potatoes");
+        list.add(DataCompressed.getCompression(meta) + " " + StatCollector.translateToLocal(getUnlocalizedName() + ".flavor"));
     }
 }
-

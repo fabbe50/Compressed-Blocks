@@ -1,6 +1,6 @@
 package com.fabbe50.compressedblocks.entities.ai;
 
-import com.fabbe50.compressedblocks.entities.tamables.EntityCorgi;
+import com.fabbe50.compressedblocks.entities.tamables.corgis.EntityCorgi;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;

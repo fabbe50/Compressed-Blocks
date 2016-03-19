@@ -16,10 +16,11 @@ import java.io.File;
 public class ConfigurationHandler {
     public static Configuration configuration;
 
-    public static boolean noSafeRecipe = false;
+    public static boolean noSafeRecipe = true;
     public static float lightLevelForEndgamium = 1.0f;
     public static float lightLevelForStarblock = 0.85f;
-    public static int textureAlternative = 0;
+    public static int endgamiumdamagevalue = 10;
+    public static int endgamiumextradamage = 1000;
 
     public static void init(File configFile) {
         //Create Config-object from Config File
@@ -39,10 +40,11 @@ public class ConfigurationHandler {
     }
 
     public static void loadConfiguration() {
-        noSafeRecipe = configuration.getBoolean("noSafeRecipe", Configuration.CATEGORY_GENERAL, false, "Is the game allowed to fall back on a Vanilla Minecraft recipe if it can't find all the mod items?");
+        noSafeRecipe = configuration.getBoolean("noSafeRecipe", Configuration.CATEGORY_GENERAL, true, "Is the game allowed to fall back on a Vanilla Minecraft recipe if it can't find all the mod items?");
         lightLevelForEndgamium = configuration.getFloat("endgamiumLightLevel", Configuration.CATEGORY_GENERAL, 1.0f, 0.0f, 1.0f, "What light level does an Endgamium Block give?");
         lightLevelForStarblock = configuration.getFloat("comprstarLightLevel", Configuration.CATEGORY_GENERAL, 0.85f, 0.0f, 1.0f, "What light level does a Compressed Nether Star Block Give?");
-        //textureAlternative = configuration.getInt("textureAlt", Configuration.CATEGORY_GENERAL, 0, 0, Reference.RESOURCES, "Choose an alternative texture!");
+        endgamiumdamagevalue = configuration.getInt("endgamiumdamagevalue", Configuration.CATEGORY_GENERAL, 10, 0, 100, "How much damage should endgamium do? (numbers are in half hearts)");
+        endgamiumextradamage = configuration.getInt("endgamiumextradamage", Configuration.CATEGORY_GENERAL, 1000, 0, 100, "How much extra damage does the sword do to mobs? (set to 0 if you want damage to stay the same for all mobs)");
 
         if (configuration.hasChanged()){
             configuration.save();

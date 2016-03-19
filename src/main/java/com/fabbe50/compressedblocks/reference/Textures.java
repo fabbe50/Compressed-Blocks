@@ -8,6 +8,7 @@ import net.minecraft.util.ResourceLocation;
 public class Textures {
     public static final String RESOURCE_PREFIX = Reference.MOD_ID.toLowerCase() + ":";
     public static final ResourceLocation RESOURCE_PATH_ENTITY = new ResourceLocation(RESOURCE_PREFIX + "textures/entity/");
+    public static final ResourceLocation corgiPath = new ResourceLocation(RESOURCE_PATH_ENTITY + "corgi/corgi_");
 
     public static String getCorgiResource (String name) {
         return RESOURCE_PATH_ENTITY + "corgi/corgi_" + name + ".png";

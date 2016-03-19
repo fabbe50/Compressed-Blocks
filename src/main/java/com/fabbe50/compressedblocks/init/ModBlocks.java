@@ -1,7 +1,8 @@
 package com.fabbe50.compressedblocks.init;
 
 import com.fabbe50.compressedblocks.block.*;
-import com.fabbe50.compressedblocks.item.ItemPotatoBlock;
+import com.fabbe50.compressedblocks.item.itemblocks.ItemCompressedBlock;
+import com.fabbe50.compressedblocks.item.itemblocks.ItemEndgamiumBlock;
 import com.fabbe50.compressedblocks.reference.Reference;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -11,27 +12,33 @@ import cpw.mods.fml.common.registry.GameRegistry;
  */
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModBlocks {
+
     //Normal Blocks
+    public static final BlockCB netherstarblock = new BlockNetherStar();
     public static final BlockCB comprstarblock = new BlockStar();
     public static final BlockCB endgamiumblock = new BlockEndgamium();
     public static final BlockCB endgamiumblockc = new BlockEndgamiumC();
+    public static final BlockCB potatoblock = new BlockPotatoblock();
 
 
     //Blocks with Metadata
-    public static BlockPotatoCompr comprpotatoblock  = new BlockPotatoCompr();
+    public static BlockCompressed comprpotatoblock = new BlockCompressed("potato", 0);
 
 
     public static void init() {
         LogHelper.info("Adding Blocks");
 
         //Normal Blocks
-        GameRegistry.registerBlock(comprstarblock, "comprstarblock");
-        GameRegistry.registerBlock(endgamiumblock, "endgamiumblock");
+        GameRegistry.registerBlock(netherstarblock, "netherstarblock");
+        GameRegistry.registerBlock(comprstarblock, "starblock");
+        GameRegistry.registerBlock(endgamiumblock, ItemEndgamiumBlock.class, "endgamiumblock");
         GameRegistry.registerBlock(endgamiumblockc, "endgamiumblockc");
+        GameRegistry.registerBlock(potatoblock, "potatoblock");
 
 
         //Blocks with Metadata
-        GameRegistry.registerBlock(comprpotatoblock, ItemPotatoBlock.class, "potatoblock");
+        GameRegistry.registerBlock(comprpotatoblock, ItemCompressedBlock.class, "potato");
+
 
         LogHelper.info("Done!");
     }

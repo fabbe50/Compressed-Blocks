@@ -1,5 +1,6 @@
 package com.fabbe50.compressedblocks.item;
 
+import com.fabbe50.compressedblocks.init.ModItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
@@ -15,9 +16,11 @@ public class ItemCorgiFood {
     }
 
     public static void registerFoodTypes () {
-        corgiFood = new Item[1];
+        corgiFood = new Item[3];
 
         corgiFood[0] = Items.baked_potato;
+        corgiFood[1] = ModItems.infusedbone;
+        corgiFood[2] = ModItems.potatobone;
     }
 
     private static boolean checkItem(Item item) {

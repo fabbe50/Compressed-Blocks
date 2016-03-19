@@ -1,11 +1,13 @@
 package com.fabbe50.compressedblocks.init;
 
-import com.fabbe50.compressedblocks.handler.ConfigurationHandler;
 import com.fabbe50.compressedblocks.item.*;
+import com.fabbe50.compressedblocks.item.items.*;
+import com.fabbe50.compressedblocks.item.tools.ItemModMultitool;
+import com.fabbe50.compressedblocks.item.tools.ItemModSword;
+import com.fabbe50.compressedblocks.lib.EnumModToolMaterial;
 import com.fabbe50.compressedblocks.reference.Reference;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.Item;
 
 /**
  * Created by fabbe50 on 14/01/2016.
@@ -17,7 +19,10 @@ public class ModItems {
     public static final ItemCB endgamiumnugget = new ItemEndgamiumNugget();
     public static final ItemCB infusedbone = new ItemInfusedBone();
     public static final ItemCB potatobone = new ItemPotatoBone();
-    //public static final ItemCB endgamiumsword = new ItemEndgamiumSword();
+    public static final ItemCB endgamiumstages = new ItemEndgamiumStages();
+    public static final ItemCB endgamiummultitool = new ItemModMultitool(EnumModToolMaterial.endgamium);
+    public static final ItemCB endgamiumsword = new ItemModSword(EnumModToolMaterial.endgamium);
+    public static final ItemCB missingitem = new ItemMissing();
 
     public static void init() {
         LogHelper.info("Adding Items");
@@ -26,7 +31,10 @@ public class ModItems {
         GameRegistry.registerItem(endgamiumnugget, "endgamiumnugget");
         GameRegistry.registerItem(infusedbone, "infusedbone");
         GameRegistry.registerItem(potatobone, "potatobone");
-        //GameRegistry.registerItem(endgamiumsword, "endgamiumsword");
+        GameRegistry.registerItem(endgamiumstages, "endgamiumstages");
+        GameRegistry.registerItem(endgamiummultitool, "endgamiumtool");
+        GameRegistry.registerItem(endgamiumsword, "endgamiumsword");
+        GameRegistry.registerItem(missingitem, "missing");
         LogHelper.info("Done!");
     }
 }

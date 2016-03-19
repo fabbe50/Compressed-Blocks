@@ -1,6 +1,6 @@
 package com.fabbe50.compressedblocks.entities.mobspawning;
 
-import com.fabbe50.compressedblocks.entities.tamables.EntityCorgi;
+import com.fabbe50.compressedblocks.entities.tamables.corgis.EntityCorgi;
 import com.fabbe50.compressedblocks.reference.Reference;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import net.minecraft.entity.*;
@@ -21,7 +21,7 @@ public class SpawnMob extends ItemMonsterPlacer{
     {
         entityToSpawnName = corgi.toString().substring(6).toLowerCase();
 
-        if (!parWorld.isRemote) // never spawn entity on client side
+        if (!parWorld.isRemote) //if on server don't spawn on client
         {
             entityToSpawnNameFull = Reference.MOB_PREFIX + entityToSpawnName;
             if (EntityList.stringToClassMapping.containsKey(entityToSpawnNameFull)) {

@@ -1,7 +1,7 @@
-package com.fabbe50.compressedblocks.entities;
+package com.fabbe50.compressedblocks.init;
 
 import com.fabbe50.compressedblocks.CompressedBlocks;
-import com.fabbe50.compressedblocks.entities.tamables.EntityCorgi;
+import com.fabbe50.compressedblocks.entities.tamables.corgis.EntityCorgi;
 import com.fabbe50.compressedblocks.reference.Reference;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.entity.EntityList;
@@ -12,21 +12,22 @@ import net.minecraft.world.biome.BiomeGenBase;
  * Created by fabbe50 on 10/02/2016.
  */
 public class ModEntities {
-    public static void mainRegistry() {
+    public static void mainRegistry () {
         registerEntity();
     }
 
-    public static void registerEntity() {
-        createEntity(EntityCorgi.class, Reference.MOB_PREFIX + "corgi", 0xedc67d, 0x8f6830);
+    public static void registerEntity() /*Register Mobs Here:*/ {
+        createEntity(EntityCorgi.class, Reference.MOB_PREFIX + "corgi", 64, 0xedc67d, 0x8f6830, true);
     }
 
-    public static void createEntity(Class entityClass, String entityName, int solidColor, int spotColor) {
+    public static void createEntity(Class entityClass, String entityName, int viewdistance, int solidColor, int spotColor, boolean createEgg) {
         int randomID = EntityRegistry.findGlobalUniqueEntityId();
         EntityRegistry.registerGlobalEntityID(entityClass,entityName,randomID);
-        EntityRegistry.registerModEntity(entityClass,entityName,randomID, CompressedBlocks.instance,16,1,true);
+        EntityRegistry.registerModEntity(entityClass,entityName,randomID, CompressedBlocks.instance, viewdistance, 1, true);
         EntityRegistry.addSpawn(entityClass,0,0,0, EnumCreatureType.creature, BiomeGenBase.beach);
 
-        createEgg(randomID,solidColor,spotColor);
+        if (createEgg)
+            createEgg(randomID,solidColor,spotColor);
     }
 
     private static void createEgg(int id, int solidColor, int spotColor) {

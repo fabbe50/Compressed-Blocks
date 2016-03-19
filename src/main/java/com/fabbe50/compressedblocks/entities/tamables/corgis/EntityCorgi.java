@@ -1,18 +1,14 @@
-package com.fabbe50.compressedblocks.entities.tamables;
+package com.fabbe50.compressedblocks.entities.tamables.corgis;
 
-import com.fabbe50.compressedblocks.entities.EnumCorgiTypes;
 import com.fabbe50.compressedblocks.entities.ai.EntityAIBegDecoy;
+import com.fabbe50.compressedblocks.entities.ai.EntityAIFly;
+import com.fabbe50.compressedblocks.entities.ai.FlyAround;
 import com.fabbe50.compressedblocks.item.ItemCorgiFood;
-import com.fabbe50.compressedblocks.lib.DataCorgi;
-import com.fabbe50.compressedblocks.utility.LogHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockColored;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityAgeable;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityGhast;
@@ -41,6 +37,7 @@ public class EntityCorgi extends EntityTameable {
     /** This time increases while corgi is shaking and emitting water particles. */
     private float timeCorgiIsShaking;
     private float prevTimeCorgiIsShaking;
+    public int amountOfCorgis = 10;
 
     public EntityCorgi(World p_i1696_1_)
     {
@@ -60,8 +57,16 @@ public class EntityCorgi extends EntityTameable {
         this.targetTasks.addTask(1, new EntityAIOwnerHurtByTarget(this));
         this.targetTasks.addTask(2, new EntityAIOwnerHurtTarget(this));
         this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, true));
-        this.targetTasks.addTask(4, new EntityAITargetNonTamed(this, EntitySheep.class, 200, false));
+        this.targetTasks.addTask(4, new EntityAINearestAttackableTarget(this, EntityPig.class, 200, false));
         this.setTamed(false);
+        this.setCorgiType(rand.nextInt(amountOfCorgis));
+        applyTraits();
+    }
+
+    public void applyTraits() {
+        switch (getCorgiType()) {
+
+        }
     }
 
     protected void applyEntityAttributes()
@@ -71,11 +76,11 @@ public class EntityCorgi extends EntityTameable {
 
         if (this.isTamed())
         {
-            this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.0D);
+            this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(50.0D);
         }
         else
         {
-            this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(8.0D);
+            this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(12.0D);
         }
     }
 
@@ -118,6 +123,7 @@ public class EntityCorgi extends EntityTameable {
         this.dataWatcher.addObject(18, new Float(this.getHealth()));
         this.dataWatcher.addObject(19, new Byte((byte)0));
         this.dataWatcher.addObject(20, new Byte((byte)BlockColored.func_150032_b(1)));
+        this.dataWatcher.addObject(22, 0);
     }
 
     protected void func_145780_a(int p_145780_1_, int p_145780_2_, int p_145780_3_, Block p_145780_4_)
@@ -133,6 +139,11 @@ public class EntityCorgi extends EntityTameable {
         super.writeEntityToNBT(tag);
         tag.setBoolean("Angry", this.isAngry());
         tag.setByte("CollarColor", (byte)this.getCollarColor());
+        tag.setInteger("CorgiType", (int)this.getCorgiType());
+    }
+
+    public int getCorgiType() {
+        return this.dataWatcher.getWatchableObjectInt(22);
     }
 
     /**
@@ -142,12 +153,20 @@ public class EntityCorgi extends EntityTameable {
     {
         super.readEntityFromNBT(p_70037_1_);
         this.setAngry(p_70037_1_.getBoolean("Angry"));
+        this.setCorgiType(p_70037_1_.getInteger("CorgiType"));
 
         if (p_70037_1_.hasKey("CollarColor", 99))
         {
             this.setCollarColor(p_70037_1_.getByte("CollarColor"));
         }
     }
+
+    public void setCorgiType(int i) {
+        if (!worldObj.isRemote) {
+            this.dataWatcher.updateObject(22, Integer.valueOf(i));
+        }
+    }
+
 
     /**
      * Returns the sound this mob makes while it's alive.
@@ -263,6 +282,27 @@ public class EntityCorgi extends EntityTameable {
                 }
             }
         }
+
+        if (!isTamed()) {
+            if (!this.worldObj.isRemote) {
+                spawnTamed(worldObj.getClosestPlayerToEntity(getEntityCorgi(), 8.0d));
+            }
+        }
+    }
+
+    public EntityCorgi getEntityCorgi () {
+        return EntityCorgi.this;
+    }
+
+    public void spawnTamed(EntityPlayer player) {
+        this.setTamed(true);
+        this.setPathToEntity((PathEntity)null);
+        this.setAttackTarget((EntityLivingBase)null);
+        this.aiSit.setSitting(true);
+        this.setHealth(20.0F);
+        this.func_152115_b(player.getUniqueID().toString());
+        this.playTameEffect(true);
+        this.worldObj.setEntityState(this, (byte)7);
     }
 
     @SideOnly(Side.CLIENT)
@@ -352,11 +392,11 @@ public class EntityCorgi extends EntityTameable {
 
         if (p_70903_1_)
         {
-            this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.0D);
+            this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(50.0D);
         }
         else
         {
-            this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(8.0D);
+            this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(12.0D);
         }
     }
 
@@ -596,7 +636,7 @@ public class EntityCorgi extends EntityTameable {
      */
     protected boolean canDespawn()
     {
-        return !this.isTamed() && this.ticksExisted > 2400;
+        return false; /*!this.isTamed() && this.ticksExisted > 2400;*/
     }
 
     public boolean func_142018_a(EntityLivingBase p_142018_1_, EntityLivingBase p_142018_2_)
@@ -619,11 +659,5 @@ public class EntityCorgi extends EntityTameable {
         {
             return false;
         }
-    }
-
-    public int getCorgiType () {
-        int i = rand.nextInt(EnumCorgiTypes.count() - 1);
-        //LogHelper.info("Selected Corgi Nr: " + i);
-        return i;
     }
 }

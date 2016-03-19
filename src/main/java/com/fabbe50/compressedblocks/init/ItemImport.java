@@ -1,5 +1,6 @@
 package com.fabbe50.compressedblocks.init;
 
+import com.fabbe50.compressedblocks.handler.RecipeHandler;
 import com.fabbe50.compressedblocks.reference.ModItemLibrary;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 
@@ -39,7 +40,7 @@ public class ItemImport {
             LogHelper.warn("barley is null");
         }
         if (ModItemLibrary.barleyBag == null) {
-            LogHelper.warn("berleyBag is null");
+            LogHelper.warn("barleyBag is null");
         }
         if (ModItemLibrary.boneBag == null) {
             LogHelper.warn("boneBag is null");

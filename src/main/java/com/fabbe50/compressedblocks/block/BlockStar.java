@@ -10,8 +10,8 @@ import net.minecraft.world.IBlockAccess;
 public class BlockStar extends BlockCB{
     public BlockStar() {
         super();
-        this.setBlockName("comprstarblock");
-        this.setBlockTextureName("comprstarblock");
+        this.setBlockName("starblock");
+        this.setBlockTextureName("starblock");
 
         this.setLightLevel(ConfigurationHandler.lightLevelForStarblock);
         this.setResistance(1700.0f);

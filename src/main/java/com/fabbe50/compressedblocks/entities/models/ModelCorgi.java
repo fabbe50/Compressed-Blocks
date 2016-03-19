@@ -4,7 +4,7 @@ package com.fabbe50.compressedblocks.entities.models;
  * Reformated to fit needs by fabbe50 - (Originally made by Mojang (ModelWolf.java))
  */
 
-import com.fabbe50.compressedblocks.entities.tamables.EntityCorgi;
+import com.fabbe50.compressedblocks.entities.tamables.corgis.EntityCorgi;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;

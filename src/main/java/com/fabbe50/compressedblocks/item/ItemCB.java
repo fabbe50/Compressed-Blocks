@@ -2,12 +2,17 @@ package com.fabbe50.compressedblocks.item;
 
 import com.fabbe50.compressedblocks.creativetab.CreativeTabCB;
 import com.fabbe50.compressedblocks.reference.Textures;
+import com.fabbe50.compressedblocks.utility.ColorHelper;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+
+import java.util.List;
 
 /**
  * Created by fabbe50 on 14/01/2016.
@@ -37,5 +42,10 @@ public class ItemCB extends Item {
 
     protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
+    }
+
+    @Override
+    public void addInformation (ItemStack stack, EntityPlayer player, List list, boolean par) {
+
     }
 }

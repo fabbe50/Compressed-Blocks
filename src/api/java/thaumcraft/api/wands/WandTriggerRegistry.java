@@ -31,7 +31,7 @@ public class WandTriggerRegistry {
 	 * @param event a logical number that you can use to differentiate different events or actions
 	 * @param block
 	 * @param meta send -1 as a wildcard value for all possible meta values
-	 * @param modid a unique identifier. It is best to register your own triggers using your mod id to avoid conflicts with mods that register triggers for the same block
+	 * @param modid a unique identifier. It is best to register your own event using your mod id to avoid conflicts with mods that register event for the same block
 	 */
 	public static void registerWandBlockTrigger(IWandTriggerManager manager, int event, Block block, int meta, String modid) {
 		if (!triggers.containsKey(modid)) {

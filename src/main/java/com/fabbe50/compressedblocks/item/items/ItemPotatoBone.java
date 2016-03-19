@@ -1,23 +1,26 @@
-package com.fabbe50.compressedblocks.item;
+package com.fabbe50.compressedblocks.item.items;
 
 
 import com.fabbe50.compressedblocks.entities.mobspawning.SpawnMob;
-import com.fabbe50.compressedblocks.entities.tamables.EntityCorgi;
+import com.fabbe50.compressedblocks.entities.tamables.corgis.EntityCorgi;
 import com.fabbe50.compressedblocks.init.ModBlocks;
+import com.fabbe50.compressedblocks.item.ItemCB;
+import com.fabbe50.compressedblocks.utility.ColorHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Facing;
-import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeCache;
+
+import java.util.List;
+import java.util.Random;
 
 /**
  * Created by fabbe50 on 29/02/2016.
@@ -28,6 +31,12 @@ public class ItemPotatoBone extends ItemCB {
     public ItemPotatoBone () {
         super();
         setUnlocalizedName("potatobone");
+    }
+
+    @Override
+    public void addInformation (ItemStack stack, EntityPlayer player, List list, boolean par) {
+        list.add(ColorHelper.magenta + "Now why would you ever pierce a potato with a rainbow bone?");
+        list.add(ColorHelper.purple + "To spawn a Corgi of course!");
     }
 
     public boolean onItemUse(ItemStack itemStack, EntityPlayer player, World world, int x, int y, int z, int side, float offsetX, float offsetY, float offsetZ) {
@@ -44,14 +53,17 @@ public class ItemPotatoBone extends ItemCB {
                 if (side == 1 && block.getRenderType() == 11) {
                     d0 = 0.5D;
                 }
-                corgi = new EntityCorgi(world);
-                Entity entity = SpawnMob.spawnEntity(world, x + 0.5D, y + d0, z + 0.5D, corgi);
-                if (entity != null) {
-                    if (entity instanceof EntityLivingBase && itemStack.hasDisplayName()) {
-                        ((EntityLiving)entity).setCustomNameTag(itemStack.getDisplayName());
-                    }
-                    if (!player.capabilities.isCreativeMode) {
-                        --itemStack.stackSize;
+
+                if (block == Block.getBlockFromItem((new ItemStack(ModBlocks.comprpotatoblock,1,7).getItem()))) {
+                    corgi = new EntityCorgi(world);
+                    Entity entity = SpawnMob.spawnEntity(world, x + 0.5D, y + d0, z + 0.5D, corgi);
+                    if (entity != null) {
+                        if (entity instanceof EntityLivingBase && itemStack.hasDisplayName()) {
+                            ((EntityLiving) entity).setCustomNameTag(itemStack.getDisplayName());
+                        }
+                        if (!player.capabilities.isCreativeMode) {
+                            --itemStack.stackSize;
+                        }
                     }
                 }
                 return true;
