@@ -1,5 +1,6 @@
 package com.fabbe50.compressedblocks.entities;
 
+import com.fabbe50.compressedblocks.reference.Reference;
 import com.fabbe50.compressedblocks.reference.Textures;
 import net.minecraft.util.ResourceLocation;
 
@@ -7,26 +8,26 @@ import net.minecraft.util.ResourceLocation;
  * Created by fabbe50 on 24/02/2016.
  */
 public enum EnumCorgiTypes {
-    Normal(0, "normal", new ResourceLocation(Textures.corgiPath + "normal.png")),
-    Super(1, "super", new ResourceLocation(Textures.corgiPath + "super.png")),
-    Spy(2, "spy", new ResourceLocation(Textures.corgiPath + "spy.png")),
-    Sun(3, "sun", new ResourceLocation(Textures.corgiPath + "sunglasses.png")),
-    Suit(4, "suit", new ResourceLocation(Textures.corgiPath + "suit.png")),
-    Pirate(5, "pirate", new ResourceLocation(Textures.corgiPath + "pirate.png")),
-    Melon(6, "melon", new ResourceLocation(Textures.corgiPath + "melon.png")),
-    Iron(7, "iron", new ResourceLocation(Textures.corgiPath + "iron.png")),
-    Fabbe50(8, "fabbe50", new ResourceLocation(Textures.corgiPath + "fabbe50.png")),
-    Zirlian(9, "zirlian", new ResourceLocation(Textures.corgiPath + "zirlian.png"));
+    Normal(0, "normal", Textures.CORGI_FOLDER + "normal.png"),
+    Super(1, "super", Textures.CORGI_FOLDER + "super.png"),
+    Spy(2, "spy", Textures.CORGI_FOLDER + "spy.png"),
+    Sun(3, "sun", Textures.CORGI_FOLDER + "sunglasses.png"),
+    Suit(4, "suit", Textures.CORGI_FOLDER + "suit.png"),
+    Pirate(5, "pirate", Textures.CORGI_FOLDER + "pirate.png"),
+    Melon(6, "melon", Textures.CORGI_FOLDER + "melon.png"),
+    Iron(7, "iron", Textures.CORGI_FOLDER + "ironman.png"),
+    Fabbe50(8, "fabbe50", Textures.CORGI_FOLDER + "fabbe50.png"),
+    Zirlian(9, "zirlian", Textures.CORGI_FOLDER + "zirlian.png");
 
 
     private int corgiID;
     private String corgiName;
-    private ResourceLocation resourceLocation;
+    private String resourcePath;
 
-    EnumCorgiTypes (int ID, String name, ResourceLocation resourceLocation) {
+    EnumCorgiTypes (int ID, String name, String resourcePath) {
         this.corgiID = ID;
         this.corgiName = name;
-        this.resourceLocation = resourceLocation;
+        this.resourcePath = resourcePath;
     }
 
     public int getCorgiID () {
@@ -37,7 +38,7 @@ public enum EnumCorgiTypes {
         return corgiName;
     }
 
-    public ResourceLocation getResourceLocation (int i) { return resourceLocation; }
+    public String getResourceLocation (int i) { return resourcePath; }
 
     public static int count() {
         return values().length;

@@ -21,24 +21,18 @@ import org.lwjgl.opengl.GL11;
  */
 @SideOnly(Side.CLIENT)
 public class RenderCorgi extends RenderLiving{
-    private ResourceLocation corgiPath = new ResourceLocation(Textures.RESOURCE_PATH_ENTITY + "corgi/");
 
     EnumCorgiTypes corgis;
 
+    private ResourceLocation[] corgi = Textures.corgiTextures;
+    private String[] exCorgi = Textures.externalCorgiTextures;
+    boolean found = false;
+
     //Corgis
-    private ResourceLocation corgiNormal = new ResourceLocation(corgiPath + "corgi_normal.png");
-    private ResourceLocation corgiSuper = new ResourceLocation(corgiPath + "corgi_super.png");
-    private ResourceLocation corgiSpy = new ResourceLocation(corgiPath + "corgi_spy.png");
-    private ResourceLocation corgiSun = new ResourceLocation(corgiPath + "corgi_sunglasses.png");
-    private ResourceLocation corgiSuit = new ResourceLocation(corgiPath + "corgi_suit.png");
-    private ResourceLocation corgiPirate = new ResourceLocation(corgiPath + "corgi_pirate.png");
-    private ResourceLocation corgiMelon = new ResourceLocation(corgiPath + "corgi_melon.png");
-    private ResourceLocation corgiIron = new ResourceLocation(corgiPath + "corgi_ironman.png");
-    private ResourceLocation corgiFabbe50 = new ResourceLocation(corgiPath + "corgi_fabbe50.png");
-    private ResourceLocation corgiZirlian = new ResourceLocation(corgiPath + "corgi_zirlian.png");
+    private ResourceLocation corgiNormal = new ResourceLocation(Textures.CORGI_FOLDER + "normal.png");
 
     //Util Textures
-    private ResourceLocation corgiCollarTextures = new ResourceLocation(corgiPath + "corgi_collar.png");
+    private ResourceLocation corgiCollarTextures = new ResourceLocation(Textures.RESOURCE_PATH_ENTITY + "tamable/corgi_collar.png");
 
     public RenderCorgi(ModelBase model, ModelBase model2, float f) {
         super(model, f);
@@ -73,35 +67,10 @@ public class RenderCorgi extends RenderLiving{
         }
     }
 
-    /**
-     * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
-     */
+    //Checks the id of the corgi and applies the texture associated with it.
     protected ResourceLocation getEntityTexture(EntityCorgi corgi) {
         try {
-            switch (corgi.getCorgiType()) {
-                case 0:
-                    return corgiNormal;
-                case 1:
-                    return corgiSuper;
-                case 2:
-                    return corgiSpy;
-                case 3:
-                    return corgiSun;
-                case 4:
-                    return corgiSuit;
-                case 5:
-                    return corgiPirate;
-                case 6:
-                    return corgiMelon;
-                case 7:
-                    return corgiIron;
-                case 8:
-                    return corgiFabbe50;
-                case 9:
-                    return corgiZirlian;
-                default:
-                    return corgiNormal;
-            }
+            return this.corgi[corgi.getCorgiType()];
         }
         catch (Exception e) {
             LogHelper.error(e);

@@ -2,33 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac4c0796-a9ea-4dd7-aeeb-ce9f2dab50be" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/tools/ItemModSword.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/ItemRecipeRemoval.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/assets/compressedblocks/textures/blocks/comprstarblock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/item/ItemDummy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/item/ItemEndgamium.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/item/ItemEndgamiumSword.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockPotatoCompr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemEndgamiumSword.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemPotatoBlock.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/RecipeRemoval.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/blocks/comprpotato_double-alt0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/blocks/comprpotato_octuple-alt0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/blocks/comprpotato_quadruple-alt0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/blocks/comprpotato_quintuple-alt0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/blocks/comprpotato_septuple-alt0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/blocks/comprpotato_sextuple-alt0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/blocks/comprpotato_single-alt0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/blocks/comprpotato_triple-alt0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/blocks/comprstarblock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/chat/PingPong.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_collar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_fabbe50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_ironman.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_melon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_pirate.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_spy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_suit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_sunglasses.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_super.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_zirlian.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.0/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.0/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.0/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.0/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.0/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.0/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.0/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.0/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.0/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.0/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/data/villages.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/data/villages.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/DIM-42/data/villages.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/DIM-42/data/villages.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/DIM1/data/villages.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/DIM1/data/villages.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/data/Village.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/data/Village.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/data/villages.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/data/villages.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/level.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/level.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/level.dat_old" afterPath="$PROJECT_DIR$/eclipse/saves/New World/level.dat_old" />
@@ -37,65 +30,36 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.0.0.mca" afterPath="$PROJECT_DIR$/eclipse/saves/New World/region/r.0.0.mca" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.0.1.mca" afterPath="$PROJECT_DIR$/eclipse/saves/New World/region/r.0.1.mca" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/session.lock" afterPath="$PROJECT_DIR$/eclipse/saves/New World/session.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/world/labyrinth.dat_old" afterPath="$PROJECT_DIR$/eclipse/world/labyrinth.dat_old" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/world/level.dat_old" afterPath="$PROJECT_DIR$/eclipse/world/level.dat_old" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/world/session.lock" afterPath="$PROJECT_DIR$/eclipse/world/session.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/CompressedBlocks.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/CompressedBlocks.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/block/BlockCB.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/block/BlockCB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/block/BlockEndgamium.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/block/BlockEndgamium.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/block/BlockStar.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/block/BlockStar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/creativetab/CreativeTabCB$1.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/creativetab/CreativeTabCB$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/creativetab/CreativeTabCB.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/creativetab/CreativeTabCB.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/handler/ConfigurationHandler.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/handler/ConfigurationHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/init/ModBlocks.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/init/ModBlocks.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/init/ModItems.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/init/ModItems.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/init/ModRecipes.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/init/ModRecipes.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/init/Recipes.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/init/Recipes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/item/ItemCB.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/item/ItemCB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/proxy/ClientProxy.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/proxy/ClientProxy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/proxy/ServerProxy.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/proxy/ServerProxy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/reference/Reference.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/reference/Reference.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/reference/Textures.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/reference/Textures.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/utility/LogHelper.class" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/com/fabbe50/compressedblocks/utility/LogHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_collar.png" afterPath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_collar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_super.png" afterPath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/textures/entity/corgi/corgi_super.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/gradle.log" afterPath="$PROJECT_DIR$/.gradle/gradle.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compressed-Blocks-2.0.ipr" afterPath="$PROJECT_DIR$/Compressed-Blocks-2.0.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compressed-Blocks-2.0.iws" afterPath="$PROJECT_DIR$/Compressed-Blocks-2.0.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/options.txt" afterPath="$PROJECT_DIR$/eclipse/options.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/server.properties" afterPath="$PROJECT_DIR$/eclipse/server.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/assets/compressedblocks/lang/en_US.lang" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/assets/compressedblocks/lang/en_US.lang" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/mcmod.info" afterPath="$PROJECT_DIR$/out/production/Compressed-Blocks-2.0/mcmod.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/java/thaumcraft/api/wands/WandTriggerRegistry.java" afterPath="$PROJECT_DIR$/src/api/java/thaumcraft/api/wands/WandTriggerRegistry.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/CompressedBlocks.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/CompressedBlocks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockCB.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockCB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockEndgamium.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockEndgamium.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockStar.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockStar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/creativetab/CreativeTabCB.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/creativetab/CreativeTabCB.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/EnumCorgiTypes.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/EnumCorgiTypes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/ai/EntityAIBegDecoy.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/ai/EntityAIBegDecoy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/mobspawning/SpawnMob.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/mobspawning/SpawnMob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/models/ModelCorgi.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/models/ModelCorgi.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/renders/RenderCorgi.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/renders/RenderCorgi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/tamables/corgis/EntityCorgi.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/tamables/corgis/EntityCorgi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/event/RegisterCraftingEvent.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/event/RegisterCraftingEvent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/AchievementHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/AchievementHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/ConfigurationHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/ConfigurationHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ItemImport.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ItemImport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModBlocks.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModBlocks.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModItems.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModItems.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/RecipeReplacers.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/RecipeReplacers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/RecipeDynamic.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/RecipeDynamic.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/Recipes.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/Recipes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemCB.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemCB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemCorgiFood.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemCorgiFood.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/EnumCompressed.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/EnumCompressed.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/proxy/ClientProxy.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/proxy/ClientProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/proxy/ServerProxy.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/proxy/ServerProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/reference/Reference.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/reference/Reference.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/tools/ItemModSword.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/tools/ItemModSword.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/EnumModToolMaterial.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/EnumModToolMaterial.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/reference/Textures.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/reference/Textures.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/DebugHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/DebugHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/MathHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/MathHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/lang/en_US.lang" afterPath="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/lang/en_US.lang" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mcmod.info" afterPath="$PROJECT_DIR$/src/main/resources/mcmod.info" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/ModEntities.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModEntities.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/tamables/EntityCorgi.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/tamables/corgis/EntityCorgi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemDummy.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemDummy.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemEndgamium.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemEndgamium.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemEndgamiumNugget.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemEndgamiumNugget.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemInfusedBone.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemInfusedBone.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemPotatoBone.java" afterPath="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemPotatoBone.java" />
     </list>
     <ignored path="Compressed-Blocks-2.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,42 +119,109 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AchievementHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/AchievementHandler.java">
+      <file leaf-file-name="RenderCorgi.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/renders/RenderCorgi.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="167" selection-start-line="19" selection-start-column="167" selection-end-line="19" selection-end-column="167" />
+              <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityCorgi.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Textures.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/reference/Textures.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CBCorgicon.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/commands/CBCorgicon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModGuiCorgicon.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/client/gui/ModGuiCorgicon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1507#1508#0" expanded="true" />
+                <element signature="e#1539#1540#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TileEntityBlazeGenerator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/tileentities/TileEntityBlazeGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.22628951">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TileEntity.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/tileentity/TileEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityCorgi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/tamables/corgis/EntityCorgi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3371901">
-              <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterCraftingEvent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/event/RegisterCraftingEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="en_US.lang" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/assets/compressedblocks/lang/en_US.lang">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="116" selection-start-line="26" selection-start-column="116" selection-end-line="26" selection-end-column="116" />
-              <folding />
+              <caret line="445" column="0" selection-start-line="445" selection-start-column="0" selection-end-line="445" selection-end-column="0" />
+              <folding>
+                <element signature="method#EntityCorgi#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#applyTraits#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#applyEntityAttributes#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#setAttackTarget#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#entityInit#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#func_145780_a#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#writeEntityToNBT#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#readEntityFromNBT#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#setCorgiType#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#getLivingSound#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#onLivingUpdate#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#onUpdate#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#spawnTamed#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#getShadingWhileShaking#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#getShakeAngle#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#getInterestedAngle#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#attackEntityFrom#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#attackEntityAsMob#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#setTamed#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#interact#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#handleHealthUpdate#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#getTailRotation#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#isBreedingItem#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#setAngry#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#setCollarColor#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#setCollarColorOnColoring#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#createChild#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#func_70918_i#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#canMateWith#0;class#EntityCorgi#0" expanded="false" />
+                <element signature="method#func_142018_a#0;class#EntityCorgi#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -216,57 +247,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockCobbleCompr.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemPotatoBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemCobbleBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModEntities.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemCompressedBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BeaconChecker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/mobspawning/SpawnMob.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/customParticles/ModEntityFXEndgamium.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockStar.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModFallbackBlocks.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/creativetab/CreativeTabCB.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mcmod.info" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemCorgiFood.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemEndgamiumNugget.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemInfusedBone.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/renders/RenderCorgi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/ai/EntityAIBegDecoy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/ai/FlyAround.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/ai/EntityAIFly.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockEndgamium.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/ItemNamingRegistry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/EnumEndgamiumStages.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockCompressed.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemEndgamiumStages.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockNetherStar.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/EnumModToolMaterial.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/tools/ItemModMultitool.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemEndgamium.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/tools/ItemModSword.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockPotatoblock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemDummy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModBlocks.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/RecipeReplacers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModItems.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemMissing.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/ConfigurationHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/Recipes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/ColorHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockCB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/RecipeDynamic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/itemblocks/ItemEndgamiumBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/itemblocks/ItemCompressedBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/CompressedBlocks.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/ToolTipHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemCB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/reference/Reference.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/itemblocks/ItemEndgamiumCBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/lang/en_US.lang" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/event/RegisterCraftingEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/ChatInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/ChatInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/ChatUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/ICBMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/CBMessageHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/CBNetworkWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/asm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/asm/asm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/asm/MCPNames.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/asm/LoadingPlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/asm/ClassTransformer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/MessageUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/EnumModToolMaterial.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/tools/ItemModSword.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModItems.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/Recipes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/CommandBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/CBCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/CBPacketChat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/chat/CBPacketChat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/RecipeDynamic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/chat/CBChatOverride.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/chat/CBChatPingServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/chat/CBChatPingClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/ConfigurationHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/AchievementHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/commands/CBSpawnMob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/mobspawning/SpawnMob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/MathHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/commands/CBPingPong.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/commands/CBCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/DebugHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/EnumCorgiTypes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/GetFilesFromDir.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/GuiHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/CompressedBlocks.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/compressedblocks/lang/en_US.lang" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/hack/HackResourceLocation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/renders/RenderCorgi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/reference/Textures.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModEntities.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/tamables/corgis/EntityCorgi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/client/gui/ModGuiCorgicon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/commands/CBCorgicon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/tileentities/tileEntityBlazeGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/tileentities/TileEntityBlazeGenerator.java" />
       </list>
     </option>
   </component>
@@ -337,26 +368,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compressed-Blocks-2.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compressed-Blocks-2.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compressed-Blocks-2.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -368,6 +379,228 @@
               <option name="myItemId" value="Compressed-Blocks-2.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minecraftforge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minecraftforge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minecraftforge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minecraft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minecraft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minecraft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minecraft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inventory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -413,41 +646,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compressed-Blocks-2.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compressed-Blocks-2.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fabbe50" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compressedblocks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tamables" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="corgis" />
+              <option name="myItemId" value="tileentities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -494,6 +693,30 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compressed-Blocks-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
     </panes>
   </component>
@@ -840,19 +1063,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32502708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27735645" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3109426" sideWeight="0.5063966" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31419286" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31852654" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3217768" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19722815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1716418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24945295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -870,19 +1093,19 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32502708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27735645" sideWeight="0.5021322" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3109426" sideWeight="0.5063966" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32502708" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31852654" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3217768" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19722815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1716418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -908,7 +1131,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -917,317 +1140,191 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/entity/passive/EntityAmbientCreature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07597765">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/entity/EntityLiving.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36201116">
-          <caret line="59" column="80" selection-start-line="59" selection-start-column="80" selection-end-line="59" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/entity/passive/EntityBat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8681564">
-          <caret line="180" column="35" selection-start-line="180" selection-start-column="35" selection-end-line="180" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemCorgiFood.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/client/gui/ModGuiConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/chat/CBChatPingServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6359143">
+          <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/EnumCompressed.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/ConfigurationHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/block/Block.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/cpw/mods/fml/client/event/ConfigChangedEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="126" column="20" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.8039539">
+          <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/EnumEndgamiumStages.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/lang/Override.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#343#344#0" expanded="false" />
-            <element signature="e#370#371#0" expanded="false" />
-            <element signature="e#399#400#0" expanded="false" />
-            <element signature="e#426#427#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.7561779">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemEndgamiumStages.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/lang/Comparable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/item/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="525" column="16" selection-start-line="525" selection-start-column="16" selection-end-line="525" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/item/ItemPickaxe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/item/ItemTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="139" column="4" selection-start-line="139" selection-start-column="4" selection-end-line="143" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/EnumModToolMaterial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1554#1555#0" expanded="false" />
-            <element signature="e#1589#1590#0" expanded="false" />
-            <element signature="e#1640#1641#0" expanded="false" />
-            <element signature="e#1694#1695#0" expanded="false" />
-            <element signature="e#1733#1734#0" expanded="false" />
-            <element signature="e#1775#1776#0" expanded="false" />
-            <element signature="e#1810#1811#0" expanded="false" />
-            <element signature="e#1850#1851#0" expanded="false" />
-            <element signature="e#1887#1888#0" expanded="false" />
-            <element signature="e#1929#1930#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/item/ItemSpade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#544#545#0" expanded="false" />
-            <element signature="e#600#601#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemEndgamium.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="85" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/entity/boss/EntityWither.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4282#4283#0" expanded="false" />
-            <element signature="e#4323#4324#0" expanded="false" />
-            <element signature="e#4442#4443#0" expanded="false" />
-            <element signature="e#4482#4483#0" expanded="false" />
-            <element signature="e#4598#4599#0" expanded="false" />
-            <element signature="e#4638#4639#0" expanded="false" />
-            <element signature="e#4748#4749#0" expanded="false" />
-            <element signature="e#4789#4790#0" expanded="false" />
-            <element signature="e#15564#15565#0" expanded="false" />
-            <element signature="e#15588#15589#0" expanded="false" />
-            <element signature="e#16014#16015#0" expanded="false" />
-            <element signature="e#16090#16091#0" expanded="false" />
-            <element signature="e#20495#20496#0" expanded="false" />
-            <element signature="e#20529#20530#0" expanded="false" />
-            <element signature="e#20619#20620#0" expanded="false" />
-            <element signature="e#20650#20651#0" expanded="false" />
-            <element signature="e#21026#21027#0" expanded="false" />
-            <element signature="e#21053#21054#0" expanded="false" />
-            <element signature="e#21513#21514#0" expanded="false" />
-            <element signature="e#21566#21567#0" expanded="false" />
-            <element signature="e#21646#21647#0" expanded="false" />
-            <element signature="e#21699#21700#0" expanded="false" />
-            <element signature="e#21736#21737#0" expanded="false" />
-            <element signature="e#21801#21802#0" expanded="false" />
-            <element signature="e#21853#21854#0" expanded="false" />
-            <element signature="e#21931#21932#0" expanded="false" />
-            <element signature="e#22115#22116#0" expanded="false" />
-            <element signature="e#22193#22194#0" expanded="false" />
-            <element signature="e#22546#22547#0" expanded="false" />
-            <element signature="e#22615#22616#0" expanded="false" />
-            <element signature="e#22741#22742#0" expanded="false" />
-            <element signature="e#22792#22793#0" expanded="false" />
-            <element signature="e#22942#22943#0" expanded="false" />
-            <element signature="e#22982#22983#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/tools/ItemModMultitool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="85" selection-start-line="32" selection-start-column="85" selection-end-line="32" selection-end-column="85" />
-          <folding>
-            <element signature="e#2456#2457#0" expanded="false" />
-            <element signature="e#2483#2484#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/tools/ItemModSword.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="28" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5303#5304#0" expanded="false" />
-            <element signature="e#5364#5365#0" expanded="false" />
-            <element signature="e#6354#6355#0" expanded="false" />
-            <element signature="e#6381#6382#0" expanded="false" />
-            <element signature="e#6448#6449#0" expanded="false" />
-            <element signature="e#6487#6488#0" expanded="false" />
-            <element signature="e#6552#6553#0" expanded="false" />
-            <element signature="e#6580#6581#0" expanded="false" />
-            <element signature="e#7308#7309#0" expanded="false" />
-            <element signature="e#7350#7351#0" expanded="false" />
-            <element signature="e#7396#7397#0" expanded="false" />
-            <element signature="e#7457#7458#0" expanded="false" />
-            <element signature="e#7504#7505#0" expanded="false" />
-            <element signature="e#7556#7557#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/entity/passive/EntitySheep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.24382208">
+          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/renders/RenderCorgi.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/command/ICommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/command/CommandHelp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/AchievementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="150" selection-start-line="23" selection-start-column="150" selection-end-line="23" selection-end-column="150" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemPotatoBone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/command/CommandBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#815#816#0" expanded="false" />
+            <element signature="e#839#840#0" expanded="false" />
+            <element signature="e#882#883#0" expanded="false" />
+            <element signature="e#909#910#0" expanded="false" />
+            <element signature="e#1409#1410#0" expanded="false" />
+            <element signature="e#1436#1437#0" expanded="false" />
+            <element signature="e#18079#18080#0" expanded="false" />
+            <element signature="e#18107#18108#0" expanded="false" />
+            <element signature="e#18771#18772#0" expanded="false" />
+            <element signature="e#18808#18809#0" expanded="false" />
+            <element signature="e#19007#19008#0" expanded="false" />
+            <element signature="e#19070#19071#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/command/ICommandSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraftforge/common/network/ForgeNetworkHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.112026356">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/network/chat/CBChatPingClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/MathHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7450658">
+          <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/mobspawning/SpawnMob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31578946">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockEndgamium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19572368">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockEndgamiumC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19572368">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockNetherStar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25714287">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.13980263">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockPotatoblock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31428573">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.33552632">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModBlocks.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/commands/CBPingPong.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ItemImport.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/DebugHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModFallbackBlocks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModRecipes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6078212">
-          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="149" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/RecipeReplacers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63910615">
-          <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemDummy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3039106">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/items/ItemMissing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47486034">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/ConfigurationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49385476">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.550838">
-          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1235,31 +1332,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockCompressed.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/Recipes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/ColorHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/reference/ModItemLibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33903134">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1267,34 +1340,31 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/itemblocks/ItemCompressedBlock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="127" selection-start-line="47" selection-start-column="127" selection-end-line="47" selection-end-column="127" />
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/ItemCB.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/GetFilesFromDir.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/utility/ToolTipHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/EnumCorgiTypes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6578512">
-          <caret line="59" column="57" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#756#772#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/reference/Reference.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/client/gui/GuiFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="101" selection-start-line="12" selection-start-column="101" selection-end-line="12" selection-end-column="101" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1302,117 +1372,247 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/CompressedBlocks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockCB.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/GuiHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/RecipeDynamic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1458410934393" expanded="false" signature="1457:1931" placeholder="..." />
-            <marker date="1458410934393" expanded="false" signature="2106:2553" placeholder="..." />
-            <marker date="1458410934393" expanded="false" signature="2708:3161" placeholder="..." />
-            <marker date="1458410934393" expanded="false" signature="3304:3754" placeholder="..." />
-            <marker date="1458410934393" expanded="false" signature="3906:4354" placeholder="..." />
-            <marker date="1458410934393" expanded="false" signature="4500:4968" placeholder="..." />
-            <marker date="1458410934393" expanded="false" signature="5128:5566" placeholder="..." />
-            <marker date="1458410934393" expanded="false" signature="5716:6170" placeholder="..." />
+            <element signature="imports" expanded="false" />
+            <element signature="e#389#390#0" expanded="false" />
+            <element signature="e#416#417#0" expanded="false" />
+            <element signature="e#534#535#0" expanded="false" />
+            <element signature="e#561#562#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockEndgamium.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/commands/CBCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5338843">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/block/BlockEndgamiumC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19669421">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getCommandName#0;class#CBCommand#0" expanded="false" />
+            <element signature="method#canCommandSenderUseCommand#0;class#CBCommand#0" expanded="false" />
+            <element signature="method#getDate#0;class#CBCommand#0" expanded="false" />
+            <element signature="method#getWorldSpawn#0;class#CBCommand#0" expanded="false" />
+            <marker date="1459932742802" expanded="false" signature="2409:8168" placeholder="..." />
+            <marker date="1459932742802" expanded="true" signature="2495:7780" placeholder="..." />
+            <marker date="1459932742802" expanded="false" signature="7848:7976" placeholder="..." />
+            <marker date="1459932742802" expanded="false" signature="8003:8150" placeholder="..." />
+            <marker date="1459932742802" expanded="false" signature="8237:9462" placeholder="..." />
+            <marker date="1459932742802" expanded="false" signature="9526:10527" placeholder="..." />
+            <marker date="1459932742802" expanded="false" signature="10550:10730" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/assets/compressedblocks/lang/en_US.lang">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="116" selection-start-line="26" selection-start-column="116" selection-end-line="26" selection-end-column="116" />
+          <caret line="126" column="35" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/itemblocks/ItemEndgamiumBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47768596">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/item/itemblocks/ItemEndgamiumCBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.646281">
-          <caret line="23" column="105" selection-start-line="23" selection-start-column="105" selection-end-line="23" selection-end-column="105" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/event/RegisterCraftingEvent.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/util/ResourceLocation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/handler/AchievementHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/init/ModEntities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="167" selection-start-line="19" selection-start-column="167" selection-end-line="19" selection-end-column="167" />
+          <caret line="19" column="102" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/entity/ai/EntityAINearestAttackableTarget.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/lib/DataCorgi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="112" selection-start-line="24" selection-start-column="112" selection-end-line="24" selection-end-column="122" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/entity/ai/EntityAITargetNonTamed.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/models/ModelCorgi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/proxy/ClientProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/registry/RegistryCorgi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/reference/Reference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/client/renderer/entity/RenderManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="114" column="17" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/client/gui/Gui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/client/gui/inventory/GuiContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/client/gui/GuiScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/client/renderer/InventoryEffectRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/client/gui/inventory/GuiInventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="86" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/tamables/corgis/EntityCorgi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3371901">
-          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="445" column="0" selection-start-line="445" selection-start-column="0" selection-end-line="445" selection-end-column="0" />
+          <folding>
+            <element signature="method#EntityCorgi#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#applyTraits#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#applyEntityAttributes#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#setAttackTarget#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#entityInit#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#func_145780_a#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#writeEntityToNBT#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#readEntityFromNBT#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#setCorgiType#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#getLivingSound#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#onLivingUpdate#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#onUpdate#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#spawnTamed#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#getShadingWhileShaking#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#getShakeAngle#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#getInterestedAngle#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#attackEntityFrom#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#attackEntityAsMob#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#setTamed#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#interact#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#handleHealthUpdate#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#getTailRotation#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#isBreedingItem#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#setAngry#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#setCollarColor#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#setCollarColorOnColoring#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#createChild#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#func_70918_i#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#canMateWith#0;class#EntityCorgi#0" expanded="false" />
+            <element signature="method#func_142018_a#0;class#EntityCorgi#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10-sources.jar!/net/minecraft/tileentity/TileEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/client/gui/ModGuiCorgicon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
+            <element signature="e#1539#1540#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/commands/CBCorgicon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/reference/Textures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/entities/renders/RenderCorgi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fabbe50/compressedblocks/tileentities/TileEntityBlazeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22628951">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>

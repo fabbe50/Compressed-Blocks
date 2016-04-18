@@ -59,8 +59,14 @@ public class ItemModSword extends ItemCB {
 
     @Override
     public void addInformation (ItemStack stack, EntityPlayer player, List list, boolean par) { //Tooltip text adder
-        list.add(ColorHelper.magenta + "Nothing is more fabulous than a rainbow sword!");
-        list.add(ColorHelper.blue + "This sword obliterates mobs, hurts players and SOMETIMES love animals.");
+        if (swordMaterial == EnumModToolMaterial.endgamium) {
+            list.add(ColorHelper.magenta + "Nothing is more fabulous than a rainbow sword!");
+            list.add(ColorHelper.blue + "This sword obliterates mobs, hurts players and SOMETIMES love animals.");
+        }
+        else if (swordMaterial == EnumModToolMaterial.potato) {
+            list.add(ColorHelper.magenta + "Ehh, WahT?");
+        }
+        else {}
     }
 
     public void onUpdate(ItemStack par1ItemStack, World par2World, Entity par3Entity, int par4, boolean par5) {

@@ -6,6 +6,7 @@ import com.fabbe50.compressedblocks.reference.Reference;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import com.fabbe50.compressedblocks.utility.ToolTipHelper;
 import com.typesafe.config.Config;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameData;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
@@ -36,6 +37,7 @@ public class RecipeDynamic {
     static ItemStack component6;
     static ItemStack component7;
     static ItemStack component8;
+    static ItemStack component9;
 
     public static void init() {
         setComponents();
@@ -48,7 +50,7 @@ public class RecipeDynamic {
             notice(component1, true);
         }
         else if (ConfigurationHandler.noSafeRecipe) {
-            component1 = new ItemStack(ModFallbackBlocks.comprcobbleblock, 1, 7);
+            component1 = new ItemStack(ModFallbackBlocks.comprcobbleblock, 1, 4);
             notice(component1, false);
         }
         else if (!ConfigurationHandler.noSafeRecipe) {
@@ -105,44 +107,60 @@ public class RecipeDynamic {
         }           //Component5: Original: Gaia Ingot [Botania]; Fallback: End Stone [Minecraft]
         if (ModItemLibrary.brewOfFlowingSpirit != null) {
             component6 = new ItemStack(ModItemLibrary.brewOfFlowingSpirit, 1, 96);
-            notice(component1, true);
+            notice(component6, true);
         }
         else if (ConfigurationHandler.noSafeRecipe) {
             component6 = new ItemStack(Items.potionitem, 1, 16417);
-            notice(component1, false);
+            notice(component6, false);
         }
         else if (!ConfigurationHandler.noSafeRecipe) {
             component6 = new ItemStack(ModItems.missingitem);
-            notice(component1, false);
+            notice(component6, false);
         } //Component6: Original: Brew Of FLowing Spirit [Witchery]; Fallback: Splash Potion of Regeneration II [Minecraft]
         if (ModItemLibrary.iridium != null) {
             component7 = new ItemStack(ModItemLibrary.iridium);
-            notice(component1, true);
+            notice(component7, true);
         }
         else if (ConfigurationHandler.noSafeRecipe) {
             component7 = new ItemStack(Blocks.obsidian);
-            notice(component1, false);
+            notice(component7, false);
         }
         else if (!ConfigurationHandler.noSafeRecipe) {
             component7 = new ItemStack(ModItems.missingitem);
-            notice(component1, false);
+            notice(component7, false);
         }             //Component7: Original: Iridium Plate [Industrial Craft 2]; Fallback: Obsidian [Minecraft]
         if (ModItemLibrary.enderium != null) {
             component8 = new ItemStack(ModItemLibrary.enderium, 1, 12);
-            notice(component1, true);
+            notice(component8, true);
         }
         else if (ConfigurationHandler.noSafeRecipe) {
             component8 = new ItemStack(Blocks.enchanting_table);
-            notice(component1, false);
+            notice(component8, false);
         }
         else if (!ConfigurationHandler.noSafeRecipe) {
             component8 = new ItemStack(ModItems.missingitem);
-            notice(component1, false);
+            notice(component8, false);
         }            //Component8: Original: Enderium Block [Thermal Foundation]; Fallback: Enchanting Table [Minecraft]
+
+        //Is Vanilla
+        if (Loader.isModLoaded("Extra Utilities") || Loader.isModLoaded("witchery") || Loader.isModLoaded("AWWayofTime") ||
+                Loader.isModLoaded("TConstruct") || Loader.isModLoaded("ForbiddenMagic") || Loader.isModLoaded("Botania") ||
+                Loader.isModLoaded("IC2") || Loader.isModLoaded("ThermalFoundation")) {
+            component9 = new ItemStack(ModBlocks.comprpotatoblock, 1, 7);
+            notice(component9, true);
+        }
+        else if (ConfigurationHandler.noSafeRecipe) {
+            component9 = new ItemStack(ModBlocks.comprpotatoblock, 1, 3);
+            notice(component9, false);
+        }
+        else if (!ConfigurationHandler.noSafeRecipe) {
+            component8 = new ItemStack(ModItems.missingitem);
+            notice(component9, false);
+        }       //Component9: Original: Octuple Compressed Potato Block [CB]; Fallback: Quadruple Compressed Potato Block [CB]
     }
 
     private static void setRecipes() {
-        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.endgamium), component1, component2, component3, component4, component5, component6, component7, component8, comprpotato);
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.endgamium), component1, component2, component3, component4, component5, component6, component7, component8, component9);
         GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.comprstarblock), "sss", "sss", "sss", 's', component4);
     }
 

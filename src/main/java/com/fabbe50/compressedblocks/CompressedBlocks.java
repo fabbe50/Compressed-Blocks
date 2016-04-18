@@ -1,5 +1,7 @@
 package com.fabbe50.compressedblocks;
 
+import com.fabbe50.compressedblocks.commands.CBCommand;
+import com.fabbe50.compressedblocks.commands.CBCorgicon;
 import com.fabbe50.compressedblocks.event.RegisterCraftingEvent;
 import com.fabbe50.compressedblocks.handler.AchievementHandler;
 import com.fabbe50.compressedblocks.handler.ConfigurationHandler;
@@ -7,19 +9,23 @@ import com.fabbe50.compressedblocks.init.*;
 import com.fabbe50.compressedblocks.item.ItemCorgiFood;
 import com.fabbe50.compressedblocks.lib.DataCompressed;
 import com.fabbe50.compressedblocks.init.ModEntities;
+import com.fabbe50.compressedblocks.commands.CBPingPong;
+import com.fabbe50.compressedblocks.network.chat.CBChatPingClient;
+import com.fabbe50.compressedblocks.network.chat.CBChatPingServer;
 import com.fabbe50.compressedblocks.proxy.ServerProxy;
 import com.fabbe50.compressedblocks.reference.Dependencies;
 import com.fabbe50.compressedblocks.reference.Reference;
+import com.fabbe50.compressedblocks.reference.Textures;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import com.fabbe50.compressedblocks.utility.ToolTipHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.*;
+import net.minecraft.command.ICommandManager;
+import net.minecraft.command.ServerCommandManager;
+import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS, dependencies = Dependencies.dependencies)
 public class CompressedBlocks {
@@ -37,6 +43,7 @@ public class CompressedBlocks {
         //PreInit Starts Here
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         DataCompressed.init();
+        Textures.initCorgiTexture();
         ModItems.init();
         ModBlocks.init();
         ModFallbackBlocks.init();
@@ -51,7 +58,6 @@ public class CompressedBlocks {
         ItemImport.init();
         AchievementHandler.init();
         ItemCorgiFood.registerFoodTypes();
-        //ModRecipes.init();
         RecipeDynamic.init();
         Recipes.init();
         FMLCommonHandler.instance().bus().register(new RegisterCraftingEvent());
@@ -65,7 +71,24 @@ public class CompressedBlocks {
         //PostInit Starts Here
         proxy.registerRenders();
         RecipeReplacers.init();
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         //PostInit Ends Here
         LogHelper.info("Post-Initialization Complete");
+    }
+
+    @Mod.EventHandler
+    public void serverStart(FMLServerStartingEvent event) {
+        MinecraftServer server = MinecraftServer.getServer();
+        ICommandManager command = server.getCommandManager();
+        ServerCommandManager manager = (ServerCommandManager) command;
+        manager.registerCommand(new CBPingPong());
+        manager.registerCommand(new CBCommand());
+        manager.registerCommand(new CBCorgicon());
+    }
+
+    @Mod.EventHandler
+    public void afterServerStart (FMLServerStartedEvent event) {
+        MinecraftForge.EVENT_BUS.register(new CBChatPingServer());
+        MinecraftForge.EVENT_BUS.register(new CBChatPingClient());
     }
 }

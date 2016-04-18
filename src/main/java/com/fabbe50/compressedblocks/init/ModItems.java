@@ -22,6 +22,7 @@ public class ModItems {
     public static final ItemCB endgamiumstages = new ItemEndgamiumStages();
     public static final ItemCB endgamiummultitool = new ItemModMultitool(EnumModToolMaterial.endgamium);
     public static final ItemCB endgamiumsword = new ItemModSword(EnumModToolMaterial.endgamium);
+    public static final ItemCB potatosword = new ItemModSword(EnumModToolMaterial.potato);
     public static final ItemCB missingitem = new ItemMissing();
 
     public static void init() {
@@ -34,6 +35,7 @@ public class ModItems {
         GameRegistry.registerItem(endgamiumstages, "endgamiumstages");
         GameRegistry.registerItem(endgamiummultitool, "endgamiumtool");
         GameRegistry.registerItem(endgamiumsword, "endgamiumsword");
+        GameRegistry.registerItem(potatosword, "potatosword");
         GameRegistry.registerItem(missingitem, "missing");
         LogHelper.info("Done!");
     }

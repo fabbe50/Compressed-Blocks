@@ -10,6 +10,7 @@ item.compressedblocks:endgamium_nugget.name=Endgamium Nugget
 item.compressedblocks:infusedbone.name=Endgamium Infused Bone
 item.compressedblocks:potatobone.name=Potato on a Bone
 item.compressedblocks:endgamiumtool.name=Endgamium Multitool (WIP)
+item.compressedblocks:potatosword.name=Potato Sword
 
 #############################################################################
 #                                 Meta Items                                #
@@ -97,10 +98,30 @@ itemGroup.compressedblocks.blocks=CB2: Blocks
 #                                Achievement                                #
 #############################################################################
 achievement.star=The 81st Beginning
-achievement.star.desc=Craft a compressed netherstar block
+achievement.star.desc=Craft a compressed netherstar block.
 achievement.endgam=Too Much Time Wasted
-achievement.endgam.desc=Craft a piece of Endgamium
+achievement.endgam.desc=Craft a piece of Endgamium.
 achievement.potato="Wallpaper?" -Zirlian
-achievement.potato.desc=Craft a compressed potato block
+achievement.potato.desc=Craft a compressed potato block.
 achievement.potatooct=OMG POTATOES!!
 achievement.potatooct.desc=Craft an octuple compressed potato block.
+achievement.endsword=Stabby Stabs
+achievement.endsword.desc=Craft an Endgamium Sword.
+achievement.endtool=Miny Mine of Minings
+achievement.endtool.desc=Craft an Endgamium Multitool.
+achievement.pingegg=Forever Alone
+achievement.pingegg.desc=Respond to your own ping.
+
+#############################################################################
+#                                    GUI                                    #
+#############################################################################
+#Titles
+gui.title.corgicon=Corgicon
+
+#Buttons
+gui.button.ok=Okay
+gui.button.close=Close
+gui.button.next=Next
+gui.button.prev=Previous
+gui.button.reset=Reset
+gui.button.rotation=Toggle Rotation

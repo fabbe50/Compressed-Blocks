@@ -15,13 +15,12 @@ public class SpawnMob extends ItemMonsterPlacer{
     protected static String entityToSpawnName = "";
     protected static String entityToSpawnNameFull = "";
     protected static EntityLiving entityToSpawn = null;
-    static EntityCorgi corgi;
 
-    public static Entity spawnEntity(World parWorld, double parX, double parY, double parZ, Entity corgi)
+    public static Entity spawnEntity(World parWorld, double parX, double parY, double parZ, Entity entitytospawn)
     {
-        entityToSpawnName = corgi.toString().substring(6).toLowerCase();
+        entityToSpawnName = entitytospawn.toString().substring(6).toLowerCase();
 
-        if (!parWorld.isRemote) //if on server don't spawn on client
+        if (!parWorld.isRemote) //If not server, spawn on client
         {
             entityToSpawnNameFull = Reference.MOB_PREFIX + entityToSpawnName;
             if (EntityList.stringToClassMapping.containsKey(entityToSpawnNameFull)) {
@@ -35,7 +34,7 @@ public class SpawnMob extends ItemMonsterPlacer{
                 Entity entity = null;
 
                 for (int j = 0; j < 1; ++j) {
-                    entity = EntityList.createEntityByID(EntityList.getEntityID(corgi), parWorld);
+                    entity = EntityList.createEntityByID(EntityList.getEntityID(entitytospawn), parWorld);
 
                     if (entity != null && entity instanceof EntityLivingBase) {
                         EntityLiving entityliving = (EntityLiving) entity;

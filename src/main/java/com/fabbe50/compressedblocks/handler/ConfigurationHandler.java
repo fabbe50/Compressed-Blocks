@@ -16,11 +16,13 @@ import java.io.File;
 public class ConfigurationHandler {
     public static Configuration configuration;
 
-    public static boolean noSafeRecipe = true;
-    public static float lightLevelForEndgamium = 1.0f;
-    public static float lightLevelForStarblock = 0.85f;
-    public static int endgamiumdamagevalue = 10;
-    public static int endgamiumextradamage = 1000;
+    public static boolean noSafeRecipe;
+    public static float lightLevelForEndgamium;
+    public static float lightLevelForStarblock;
+    public static int endgamiumdamagevalue;
+    public static int endgamiumextradamage;
+    public static boolean pinginchat;
+    public static int pingcommandpermission;
 
     public static void init(File configFile) {
         //Create Config-object from Config File
@@ -45,6 +47,8 @@ public class ConfigurationHandler {
         lightLevelForStarblock = configuration.getFloat("comprstarLightLevel", Configuration.CATEGORY_GENERAL, 0.85f, 0.0f, 1.0f, "What light level does a Compressed Nether Star Block Give?");
         endgamiumdamagevalue = configuration.getInt("endgamiumdamagevalue", Configuration.CATEGORY_GENERAL, 10, 0, 100, "How much damage should endgamium do? (numbers are in half hearts)");
         endgamiumextradamage = configuration.getInt("endgamiumextradamage", Configuration.CATEGORY_GENERAL, 1000, 0, 100, "How much extra damage does the sword do to mobs? (set to 0 if you want damage to stay the same for all mobs)");
+        pinginchat = configuration.getBoolean("pinginchat", Configuration.CATEGORY_GENERAL, false, "Can you type ping in chat for the server to respond pong? (WIP)");
+        pingcommandpermission = configuration.getInt("pingcommandpermission", Configuration.CATEGORY_GENERAL, 0, 0, 4, "How high OP-level do you need to use ping-command? '0' means everyone can use it, 4 is only highest tier OP.");
 
         if (configuration.hasChanged()){
             configuration.save();

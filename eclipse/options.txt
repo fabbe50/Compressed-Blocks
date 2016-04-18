@@ -8,7 +8,7 @@ guiScale:2
 particles:0
 bobView:true
 anaglyph3d:false
-advancedOpengl:true
+advancedOpengl:false
 maxFps:260
 fboEnable:true
 difficulty:1
@@ -16,7 +16,7 @@ fancyGraphics:true
 ao:2
 clouds:true
 resourcePacks:[]
-lastServer:
+lastServer:127.0.0.1
 lang:en_US
 chatVisibility:0
 chatColors:true

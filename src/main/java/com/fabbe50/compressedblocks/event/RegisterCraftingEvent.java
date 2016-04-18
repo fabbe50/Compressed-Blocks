@@ -27,5 +27,11 @@ public class RegisterCraftingEvent {
         if(event.crafting.getItem().equals(new ItemStack(ModBlocks.comprpotatoblock,1,7).getItem())) {
             event.player.addStat(AchievementHandler.foodIsWasted, 1);
         }
+        if(event.crafting.getItem().equals(new ItemStack(ModItems.endgamiummultitool).getItem())) {
+            event.player.addStat(AchievementHandler.endgameMining, 1);
+        }
+        if(event.crafting.getItem().equals(new ItemStack(ModItems.endgamiumsword).getItem())) {
+            event.player.addStat(AchievementHandler.endgameSword, 1);
+        }
     }
 }

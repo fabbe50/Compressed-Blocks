@@ -9,7 +9,8 @@ import net.minecraft.item.ItemStack;
  * Created by fabbe50 on 07/03/2016.
  */
 public enum EnumModToolMaterial {
-    endgamium (3,9001,30f,MathHelper.endgamiumbasedamage,35);
+    endgamium (3,9001,30f,MathHelper.endgamiumbasedamage,35),
+    potato (3,15,1f,6,20);
 
     @Deprecated public Item customCraftingMaterial = null;
     private ItemStack repairMaterial = null;
