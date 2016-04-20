@@ -1,7 +1,7 @@
 package com.fabbe50.compressedblocks.init;
 
-import com.fabbe50.compressedblocks.block.BlockCompressed;
-import com.fabbe50.compressedblocks.item.itemblocks.ItemCompressedBlock;
+import com.fabbe50.compressedblocks.common.block.BlockCompressed;
+import com.fabbe50.compressedblocks.common.item.itemblocks.ItemCompressedBlock;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
 

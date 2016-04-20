@@ -1,25 +1,14 @@
 package com.fabbe50.compressedblocks.init;
 
-import com.fabbe50.compressedblocks.handler.ConfigurationHandler;
-import com.fabbe50.compressedblocks.reference.ModItemLibrary;
-import com.fabbe50.compressedblocks.reference.Reference;
+import com.fabbe50.compressedblocks.core.handler.ConfigurationHandler;
+import com.fabbe50.compressedblocks.core.reference.ModItemLibrary;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import com.fabbe50.compressedblocks.utility.ToolTipHelper;
-import com.typesafe.config.Config;
 import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.registry.GameData;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import org.apache.commons.lang3.text.WordUtils;
-
-import javax.annotation.Nonnull;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
 
 /**
  * Created by fabbe50 on 19/03/2016.

@@ -1,7 +1,6 @@
 package com.fabbe50.compressedblocks.init;
 
-import com.fabbe50.compressedblocks.handler.RecipeHandler;
-import com.fabbe50.compressedblocks.reference.ModItemLibrary;
+import com.fabbe50.compressedblocks.core.reference.ModItemLibrary;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 
 /**

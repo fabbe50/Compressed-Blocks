@@ -1,9 +1,9 @@
 package com.fabbe50.compressedblocks.init;
 
-import com.fabbe50.compressedblocks.block.*;
-import com.fabbe50.compressedblocks.item.itemblocks.ItemCompressedBlock;
-import com.fabbe50.compressedblocks.item.itemblocks.ItemEndgamiumBlock;
-import com.fabbe50.compressedblocks.reference.Reference;
+import com.fabbe50.compressedblocks.common.block.*;
+import com.fabbe50.compressedblocks.common.item.itemblocks.ItemCompressedBlock;
+import com.fabbe50.compressedblocks.common.item.itemblocks.ItemEndgamiumBlock;
+import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -20,7 +20,6 @@ public class ModBlocks {
     public static final BlockCB endgamiumblockc = new BlockEndgamiumC();
     public static final BlockCB potatoblock = new BlockPotatoblock();
 
-
     //Blocks with Metadata
     public static BlockCompressed comprpotatoblock = new BlockCompressed("potato", 0);
 
@@ -34,7 +33,6 @@ public class ModBlocks {
         GameRegistry.registerBlock(endgamiumblock, ItemEndgamiumBlock.class, "endgamiumblock");
         GameRegistry.registerBlock(endgamiumblockc, "endgamiumblockc");
         GameRegistry.registerBlock(potatoblock, "potatoblock");
-
 
         //Blocks with Metadata
         GameRegistry.registerBlock(comprpotatoblock, ItemCompressedBlock.class, "potato");

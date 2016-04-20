@@ -1,6 +1,6 @@
 package com.fabbe50.compressedblocks.lib;
 
-import com.fabbe50.compressedblocks.entities.EnumCorgiTypes;
+import com.fabbe50.compressedblocks.common.entity.EnumCorgiTypes;
 
 /**
  * Created by fabbe50 on 25/02/2016.

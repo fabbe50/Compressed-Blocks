@@ -21,7 +21,7 @@ public enum EnumModToolMaterial {
     private final int maxUses;
     /** The strength of this tool material against blocks which it is effective against. */
     private final float efficiencyOnProperMaterial;
-    /** Damage versus entities. */
+    /** Damage versus entity. */
     private final float damageVsEntity;
     /** Defines the natural enchantability factor of the material. [35 is perfect for only allowing unbreaking on a tool!]*/
     private final int enchantability;

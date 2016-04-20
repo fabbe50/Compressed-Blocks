@@ -1,6 +1,5 @@
 package com.fabbe50.compressedblocks.init;
 
-import com.fabbe50.compressedblocks.handler.RecipeHandler;
 import com.fabbe50.compressedblocks.lib.EnumCompressed;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import cpw.mods.fml.common.Loader;

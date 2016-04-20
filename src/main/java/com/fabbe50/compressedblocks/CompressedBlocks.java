@@ -1,21 +1,21 @@
 package com.fabbe50.compressedblocks;
 
-import com.fabbe50.compressedblocks.commands.CBCommand;
-import com.fabbe50.compressedblocks.commands.CBCorgicon;
-import com.fabbe50.compressedblocks.event.RegisterCraftingEvent;
-import com.fabbe50.compressedblocks.handler.AchievementHandler;
-import com.fabbe50.compressedblocks.handler.ConfigurationHandler;
+import com.fabbe50.compressedblocks.core.commands.CBCommand;
+import com.fabbe50.compressedblocks.core.commands.CBCorgicon;
+import com.fabbe50.compressedblocks.core.event.RegisterCraftingEvent;
+import com.fabbe50.compressedblocks.core.handler.AchievementHandler;
+import com.fabbe50.compressedblocks.core.handler.ConfigurationHandler;
 import com.fabbe50.compressedblocks.init.*;
-import com.fabbe50.compressedblocks.item.ItemCorgiFood;
+import com.fabbe50.compressedblocks.common.item.ItemCorgiFood;
 import com.fabbe50.compressedblocks.lib.DataCompressed;
 import com.fabbe50.compressedblocks.init.ModEntities;
-import com.fabbe50.compressedblocks.commands.CBPingPong;
-import com.fabbe50.compressedblocks.network.chat.CBChatPingClient;
-import com.fabbe50.compressedblocks.network.chat.CBChatPingServer;
-import com.fabbe50.compressedblocks.proxy.ServerProxy;
-import com.fabbe50.compressedblocks.reference.Dependencies;
-import com.fabbe50.compressedblocks.reference.Reference;
-import com.fabbe50.compressedblocks.reference.Textures;
+import com.fabbe50.compressedblocks.core.commands.CBPingPong;
+import com.fabbe50.compressedblocks.core.network.chat.CBChatPingClient;
+import com.fabbe50.compressedblocks.core.network.chat.CBChatPingServer;
+import com.fabbe50.compressedblocks.core.proxy.ServerProxy;
+import com.fabbe50.compressedblocks.core.reference.Dependencies;
+import com.fabbe50.compressedblocks.core.reference.Reference;
+import com.fabbe50.compressedblocks.core.reference.Textures;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import com.fabbe50.compressedblocks.utility.ToolTipHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -46,6 +46,7 @@ public class CompressedBlocks {
         Textures.initCorgiTexture();
         ModItems.init();
         ModBlocks.init();
+        ModTileEntities.init();
         ModFallbackBlocks.init();
         ModEntities.mainRegistry();
         //PreInit Ends Here
@@ -55,6 +56,7 @@ public class CompressedBlocks {
     public void init(FMLInitializationEvent event) {
         LogHelper.info("Initializing");
         //Init Starts Here
+        ModTileEntities.initTileEntity();
         ItemImport.init();
         AchievementHandler.init();
         ItemCorgiFood.registerFoodTypes();

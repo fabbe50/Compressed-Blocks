@@ -1,11 +1,11 @@
 package com.fabbe50.compressedblocks.init;
 
-import com.fabbe50.compressedblocks.item.*;
-import com.fabbe50.compressedblocks.item.items.*;
-import com.fabbe50.compressedblocks.item.tools.ItemModMultitool;
-import com.fabbe50.compressedblocks.item.tools.ItemModSword;
+import com.fabbe50.compressedblocks.common.item.*;
+import com.fabbe50.compressedblocks.common.item.items.*;
+import com.fabbe50.compressedblocks.common.item.tools.ItemModMultitool;
+import com.fabbe50.compressedblocks.common.item.tools.ItemModSword;
 import com.fabbe50.compressedblocks.lib.EnumModToolMaterial;
-import com.fabbe50.compressedblocks.reference.Reference;
+import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.fabbe50.compressedblocks.utility.LogHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 

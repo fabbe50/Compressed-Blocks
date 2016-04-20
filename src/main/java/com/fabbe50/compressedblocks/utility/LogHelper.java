@@ -1,6 +1,6 @@
 package com.fabbe50.compressedblocks.utility;
 
-import com.fabbe50.compressedblocks.reference.Reference;
+import com.fabbe50.compressedblocks.core.reference.Reference;
 import cpw.mods.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
 

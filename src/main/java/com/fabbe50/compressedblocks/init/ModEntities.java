@@ -1,8 +1,8 @@
 package com.fabbe50.compressedblocks.init;
 
 import com.fabbe50.compressedblocks.CompressedBlocks;
-import com.fabbe50.compressedblocks.entities.tamables.corgis.EntityCorgi;
-import com.fabbe50.compressedblocks.reference.Reference;
+import com.fabbe50.compressedblocks.common.entity.tamables.corgis.EntityCorgi;
+import com.fabbe50.compressedblocks.core.reference.Reference;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;

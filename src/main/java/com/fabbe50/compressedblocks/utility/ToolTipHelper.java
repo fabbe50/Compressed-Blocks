@@ -1,6 +1,6 @@
 package com.fabbe50.compressedblocks.utility;
 
-import com.fabbe50.compressedblocks.reference.Reference;
+import com.fabbe50.compressedblocks.core.reference.Reference;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.ModContainer;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

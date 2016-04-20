@@ -119,7 +119,7 @@ public class ResearchItem
     private ItemStack[] itemTriggers;
     
     /**
-     * Scanning these entities will have a chance of revealing hidden knowledge in the thaumonomicon
+     * Scanning these entity will have a chance of revealing hidden knowledge in the thaumonomicon
      */
     private String[] entityTriggers;
     

@@ -1,6 +1,6 @@
 package com.fabbe50.compressedblocks.utility;
 
-import com.fabbe50.compressedblocks.handler.ConfigurationHandler;
+import com.fabbe50.compressedblocks.core.handler.ConfigurationHandler;
 
 /**
  * Created by fabbe50 on 08/03/2016.
