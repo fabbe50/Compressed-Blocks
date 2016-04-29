@@ -1,5 +1,6 @@
 package com.fabbe50.compressedblocks.core.client.gui;
 
+import com.fabbe50.compressedblocks.common.container.ContainerBlazeGen;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntityBlazeGen;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -17,7 +18,7 @@ public class GUIBlazeGen extends GuiContainer {
     public TileEntityBlazeGen blazeGen;
 
     public GUIBlazeGen (InventoryPlayer inventoryPlayer, TileEntityBlazeGen entity) {
-        super(ContainerBlazeGen(inventoryPlayer, entity));
+        super(new ContainerBlazeGen(inventoryPlayer, entity));
 
         this.blazeGen = entity;
 
