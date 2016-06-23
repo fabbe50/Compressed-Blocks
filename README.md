@@ -9,3 +9,4 @@ Feel free to use this for any modpack (public or private) as long as these condi
 
 ### Note:
 The authors of this mod holds no responsibility to any damages to your game-instance or system caused by the mod.
+Backing up your world is recommended before adding this mod to your game.
