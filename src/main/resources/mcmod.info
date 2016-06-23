@@ -1,0 +1,16 @@
+[
+{
+  "modid": "compressedblocks",
+  "name": "Compressed Blocks",
+  "description": "Adds stuff",
+  "version": "3.0.0.0",
+  "mcversion": "1.9",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["fabbe50", "Levinaxr", "Zirlian"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": [tficore]
+}
+]

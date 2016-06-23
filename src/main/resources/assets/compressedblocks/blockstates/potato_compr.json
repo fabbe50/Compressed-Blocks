@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"type=single": { "model": "compressedblocks:potato_compr_single" },
+		"type=double": { "model": "compressedblocks:potato_compr_double" },
+		"type=triple": { "model": "compressedblocks:potato_compr_triple" },
+		"type=quadruple": { "model": "compressedblocks:potato_compr_quadruple" },
+		"type=quintuple": { "model": "compressedblocks:potato_compr_quintuple" },
+		"type=sextuple": { "model": "compressedblocks:potato_compr_sextuple" },
+		"type=septuple": { "model": "compressedblocks:potato_compr_septuple" },
+		"type=octuple": { "model": "compressedblocks:potato_compr_octuple" }
+	}
+}

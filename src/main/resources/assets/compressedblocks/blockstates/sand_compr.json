@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"type=single": { "model": "compressedblocks:sand_compr_single" },
+		"type=double": { "model": "compressedblocks:sand_compr_double" },
+		"type=triple": { "model": "compressedblocks:sand_compr_triple" },
+		"type=quadruple": { "model": "compressedblocks:sand_compr_quadruple" },
+		"type=quintuple": { "model": "compressedblocks:sand_compr_quintuple" },
+		"type=sextuple": { "model": "compressedblocks:sand_compr_sextuple" },
+		"type=septuple": { "model": "compressedblocks:sand_compr_septuple" },
+		"type=octuple": { "model": "compressedblocks:sand_compr_octuple" }
+	}
+}
