@@ -1,7 +1,10 @@
 #############################################################################
 #                                  Items                                    #
 #############################################################################
-item.tficore:testItem.name=Testing Item
+item.compressedblocks:endgamiumIngot.name=Endgamium Ingot
+item.compressedblocks:endgamiumNugget.name=Endgamium Nugget
+item.compressedblocks:potatoBone.name=Potato on a Bone
+item.compressedblocks:endgamiumBone.name=Endgamium Infused Bone
 
 #############################################################################
 #                                Meta Items                                 #
@@ -12,12 +15,56 @@ item.tficore:testItem.name=Testing Item
 #                                  Blocks                                   #
 #############################################################################
 #Normal Blocks
-tile.tficore:testBlock.name=Testing Block
+tile.compressedblocks:potatoBlock.name=Potato Block
 
 #############################################################################
 #                                Meta Blocks                                #
 #############################################################################
-
+#Compressed Potato
+tile.compressedblocks:potato_compr_single.name=Single Compressed Potato
+tile.compressedblocks:potato_compr_double.name=Double Compressed Potato
+tile.compressedblocks:potato_compr_triple.name=Triple Compressed Potato
+tile.compressedblocks:potato_compr_quadruple.name=Quadruple Compressed Potato
+tile.compressedblocks:potato_compr_quintuple.name=Quintuple Compressed Potato
+tile.compressedblocks:potato_compr_sextuple.name=Sextuple Compressed Potato
+tile.compressedblocks:potato_compr_septuple.name=Septuple Compressed Potato
+tile.compressedblocks:potato_compr_octuple.name=Octuple Compressed Potato
+#Compressed Cobblestone
+tile.compressedblocks:cobble_compr_single.name=Single Compressed Cobblestone
+tile.compressedblocks:cobble_compr_double.name=Double Compressed Cobblestone
+tile.compressedblocks:cobble_compr_triple.name=Triple Compressed Cobblestone
+tile.compressedblocks:cobble_compr_quadruple.name=Quadruple Compressed Cobblestone
+tile.compressedblocks:cobble_compr_quintuple.name=Quintuple Compressed Cobblestone
+tile.compressedblocks:cobble_compr_sextuple.name=Sextuple Compressed Cobblestone
+tile.compressedblocks:cobble_compr_septuple.name=Septuple Compressed Cobblestone
+tile.compressedblocks:cobble_compr_octuple.name=Octuple Compressed Cobblestone
+#Compressed Dirt
+tile.compressedblocks:dirt_compr_single.name=Single Compressed Dirt
+tile.compressedblocks:dirt_compr_double.name=Double Compressed Dirt
+tile.compressedblocks:dirt_compr_triple.name=Triple Compressed Dirt
+tile.compressedblocks:dirt_compr_quadruple.name=Quadruple Compressed Dirt
+tile.compressedblocks:dirt_compr_quintuple.name=Quintuple Compressed Dirt
+tile.compressedblocks:dirt_compr_sextuple.name=Sextuple Compressed Dirt
+tile.compressedblocks:dirt_compr_septuple.name=Septuple Compressed Dirt
+tile.compressedblocks:dirt_compr_octuple.name=Octuple Compressed Dirt
+#Compressed Gravel
+tile.compressedblocks:gravel_compr_single.name=Single Compressed Gravel
+tile.compressedblocks:gravel_compr_double.name=Double Compressed Gravel
+tile.compressedblocks:gravel_compr_triple.name=Triple Compressed Gravel
+tile.compressedblocks:gravel_compr_quadruple.name=Quadruple Compressed Gravel
+tile.compressedblocks:gravel_compr_quintuple.name=Quintuple Compressed Gravel
+tile.compressedblocks:gravel_compr_sextuple.name=Sextuple Compressed Gravel
+tile.compressedblocks:gravel_compr_septuple.name=Septuple Compressed Gravel
+tile.compressedblocks:gravel_compr_octuple.name=Octuple Compressed Gravel
+#Compressed Sand
+tile.compressedblocks:sand_compr_single.name=Single Compressed Sand
+tile.compressedblocks:sand_compr_double.name=Double Compressed Sand
+tile.compressedblocks:sand_compr_triple.name=Triple Compressed Sand
+tile.compressedblocks:sand_compr_quadruple.name=Quadruple Compressed Sand
+tile.compressedblocks:sand_compr_quintuple.name=Quintuple Compressed Sand
+tile.compressedblocks:sand_compr_sextuple.name=Sextuple Compressed Sand
+tile.compressedblocks:sand_compr_septuple.name=Septuple Compressed Sand
+tile.compressedblocks:sand_compr_octuple.name=Octuple Compressed Sand
 
 #############################################################################
 #                                   Mobs                                    #
@@ -37,6 +84,3 @@ tile.tficore:testBlock.name=Testing Block
 #############################################################################
 #                                    GUI                                    #
 #############################################################################
-#CreativeTabs
-itemGroup.tficore.blocks=TFICore: Blocks
-itemGroup.tficore.items=TFICore: Items
