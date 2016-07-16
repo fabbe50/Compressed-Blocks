@@ -1,5 +1,6 @@
 package com.fabbe50.compressedblocks.core.registry;
 
+import com.fabbe50.compressedblocks.common.blocks.BlockFurnaceDecoy;
 import com.fabbe50.compressedblocks.common.blocks.meta.MetaCompressedBase;
 import com.fabbe50.compressedblocks.core.reference.MetaValues;
 import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
@@ -22,6 +23,11 @@ public class BlockRegistry {
     public static final Block compressedSand = new MetaCompressedBase(Material.SAND, MapColor.SAND, Reference.MOD_ID, "sand_compr", 1.5f, 3.5f, null);
     public static final Block compressedGravel = new MetaCompressedBase(Material.GROUND, MapColor.GRAY, Reference.MOD_ID, "gravel_compr", 1.5f, 3.5f, null);
 
+
+    //TileEntity
+    public static final Block compressedFurnaceActive = new BlockFurnaceDecoy("activeFurnace", 0.875f, null, true).setCreativeTab(null);
+    public static final Block compressedFurnaceIdle = new BlockFurnaceDecoy("idleFurnace", 0, null, false);
+
     /*  If more data on a block is needed
      *  Example 1:
      *  public static final Block compressedCobbleWithData = new CompressedBlock(Material.ROCK, MapColor.GRAY, Reference.MOD_ID, "cobble_compr", 2.0f, 10.0f, null).setLightLevel(0.8f);
@@ -33,6 +39,8 @@ public class BlockRegistry {
 
 	public static void init() {
 		TFIBlocks.addBlock(potatoBlock);
+        TFIBlocks.addBlock(compressedFurnaceActive);
+        TFIBlocks.addBlock(compressedFurnaceIdle);
 
         TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "potato_compr"), compressedPotato);
         TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "cobble_compr"), compressedCobble);
@@ -43,6 +51,8 @@ public class BlockRegistry {
 	
 	public static void renderInit() {
 		BlockRenderer.registerBlock(potatoBlock);
+        //BlockRenderer.registerBlock(compressedFurnaceActive);
+        //BlockRenderer.registerBlock(compressedFurnaceIdle);
 
         BlockRenderer.registerMetaBlock(compressedPotato, MetaValues.COMPRESSED);
         BlockRenderer.registerMetaBlock(compressedCobble, MetaValues.COMPRESSED);
