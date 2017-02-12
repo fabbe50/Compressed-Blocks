@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "color=white": { "model": "compressedblocks:color_block_white" },
+    "color=orange": { "model": "compressedblocks:color_block_orange" },
+    "color=magenta": { "model": "compressedblocks:color_block_magenta" },
+    "color=light_blue": { "model": "compressedblocks:color_block_light_blue" },
+    "color=yellow": { "model": "compressedblocks:color_block_yellow" },
+    "color=lime": { "model": "compressedblocks:color_block_lime" },
+    "color=pink": { "model": "compressedblocks:color_block_pink" },
+    "color=gray": { "model": "compressedblocks:color_block_gray" },
+    "color=silver": { "model": "compressedblocks:color_block_silver" },
+    "color=cyan": { "model": "compressedblocks:color_block_cyan" },
+    "color=purple": { "model": "compressedblocks:color_block_purple" },
+    "color=blue": { "model": "compressedblocks:color_block_blue" },
+    "color=brown": { "model": "compressedblocks:color_block_brown" },
+    "color=green": { "model": "compressedblocks:color_block_green" },
+    "color=red": { "model": "compressedblocks:color_block_red" },
+    "color=black": { "model": "compressedblocks:color_block_black" }
+  }
+}

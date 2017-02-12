@@ -1,6 +1,12 @@
 {
-	"parent": "block/cube_all",
+	"parent": "compressedblocks:block/overlayparent",
 	"textures": {
-		"all": "compressedblocks:blocks/sand_compr_quintuple"
+		"particle": "minecraft:blocks/sand",
+		"bottom": "minecraft:blocks/sand",
+		"top": "minecraft:blocks/sand",
+		"side": "minecraft:blocks/sand",
+		"overlay-bottom": "compressedblocks:blocks/compressions/OverlayCompressedQuintuple",
+		"overlay-top": "compressedblocks:blocks/compressions/OverlayCompressedQuintuple",
+		"overlay-side": "compressedblocks:blocks/compressions/OverlayCompressedQuintuple"
 	}
 }

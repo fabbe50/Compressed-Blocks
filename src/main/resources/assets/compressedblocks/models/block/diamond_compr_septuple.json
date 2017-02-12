@@ -1,0 +1,12 @@
+{
+	"parent": "compressedblocks:block/overlayparent",
+	"textures": {
+		"particle": "minecraft:blocks/diamond_block",
+		"bottom": "minecraft:blocks/diamond_block",
+		"top": "minecraft:blocks/diamond_block",
+		"side": "minecraft:blocks/diamond_block",
+		"overlay-bottom": "compressedblocks:blocks/compressions/OverlayCompressedSeptuple",
+		"overlay-top": "compressedblocks:blocks/compressions/OverlayCompressedSeptuple",
+		"overlay-side": "compressedblocks:blocks/compressions/OverlayCompressedSeptuple"
+	}
+}

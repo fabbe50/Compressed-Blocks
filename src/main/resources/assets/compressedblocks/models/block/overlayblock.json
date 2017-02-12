@@ -1,0 +1,12 @@
+{
+  "parent": "compressedblocks:block/overlayparent",
+  "textures": {
+    "particle": "blocks/stone",
+    "bottom": "blocks/stone",
+    "top": "blocks/stone",
+    "side": "blocks/stone",
+    "overlay-bottom": "compressedblocks:blocks/overlay",
+    "overlay-top": "compressedblocks:blocks/overlay",
+    "overlay-side": "compressedblocks:blocks/overlay"
+  }
+}

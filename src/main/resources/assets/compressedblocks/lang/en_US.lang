@@ -1,21 +1,45 @@
 #############################################################################
 #                                  Items                                    #
 #############################################################################
-item.compressedblocks:endgamiumIngot.name=Endgamium Ingot
-item.compressedblocks:endgamiumNugget.name=Endgamium Nugget
-item.compressedblocks:potatoBone.name=Potato on a Bone
-item.compressedblocks:endgamiumBone.name=Endgamium Infused Bone
+item.compressedblocks:endgamiumingot.name=Endgamium Ingot
+item.compressedblocks:endgamiumnugget.name=Endgamium Nugget
+item.compressedblocks:potatobone.name=Potato on a Bone
+item.compressedblocks:endgamiumbone.name=Endgamium Infused Bone
+item.compressedblocks:bedrockbreaker.name=Bedrock Destroyer (WIP)
+item.compressedblocks:bedrockobtainer.name=Bedrock Obtainer (WIP)
+item.compressedblocks:bowitems.name=Pile of Bow Parts
+item.compressedblocks:milkflask.name=Bottle of Milk
+item.compressedblocks:colorcore.name=Color Core
 
 #############################################################################
 #                                Meta Items                                 #
 #############################################################################
-
+#Compressed Stick
+item.compressedblocks:stick_compr_single.name=Single Compressed Stick
+item.compressedblocks:stick_compr_double.name=Double Compressed Stick
+item.compressedblocks:stick_compr_triple.name=Triple Compressed Stick
+item.compressedblocks:stick_compr_quadruple.name=Quadruple Compressed Stick
+item.compressedblocks:stick_compr_quintuple.name=Quintuple Compressed Stick
+item.compressedblocks:stick_compr_sextuple.name=Sextuple Compressed Stick
+item.compressedblocks:stick_compr_septuple.name=Septuple Compressed Stick
+item.compressedblocks:stick_compr_octuple.name=Octuple Compressed Stick
 
 #############################################################################
 #                                  Blocks                                   #
 #############################################################################
 #Normal Blocks
-tile.compressedblocks:potatoBlock.name=Potato Block
+tile.compressedblocks:potatoblock.name=Potato Block
+tile.compressedblocks:hqcake.name=High Quality Cake
+tile.compressedblocks:furnacecompr.name=Compressed Furnace
+tile.compressedblocks:surpriseblock.name=Surprise Box
+tile.compressedblocks:falltrap.name=Disappearing Block
+tile.compressedblocks:overlayblock.name=Overlay Test Block
+tile.compressedblocks:beacon_xray.name=Power Beacon
+tile.compressedblocks:endgamiumblock.name=Endgamium Block
+tile.compressedblocks:endgamiumblockc.name=Compressed Endgamium Block
+tile.compressedblocks:nether_stone.name=Nether Stone
+tile.compressedblocks:netherstarblock.name=Nether Star Block
+tile.compressedblocks:color_block.name=Color Block
 
 #############################################################################
 #                                Meta Blocks                                #
@@ -65,11 +89,38 @@ tile.compressedblocks:sand_compr_quintuple.name=Quintuple Compressed Sand
 tile.compressedblocks:sand_compr_sextuple.name=Sextuple Compressed Sand
 tile.compressedblocks:sand_compr_septuple.name=Septuple Compressed Sand
 tile.compressedblocks:sand_compr_octuple.name=Octuple Compressed Sand
+#Compressed Diamond Block
+tile.compressedblocks:diamond_compr_single.name=Single Compressed Diamond Block
+tile.compressedblocks:diamond_compr_double.name=Double Compressed Diamond Block
+tile.compressedblocks:diamond_compr_triple.name=Triple Compressed Diamond Block
+tile.compressedblocks:diamond_compr_quadruple.name=Quadruple Compressed Diamond Block
+tile.compressedblocks:diamond_compr_quintuple.name=Quintuple Compressed Diamond Block
+tile.compressedblocks:diamond_compr_sextuple.name=Sextuple Compressed Diamond Block
+tile.compressedblocks:diamond_compr_septuple.name=Septuple Compressed Diamond Block
+tile.compressedblocks:diamond_compr_octuple.name=Octuple Compressed Diamond Block
+#Compressed Gold Block
+tile.compressedblocks:gold_compr_single.name=Single Compressed Gold Block
+tile.compressedblocks:gold_compr_double.name=Double Compressed Gold Block
+tile.compressedblocks:gold_compr_triple.name=Triple Compressed Gold Block
+tile.compressedblocks:gold_compr_quadruple.name=Quadruple Compressed Gold Block
+tile.compressedblocks:gold_compr_quintuple.name=Quintuple Compressed Gold Block
+tile.compressedblocks:gold_compr_sextuple.name=Sextuple Compressed Gold Block
+tile.compressedblocks:gold_compr_septuple.name=Septuple Compressed Gold Block
+tile.compressedblocks:gold_compr_octuple.name=Octuple Compressed Gold Block
+#Compressed Iron Block
+tile.compressedblocks:iron_compr_single.name=Single Compressed Iron Block
+tile.compressedblocks:iron_compr_double.name=Double Compressed Iron Block
+tile.compressedblocks:iron_compr_triple.name=Triple Compressed Iron Block
+tile.compressedblocks:iron_compr_quadruple.name=Quadruple Compressed Iron Block
+tile.compressedblocks:iron_compr_quintuple.name=Quintuple Compressed Iron Block
+tile.compressedblocks:iron_compr_sextuple.name=Sextuple Compressed Iron Block
+tile.compressedblocks:iron_compr_septuple.name=Septuple Compressed Iron Block
+tile.compressedblocks:iron_compr_octuple.name=Octuple Compressed Iron Block
 
 #############################################################################
 #                                   Mobs                                    #
 #############################################################################
-
+entity.corgi.name=Corgi
 
 #############################################################################
 #                               Miscellaneous                               #
@@ -79,8 +130,25 @@ tile.compressedblocks:sand_compr_octuple.name=Octuple Compressed Sand
 #############################################################################
 #                                Achievement                                #
 #############################################################################
-
+achievement.star=The 81st Beginning
+achievement.star.desc=Craft a compressed netherstar block.
+achievement.endgam=Too Much Time Wasted
+achievement.endgam.desc=Craft a piece of Endgamium.
+achievement.potato="Wallpaper?" -Zirlian
+achievement.potato.desc=Craft a compressed potato block.
+achievement.potatooct=OMG POTATOES!!
+achievement.potatooct.desc=Craft an octuple compressed potato block.
+achievement.endsword=Stabby Stabs
+achievement.endsword.desc=Craft an Endgamium Sword.
+achievement.endtool=Miny Mine of Minings
+achievement.endtool.desc=Craft an Endgamium Multitool.
+achievement.pingegg=Forever Alone
+achievement.pingegg.desc=Respond to your own ping.
+achievement.buildHQCake=The Foolproof Lie
+achievement.buildHQCake.desc=Make a high quality cake.
 
 #############################################################################
 #                                    GUI                                    #
 #############################################################################
+#Titles
+container.furnacecompr=Compressed Furnace

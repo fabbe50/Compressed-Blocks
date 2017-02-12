@@ -6,7 +6,6 @@ import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
 import com.sun.istack.internal.Nullable;
 import com.thefifthidiot.tficore.common.creativetabs.TFITab;
 import com.thefifthidiot.tficore.lib.Configs;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.SoundType;
@@ -18,10 +17,8 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -46,22 +43,22 @@ public class BlockFurnaceDecoy extends BlockContainer {
 
     public BlockFurnaceDecoy(String unlocalizedName, float lightLevel, @Nullable CreativeTabs tab, boolean active) {
         super(Material.ROCK);
-        setUnlocalizedName(unlocalizedName);
-        setRegistryName(Reference.MOD_ID, getUnlocalizedName().substring(5));
+        setUnlocalizedName(Reference.MOD_ID + ":" + unlocalizedName);
+        setRegistryName(Reference.MOD_ID, !active ? unlocalizedName : unlocalizedName + "active");
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         setCreativeTab(tab != null ? tab : (Configs.tfitabs ? TFITab.blockTab : null));
+        setLightLevel(lightLevel);
         blockSoundType = SoundType.STONE;
         blockParticleGravity = 1.0f;
-        slipperiness = 0;
         lightOpacity = 20;
         setTickRandomly(false);
         useNeighborBrightness = false;
         isBurning = active;
     }
 
-    @javax.annotation.Nullable
+    @Nullable
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(BlockRegistry.compressedFurnaceIdle);
+        return Item.getItemFromBlock(BlockRegistry.COMPRESSED_FURNACE_IDLE);
     }
 
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
@@ -122,11 +119,12 @@ public class BlockFurnaceDecoy extends BlockContainer {
                 case SOUTH:
                     worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D, new int[0]);
                     worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D, new int[0]);
+                    break;
             }
         }
     }
 
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @javax.annotation.Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
         if (worldIn.isRemote) {
             return true;
         }
@@ -148,12 +146,12 @@ public class BlockFurnaceDecoy extends BlockContainer {
         keepInventory = true;
 
         if (active) {
-            worldIn.setBlockState(pos, BlockRegistry.compressedFurnaceActive.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-            worldIn.setBlockState(pos, BlockRegistry.compressedFurnaceActive.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, BlockRegistry.COMPRESSED_FURNACE_ACTIVE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, BlockRegistry.COMPRESSED_FURNACE_ACTIVE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
         else {
-            worldIn.setBlockState(pos, BlockRegistry.compressedFurnaceIdle.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-            worldIn.setBlockState(pos, BlockRegistry.compressedFurnaceIdle.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, BlockRegistry.COMPRESSED_FURNACE_IDLE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, BlockRegistry.COMPRESSED_FURNACE_IDLE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
 
         keepInventory = false;
@@ -167,10 +165,6 @@ public class BlockFurnaceDecoy extends BlockContainer {
     public TileEntity createNewTileEntity(World worldIn, int meta)
     {
         return new TileEntityFurnaceCompr();
-    }
-
-    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
-        return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
     }
 
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
@@ -203,7 +197,7 @@ public class BlockFurnaceDecoy extends BlockContainer {
     }
 
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
-        return new ItemStack(BlockRegistry.compressedFurnaceIdle);
+        return new ItemStack(BlockRegistry.COMPRESSED_FURNACE_IDLE);
     }
 
     public EnumBlockRenderType getRenderType(IBlockState state) {

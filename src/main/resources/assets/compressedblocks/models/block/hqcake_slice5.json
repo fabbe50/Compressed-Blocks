@@ -1,0 +1,22 @@
+{
+  "textures": {
+    "particle": "compressedblocks:blocks/hqcake_side",
+    "bottom": "compressedblocks:blocks/hqcake_bottom",
+    "top": "compressedblocks:blocks/hqcake_top",
+    "side": "compressedblocks:blocks/hqcake_side",
+    "inside": "compressedblocks:blocks/hqcake_inner"
+  },
+  "elements": [
+    {   "from": [ 6, 0, 1 ],
+      "to": [ 15, 8, 15 ],
+      "faces": {
+        "down":  { "texture": "#bottom", "cullface": "down" },
+        "up":    { "texture": "#top" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west":  { "texture": "#inside" },
+        "east":  { "texture": "#side" }
+      }
+    }
+  ]
+}

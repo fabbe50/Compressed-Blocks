@@ -1,6 +1,12 @@
 {
-	"parent": "block/cube_all",
+	"parent": "compressedblocks:block/overlayparent",
 	"textures": {
-		"all": "compressedblocks:blocks/potato_compr_sextuple"
+		"particle": "compressedblocks:blocks/potatoBlock",
+		"bottom": "compressedblocks:blocks/potatoBlock",
+		"top": "compressedblocks:blocks/potatoBlock",
+		"side": "compressedblocks:blocks/potatoBlock",
+		"overlay-bottom": "compressedblocks:blocks/compressions/OverlayCompressedSextuple",
+		"overlay-top": "compressedblocks:blocks/compressions/OverlayCompressedSextuple",
+		"overlay-side": "compressedblocks:blocks/compressions/OverlayCompressedSextuple"
 	}
 }

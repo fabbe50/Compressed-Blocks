@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "compressedblocks:furnacecompr" },
+    "facing=south": { "model": "compressedblocks:furnacecompr", "y": 180 },
+    "facing=west":  { "model": "compressedblocks:furnacecompr", "y": 270 },
+    "facing=east":  { "model": "compressedblocks:furnacecompr", "y": 90 }
+  }
+}

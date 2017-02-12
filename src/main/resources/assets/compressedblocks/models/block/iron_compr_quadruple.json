@@ -1,0 +1,12 @@
+{
+	"parent": "compressedblocks:block/overlayparent",
+	"textures": {
+		"particle": "minecraft:blocks/iron_block",
+		"bottom": "minecraft:blocks/iron_block",
+		"top": "minecraft:blocks/iron_block",
+		"side": "minecraft:blocks/iron_block",
+		"overlay-bottom": "compressedblocks:blocks/compressions/OverlayCompressedQuadruple",
+		"overlay-top": "compressedblocks:blocks/compressions/OverlayCompressedQuadruple",
+		"overlay-side": "compressedblocks:blocks/compressions/OverlayCompressedQuadruple"
+	}
+}

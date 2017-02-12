@@ -1,6 +1,12 @@
 {
-	"parent": "block/cube_all",
+	"parent": "compressedblocks:block/overlayparent",
 	"textures": {
-		"all": "compressedblocks:blocks/dirt_compr_quintuple"
+		"particle": "minecraft:blocks/dirt",
+		"bottom": "minecraft:blocks/dirt",
+		"top": "minecraft:blocks/dirt",
+		"side": "minecraft:blocks/dirt",
+		"overlay-bottom": "compressedblocks:blocks/compressions/OverlayCompressedQuintuple",
+		"overlay-top": "compressedblocks:blocks/compressions/OverlayCompressedQuintuple",
+		"overlay-side": "compressedblocks:blocks/compressions/OverlayCompressedQuintuple"
 	}
 }

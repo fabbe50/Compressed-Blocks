@@ -1,0 +1,12 @@
+{
+	"parent": "compressedblocks:block/overlayparent",
+	"textures": {
+		"particle": "minecraft:blocks/gold_block",
+		"bottom": "minecraft:blocks/gold_block",
+		"top": "minecraft:blocks/gold_block",
+		"side": "minecraft:blocks/gold_block",
+		"overlay-bottom": "compressedblocks:blocks/compressions/OverlayCompressedQuintuple",
+		"overlay-top": "compressedblocks:blocks/compressions/OverlayCompressedQuintuple",
+		"overlay-side": "compressedblocks:blocks/compressions/OverlayCompressedQuintuple"
+	}
+}

@@ -1,6 +1,12 @@
 {
-	"parent": "block/cube_all",
+	"parent": "compressedblocks:block/overlayparent",
 	"textures": {
-		"all": "compressedblocks:blocks/gravel_compr_quadruple"
+		"particle": "minecraft:blocks/gravel",
+		"bottom": "minecraft:blocks/gravel",
+		"top": "minecraft:blocks/gravel",
+		"side": "minecraft:blocks/gravel",
+		"overlay-bottom": "compressedblocks:blocks/compressions/OverlayCompressedQuadruple",
+		"overlay-top": "compressedblocks:blocks/compressions/OverlayCompressedQuadruple",
+		"overlay-side": "compressedblocks:blocks/compressions/OverlayCompressedQuadruple"
 	}
 }

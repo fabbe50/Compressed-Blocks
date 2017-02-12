@@ -13,6 +13,10 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.NonNullList;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -31,6 +35,12 @@ public class MetaCompressedBase extends MetaBlockBase {
         this.setHardness(hardness);
         this.setResistance(resistance);
         this.setCreativeTab(tab != null ? tab : (Configs.tfitabs ? TFITab.blockTab : null));
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public BlockRenderLayer getBlockLayer() {
+        return BlockRenderLayer.TRANSLUCENT;
     }
 
     @Override
@@ -54,7 +64,7 @@ public class MetaCompressedBase extends MetaBlockBase {
     }
 
     @Override
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
+    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
         for (EnumCompressed type : EnumCompressed.values()) {
             list.add(new ItemStack(itemIn, 1, type.getMetadata()));
         }

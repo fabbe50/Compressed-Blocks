@@ -3,6 +3,7 @@ package com.fabbe50.compressedblocks.core.proxy;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
 
 import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
+import com.fabbe50.compressedblocks.core.registry.RenderRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -19,6 +20,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class ClientProxy extends CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) {
 		super.preInit(event);
+        RenderRegistry.init();
 	}
 	
     public void init(FMLInitializationEvent event) {

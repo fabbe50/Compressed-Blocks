@@ -1,6 +1,12 @@
 {
-	"parent": "block/cube_all",
+	"parent": "compressedblocks:block/overlayparent",
 	"textures": {
-		"all": "compressedblocks:blocks/cobble_compr_double"
+		"particle": "minecraft:blocks/cobblestone",
+		"bottom": "minecraft:blocks/cobblestone",
+		"top": "minecraft:blocks/cobblestone",
+		"side": "minecraft:blocks/cobblestone",
+		"overlay-bottom": "compressedblocks:blocks/compressions/OverlayCompressedDouble",
+		"overlay-top": "compressedblocks:blocks/compressions/OverlayCompressedDouble",
+		"overlay-side": "compressedblocks:blocks/compressions/OverlayCompressedDouble"
 	}
 }
