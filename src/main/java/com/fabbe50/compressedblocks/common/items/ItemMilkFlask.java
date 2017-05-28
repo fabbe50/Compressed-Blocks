@@ -32,7 +32,7 @@ public class ItemMilkFlask extends ItemBase {
 
     public ItemMilkFlask(String itemName, CreativeTabs tab) {
         super(itemName, tab);
-        this.setMaxStackSize(16);
+        this.setMaxStackSize(64);
     }
 
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving) {

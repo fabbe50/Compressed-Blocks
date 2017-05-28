@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "inventory": "compressedblocks:items/inkbottle_black"
+  }
+}

@@ -3,6 +3,7 @@ package com.fabbe50.compressedblocks.common.items;
 import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
 import com.fabbe50.compressedblocks.core.utils.Utilities;
 import com.thefifthidiot.tficore.common.items.ItemBase;
+import com.thefifthidiot.tficore.utility.helper.ChatHelper;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -57,9 +58,8 @@ public class ItemBedrockBreaker extends ItemBase {
 
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-        tooltip.add("It destroys bedrock!");
+        tooltip.add(ChatHelper.MAGENTA + "EXPERIMENTAL");
         tooltip.add("");
-        tooltip.add("Currently Broken: ");
-        tooltip.add("* Durability not accurate (supposed to be 16)");
+        tooltip.add("It destroys bedrock!");
     }
 }

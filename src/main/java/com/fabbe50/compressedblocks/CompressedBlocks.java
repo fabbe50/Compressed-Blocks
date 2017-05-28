@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, acceptedMinecraftVersions = "[1.11]", dependencies = Dependencies.dependencies, guiFactory = Reference.GUIFACTORY)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, acceptedMinecraftVersions = "[1.10.*, 1.11]", dependencies = Dependencies.dependencies, guiFactory = Reference.GUIFACTORY)
 public class CompressedBlocks {
 	@Instance(Reference.MOD_ID)
 	public static CompressedBlocks instance;

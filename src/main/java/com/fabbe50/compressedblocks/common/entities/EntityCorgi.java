@@ -75,8 +75,7 @@ public class EntityCorgi extends EntityTameable {
         this.targetTasks.addTask(2, new EntityAIOwnerHurtTarget(this));
         this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, true, new Class[0]));
         this.targetTasks.addTask(4, new EntityAITargetNonTamed<EntityAnimal>(this, EntityAnimal.class, false, new Predicate<Entity>() {
-            public boolean apply(@Nullable Entity entity)
-            {
+            public boolean apply(@Nullable Entity entity) {
                 return entity instanceof EntityPig;
             }
         }));

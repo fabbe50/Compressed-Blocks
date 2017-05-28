@@ -1,15 +1,14 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
-import com.fabbe50.compressedblocks.core.utils.helper.RedstoneHelper;
 import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
+import com.thefifthidiot.tficore.utility.helper.RedstoneHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
@@ -17,7 +16,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -37,14 +35,10 @@ public class BlockMultiColored extends BlockBase {
     public BlockMultiColored(Material material, MapColor mapColor, String blockName, float hardness, float resistance, @Nullable CreativeTabs tab) {
         super(material, mapColor, blockName, hardness, resistance, tab);
         this.setDefaultState(this.blockState.getBaseState().withProperty(COLOR, EnumDyeColor.BLACK));
-        this.powerLevel = 15;
     }
 
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
-        for (EnumDyeColor enumdyecolor : EnumDyeColor.values()) {
-            list.add(new ItemStack(itemIn, 1, enumdyecolor.getMetadata()));
-        }
     }
 
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
@@ -58,7 +52,7 @@ public class BlockMultiColored extends BlockBase {
 
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
         if (!worldIn.isRemote) {
-            if (this.powerLevel > 0 && !worldIn.isBlockPowered(pos)) {
+            if (powerActiveSide > 0 && !worldIn.isBlockPowered(pos)) {
                 worldIn.setBlockState(pos, BlockRegistry.COLORBLOCK.getDefaultState().withProperty(COLOR, EnumDyeColor.BLACK));
             }
         }
@@ -73,10 +67,10 @@ public class BlockMultiColored extends BlockBase {
             }
         }
         if (!worldIn.isRemote) {
-            if (this.powerLevel > 0 && !worldIn.isBlockPowered(pos)) {
+            if (powerActiveSide > 0 && !worldIn.isBlockPowered(pos)) {
                 worldIn.setBlockState(pos, BlockRegistry.COLORBLOCK.getDefaultState().withProperty(COLOR, EnumDyeColor.BLACK));
             }
-            else if (worldIn.isBlockPowered(pos)) { //this.powerLevel == 0 && worldIn.isBlockPowered(pos) || this.powerLevel != powerActiveSide &&
+            else if (worldIn.isBlockPowered(pos)) {
                 if (powerActiveSide == 15) {
                     worldIn.setBlockState(pos, BlockRegistry.COLORBLOCK.getDefaultState().withProperty(COLOR, EnumDyeColor.WHITE));
                 }
@@ -99,10 +93,6 @@ public class BlockMultiColored extends BlockBase {
 
     @SuppressWarnings("deprecation")
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
-        return new ItemStack(BlockRegistry.COLORBLOCK);
-    }
-
-    protected ItemStack createStackedBlock(IBlockState state) {
         return new ItemStack(BlockRegistry.COLORBLOCK);
     }
 

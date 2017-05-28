@@ -24,9 +24,10 @@ public class ConfigurationHandler {
     static Configuration configFile;
 
     public static ConfigCategory general;
+    public static ConfigCategory vanillaTweaks;
 
     public static void load(FMLPreInitializationEvent event) {
-        configFile = new Configuration(event.getSuggestedConfigurationFile(), "Alpha2", false);
+        configFile = new Configuration(event.getSuggestedConfigurationFile(), "Alpha4", false);
 
         MinecraftForge.EVENT_BUS.register(configuration);
 
@@ -54,9 +55,41 @@ public class ConfigurationHandler {
             Configs.entityBlacklist = prop.getStringList();
             propOrder.add(prop.getName());
 
-            prop = configFile.get(cat, "Hardcore Recipes", Configs.hardcoreRecipes);
+            prop = configFile.get(cat, "Hardcore Recipes [Not fully implemented]", Configs.hardcoreRecipes);
             prop.setComment("Replaces recipes of some mods to become more difficult to get, therefore prolonging the journey to endgame.");
             Configs.hardcoreRecipes = prop.getBoolean();
+            propOrder.add(prop.getName());
+
+            prop = configFile.get(cat, "Crossdimensional Teleportation [EXPERIMENTAL]", Configs.enableCrossDimensionalTP);
+            prop.setComment("Enable Experimental Crossdimensional Teleportation (Doesn't work with The End)");
+            Configs.enableCrossDimensionalTP = prop.getBoolean();
+            propOrder.add(prop.getName());
+
+            prop = configFile.get(cat, "Compressed TNT Spread", Configs.compressedTNTSpread);
+            prop.setComment("Should the TNT spawned from compressed TNT spread out?");
+            Configs.compressedTNTSpread = prop.getBoolean();
+            propOrder.add(prop.getName());
+        }
+
+        //Vanilla Tweaks
+        {
+            String cat = "Vanilla Tweaks";
+            List<String> propOrder = Lists.newArrayList();
+            vanillaTweaks = configFile.getCategory(cat);
+
+            prop = configFile.get(cat, "Vanilla Tweaks", Configs.vanillaHooks);
+            prop.setComment("Turns all tweaks off.");
+            Configs.vanillaHooks = prop.getBoolean();
+            propOrder.add(prop.getName());
+
+            prop = configFile.get(cat, "Stack Sizes", Configs.stackSizes);
+            prop.setComment("Increases stack sizes for different things: boats, buckets, cake etc.");
+            Configs.stackSizes = prop.getBoolean();
+            propOrder.add(prop.getName());
+
+            prop = configFile.get(cat, "Disable drinking milk from bucket", Configs.undrinkableBuckets);
+            prop.setComment("Disable drinking milk from buckets, allows for increased stack size if 'Stack Sizes' are enabled.");
+            Configs.undrinkableBuckets = prop.getBoolean();
             propOrder.add(prop.getName());
         }
 

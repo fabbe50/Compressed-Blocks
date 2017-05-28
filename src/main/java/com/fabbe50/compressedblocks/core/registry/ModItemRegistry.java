@@ -1,6 +1,7 @@
 package com.fabbe50.compressedblocks.core.registry;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -17,7 +18,12 @@ public class ModItemRegistry {
     public static Block EU2_NETHERRACK = null;
     @GameRegistry.ObjectHolder("extrautils2:CompressedSand")
     public static Block EU2_SAND = null;
-
+    @GameRegistry.ObjectHolder("extrautils2:Teleporter") //Meta 1 = DEEPDARK
+    public static Block TELEPORTER = null;
+    @GameRegistry.ObjectHolder("extrautils2:Quarry")
+    public static Block EUQUARRY = null;
+    @GameRegistry.ObjectHolder("extrautils2:DecorativeSolid") //Meta 3 = STONEBURNT
+    public static Block DECORATIVE_SOLID = null;
 
     public static void init() {}
 }

@@ -3,7 +3,6 @@ package com.fabbe50.compressedblocks.common.blocks;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntityFurnaceCompr;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
-import com.sun.istack.internal.Nullable;
 import com.thefifthidiot.tficore.common.creativetabs.TFITab;
 import com.thefifthidiot.tficore.lib.Configs;
 import net.minecraft.block.BlockContainer;
@@ -30,6 +29,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 /**

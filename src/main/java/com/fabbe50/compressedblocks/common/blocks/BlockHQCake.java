@@ -31,7 +31,7 @@ import java.util.Random;
  * Created by fabbe50 on 15/09/2016.
  */
 public class BlockHQCake extends BlockBase {
-    public static final PropertyInteger BITES = PropertyInteger.create("bites", 0, 13);
+    public static final PropertyInteger BITES = PropertyInteger.create("bites", 0, 12);
     protected static final AxisAlignedBB[] CAKE_AABB = new AxisAlignedBB[] {new AxisAlignedBB(0.0625D, 0.0D, 0.0625D, 0.9375D, 0.5D, 0.9375D),
             new AxisAlignedBB(0.125D, 0.0D, 0.0625D, 0.9375D, 0.5D, 0.9375D), new AxisAlignedBB(0.1875D, 0.0D, 0.0625D, 0.9375D, 0.5D, 0.9375D),
             new AxisAlignedBB(0.25D, 0.0D, 0.0625D, 0.9375D, 0.5D, 0.9375D), new AxisAlignedBB(0.3125D, 0.0D, 0.0625D, 0.9375D, 0.5D, 0.9375D),
@@ -68,7 +68,7 @@ public class BlockHQCake extends BlockBase {
         return false;
     }
 
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         this.eatCake(worldIn, pos, state, playerIn);
         return true;
     }
@@ -79,7 +79,7 @@ public class BlockHQCake extends BlockBase {
             player.getFoodStats().addStats(2, 0.1F);
             int i = ((Integer)state.getValue(BITES)).intValue();
 
-            if (i < 13) {
+            if (i < 12) {
                 worldIn.setBlockState(pos, state.withProperty(BITES, Integer.valueOf(i + 1)), 3);
             }
             else {
@@ -93,7 +93,7 @@ public class BlockHQCake extends BlockBase {
     }
 
     @SuppressWarnings("deprecation")
-    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn) {
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
         if (!this.canBlockStay(worldIn, pos)) {
             worldIn.setBlockToAir(pos);
         }

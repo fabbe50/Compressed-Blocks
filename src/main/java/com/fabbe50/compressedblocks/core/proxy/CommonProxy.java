@@ -1,10 +1,15 @@
 package com.fabbe50.compressedblocks.core.proxy;
 
 import com.fabbe50.compressedblocks.core.handler.ConfigurationHandler;
+import com.fabbe50.compressedblocks.core.lib.CBLibrary;
 import com.fabbe50.compressedblocks.core.lib.Configs;
 import com.fabbe50.compressedblocks.core.lib.EntityBlacklistStorage;
+import com.fabbe50.compressedblocks.core.lib.Payments;
 import com.fabbe50.compressedblocks.core.registry.*;
 
+import com.fabbe50.compressedblocks.core.utils.DataFixesManager;
+import com.fabbe50.compressedblocks.core.utils.RecipeRemoval;
+import com.fabbe50.compressedblocks.core.utils.VanillaHooks;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -18,11 +23,12 @@ import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
 public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.load(event);                               //Initialize Configuration
+        ToolMaterialRegistry.init();                                    //Initialize Tool Material
 		BlockRegistry.init();	                                        //Initialize Blocks
         BlockRegistry.registerTileEntity();                             //Initialize TileEntities
 		ItemRegistry.init();	                                        //Initialize Items
-        ToolMaterialRegistry.init();                                    //Initialize Tool Material
-        EntityRegistryCB.init();                                        //Initialize Entities
+        EntityRegistry.init();                                          //Initialize Entities
+        CBLibrary.init();                                               //Initialize Special Data for Compressed Blocks
 	}
 	
     public void init(FMLInitializationEvent event) {
@@ -31,14 +37,21 @@ public class CommonProxy {
         EventRegistry.init();                                           //Initialize Events
         ModItemRegistry.init();                                         //Initialize Mod Items
         OreDictRegistry.init();                                         //Initialize OreDictionary
+        ReturnableItemRegistry.init();                                  //Initialize ReturnableItemRegistry
         RecipeRegistry.init();                                          //Initialize Recipes
+        Payments.init();                                                //Initialize Payments
+        EndgameCraftingRegistry.init();                                 //Initialize Endgame Recipes
     	SmeltingRegistry.init();                                        //Initialize Smelting Recipes
         OregenRegistry.init();                                          //Initialize Ore Generation
         //BiomeRegistry.init();                                           //Initialize Biomes //FIXME: Create custom world generator. INFO: NETHER_STONE is generated through ore-veins for now.
-        Configs.parseBlacklist();
+        Configs.init();                                                 //Initialize Configs
+        RecipeRemoval.init();                                           //Remove Recipes
+        RecipeOverrideRegistry.init();                                  //Add Replacements for Recipes
+        DataFixesManager.createFixer();
     }
     
     public void postInit(FMLPostInitializationEvent event) {
+        VanillaHooks.init();
         EntityBlacklistStorage.init();
     }
 

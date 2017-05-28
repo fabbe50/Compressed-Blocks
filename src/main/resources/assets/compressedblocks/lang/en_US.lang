@@ -5,11 +5,20 @@ item.compressedblocks:endgamiumingot.name=Endgamium Ingot
 item.compressedblocks:endgamiumnugget.name=Endgamium Nugget
 item.compressedblocks:potatobone.name=Potato on a Bone
 item.compressedblocks:endgamiumbone.name=Endgamium Infused Bone
-item.compressedblocks:bedrockbreaker.name=Bedrock Destroyer (WIP)
-item.compressedblocks:bedrockobtainer.name=Bedrock Obtainer (WIP)
+item.compressedblocks:bedrockbreaker.name=Bedrock Destroyer [WIP]
+item.compressedblocks:bedrockobtainer.name=Bedrock Obtainer [WIP]
 item.compressedblocks:bowitems.name=Pile of Bow Parts
 item.compressedblocks:milkflask.name=Bottle of Milk
 item.compressedblocks:colorcore.name=Color Core
+item.compressedblocks:teleportorb.name=Teleport Orb [WIP]
+item.compressedblocks:mobkiller.name=Mob Killer
+item.compressedblocks:fooditem.name=Nutrient Block
+item.compressedblocks:enderapple.name=Ender Apple
+item.compressedblocks:pebble.name=Pebble
+item.compressedblocks:foodbowl.name=Bowl With Mixed Food
+item.compressedblocks:dnasample.name=DNA Sample [WIP]
+item.compressedblocks:twohanditemtest.name=TEST [NOT IMPLEMENTED]
+item.compressedblocks:mashedfood.name=Soup
 
 #############################################################################
 #                                Meta Items                                 #
@@ -23,6 +32,22 @@ item.compressedblocks:stick_compr_quintuple.name=Quintuple Compressed Stick
 item.compressedblocks:stick_compr_sextuple.name=Sextuple Compressed Stick
 item.compressedblocks:stick_compr_septuple.name=Septuple Compressed Stick
 item.compressedblocks:stick_compr_octuple.name=Octuple Compressed Stick
+item.compressedblocks:inkbottle.black.name=Bottle of Black Ink
+item.compressedblocks:inkbottle.red.name=Bottle of Red Ink
+item.compressedblocks:inkbottle.green.name=Bottle of Green Ink
+item.compressedblocks:inkbottle.brown.name=Bottle of Brown Ink
+item.compressedblocks:inkbottle.blue.name=Bottle of Blue Ink
+item.compressedblocks:inkbottle.purple.name=Bottle of Purple Ink
+item.compressedblocks:inkbottle.cyan.name=Bottle of Cyan Ink
+item.compressedblocks:inkbottle.silver.name=Bottle of Silver Ink
+item.compressedblocks:inkbottle.gray.name=Bottle of Gray Ink
+item.compressedblocks:inkbottle.pink.name=Bottle of Pink Ink
+item.compressedblocks:inkbottle.lime.name=Bottle of Lime Ink
+item.compressedblocks:inkbottle.yellow.name=Bottle of Yellow Ink
+item.compressedblocks:inkbottle.lightBlue.name=Bottle of Light Blue Ink
+item.compressedblocks:inkbottle.magenta.name=Bottle of Magenta Ink
+item.compressedblocks:inkbottle.orange.name=Bottle of Orange Ink
+item.compressedblocks:inkbottle.white.name=Bottle of White Ink
 
 #############################################################################
 #                                  Blocks                                   #
@@ -40,6 +65,32 @@ tile.compressedblocks:endgamiumblockc.name=Compressed Endgamium Block
 tile.compressedblocks:nether_stone.name=Nether Stone
 tile.compressedblocks:netherstarblock.name=Nether Star Block
 tile.compressedblocks:color_block.name=Color Block
+tile.compressedblocks:white_super_shulker_box.name=White Compressed Shulker Box
+tile.compressedblocks:orange_super_shulker_box.name=Orange Compressed Shulker Box
+tile.compressedblocks:magenta_super_shulker_box.name=Magenta Compressed Shulker Box
+tile.compressedblocks:light_blue_super_shulker_box.name=Light Blue Compressed Shulker Box
+tile.compressedblocks:yellow_super_shulker_box.name=Yellow Compressed Shulker Box
+tile.compressedblocks:lime_super_shulker_box.name=Lime Compressed Shulker Box
+tile.compressedblocks:pink_super_shulker_box.name=Pink Compressed Shulker Box
+tile.compressedblocks:gray_super_shulker_box.name=Gray Compressed Shulker Box
+tile.compressedblocks:silver_super_shulker_box.name=Silver Compressed Shulker Box
+tile.compressedblocks:cyan_super_shulker_box.name=Cyan Compressed Shulker Box
+tile.compressedblocks:purple_super_shulker_box.name=Purple Compressed Shulker Box
+tile.compressedblocks:blue_super_shulker_box.name=Blue Compressed Shulker Box
+tile.compressedblocks:brown_super_shulker_box.name=Brown Compressed Shulker Box
+tile.compressedblocks:green_super_shulker_box.name=Green Compressed Shulker Box
+tile.compressedblocks:red_super_shulker_box.name=Red Compressed Shulker Box
+tile.compressedblocks:black_super_shulker_box.name=Black Compressed Shulker Box
+tile.compressedblocks:singlecompressedtnt.name=Single Compressed TNT
+tile.compressedblocks:doublecompressedtnt.name=Double Compressed TNT
+tile.compressedblocks:triplecompressedtnt.name=Triple Compressed TNT
+tile.compressedblocks:miningexplosives.name=Chunk Miner
+tile.compressedblocks:enderblock.name=Ender Pearl Block
+tile.compressedblocks:light_block.name=Adjustable Light [NOT IMPLEMENTED]
+tile.compressedblocks:onlinedetector.name=Online Detector [NOT IMPLEMENTED]
+tile.compressedblocks:blackhole.name=Black Hole [NOT IMPLEMENTED]
+tile.compressedblocks:fusionpedestal.name=Fusion Pedestal
+tile.compressedblocks:brewer.name=Brewing Stand
 
 #############################################################################
 #                                Meta Blocks                                #
@@ -132,11 +183,11 @@ entity.corgi.name=Corgi
 #############################################################################
 achievement.star=The 81st Beginning
 achievement.star.desc=Craft a compressed netherstar block.
-achievement.endgam=Too Much Time Wasted
+achievement.endgam=No Life
 achievement.endgam.desc=Craft a piece of Endgamium.
 achievement.potato="Wallpaper?" -Zirlian
 achievement.potato.desc=Craft a compressed potato block.
-achievement.potatooct=OMG POTATOES!!
+achievement.potatooct=Insane food supply!!
 achievement.potatooct.desc=Craft an octuple compressed potato block.
 achievement.endsword=Stabby Stabs
 achievement.endsword.desc=Craft an Endgamium Sword.
@@ -144,7 +195,7 @@ achievement.endtool=Miny Mine of Minings
 achievement.endtool.desc=Craft an Endgamium Multitool.
 achievement.pingegg=Forever Alone
 achievement.pingegg.desc=Respond to your own ping.
-achievement.buildHQCake=The Foolproof Lie
+achievement.buildHQCake=The High Quality Lie
 achievement.buildHQCake.desc=Make a high quality cake.
 
 #############################################################################
@@ -152,3 +203,4 @@ achievement.buildHQCake.desc=Make a high quality cake.
 #############################################################################
 #Titles
 container.furnacecompr=Compressed Furnace
+container.superShulkerBox=Compressed Shulker Box

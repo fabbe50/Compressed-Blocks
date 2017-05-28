@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "explode=false": { "model": "compressedblocks:doublecompressedtnt" },
+    "explode=true": { "model": "compressedblocks:doublecompressedtnt" }
+  }
+}

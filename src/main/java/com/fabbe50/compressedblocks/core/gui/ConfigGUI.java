@@ -25,6 +25,7 @@ public class ConfigGUI extends GuiConfig {
         List<IConfigElement> list = Lists.newArrayList();
 
         list.add(new ConfigElement(ConfigurationHandler.general));
+        list.add(new ConfigElement(ConfigurationHandler.vanillaTweaks));
 
         return list;
     }
