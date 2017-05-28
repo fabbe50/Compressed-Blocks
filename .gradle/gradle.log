@@ -1,3 +1,5 @@
+This mapping 'snapshot_20170528' was designed for MC 1.11! Use at your own peril.This mapping 'snapshot_20170528' was designed for MC 1.11! Use at your own peril.
+
 #################################################
          ForgeGradle 2.2-SNAPSHOT-eb2e450        
   https://github.com/MinecraftForge/ForgeGradle  
@@ -9,39 +11,33 @@
 #################################################
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
-:sourceApiJava
-:compileApiJava UP-TO-DATE
-:processApiResources UP-TO-DATE
-:apiClasses UP-TO-DATE
-:sourceMainJava
-:compileJavaNote: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-
-:processResources
-:classes
-:jar
-:sourceTestJava
-:compileTestJava UP-TO-DATE
-:processTestResources UP-TO-DATE
-:testClasses UP-TO-DATE
-:test UP-TO-DATE
+:getVersionJson
+:extractUserdev
+:extractDependencyATs SKIPPED
 :extractMcpData SKIPPED
 :extractMcpMappings SKIPPED
-:getVersionJson
-:extractUserdev UP-TO-DATE
 :genSrgs SKIPPED
-:reobfJar
-:extractRangemapReplacedMain
-F:\GitHub\Compressed-Blocks-2.0\build\sources\main\java
-:retromapReplacedMain
-remapping source...
-:sourceJar
-:assemble
-:check UP-TO-DATE
-:build
+:downloadClient SKIPPED
+:downloadServer SKIPPED
+:splitServerJar SKIPPED
+:mergeJars SKIPPED
+:deobfMcSRG SKIPPED
+:decompileMc SKIPPED
+:fixMcSources
+:applySourcePatches
+:remapMcSources SKIPPED
+:recompileMc SKIPPED
+:extractNatives SKIPPED
+:getAssetIndex UP-TO-DATE
+:getAssets
+:makeStart
+:setupDecompWorkspace
+:ideaModule
+:ideaProject
+:ideaWorkspace
+:idea
+:genIntellijRuns
 
 BUILD SUCCESSFUL
 
-Total time: 3 mins 26.67 secs
+Total time: 34.169 secs

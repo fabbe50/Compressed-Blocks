@@ -46,7 +46,7 @@ public class BiomeDenseHell extends Biome {
         this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityPigZombie.class, 100, 16, 16));
         this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityMagmaCube.class, 8, 6, 6));
         this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEnderman.class, 8, 6, 6));
-        this.theBiomeDecorator = new BiomeDenseHellDecorator();
+        this.decorator = new BiomeDenseHellDecorator();
     }
 
     public void genTerrainBlocks(World worldIn, Random rand, ChunkPrimer primer, int x, int z, double noiseVal) {
