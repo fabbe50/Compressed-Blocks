@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "compressedblocks:items/endgamiumNugget"
+    "layer0": "compressedblocks:items/endgamiumnugget"
   }
 }
