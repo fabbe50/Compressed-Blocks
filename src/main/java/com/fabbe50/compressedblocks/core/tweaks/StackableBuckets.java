@@ -47,16 +47,16 @@ public class StackableBuckets {
                     event.getWorld().setBlockState(event.getPos().offset(facing), Blocks.WATER.getDefaultState());
                 }
 
+                boolean notFull = event.getEntityPlayer().inventory.addItemStackToInventory(new ItemStack(Items.BUCKET, 1, 0));
+                if (!notFull)
+                    event.getEntityPlayer().dropItem(Items.BUCKET, 1);
+
                 if (event.getItemStack().getCount() > 1) {
                     event.getItemStack().shrink(1);
                 }
                 else if (event.getItemStack().getCount() == 1) {
                     event.getItemStack().setCount(0);
                 }
-
-                boolean notFull = event.getEntityPlayer().inventory.addItemStackToInventory(new ItemStack(Items.BUCKET, 1, 0));
-                if (!notFull)
-                    event.getEntityPlayer().dropItem(Items.BUCKET, 1);
             }
             else if (event.getItemStack().getItem() == Items.LAVA_BUCKET) {
                 EnumFacing facing = event.getFace();
@@ -70,16 +70,16 @@ public class StackableBuckets {
                     event.getWorld().setBlockState(event.getPos().offset(facing), Blocks.LAVA.getDefaultState());
                 }
 
+                boolean notFull = event.getEntityPlayer().inventory.addItemStackToInventory(new ItemStack(Items.BUCKET, 1, 0));
+                if (!notFull)
+                    event.getEntityPlayer().dropItem(Items.BUCKET, 1);
+
                 if (event.getItemStack().getCount() > 1) {
                     event.getItemStack().shrink(1);
                 }
                 else if (event.getItemStack().getCount() == 1) {
                     event.getItemStack().setCount(0);
                 }
-
-                boolean notFull = event.getEntityPlayer().inventory.addItemStackToInventory(new ItemStack(Items.BUCKET, 1, 0));
-                if (!notFull)
-                    event.getEntityPlayer().dropItem(Items.BUCKET, 1);
             }
         }
     }

@@ -50,5 +50,28 @@ public class RecipeOverrideRegistry {
                 'S', new ItemStack(ModItemRegistry.DECORATIVE_SOLID, 1, 3),
                 'N', new ItemStack(BlockRegistry.NETHER_STAR_BLOCK, 1, 0)
         });
+        GameRegistry.addShapedRecipe(new ItemStack(ModItemRegistry.PASSIVEGENERATOR, 1, 6), new Object[]{
+                "RNR",
+                "EDE",
+                "RNR",
+                'R', new ItemStack(ModItemRegistry.RAINBOWGENERATOR, 1, 0),
+                'N', new ItemStack(BlockRegistry.NETHER_STAR_BLOCK, 1, 0),
+                'E', new ItemStack(BlockRegistry.ENDERBLOCK, 1, 0),
+                'D', new ItemStack(ModItemRegistry.PASSIVEGENERATOR, 1, 8)
+        });
+        GameRegistry.addShapedRecipe(new ItemStack(ModItemRegistry.DECORATIVEBEDROCK, 4, 0), new Object[]{
+                "BB",
+                "BB",
+                'B', new ItemStack(Blocks.BEDROCK, 1, 0)
+        });
+        GameRegistry.addShapedRecipe(new ItemStack(ModItemRegistry.DECORATIVEBEDROCK, 3, 1), new Object[]{
+                "BBB",
+                'B', new ItemStack(Blocks.BEDROCK, 1, 0)
+        });
+        GameRegistry.addShapedRecipe(new ItemStack(ModItemRegistry.DECORATIVEBEDROCK, 2, 2), new Object[]{
+                "B",
+                "B",
+                'B', new ItemStack(Blocks.BEDROCK, 1, 0)
+        });
     }
 }

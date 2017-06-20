@@ -28,7 +28,7 @@ public class ItemEnderApple extends ItemFood {
     public ItemEnderApple(int amount, float saturation, boolean isWolfFood, String registryName) {
         super(amount, saturation, isWolfFood, registryName);
         this.setHasSubtypes(true);
-        this.setMaxStackSize(16);
+        this.setMaxStackSize(64);
     }
 
     @Override

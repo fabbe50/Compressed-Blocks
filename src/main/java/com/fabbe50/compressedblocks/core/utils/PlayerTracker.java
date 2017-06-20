@@ -19,7 +19,7 @@ public class PlayerTracker {
         MinecraftServer server = event.player.getServer();
         if (server != null) {
             players.add(event.player.getName());
-            LogHelper.info("Added Player");
+            LogHelper.info("Added Player: " + event.player.getName());
         }
     }
 

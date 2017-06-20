@@ -5,7 +5,6 @@ import com.fabbe50.compressedblocks.core.reference.MetaValues;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentData;
-import net.minecraft.enchantment.EnchantmentMending;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.PotionTypes;
@@ -15,7 +14,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.potion.PotionUtils;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
@@ -23,7 +24,11 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
  * Created by fabbe50 on 16/09/2016.
  */
 public class RecipeRegistry {
-    private static ItemStack mendingBook = new ItemStack(Items.ENCHANTED_BOOK);
+    private static ItemEnchantedBook enchantedBook;
+    private static ItemStack mendingBook = new ItemStack(Items.ENCHANTED_BOOK, 1, 0);
+    private static NBTTagList bookTags;
+    private static NBTTagCompound bookTag;
+    private static ItemStack endgamiumSword = new ItemStack(ItemRegistry.ENDGAMIUM_SWORD, 1, 0);
 
     public static void init() {
         addDataToItemStack();
@@ -39,7 +44,13 @@ public class RecipeRegistry {
     }
 
     private static void addDataToItemStack() {
-        mendingBook.addEnchantment(Enchantment.getEnchantmentByID(70), 1);
+        //mendingBook.addEnchantment(Enchantment.getEnchantmentByID(70), 1);
+        Items.ENCHANTED_BOOK.addEnchantment(mendingBook, new EnchantmentData(Enchantment.getEnchantmentByID(70), 1));
+        endgamiumSword.addEnchantment(Enchantment.getEnchantmentByID(16), 5);
+        endgamiumSword.addEnchantment(Enchantment.getEnchantmentByID(21), 3);
+        endgamiumSword.addEnchantment(Enchantment.getEnchantmentByID(22), 3);
+        endgamiumSword.addEnchantment(Enchantment.getEnchantmentByID(34), 3);
+        endgamiumSword.addEnchantment(Enchantment.getEnchantmentByID(19), 2);
     }
 
     private static void createReturnableRecipes() {
@@ -65,6 +76,7 @@ public class RecipeRegistry {
         craft3x3Block(BlockRegistry.DOUBLECOMPRESSSEDTNT, 1, 0, BlockRegistry.TRIPLECOMPRESSSEDTNT, 1, 0, false);
         craft3x3Block(Items.ENDER_PEARL, 1, 0, BlockRegistry.ENDERBLOCK, 1, 0, false);
         craft3x3Block(ItemRegistry.PEBBLES, 1, 0, Blocks.COBBLESTONE, 1, 0, false);
+        craft3x3Block(ItemRegistry.BEDROCK_INGOT, 1, 0, Blocks.BEDROCK, 1, 0, false);
 
         //Compressed Blocks Recipes
         craft3x3Block(BlockRegistry.POTATO_BLOCK, 1, 0, BlockRegistry.COMPRESSED_POTATO, 1, 0, true);
@@ -86,9 +98,10 @@ public class RecipeRegistry {
         GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.POTATO_BONE, 1, 0), new Object[]{new ItemStack(ItemRegistry.ENDGAMIUM_BONE, 1, 0), new ItemStack(Items.BAKED_POTATO, 1, 0)});
         GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.FALLTRAPBLOCK, 1, 0), new Object[]{new ItemStack(Items.ENDER_PEARL, 1, 0), new ItemStack(Blocks.COBBLESTONE, 1, 0), new ItemStack(Blocks.TRIPWIRE_HOOK, 1, 0)});
         GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.ENDGAMIUM_INGOT, 2, 0), new Object[]{new ItemStack(ItemRegistry.ENDGAMIUM_INGOT, 1, 0), new ItemStack(Items.IRON_INGOT, 1, 0), new ItemStack(Items.NETHER_STAR, 1 ,0)});
-        GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.ENDGAMIUM_INGOT, 1, 0), new Object[]{new ItemStack(BlockRegistry.NETHER_STAR_BLOCK, 1, 0), new ItemStack(BlockRegistry.COMPRESSED_IRON, 1, 0), new ItemStack(Items.GOLDEN_APPLE, 1, 1), new ItemStack(Items.END_CRYSTAL, 1, 0), new ItemStack(Blocks.DRAGON_EGG)});
+        GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.ENDGAMIUM_INGOT, 1, 0), new Object[]{new ItemStack(BlockRegistry.NETHER_STAR_BLOCK, 1, 0), new ItemStack(BlockRegistry.COMPRESSED_IRON, 1, 0), new ItemStack(Items.GOLDEN_APPLE, 1, 1), new ItemStack(Items.END_CRYSTAL, 1, 0), new ItemStack(Blocks.DRAGON_EGG), new ItemStack(ItemRegistry.ENDERAPPLE, 1, 1)});
         GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.FOODBOWL, 1, 0), new Object[]{new ItemStack(Items.BOWL, 1, 0), new ItemStack(Items.COOKED_BEEF, 1, 0), new ItemStack(Items.COOKED_PORKCHOP, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 0), new ItemStack(Items.BAKED_POTATO, 1, 0), new ItemStack(Items.CARROT, 1, 0), new ItemStack(Items.BREAD, 1, 0)});
         GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.PEBBLES, 9, 0), new Object[]{new ItemStack(Blocks.COBBLESTONE, 1, 0)});
+        GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.TELEPORTORB, 1, 0), new Object[]{new ItemStack(ItemRegistry.ENDERAPPLE, 1, 1), new ItemStack(Items.COMPASS, 2, 0), new ItemStack(Blocks.OBSIDIAN, 3, 0), new ItemStack(Items.DIAMOND, 1, 0), new ItemStack(Items.DYE, 2, 4)});
     }
 
     private static void createShapedHCRecipes() {
@@ -181,6 +194,12 @@ public class RecipeRegistry {
                 'E', new ItemStack(Items.EMERALD, 1, 0),
                 'P', new ItemStack(BlockRegistry.ENDERBLOCK, 1, 0),
                 'O', new ItemStack(Blocks.OBSIDIAN, 1, 0)});
+        GameRegistry.addShapedRecipe(endgamiumSword, new Object[] {
+                "E",
+                "E",
+                "S",
+                'E', new ItemStack(ItemRegistry.ENDGAMIUM_INGOT, 1, 0),
+                'S', new ItemStack(Items.STICK, 1, 0)});
     }
 
     private static void createHalfShapedRecipes() {

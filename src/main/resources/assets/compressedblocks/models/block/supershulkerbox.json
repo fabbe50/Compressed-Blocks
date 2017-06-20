@@ -1,0 +1,9 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"particle": "compressedblocks:blocks/shulker_box/shulker_black_bottom",
+		"bottom": "compressedblocks:blocks/shulker_box/shulker_black_bottom",
+		"top": "minecraft:blocks/shulker_top_black",
+		"side": "compressedblocks:blocks/shulker_box/shulker_black_side"
+	}
+}

@@ -34,7 +34,7 @@ public class RecipeRemoval {
 
     private static void removeFromVanilla() {
         if (Configs.vanillaHooks && Configs.stackSizes) {
-            removeRecipe(Items.BREWING_STAND);
+            //removeRecipe(Items.BREWING_STAND);
         }
 
         removeRecipe(Blocks.STAINED_HARDENED_CLAY);

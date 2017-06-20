@@ -3,6 +3,7 @@
 #############################################################################
 item.compressedblocks:endgamiumingot.name=Endgamium Ingot
 item.compressedblocks:endgamiumnugget.name=Endgamium Nugget
+item.compressedblocks:endgamiumsword.name=Endgamium Sword
 item.compressedblocks:potatobone.name=Potato on a Bone
 item.compressedblocks:endgamiumbone.name=Endgamium Infused Bone
 item.compressedblocks:bedrockbreaker.name=Bedrock Destroyer [WIP]
@@ -48,6 +49,7 @@ item.compressedblocks:inkbottle.lightBlue.name=Bottle of Light Blue Ink
 item.compressedblocks:inkbottle.magenta.name=Bottle of Magenta Ink
 item.compressedblocks:inkbottle.orange.name=Bottle of Orange Ink
 item.compressedblocks:inkbottle.white.name=Bottle of White Ink
+item.compressedblocks:bedrockingot.name=Bedrock Ingot
 
 #############################################################################
 #                                  Blocks                                   #
@@ -86,7 +88,7 @@ tile.compressedblocks:doublecompressedtnt.name=Double Compressed TNT
 tile.compressedblocks:triplecompressedtnt.name=Triple Compressed TNT
 tile.compressedblocks:miningexplosives.name=Chunk Miner
 tile.compressedblocks:enderblock.name=Ender Pearl Block
-tile.compressedblocks:light_block.name=Adjustable Light [NOT IMPLEMENTED]
+tile.compressedblocks:light_block.name=Adjustable Light [WIP]
 tile.compressedblocks:onlinedetector.name=Online Detector [NOT IMPLEMENTED]
 tile.compressedblocks:blackhole.name=Black Hole [NOT IMPLEMENTED]
 tile.compressedblocks:fusionpedestal.name=Fusion Pedestal
@@ -167,6 +169,15 @@ tile.compressedblocks:iron_compr_quintuple.name=Quintuple Compressed Iron Block
 tile.compressedblocks:iron_compr_sextuple.name=Sextuple Compressed Iron Block
 tile.compressedblocks:iron_compr_septuple.name=Septuple Compressed Iron Block
 tile.compressedblocks:iron_compr_octuple.name=Octuple Compressed Iron Block
+#Compressed Emerald Block
+tile.compressedblocks:emerald_compr_single.name=Single Compressed Emerald Block
+tile.compressedblocks:emerald_compr_double.name=Double Compressed Emerald Block
+tile.compressedblocks:emerald_compr_triple.name=Triple Compressed Emerald Block
+tile.compressedblocks:emerald_compr_quadruple.name=Quadruple Compressed Emerald Block
+tile.compressedblocks:emerald_compr_quintuple.name=Quintuple Compressed Emerald Block
+tile.compressedblocks:emerald_compr_sextuple.name=Sextuple Compressed Emerald Block
+tile.compressedblocks:emerald_compr_septuple.name=Septuple Compressed Emerald Block
+tile.compressedblocks:emerald_compr_octuple.name=Octuple Compressed Emerald Block
 
 #############################################################################
 #                                   Mobs                                    #
@@ -204,3 +215,5 @@ achievement.buildHQCake.desc=Make a high quality cake.
 #Titles
 container.furnacecompr=Compressed Furnace
 container.superShulkerBox=Compressed Shulker Box
+#CreativeTabs
+itemGroup.compressedblocks.compressedblocks=Compresssed Blocks

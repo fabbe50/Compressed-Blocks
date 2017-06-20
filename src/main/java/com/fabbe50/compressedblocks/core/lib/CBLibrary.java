@@ -15,5 +15,6 @@ public class CBLibrary {
         compressedBlocks.add("iron");
         compressedBlocks.add("gold");
         compressedBlocks.add("diamond");
+        compressedBlocks.add("emerald");
     }
 }

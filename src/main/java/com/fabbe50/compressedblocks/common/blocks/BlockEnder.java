@@ -11,6 +11,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -26,38 +27,42 @@ public class BlockEnder extends BlockBase {
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!worldIn.isRemote) {
-            BlockPos pos1;
+            if (!playerIn.isSneaking()) {
+                BlockPos pos1;
 
-            if (facing == EnumFacing.NORTH) {
-                pos1 = new BlockPos(pos.getX(), pos.getY(), pos.getZ() + 50);
-                worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
-                worldIn.setBlockState(pos1, BlockRegistry.ENDERBLOCK.getDefaultState());
-                playerIn.attemptTeleport(playerIn.posX, playerIn.posY, playerIn.posZ + 50);
-                return true;
-            }
-            else if (facing == EnumFacing.SOUTH) {
-                pos1 = new BlockPos(pos.getX(), pos.getY(), pos.getZ() - 50);
-                worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
-                worldIn.setBlockState(pos1, BlockRegistry.ENDERBLOCK.getDefaultState());
-                playerIn.attemptTeleport(playerIn.posX, playerIn.posY, playerIn.posZ - 50);
-                return true;
-            }
-            else if (facing == EnumFacing.WEST) {
-                pos1 = new BlockPos(pos.getX() + 50, pos.getY(), pos.getZ());
-                worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
-                worldIn.setBlockState(pos1, BlockRegistry.ENDERBLOCK.getDefaultState());
-                playerIn.attemptTeleport(playerIn.posX + 50, playerIn.posY, playerIn.posZ);
-                return true;
-            }
-            else if (facing == EnumFacing.EAST) {
-                pos1 = new BlockPos(pos.getX() - 50, pos.getY(), pos.getZ());
-                worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
-                worldIn.setBlockState(pos1, BlockRegistry.ENDERBLOCK.getDefaultState());
-                playerIn.attemptTeleport(playerIn.posX - 50, playerIn.posY, playerIn.posZ);
-                return true;
+                if (facing == EnumFacing.NORTH) {
+                    pos1 = new BlockPos(pos.getX(), pos.getY(), pos.getZ() + 50);
+                    worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
+                    worldIn.setBlockState(pos1, BlockRegistry.ENDERBLOCK.getDefaultState());
+                    playerIn.attemptTeleport(playerIn.posX, playerIn.posY, playerIn.posZ + 50);
+                    return true;
+                } else if (facing == EnumFacing.SOUTH) {
+                    pos1 = new BlockPos(pos.getX(), pos.getY(), pos.getZ() - 50);
+                    worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
+                    worldIn.setBlockState(pos1, BlockRegistry.ENDERBLOCK.getDefaultState());
+                    playerIn.attemptTeleport(playerIn.posX, playerIn.posY, playerIn.posZ - 50);
+                    return true;
+                } else if (facing == EnumFacing.WEST) {
+                    pos1 = new BlockPos(pos.getX() + 50, pos.getY(), pos.getZ());
+                    worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
+                    worldIn.setBlockState(pos1, BlockRegistry.ENDERBLOCK.getDefaultState());
+                    playerIn.attemptTeleport(playerIn.posX + 50, playerIn.posY, playerIn.posZ);
+                    return true;
+                } else if (facing == EnumFacing.EAST) {
+                    pos1 = new BlockPos(pos.getX() - 50, pos.getY(), pos.getZ());
+                    worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
+                    worldIn.setBlockState(pos1, BlockRegistry.ENDERBLOCK.getDefaultState());
+                    playerIn.attemptTeleport(playerIn.posX - 50, playerIn.posY, playerIn.posZ);
+                    return true;
+                }
             }
         }
 
         return false;
+    }
+
+    @Override
+    public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon) {
+        return true;
     }
 }

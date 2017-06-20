@@ -1,5 +1,7 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
+import com.fabbe50.compressedblocks.common.blocks.meta.MetaLightBase;
+import com.fabbe50.compressedblocks.core.lib.EnumLight;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
 import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
 import com.thefifthidiot.tficore.utility.helper.RedstoneHelper;
@@ -26,9 +28,11 @@ import java.util.Random;
 public class BlockAdjustableLight extends BlockBase {
     int powerActiveSide = 0;
 
-    public BlockAdjustableLight(Material material, MapColor mapColor, String blockName, float hardness, float resistance, @Nullable CreativeTabs tab) {
-        super(material, mapColor, blockName, hardness, resistance, tab);
+    public BlockAdjustableLight(Material material, MapColor mapColor, String itemName, float hardness, float resistance, @Nullable CreativeTabs tab, float lightStrength) {
+        super(material, mapColor, itemName, hardness, resistance, tab);
+        this.setLightLevel(lightStrength);
     }
+
 
     @SuppressWarnings("deprecation")
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
@@ -38,7 +42,7 @@ public class BlockAdjustableLight extends BlockBase {
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
         if (!worldIn.isRemote) {
             if (this.powerActiveSide > 0 && !worldIn.isBlockPowered(pos)) {
-                this.setLightLevel(0);
+                worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK.getDefaultState());
             }
         }
     }
@@ -53,10 +57,71 @@ public class BlockAdjustableLight extends BlockBase {
         }
         if (!worldIn.isRemote) {
             if (this.powerActiveSide > 0 && !worldIn.isBlockPowered(pos)) {
-                this.setLightLevel(0);
+                worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK.getDefaultState());
             }
             else if (worldIn.isBlockPowered(pos)) {
-                this.setLightLevel((float)(this.powerActiveSide / 15));
+                switch(powerActiveSide) {
+                    case 1: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK1.getDefaultState());
+                        break;
+                    }
+                    case 2: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK2.getDefaultState());
+                        break;
+                    }
+                    case 3: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK3.getDefaultState());
+                        break;
+                    }
+                    case 4: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK4.getDefaultState());
+                        break;
+                    }
+                    case 5: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK5.getDefaultState());
+                        break;
+                    }
+                    case 6: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK6.getDefaultState());
+                        break;
+                    }
+                    case 7: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK7.getDefaultState());
+                        break;
+                    }
+                    case 8: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK8.getDefaultState());
+                        break;
+                    }
+                    case 9: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK9.getDefaultState());
+                        break;
+                    }
+                    case 10: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK10.getDefaultState());
+                        break;
+                    }
+                    case 11: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK11.getDefaultState());
+                        break;
+                    }
+                    case 12: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK12.getDefaultState());
+                        break;
+                    }
+                    case 13: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK13.getDefaultState());
+                        break;
+                    }
+                    case 14: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK14.getDefaultState());
+                        break;
+                    }
+                    case 15: {
+                        worldIn.setBlockState(pos, BlockRegistry.LIGHTBLOCK15.getDefaultState());
+                        break;
+                    }
+                }
             }
         }
     }

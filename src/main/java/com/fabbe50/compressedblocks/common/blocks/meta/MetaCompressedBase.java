@@ -1,10 +1,12 @@
 package com.fabbe50.compressedblocks.common.blocks.meta;
 
+import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import com.fabbe50.compressedblocks.core.lib.CBLibrary;
 import com.thefifthidiot.tficore.common.blocks.meta.MetaBlockBase;
 import com.thefifthidiot.tficore.common.creativetabs.TFITab;
 import com.thefifthidiot.tficore.lib.Configs;
 import com.thefifthidiot.tficore.lib.EnumCompressed;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -17,6 +19,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -29,6 +33,8 @@ import java.util.List;
 @SuppressWarnings("deprecation, unchecked")
 public class MetaCompressedBase extends MetaBlockBase {
     public static final PropertyEnum TYPE = PropertyEnum.create("type", EnumCompressed.class);
+    private static boolean beaconBase = false;
+    private static int beaconLevel = 0;
 
     public MetaCompressedBase(Material material, MapColor mapColor, String modID, String itemName, float hardness, float resistance, @Nullable CreativeTabs tab) {
         super(material);
@@ -36,7 +42,7 @@ public class MetaCompressedBase extends MetaBlockBase {
         this.setRegistryName(modID, itemName);
         this.setHardness(hardness);
         this.setResistance(resistance);
-        this.setCreativeTab(tab != null ? tab : (Configs.tfitabs ? TFITab.blockTab : null));
+        this.setCreativeTab(CBTab.compressedBlocksTab);
     }
 
     @Override
@@ -165,7 +171,14 @@ public class MetaCompressedBase extends MetaBlockBase {
             return "gold ingots";
         else if (stack.getUnlocalizedName().contains("diamond"))
             return "diamond ingots";
+        else if (stack.getUnlocalizedName().contains("emerald"))
+            return "emeralds";
         else
             return "";
+    }
+
+    @Override
+    public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon) {
+        return beaconBase;
     }
 }

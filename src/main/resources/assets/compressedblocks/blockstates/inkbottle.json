@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "ink_black": {"model": "compressedblocks:item/inkbottle_black"}
+  }
+}

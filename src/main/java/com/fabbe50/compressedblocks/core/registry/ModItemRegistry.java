@@ -24,6 +24,12 @@ public class ModItemRegistry {
     public static Block EUQUARRY = null;
     @GameRegistry.ObjectHolder("extrautils2:DecorativeSolid") //Meta 3 = STONEBURNT
     public static Block DECORATIVE_SOLID = null;
+    @GameRegistry.ObjectHolder("extrautils2:passivegenerator") //Meta 6 = CREATIVE MILL
+    public static Block PASSIVEGENERATOR = null;
+    @GameRegistry.ObjectHolder("extrautils2:rainbowgenerator")
+    public static Block RAINBOWGENERATOR = null;
+    @GameRegistry.ObjectHolder("extrautils2:decorativebedrock")
+    public static Block DECORATIVEBEDROCK = null;
 
     public static void init() {}
 }

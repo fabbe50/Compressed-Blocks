@@ -27,33 +27,18 @@ import java.util.Random;
 public class BlockOnlineDetector extends BlockBase {
     private MinecraftServer server = null;
     private String name = "";
-    private int power = 0;
-    private Material material = null;
-    private MapColor mapColor = null;
-    private String blockName = "";
-    private float hardness = 0;
-    private float resistance = 0;
-    private CreativeTabs tab = null;
+    private boolean online = false;
 
     public BlockOnlineDetector(Material material, MapColor mapColor, String blockName, float hardness, float resistance, @Nullable CreativeTabs tab) {
         super(material, mapColor, blockName, hardness, resistance, tab);
-        this.material = material;
-        this.mapColor = mapColor;
-        this.blockName = blockName;
-        this.hardness = hardness;
-        this.resistance = resistance;
-        this.tab = tab;
-    }
-
-    public BlockOnlineDetector() {
-        super(Material.REDSTONE_LIGHT, MapColor.BLUE, "NAME", 1.6f, 0.8f, null);
+        setTickRandomly(true);
     }
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!worldIn.isRemote) {
             if (playerIn.getHeldItem(hand).getItem() instanceof ItemDNASample) {
-                server = worldIn.getMinecraftServer();
+                this.server = worldIn.getMinecraftServer();
                 LogHelper.info("DNA Analyzing");
                 ItemStack stack = playerIn.getHeldItem(hand);
                 NBTTagCompound tags = stack.getTagCompound();
@@ -66,7 +51,7 @@ public class BlockOnlineDetector extends BlockBase {
                 else
                     return false;
 
-                name = player;
+                this.name = player;
 
                 return true;
             }
@@ -86,16 +71,16 @@ public class BlockOnlineDetector extends BlockBase {
 
     @Override
     public int tickRate(World worldIn) {
-        return 1;
+        return 2;
     }
 
     public void update(World worldIn) {
         LogHelper.info("update");
         if (!worldIn.isRemote) {
             if (PlayerTracker.players.contains(name)) {
-                power = 15;
+                online = true;
             } else {
-                power = 0;
+                online = false;
             }
         }
     }
@@ -107,7 +92,13 @@ public class BlockOnlineDetector extends BlockBase {
 
     @Override
     @SuppressWarnings("deprecation")
+    public boolean canProvidePower(IBlockState state) {
+        return true;
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
     public int getWeakPower(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
-        return power;
+        return online ? 15 : 0;
     }
 }

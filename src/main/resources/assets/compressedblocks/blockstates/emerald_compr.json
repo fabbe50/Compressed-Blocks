@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"type=single": { "model": "compressedblocks:emerald_compr_single" },
+		"type=double": { "model": "compressedblocks:emerald_compr_double" },
+		"type=triple": { "model": "compressedblocks:emerald_compr_triple" },
+		"type=quadruple": { "model": "compressedblocks:emerald_compr_quadruple" },
+		"type=quintuple": { "model": "compressedblocks:emerald_compr_quintuple" },
+		"type=sextuple": { "model": "compressedblocks:emerald_compr_sextuple" },
+		"type=septuple": { "model": "compressedblocks:emerald_compr_septuple" },
+		"type=octuple": { "model": "compressedblocks:emerald_compr_octuple" }
+	}
+}
