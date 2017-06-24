@@ -70,10 +70,10 @@ public class VanillaHooks {
             //Items.RABBIT_STEW.setMaxStackSize(16);
 
             Items.BUCKET.setMaxStackSize(64);
-            Items.WATER_BUCKET.setMaxStackSize(8);
-            Items.LAVA_BUCKET.setMaxStackSize(8);
+            Items.WATER_BUCKET.setMaxStackSize(16);
+            Items.LAVA_BUCKET.setMaxStackSize(16);
 
-            if (Configs.undrinkableBuckets) Items.MILK_BUCKET.setMaxStackSize(32);
+            if (Configs.undrinkableBuckets) Items.MILK_BUCKET.setMaxStackSize(16);
 
             //Tooltips
             //items.add(Items.BREWING_STAND);
