@@ -98,7 +98,7 @@ public class ContainerFurnaceCompr extends Container {
                 slot.onSlotChange(itemstack1, itemstack);
             }
             else if (index != 1 && index != 0) {
-                if (FurnaceRecipes.instance().getSmeltingResult(itemstack1) != null) {
+                if (!FurnaceRecipes.instance().getSmeltingResult(itemstack1).isEmpty()) {
                     if (!this.mergeItemStack(itemstack1, 0, 1, false)) {
                         return null;
                     }

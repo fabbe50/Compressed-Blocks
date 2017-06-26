@@ -65,7 +65,7 @@ public class BlockBrewer extends BlockContainer {
         return false;
     }
 
-    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn) {
+    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean bool) {
         addCollisionBoxToList(pos, entityBox, collidingBoxes, STICK_AABB);
         addCollisionBoxToList(pos, entityBox, collidingBoxes, BASE_AABB);
     }

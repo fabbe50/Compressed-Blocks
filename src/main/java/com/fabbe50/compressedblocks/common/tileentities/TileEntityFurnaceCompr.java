@@ -187,7 +187,7 @@ public class TileEntityFurnaceCompr extends TileEntityLockable implements ITicka
 
             if (flag != this.isBurning()) {
                 flag1 = true;
-                BlockFurnace.setState(this.isBurning(), this.world, this.pos);
+                BlockFurnaceDecoy.setState(this.isBurning(), this.world, this.pos);
             }
         }
 
