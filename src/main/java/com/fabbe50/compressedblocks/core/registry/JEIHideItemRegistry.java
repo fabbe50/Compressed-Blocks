@@ -51,6 +51,7 @@ public class JEIHideItemRegistry {
         hide.add(new ItemStack(BlockRegistry.LIGHTBLOCK15));
         hide.add(new ItemStack(BlockRegistry.BREWER));
         hide.add(new ItemStack(BlockRegistry.OVERLAYTEST));
+        hide.add(new ItemStack(BlockRegistry.COMPRESSED_GRASS_EATEN, 1, WILDCARD_VALUE));
 
         hide.add(new ItemStack(ItemRegistry.INKBOTTLE, 1, WILDCARD_VALUE));
         hide.add(new ItemStack(ItemRegistry.TWOHANDITEMTEST));

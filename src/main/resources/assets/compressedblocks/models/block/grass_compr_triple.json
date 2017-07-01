@@ -1,0 +1,12 @@
+{
+	"parent": "compressedblocks:block/overlayparent",
+	"textures": {
+		"particle": "minecraft:blocks/dirt",
+		"bottom": "minecraft:blocks/dirt",
+		"top": "compressedblocks:blocks/grass_top",
+		"side": "minecraft:blocks/grass_side",
+		"overlay-bottom": "compressedblocks:blocks/compressions/OverlayCompressedTriple",
+		"overlay-top": "compressedblocks:blocks/compressions/OverlayCompressedTriple",
+		"overlay-side": "compressedblocks:blocks/compressions/OverlayCompressedTriple"
+	}
+}

@@ -178,6 +178,15 @@ tile.compressedblocks:emerald_compr_quintuple.name=Quintuple Compressed Emerald 
 tile.compressedblocks:emerald_compr_sextuple.name=Sextuple Compressed Emerald Block
 tile.compressedblocks:emerald_compr_septuple.name=Septuple Compressed Emerald Block
 tile.compressedblocks:emerald_compr_octuple.name=Octuple Compressed Emerald Block
+#Compressed Grass Block
+tile.compressedblocks:grass_compr_single.name=Single Compressed Grass Block
+tile.compressedblocks:grass_compr_double.name=Double Compressed Grass Block
+tile.compressedblocks:grass_compr_triple.name=Triple Compressed Grass Block
+tile.compressedblocks:grass_compr_quadruple.name=Quadruple Compressed Grass Block
+tile.compressedblocks:grass_compr_quintuple.name=Quintuple Compressed Grass Block
+tile.compressedblocks:grass_compr_sextuple.name=Sextuple Compressed Grass Block
+tile.compressedblocks:grass_compr_septuple.name=Septuple Compressed Grass Block
+tile.compressedblocks:grass_compr_octuple.name=Octuple Compressed Grass Block
 
 #############################################################################
 #                                   Mobs                                    #

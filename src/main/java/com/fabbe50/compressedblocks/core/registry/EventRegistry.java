@@ -1,6 +1,7 @@
 package com.fabbe50.compressedblocks.core.registry;
 
 import com.fabbe50.compressedblocks.core.event.CraftingEvent;
+import com.fabbe50.compressedblocks.core.event.GrassEatEvent;
 import com.fabbe50.compressedblocks.core.event.SmeltingEvent;
 import com.fabbe50.compressedblocks.core.tweaks.StackableBuckets;
 import com.fabbe50.compressedblocks.core.utils.PlayerTracker;
@@ -24,6 +25,7 @@ public class EventRegistry {
         MinecraftForge.EVENT_BUS.register(new StackableBuckets());
         MinecraftForge.EVENT_BUS.register(new PlayerTracker());
         MinecraftForge.EVENT_BUS.register(new VanillaHooks());
+        MinecraftForge.EVENT_BUS.register(new GrassEatEvent());
     }
 
     public static void onClientStarted() {

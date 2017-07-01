@@ -68,6 +68,8 @@ public class BlockRegistry {
     public static final Block COMPRESSED_GOLD = new MetaCompressedBase(Material.IRON, MapColor.GOLD, Reference.MOD_ID, "gold_compr", 2.5f, 12.0f, null);
     public static final Block COMPRESSED_DIAMOND = new MetaCompressedBase(Material.IRON, MapColor.DIAMOND, Reference.MOD_ID, "diamond_compr", 2.5f, 12.0f, null);
     public static final Block COMPRESSED_EMERALD = new MetaCompressedBase(Material.IRON, MapColor.EMERALD, Reference.MOD_ID, "emerald_compr", 2.5f, 12.0f, null);
+    public static final Block COMPRESSED_GRASS = new MetaCompressedBase(Material.GRASS, MapColor.GRASS, Reference.MOD_ID, "grass_compr", 1.6f, 4.0f, null);
+    public static final Block COMPRESSED_GRASS_EATEN = new BlockCompressedGrass(Material.GROUND, MapColor.DIRT, Reference.MOD_ID, "grass_eaten_compr", 1.5f, 3.5f, null);
 
     //LightBlocks
     public static final Block LIGHTBLOCK = new BlockAdjustableLight(Material.REDSTONE_LIGHT, MapColor.SNOW, "light_block", 1.3f, 6f, null, 0);
@@ -186,6 +188,8 @@ public class BlockRegistry {
         TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "gold_compr"), COMPRESSED_GOLD);
         TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "diamond_compr"), COMPRESSED_DIAMOND);
         TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "emerald_compr"), COMPRESSED_EMERALD);
+        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "grass_compr"), COMPRESSED_GRASS);
+        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "grass_eaten_compr"), COMPRESSED_GRASS_EATEN);
     }
 	
 	public static void renderInit() {
@@ -273,6 +277,8 @@ public class BlockRegistry {
         BlockRenderer.registerMetaBlock(COMPRESSED_GOLD, MetaValues.COMPRESSED);
         BlockRenderer.registerMetaBlock(COMPRESSED_DIAMOND, MetaValues.COMPRESSED);
         BlockRenderer.registerMetaBlock(COMPRESSED_EMERALD, MetaValues.COMPRESSED);
+        BlockRenderer.registerMetaBlock(COMPRESSED_GRASS, MetaValues.COMPRESSED);
+        BlockRenderer.registerMetaBlock(COMPRESSED_GRASS_EATEN, MetaValues.COMPRESSED);
 	}
 
     public static void registerTileEntity() {

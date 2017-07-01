@@ -13,6 +13,7 @@ import net.minecraft.item.ItemEnchantedBook;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.ShapelessRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.potion.PotionUtils;
@@ -39,6 +40,7 @@ public class RecipeRegistry {
         createShapelessRecipes();
         createHalfShapedRecipes();
         createShapedHCRecipes();
+        createUncraft3x3Recipes();
 
         registerReturnableRecipes();
     }
@@ -63,10 +65,6 @@ public class RecipeRegistry {
 
         //Normal Blocks Recipes
         craft3x3Block(Items.POTATO, 1, 0, BlockRegistry.POTATO_BLOCK, 1, 0, false);
-        craft3x3Block(Blocks.COBBLESTONE, 1, 0, BlockRegistry.COMPRESSED_COBBLESTONE, 1, 0, false);
-        craft3x3Block(Blocks.GRAVEL, 1, 0, BlockRegistry.COMPRESSED_GRAVEL, 1, 0, false);
-        craft3x3Block(Blocks.SAND, 1, 0, BlockRegistry.COMPRESSED_SAND, 1, 0, false);
-        craft3x3Block(Blocks.DIRT, 1, 0, BlockRegistry.COMPRESSED_DIRT, 1, 0, false);
         craft3x3Block(Blocks.FURNACE, 1, 0, BlockRegistry.COMPRESSED_FURNACE_IDLE, 1, 0, false);
         craft3x3Block(Items.NETHER_STAR, 1, 0, BlockRegistry.NETHER_STAR_BLOCK, 1, 0, false);
         craft3x3Block(ItemRegistry.ENDGAMIUM_INGOT, 1, 0, BlockRegistry.ENDGAMIUMBLOCK, 1, 0, false);
@@ -80,9 +78,28 @@ public class RecipeRegistry {
 
         //Compressed Blocks Recipes
         craft3x3Block(BlockRegistry.POTATO_BLOCK, 1, 0, BlockRegistry.COMPRESSED_POTATO, 1, 0, true);
+        craft3x3Block(Blocks.COBBLESTONE, 1, 0, BlockRegistry.COMPRESSED_COBBLESTONE, 1, 0, true);
+        craft3x3Block(Blocks.GRAVEL, 1, 0, BlockRegistry.COMPRESSED_GRAVEL, 1, 0, true);
+        craft3x3Block(Blocks.SAND, 1, 0, BlockRegistry.COMPRESSED_SAND, 1, 0, true);
+        craft3x3Block(Blocks.DIRT, 1, 0, BlockRegistry.COMPRESSED_DIRT, 1, 0, true);
+        craft3x3Block(Blocks.EMERALD_BLOCK, 1, 0, BlockRegistry.COMPRESSED_EMERALD, 1, 0, true);
         craft3x3Block(Blocks.DIAMOND_BLOCK, 1, 0, BlockRegistry.COMPRESSED_DIAMOND, 1, 0, true);
         craft3x3Block(Blocks.GOLD_BLOCK, 1, 0, BlockRegistry.COMPRESSED_GOLD, 1, 0, true);
         craft3x3Block(Blocks.IRON_BLOCK, 1, 0, BlockRegistry.COMPRESSED_IRON, 1, 0, true);
+        craft3x3Block(Blocks.GRASS, 1, 0, BlockRegistry.COMPRESSED_GRASS, 1, 0, true);
+    }
+
+    private static void createUncraft3x3Recipes() {
+        uncraft3x3(Item.getItemFromBlock(BlockRegistry.COMPRESSED_POTATO), Item.getItemFromBlock(BlockRegistry.POTATO_BLOCK));
+        uncraft3x3(Item.getItemFromBlock(BlockRegistry.COMPRESSED_COBBLESTONE), Item.getItemFromBlock(Blocks.COBBLESTONE));
+        uncraft3x3(Item.getItemFromBlock(BlockRegistry.COMPRESSED_GRAVEL), Item.getItemFromBlock(Blocks.GRAVEL));
+        uncraft3x3(Item.getItemFromBlock(BlockRegistry.COMPRESSED_SAND), Item.getItemFromBlock(Blocks.SAND));
+        uncraft3x3(Item.getItemFromBlock(BlockRegistry.COMPRESSED_DIRT), Item.getItemFromBlock(Blocks.DIRT));
+        uncraft3x3(Item.getItemFromBlock(BlockRegistry.COMPRESSED_EMERALD), Item.getItemFromBlock(Blocks.EMERALD_BLOCK));
+        uncraft3x3(Item.getItemFromBlock(BlockRegistry.COMPRESSED_DIAMOND), Item.getItemFromBlock(Blocks.DIAMOND_BLOCK));
+        uncraft3x3(Item.getItemFromBlock(BlockRegistry.COMPRESSED_GOLD), Item.getItemFromBlock(Blocks.GOLD_BLOCK));
+        uncraft3x3(Item.getItemFromBlock(BlockRegistry.COMPRESSED_IRON), Item.getItemFromBlock(Blocks.IRON_BLOCK));
+        uncraft3x3(Item.getItemFromBlock(BlockRegistry.COMPRESSED_GRASS), Item.getItemFromBlock(Blocks.GRASS));
     }
 
     private static void createShapedOreRecipes() {
@@ -101,7 +118,7 @@ public class RecipeRegistry {
         GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.ENDGAMIUM_INGOT, 1, 0), new Object[]{new ItemStack(BlockRegistry.NETHER_STAR_BLOCK, 1, 0), new ItemStack(BlockRegistry.COMPRESSED_IRON, 1, 0), new ItemStack(Items.GOLDEN_APPLE, 1, 1), new ItemStack(Items.END_CRYSTAL, 1, 0), new ItemStack(Blocks.DRAGON_EGG), new ItemStack(ItemRegistry.ENDERAPPLE, 1, 1)});
         GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.FOODBOWL, 1, 0), new Object[]{new ItemStack(Items.BOWL, 1, 0), new ItemStack(Items.COOKED_BEEF, 1, 0), new ItemStack(Items.COOKED_PORKCHOP, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 0), new ItemStack(Items.BAKED_POTATO, 1, 0), new ItemStack(Items.CARROT, 1, 0), new ItemStack(Items.BREAD, 1, 0)});
         GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.PEBBLES, 9, 0), new Object[]{new ItemStack(Blocks.COBBLESTONE, 1, 0)});
-        GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.TELEPORTORB, 1, 0), new Object[]{new ItemStack(ItemRegistry.ENDERAPPLE, 1, 1), new ItemStack(Items.COMPASS, 2, 0), new ItemStack(Blocks.OBSIDIAN, 3, 0), new ItemStack(Items.DIAMOND, 1, 0), new ItemStack(Items.DYE, 2, 4)});
+        GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.TELEPORTORB, 1, 0), new Object[]{new ItemStack(ItemRegistry.ENDERAPPLE, 1, 1), new ItemStack(Items.COMPASS, 1, 0), new ItemStack(Items.COMPASS, 1, 0), new ItemStack(Blocks.OBSIDIAN, 1, 0), new ItemStack(Blocks.OBSIDIAN, 1, 0), new ItemStack(Blocks.OBSIDIAN, 1, 0), new ItemStack(Items.DIAMOND, 1, 0), new ItemStack(Items.DYE, 1, 4), new ItemStack(Items.DYE, 1, 4)});
     }
 
     private static void createShapedHCRecipes() {
@@ -203,9 +220,9 @@ public class RecipeRegistry {
     }
 
     private static void createHalfShapedRecipes() {
-        GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.BOW_ITEMS, 1, 0), new Object[]{"SSS", "TTT", 'S', new ItemStack(Items.STRING, 3, 0), 'T', new ItemStack(Items.STICK, 3, 0)});
-        GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.BOW_ITEMS, 1, 0), new Object[]{"TTT", "SSS", 'S', new ItemStack(Items.STRING, 3, 0), 'T', new ItemStack(Items.STICK, 3, 0)});
-        GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.BOW_ITEMS, 1, 0), new Object[]{"ST", "ST", "ST", 'S', new ItemStack(Items.STRING, 3, 0), 'T', new ItemStack(Items.STICK, 3, 0)});
+        GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.BOW_ITEMS, 1, 0), new Object[]{"SSS", "TTT", 'S', new ItemStack(Items.STRING, 1, 0), 'T', new ItemStack(Items.STICK, 1, 0)});
+        GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.BOW_ITEMS, 1, 0), new Object[]{"TTT", "SSS", 'S', new ItemStack(Items.STRING, 1, 0), 'T', new ItemStack(Items.STICK, 1, 0)});
+        GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.BOW_ITEMS, 1, 0), new Object[]{"ST", "ST", "ST", 'S', new ItemStack(Items.STRING, 1, 0), 'T', new ItemStack(Items.STICK, 1, 0)});
     }
 
     private static void vanillaHooksRecipes() {
@@ -272,5 +289,12 @@ public class RecipeRegistry {
                     'C', MetaValues.COMPRESSED[i] + oreDictEntryIn
             }));
         }
+    }
+
+    private static void uncraft3x3(Item in, Item out) {
+        for (int i = 6; i >= 0; i--) {
+            GameRegistry.addShapelessRecipe(new ItemStack(in, 9, i), new Object[]{new ItemStack(in, 1, i + 1)});
+        }
+        GameRegistry.addShapelessRecipe(new ItemStack(out, 9, 0), new Object[]{new ItemStack(in, 1, 0)});
     }
 }
