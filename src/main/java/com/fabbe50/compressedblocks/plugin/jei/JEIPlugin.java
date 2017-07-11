@@ -5,6 +5,7 @@ import mezz.jei.api.*;
 import mezz.jei.api.ingredients.IIngredientBlacklist;
 import mezz.jei.api.ingredients.IIngredientRegistry;
 import mezz.jei.api.ingredients.IModIngredientRegistration;
+import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 
 /**
  * Created by fabbe on 16/06/2017.
@@ -20,6 +21,11 @@ public class JEIPlugin implements IModPlugin {
 
     @Override
     public void registerIngredients(IModIngredientRegistration iModIngredientRegistration) {
+
+    }
+
+    @Override
+    public void registerCategories(IRecipeCategoryRegistration iRecipeCategoryRegistration) {
 
     }
 

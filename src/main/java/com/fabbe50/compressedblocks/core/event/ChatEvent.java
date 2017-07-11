@@ -1,8 +1,6 @@
 package com.fabbe50.compressedblocks.core.event;
 
-import com.rwtema.extrautils2.utils.helpers.ColorHelper;
 import com.thefifthidiot.tficore.utility.helper.ChatHelper;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

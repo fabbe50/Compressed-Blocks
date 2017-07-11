@@ -6,6 +6,7 @@ import com.fabbe50.compressedblocks.common.items.base.ItemSwordBase;
 import com.fabbe50.compressedblocks.common.items.base.TwoHandItemBase;
 import com.fabbe50.compressedblocks.core.reference.MetaValues;
 import com.fabbe50.compressedblocks.core.reference.Reference;
+import com.thefifthidiot.tficore.common.creativetabs.TFITab;
 import com.thefifthidiot.tficore.common.items.ItemBase;
 import com.thefifthidiot.tficore.init.TFIItems;
 import com.thefifthidiot.tficore.render.ItemRenderer;
@@ -45,6 +46,7 @@ public class ItemRegistry {
     public static final Item MASHEDFOOD;
     public static final Item INKBOTTLE;
     public static final Item BEDROCK_INGOT;
+    public static final Item STAFF_WOOD;
     //public static final Item COMPRESSEDSTICK;
 
     static {
@@ -69,6 +71,7 @@ public class ItemRegistry {
         MASHEDFOOD = TFIItems.registerItem(new ItemBowledFood(15, 25, true, "mashedfood")).setMaxStackSize(16);
         INKBOTTLE = TFIItems.registerItem(new ItemInkBottle("inkbottle", null)).setCreativeTab(null);
         BEDROCK_INGOT = TFIItems.registerItem(new ItemBase("bedrockingot", null));
+        STAFF_WOOD = TFIItems.registerItem(new ItemStaff(1, 2, Item.ToolMaterial.WOOD, null, "wooden_staff")).setCreativeTab(TFITab.itemTab);
         //COMPRESSEDSTICK = TFIItems.registerItem(new CompressedItemBase("stick_compr", null));
     }
 
@@ -94,6 +97,7 @@ public class ItemRegistry {
         ItemRenderer.registerItem(FOODBOWL);
         ItemRenderer.registerItem(MASHEDFOOD);
         ItemRenderer.registerItem(BEDROCK_INGOT);
+        ItemRenderer.registerItem(STAFF_WOOD);
 
         /*registerItem(INKBOTTLE, EnumDyeColor.BLACK.getDyeDamage(), "ink_black");
         registerItem(INKBOTTLE, EnumDyeColor.RED.getDyeDamage(), "ink_red");
