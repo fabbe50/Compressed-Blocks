@@ -60,6 +60,5 @@ eclipse
 *.iml
 out
 libs
-gradle
 cache.properties
 build/
