@@ -203,7 +203,7 @@ entity.corgi.name=Corgi
 #############################################################################
 achievement.star=The 81st Beginning
 achievement.star.desc=Craft a compressed netherstar block.
-achievement.endgam=No Life
+achievement.endgam=Too much free-time!
 achievement.endgam.desc=Craft a piece of Endgamium.
 achievement.potato="Wallpaper?" -Zirlian
 achievement.potato.desc=Craft a compressed potato block.
@@ -215,8 +215,10 @@ achievement.endtool=Miny Mine of Minings
 achievement.endtool.desc=Craft an Endgamium Multitool.
 achievement.pingegg=Forever Alone
 achievement.pingegg.desc=Respond to your own ping.
-achievement.buildHQCake=The High Quality Lie
+achievement.buildHQCake=The Failproof Lie
 achievement.buildHQCake.desc=Make a high quality cake.
+achievement.compressedtnt=Teemo want big BOOM!
+achievement.compressedtnt.desc=Craft a block of Compressed TNT.
 
 #############################################################################
 #                                    GUI                                    #

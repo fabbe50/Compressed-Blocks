@@ -1,5 +1,6 @@
 package com.fabbe50.compressedblocks.core.registry;
 
+import com.fabbe50.compressedblocks.core.event.ChatEvent;
 import com.fabbe50.compressedblocks.core.event.CraftingEvent;
 import com.fabbe50.compressedblocks.core.event.GrassEatEvent;
 import com.fabbe50.compressedblocks.core.event.SmeltingEvent;
@@ -21,7 +22,7 @@ public class EventRegistry {
     }
 
     public static void onServerStarted() {
-        //MinecraftForge.EVENT_BUS.register(new GameHelper());
+        MinecraftForge.EVENT_BUS.register(new ChatEvent());
         MinecraftForge.EVENT_BUS.register(new StackableBuckets());
         MinecraftForge.EVENT_BUS.register(new PlayerTracker());
         MinecraftForge.EVENT_BUS.register(new VanillaHooks());
