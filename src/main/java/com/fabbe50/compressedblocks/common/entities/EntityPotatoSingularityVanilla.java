@@ -12,20 +12,20 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
- * Created by fabbe on 21/07/2017.
+ * Created by fabbe on 24/07/2017 - 2:50 PM.
  */
-public class EntityPotatoSingularity extends EntityThrowable {
+public class EntityPotatoSingularityVanilla extends EntityThrowable {
     public static float[] position = new float[] {-15, -10.5f, -7, -3.5f, 0, 3.5f, 7, 10.5f, 15};
 
-    public EntityPotatoSingularity(World worldIn) {
+    public EntityPotatoSingularityVanilla(World worldIn) {
         super(worldIn);
     }
 
-    public EntityPotatoSingularity(World worldIn, EntityLivingBase throwerIn) {
+    public EntityPotatoSingularityVanilla(World worldIn, EntityLivingBase throwerIn) {
         super(worldIn, throwerIn);
     }
 
-    public EntityPotatoSingularity(World worldIn, double x, double y, double z) {
+    public EntityPotatoSingularityVanilla(World worldIn, double x, double y, double z) {
         super(worldIn, x, y, z);
     }
 
@@ -42,10 +42,15 @@ public class EntityPotatoSingularity extends EntityThrowable {
 
     @Override
     protected void onImpact(RayTraceResult result) {
-        BlockPos pos = new BlockPos(result.getBlockPos());
         if (!hasHit) {
-            com.brandon3055.draconicevolution.blocks.reactor.ProcessExplosion explosion = new com.brandon3055.draconicevolution.blocks.reactor.ProcessExplosion(pos, 150, this.world.getMinecraftServer().worldServerForDimension(this.dimension), 0);
-            com.brandon3055.brandonscore.handlers.ProcessHandler.addProcess(explosion);
+            for (int i = 0; i < 9; i++) {
+                for (int j = 0; j < 9; j++) {
+                    for (int l = 0; l < 3; l++) {
+                        EntityCompressedTNT entityTNT = new EntityCompressedTNT(this.world, (double) ((float) result.getBlockPos().getX() + 0.5F + position[i]), (double) result.getBlockPos().getY() + (l * -5), (double) ((float) result.getBlockPos().getZ() + 0.5F + position[j]), this.getThrower(), 9);
+                        this.world.spawnEntity(entityTNT);
+                    }
+                }
+            }
         }
         hasHit = true;
     }
