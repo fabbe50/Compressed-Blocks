@@ -31,12 +31,13 @@ public class JEIPlugin implements IModPlugin {
 
     @Override
     public void register(IModRegistry iModRegistry) {
+        JEIHideItemRegistry.init();
         itemBlacklist = iModRegistry.getJeiHelpers().getIngredientBlacklist();
+        JEIHideItemRegistry.hide.forEach(itemBlacklist::addIngredientToBlacklist);
     }
 
     @Override
     public void onRuntimeAvailable(IJeiRuntime iJeiRuntime) {
-        JEIHideItemRegistry.init();
-        JEIHideItemRegistry.hide.forEach(itemBlacklist::addIngredientToBlacklist);
+
     }
 }

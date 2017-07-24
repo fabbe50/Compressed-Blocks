@@ -4,13 +4,14 @@ import com.fabbe50.compressedblocks.core.registry.ToolMaterialRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.item.EntityExpBottle;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
+import net.minecraft.util.*;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -38,8 +39,10 @@ public class ItemStaff extends ItemTool {
     }
 
     @Override
-    public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer player, EnumHand hand) {
         if (!worldIn.isRemote) {
+            BlockPos pos = player.getPosition();
+            ItemStack stack = player.getHeldItem(hand);
             int index = 0;
             if (toolMaterial == ToolMaterial.WOOD)
                 index = 0;
@@ -59,10 +62,23 @@ public class ItemStaff extends ItemTool {
             List<Entity> entities = worldIn.getEntitiesWithinAABB(EntityLiving.class, aabb);
 
             for (Entity e : entities) {
-                e.attackEntityFrom(DamageSource.GENERIC, 5 * multiplier[index]);
+                if (!(e instanceof EntityPlayer) && !(e instanceof EntityXPOrb) && !(e instanceof EntityItem)) {
+                    e.attackEntityFrom(DamageSource.causePlayerDamage(player), 5 * multiplier[index]);
+                    stack.damageItem(1, player);
+                }
             }
-            return EnumActionResult.SUCCESS;
+            return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
         }
-        return EnumActionResult.PASS;
+        return ActionResult.newResult(EnumActionResult.PASS, player.getHeldItem(hand));
+    }
+
+    @Override
+    public boolean showDurabilityBar(ItemStack stack) {
+        return true;
+    }
+
+    @Override
+    public double getDurabilityForDisplay(ItemStack stack) {
+        return super.getDurabilityForDisplay(stack);
     }
 }

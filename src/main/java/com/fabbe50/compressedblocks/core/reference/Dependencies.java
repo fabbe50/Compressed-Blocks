@@ -7,5 +7,7 @@ public class Dependencies {
     public static final String dependencies =
             "required-after:forge@[13.20.0,);" +
             "required-after:tficore;" +
-            "after:ExtraUtils2";
+            "after:ExtraUtils2;" +
+            "after:brandonscore;" +
+            "after:draconicevolution;";
 }

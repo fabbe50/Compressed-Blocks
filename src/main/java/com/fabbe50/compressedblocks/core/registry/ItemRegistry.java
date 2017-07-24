@@ -47,6 +47,13 @@ public class ItemRegistry {
     public static final Item INKBOTTLE;
     public static final Item BEDROCK_INGOT;
     public static final Item STAFF_WOOD;
+    public static final Item STAFF_STONE;
+    public static final Item STAFF_IRON;
+    public static final Item STAFF_GOLD;
+    public static final Item STAFF_DIAMOND;
+    public static final Item STAFF_ENDGAMIUM;
+    public static final Item EGG_HATCHER;
+    public static final Item POTATO_SINGULARITY;
     //public static final Item COMPRESSEDSTICK;
 
     static {
@@ -72,6 +79,13 @@ public class ItemRegistry {
         INKBOTTLE = TFIItems.registerItem(new ItemInkBottle("inkbottle", null)).setCreativeTab(null);
         BEDROCK_INGOT = TFIItems.registerItem(new ItemBase("bedrockingot", null));
         STAFF_WOOD = TFIItems.registerItem(new ItemStaff(1, 2, Item.ToolMaterial.WOOD, null, "wooden_staff")).setCreativeTab(TFITab.itemTab);
+        STAFF_STONE = TFIItems.registerItem(new ItemStaff(1, 2, Item.ToolMaterial.STONE, null, "stone_staff")).setCreativeTab(TFITab.itemTab);
+        STAFF_IRON = TFIItems.registerItem(new ItemStaff(1, 2, Item.ToolMaterial.IRON, null, "iron_staff")).setCreativeTab(TFITab.itemTab);
+        STAFF_GOLD = TFIItems.registerItem(new ItemStaff(1, 2, Item.ToolMaterial.GOLD, null, "gold_staff")).setCreativeTab(TFITab.itemTab);
+        STAFF_DIAMOND = TFIItems.registerItem(new ItemStaff(1, 2, Item.ToolMaterial.DIAMOND, null, "diamond_staff")).setCreativeTab(TFITab.itemTab);
+        STAFF_ENDGAMIUM = TFIItems.registerItem(new ItemStaff(1, 2, ToolMaterialRegistry.TOOL_ENDGAMIUM, null, "endgamium_staff")).setCreativeTab(TFITab.itemTab);
+        EGG_HATCHER = TFIItems.registerItem(new ItemEggHatcher("egghatcher", TFITab.itemTab));
+        POTATO_SINGULARITY = TFIItems.registerItem(new ItemPotatoSingularity("potatosingularity", TFITab.itemTab));
         //COMPRESSEDSTICK = TFIItems.registerItem(new CompressedItemBase("stick_compr", null));
     }
 
@@ -98,6 +112,13 @@ public class ItemRegistry {
         ItemRenderer.registerItem(MASHEDFOOD);
         ItemRenderer.registerItem(BEDROCK_INGOT);
         ItemRenderer.registerItem(STAFF_WOOD);
+        ItemRenderer.registerItem(STAFF_STONE);
+        ItemRenderer.registerItem(STAFF_IRON);
+        ItemRenderer.registerItem(STAFF_GOLD);
+        ItemRenderer.registerItem(STAFF_DIAMOND);
+        ItemRenderer.registerItem(STAFF_ENDGAMIUM);
+        ItemRenderer.registerItem(EGG_HATCHER);
+        ItemRenderer.registerItem(POTATO_SINGULARITY);
 
         /*registerItem(INKBOTTLE, EnumDyeColor.BLACK.getDyeDamage(), "ink_black");
         registerItem(INKBOTTLE, EnumDyeColor.RED.getDyeDamage(), "ink_red");

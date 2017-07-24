@@ -173,6 +173,8 @@ public class MetaCompressedBase extends MetaBlockBase {
             return "diamond ingots";
         else if (stack.getUnlocalizedName().contains("emerald"))
             return "emeralds";
+        else if (stack.getUnlocalizedName().contains("grass"))
+            return "grass blocks";
         else
             return "";
     }

@@ -1,11 +1,8 @@
 package com.fabbe50.compressedblocks.core.proxy;
 
 import com.fabbe50.compressedblocks.core.reference.Reference;
-import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
+import com.fabbe50.compressedblocks.core.registry.*;
 
-import com.fabbe50.compressedblocks.core.registry.EventRegistry;
-import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
-import com.fabbe50.compressedblocks.core.registry.RenderRegistry;
 import com.fabbe50.compressedblocks.core.render.TileEntityItemStackRenderer;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.util.ResourceLocation;
@@ -35,6 +32,7 @@ public class ClientProxy extends CommonProxy {
 
 		BlockRegistry.renderInit(); //Register block-rendering
     	ItemRegistry.renderInit(); //Register item-rendering
+		EntityRegistry.renderInit();
 
 		net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer.instance = new TileEntityItemStackRenderer();
     }

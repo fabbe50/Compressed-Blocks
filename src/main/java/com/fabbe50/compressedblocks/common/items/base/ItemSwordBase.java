@@ -8,6 +8,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemTool;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -16,27 +17,22 @@ import javax.annotation.Nullable;
 /**
  * Created by fabbe on 02/06/2017.
  */
-public class ItemSwordBase extends ItemSword {
-    private final float attackDamage;
+public class ItemSwordBase extends ItemTool {
+    //private final float attackDamage;
     private final Item.ToolMaterial material;
 
     public ItemSwordBase(ToolMaterial material, String name, @Nullable CreativeTabs tab) {
-        super(material);
+        super(material.getDamageVsEntity(), 10, material, null);
         this.material = material;
         this.maxStackSize = 1;
         setItemName(this, name);
-        this.attackDamage = material.getDamageVsEntity();
+        //this.attackDamage = material.getDamageVsEntity();
         setCreativeTab(tab != null ? tab : (Configs.tfitabs ? TFITab.blockTab : null));
     }
 
     private static void setItemName(Item item, String itemName) {
         item.setRegistryName(itemName);
         item.setUnlocalizedName(item.getRegistryName().toString());
-    }
-
-    @Override
-    public float getDamageVsEntity() {
-        return this.material.getDamageVsEntity();
     }
 
     @SideOnly(Side.CLIENT)

@@ -50,6 +50,14 @@ item.compressedblocks:inkbottle.magenta.name=Bottle of Magenta Ink
 item.compressedblocks:inkbottle.orange.name=Bottle of Orange Ink
 item.compressedblocks:inkbottle.white.name=Bottle of White Ink
 item.compressedblocks:bedrockingot.name=Bedrock Ingot
+item.compressedblocks:wooden_staff.name=Wooden Staff
+item.compressedblocks:stone_staff.name=Stone Staff
+item.compressedblocks:iron_staff.name=Iron Staff
+item.compressedblocks:gold_staff.name=Golden Staff
+item.compressedblocks:diamond_staff.name=Diamond Staff
+item.compressedblocks:endgamium_staff.name=Endgamium Staff
+item.compressedblocks:egghatcher.name=Egg Hatcher
+item.compressedblocks:potatosingularity.name=Singularity
 
 #############################################################################
 #                                  Blocks                                   #
