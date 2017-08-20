@@ -20,6 +20,6 @@ public class RenderRegistry {
     public static void init() {
         RenderingRegistry.registerEntityRenderingHandler(EntityCorgi.class, renderManager -> new RenderCorgi(renderManager, new ModelCorgi(), 0.3f));
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBeaconXray.class, new TileEntityBeaconXrayRenderer());
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySuperShulkerBox.class, new TileEntitySuperShulkerBoxRenderer(new ModelShulker()));
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySuperShulkerBox.class, new TileEntitySuperShulkerBoxRenderer());
     }
 }

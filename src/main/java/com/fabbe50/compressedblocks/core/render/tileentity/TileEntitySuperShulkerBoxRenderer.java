@@ -2,6 +2,7 @@ package com.fabbe50.compressedblocks.core.render.tileentity;
 
 import com.fabbe50.compressedblocks.common.blocks.BlockSuperShulkerBox;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntitySuperShulkerBox;
+import com.fabbe50.compressedblocks.core.render.Render;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelShulker;
@@ -21,18 +22,21 @@ import org.lwjgl.opengl.GL11;
  */
 @SideOnly(Side.CLIENT)
 public class TileEntitySuperShulkerBoxRenderer extends TileEntitySpecialRenderer<TileEntitySuperShulkerBox> {
-    private final ModelShulker model;
+    private static final ModelShulker model = new ModelShulker();
 
-    public TileEntitySuperShulkerBoxRenderer(ModelShulker modelIn) {
-        this.model = modelIn;
+    public TileEntitySuperShulkerBoxRenderer() {
     }
 
     @Override
     public void renderTileEntityAt(TileEntitySuperShulkerBox te, double x, double y, double z, float partialTicks, int destroyStage) {
+        renderShulker(te, x, y, z, partialTicks, destroyStage);
+    }
+
+    public static void renderShulker(TileEntitySuperShulkerBox box, double x, double y, double z, float partialTicks, int destroyStage) {
         EnumFacing enumfacing = EnumFacing.UP;
 
-        if (te.hasWorld()) {
-            IBlockState iblockstate = this.getWorld().getBlockState(te.getPos());
+        if (box.hasWorld()) {
+            IBlockState iblockstate = box.getWorld().getBlockState(box.getPos());
 
             if (iblockstate.getBlock() instanceof BlockSuperShulkerBox) {
                 enumfacing = (EnumFacing)iblockstate.getValue(BlockSuperShulkerBox.FACING);
@@ -45,7 +49,7 @@ public class TileEntitySuperShulkerBoxRenderer extends TileEntitySpecialRenderer
         GlStateManager.disableCull();
 
         if (destroyStage >= 0) {
-            this.bindTexture(DESTROY_STAGES[destroyStage]);
+            Render.bindTexture(DESTROY_STAGES[destroyStage]);
             GlStateManager.matrixMode(GL11.GL_TEXTURE);
             GlStateManager.pushMatrix();
             GlStateManager.scale(4.0F, 4.0F, 1.0F);
@@ -53,7 +57,7 @@ public class TileEntitySuperShulkerBoxRenderer extends TileEntitySpecialRenderer
             GlStateManager.matrixMode(GL11.GL_MODELVIEW);
         }
         else {
-            this.bindTexture(RenderShulker.SHULKER_ENDERGOLEM_TEXTURE[te.getColor().getMetadata()]);
+            Render.bindTexture(RenderShulker.SHULKER_ENDERGOLEM_TEXTURE[box.getColor().getMetadata()]);
         }
 
         GlStateManager.pushMatrix();
@@ -97,10 +101,10 @@ public class TileEntitySuperShulkerBoxRenderer extends TileEntitySpecialRenderer
                 GlStateManager.rotate(90.0F, 0.0F, 0.0F, 1.0F);
         }
 
-        this.model.base.render(0.0625F);
-        GlStateManager.translate(0.0F, -te.getProgress(partialTicks) * 0.5F, 0.0F);
-        GlStateManager.rotate(270.0F * te.getProgress(partialTicks), 0.0F, 1.0F, 0.0F);
-        this.model.lid.render(0.0625F);
+        model.base.render(0.0625F);
+        GlStateManager.translate(0.0F, -box.getProgress(partialTicks) * 0.5F, 0.0F);
+        GlStateManager.rotate(270.0F * box.getProgress(partialTicks), 0.0F, 1.0F, 0.0F);
+        model.lid.render(0.0625F);
         GlStateManager.enableCull();
         GlStateManager.disableRescaleNormal();
         GlStateManager.popMatrix();
@@ -111,5 +115,10 @@ public class TileEntitySuperShulkerBoxRenderer extends TileEntitySpecialRenderer
             GlStateManager.popMatrix();
             GlStateManager.matrixMode(GL11.GL_MODELVIEW);
         }
+    }
+
+    @Override
+    public boolean isGlobalRenderer(TileEntitySuperShulkerBox te) {
+        return true;
     }
 }

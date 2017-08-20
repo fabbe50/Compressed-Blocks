@@ -6,7 +6,6 @@ import com.fabbe50.compressedblocks.core.utils.Utilities;
 import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockProperties;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;

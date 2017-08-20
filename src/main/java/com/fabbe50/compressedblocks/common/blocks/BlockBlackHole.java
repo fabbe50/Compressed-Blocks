@@ -1,15 +1,12 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
 import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
-import javafx.geometry.BoundingBox;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.MoverType;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;

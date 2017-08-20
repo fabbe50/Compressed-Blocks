@@ -1,9 +1,7 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
 import com.fabbe50.compressedblocks.common.tileentities.TileEntityBeaconXray;
-import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.fabbe50.compressedblocks.core.registry.StatsRegistry;
-import com.thefifthidiot.tficore.common.creativetabs.TFITab;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.MapColor;
@@ -14,7 +12,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;

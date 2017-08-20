@@ -1,11 +1,12 @@
 package com.fabbe50.compressedblocks.core.proxy;
 
-import com.fabbe50.compressedblocks.core.reference.Reference;
+import com.fabbe50.compressedblocks.common.tileentities.TileEntitySuperShulkerBox;
+import com.fabbe50.compressedblocks.core.model.ModelBakery;
 import com.fabbe50.compressedblocks.core.registry.*;
 
 import com.fabbe50.compressedblocks.core.render.TileEntityItemStackRenderer;
-import net.minecraft.client.renderer.block.model.ModelBakery;
-import net.minecraft.util.ResourceLocation;
+import com.fabbe50.compressedblocks.core.render.tileentity.TileEntitySuperShulkerBoxRenderer;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -32,7 +33,10 @@ public class ClientProxy extends CommonProxy {
 
 		BlockRegistry.renderInit(); //Register block-rendering
     	ItemRegistry.renderInit(); //Register item-rendering
-		EntityRegistry.renderInit();
+		EntityRegistry.renderInit(); //Register entity-renderering
+		ModelBakery.init();
+
+		ClientRegistry.registerTileEntity(TileEntitySuperShulkerBox.class, "supershulkerbox", new TileEntitySuperShulkerBoxRenderer());
 
 		net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer.instance = new TileEntityItemStackRenderer();
     }

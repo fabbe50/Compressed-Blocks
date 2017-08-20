@@ -1,7 +1,5 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
-import com.fabbe50.compressedblocks.common.blocks.meta.MetaLightBase;
-import com.fabbe50.compressedblocks.core.lib.EnumLight;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
 import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
 import com.thefifthidiot.tficore.utility.helper.RedstoneHelper;

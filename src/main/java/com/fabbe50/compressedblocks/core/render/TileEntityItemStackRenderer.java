@@ -2,6 +2,7 @@ package com.fabbe50.compressedblocks.core.render;
 
 import com.fabbe50.compressedblocks.common.blocks.BlockSuperShulkerBox;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntitySuperShulkerBox;
+import com.thefifthidiot.tficore.utility.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.item.EnumDyeColor;
@@ -20,9 +21,13 @@ public class TileEntityItemStackRenderer extends net.minecraft.client.renderer.t
     @Override
     public void renderByItem(ItemStack itemStackIn) {
         Item item = itemStackIn.getItem();
+        //LogHelper.info("CB2: TileEntityRenderer; Pass");
 
+        //LogHelper.info(item);
         if(Block.getBlockFromItem(item) instanceof BlockSuperShulkerBox) {
+            //LogHelper.info("Before Shulker Render");
             TileEntityRendererDispatcher.instance.renderTileEntityAt(SHULKER_BOXES[BlockSuperShulkerBox.getColorFromItem(item).getMetadata()], 0.0D, 0.0D, 0.0D, 0.0F);
+            //LogHelper.info("After Shulker Render");
         }
 
         super.renderByItem(itemStackIn);

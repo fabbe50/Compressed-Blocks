@@ -4,23 +4,17 @@ import com.fabbe50.compressedblocks.common.blocks.*;
 import com.fabbe50.compressedblocks.common.blocks.base.BlockBeaconBase;
 import com.fabbe50.compressedblocks.common.blocks.meta.MetaCompressedBase;
 import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
-import com.fabbe50.compressedblocks.common.items.ItemSuperShulkerBox;
-import com.fabbe50.compressedblocks.common.tileentities.TileEntityBeaconXray;
-import com.fabbe50.compressedblocks.common.tileentities.TileEntityBrewer;
-import com.fabbe50.compressedblocks.common.tileentities.TileEntityFurnaceCompr;
-import com.fabbe50.compressedblocks.common.tileentities.TileEntitySuperShulkerBox;
+import com.fabbe50.compressedblocks.common.tileentities.*;
+import com.fabbe50.compressedblocks.core.model.ModelBakery;
 import com.fabbe50.compressedblocks.core.reference.MetaValues;
 import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.thefifthidiot.tficore.common.creativetabs.TFITab;
 import com.thefifthidiot.tficore.init.TFIBlocks;
-import com.thefifthidiot.tficore.init.TFIItems;
 import com.thefifthidiot.tficore.render.BlockRenderer;
 
-import com.thefifthidiot.tficore.render.ItemRenderer;
 import com.thefifthidiot.tficore.utility.helper.LogHelper;
 import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -29,11 +23,8 @@ import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.RegistryNamespaced;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.Map;
 
@@ -57,6 +48,7 @@ public class BlockRegistry {
     public static final Block ONLINEDETECTOR = new BlockOnlineDetector(Material.REDSTONE_LIGHT, MapColor.BLUE, "onlinedetector", 1.3f, 6f, null).setCreativeTab(null);
     public static final Block ENDERBLOCK = new BlockEnder(Material.CAKE, MapColor.CYAN, "enderblock", 2.3f, 12.2f, null);
     public static final Block FUSIONPEDESTAL = new BlockFusionPedestal(Material.IRON, MapColor.BLUE, "fusionpedestal", 5.0f, 2000.0f, null);
+    public static final Block NUKE = new BlockNuke(Material.TNT, MapColor.YELLOW, "nuke", 0.3f, 0.2f, null);
 
     //Compressed Blocks
     public static final Block COMPRESSED_POTATO = new MetaCompressedBase(Material.CAKE, MapColor.BROWN, Reference.MOD_ID, "potato_compr", 2.0f, 10.0f, null);
@@ -110,6 +102,7 @@ public class BlockRegistry {
     public static final Block GREEN_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.GREEN, Material.ROCK, MapColor.GREEN, "green_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
     public static final Block RED_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.RED, Material.ROCK, MapColor.RED, "red_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
     public static final Block BLACK_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.BLACK, Material.ROCK, MapColor.BLACK, "black_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
+    public static final Block DRAWBRIDGE = new BlockDrawbridge(Material.ROCK).setRegistryName(Reference.MOD_ID, "drawbridge").setUnlocalizedName(Reference.MOD_ID+":drawbridge").setHardness(2.0f).setResistance(10.0f).setCreativeTab(TFITab.blockTab);
 
     /*  If more data on a block is needed
      *  Example 1:
@@ -139,6 +132,7 @@ public class BlockRegistry {
         TFIBlocks.addBlock(ONLINEDETECTOR);
         TFIBlocks.addBlock(ENDERBLOCK);
         TFIBlocks.addBlock(FUSIONPEDESTAL);
+        TFIBlocks.addBlock(NUKE);
 
         TFIBlocks.addBlock(COMPRESSED_FURNACE_IDLE);
         TFIBlocks.addBlock(COMPRESSED_FURNACE_ACTIVE);
@@ -162,7 +156,7 @@ public class BlockRegistry {
         TFIBlocks.addBlock(LIGHTBLOCK14);
         TFIBlocks.addBlock(LIGHTBLOCK15);
 
-        registerItemBlock(WHITE_SHULKER_BOX, new ItemSuperShulkerBox(WHITE_SHULKER_BOX));
+        /*registerItemBlock(WHITE_SHULKER_BOX, new ItemSuperShulkerBox(WHITE_SHULKER_BOX));
         registerItemBlock(ORANGE_SHULKER_BOX, new ItemSuperShulkerBox(ORANGE_SHULKER_BOX));
         registerItemBlock(MAGENTA_SHULKER_BOX, new ItemSuperShulkerBox(MAGENTA_SHULKER_BOX));
         registerItemBlock(LIGHT_BLUE_SHULKER_BOX, new ItemSuperShulkerBox(LIGHT_BLUE_SHULKER_BOX));
@@ -177,7 +171,11 @@ public class BlockRegistry {
         registerItemBlock(BROWN_SHULKER_BOX, new ItemSuperShulkerBox(BROWN_SHULKER_BOX));
         registerItemBlock(GREEN_SHULKER_BOX, new ItemSuperShulkerBox(GREEN_SHULKER_BOX));
         registerItemBlock(RED_SHULKER_BOX, new ItemSuperShulkerBox(RED_SHULKER_BOX));
-        registerItemBlock(BLACK_SHULKER_BOX, new ItemSuperShulkerBox(BLACK_SHULKER_BOX));
+        registerItemBlock(BLACK_SHULKER_BOX, new ItemSuperShulkerBox(BLACK_SHULKER_BOX));*/
+
+        TFIBlocks.addBlock(WHITE_SHULKER_BOX);
+
+        TFIBlocks.addBlock(DRAWBRIDGE);
 
         TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "potato_compr"), COMPRESSED_POTATO);
         TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "cobble_compr"), COMPRESSED_COBBLESTONE);
@@ -211,11 +209,13 @@ public class BlockRegistry {
         BlockRenderer.registerBlock(ONLINEDETECTOR);
         BlockRenderer.registerBlock(ENDERBLOCK);
         BlockRenderer.registerBlock(FUSIONPEDESTAL);
+        BlockRenderer.registerBlock(NUKE);
 
         BlockRenderer.registerBlock(COMPRESSED_FURNACE_IDLE);
         BlockRenderer.registerBlock(COMPRESSED_FURNACE_ACTIVE);
         BlockRenderer.registerBlock(BEACON_XRAY);
         BlockRenderer.registerBlock(BREWER);
+        BlockRenderer.registerBlock(DRAWBRIDGE);
 
         BlockRenderer.registerBlock(LIGHTBLOCK);
         BlockRenderer.registerBlock(LIGHTBLOCK1);
@@ -234,8 +234,8 @@ public class BlockRegistry {
         BlockRenderer.registerBlock(LIGHTBLOCK14);
         BlockRenderer.registerBlock(LIGHTBLOCK15);
 
-        /*TFIBlocks.registerItemBlockRenderer(Item.getItemFromBlock(WHITE_SHULKER_BOX));
-        TFIBlocks.registerItemBlockRenderer(Item.getItemFromBlock(ORANGE_SHULKER_BOX));
+        //registerItemBlockRenderer(WHITE_SHULKER_BOX, "supershulkerbox", true);
+        /*TFIBlocks.registerItemBlockRenderer(Item.getItemFromBlock(ORANGE_SHULKER_BOX));
         TFIBlocks.registerItemBlockRenderer(Item.getItemFromBlock(MAGENTA_SHULKER_BOX));
         TFIBlocks.registerItemBlockRenderer(Item.getItemFromBlock(LIGHT_BLUE_SHULKER_BOX));
         TFIBlocks.registerItemBlockRenderer(Item.getItemFromBlock(YELLOW_SHULKER_BOX));
@@ -251,7 +251,10 @@ public class BlockRegistry {
         TFIBlocks.registerItemBlockRenderer(Item.getItemFromBlock(RED_SHULKER_BOX));
         TFIBlocks.registerItemBlockRenderer(Item.getItemFromBlock(BLACK_SHULKER_BOX));*/
 
-        registerItemBlockRenderer(WHITE_SHULKER_BOX, "supershulkerbox", true);
+        ModelBakery.registerBlockModel(WHITE_SHULKER_BOX, 0, "inventory");
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(WHITE_SHULKER_BOX), 0, new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, "super_shulker_box_white"), "inventory"));
+
+        //registerItemBlockRenderer(WHITE_SHULKER_BOX, "supershulkerbox", true);
         /*registerItemBlockRenderer(Item.getItemFromBlock(ORANGE_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(MAGENTA_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(LIGHT_BLUE_SHULKER_BOX), "supershulkerbox");
@@ -286,6 +289,7 @@ public class BlockRegistry {
         GameRegistry.registerTileEntity(TileEntityBeaconXray.class, "beaconxray");
         GameRegistry.registerTileEntity(TileEntityBrewer.class, "brewer");
         GameRegistry.registerTileEntity(TileEntitySuperShulkerBox.class, "supershulkerbox");
+        GameRegistry.registerTileEntity(TileEntityDrawbridge.class, "drawbridge");
     }
 
     //INFO: MOVED TO TFICORE
