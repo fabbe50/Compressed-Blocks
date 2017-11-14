@@ -49,6 +49,7 @@ public class BlockRegistry {
     public static final Block ENDERBLOCK = new BlockEnder(Material.CAKE, MapColor.CYAN, "enderblock", 2.3f, 12.2f, null);
     public static final Block FUSIONPEDESTAL = new BlockFusionPedestal(Material.IRON, MapColor.BLUE, "fusionpedestal", 5.0f, 2000.0f, null);
     public static final Block NUKE = new BlockNuke(Material.TNT, MapColor.YELLOW, "nuke", 0.3f, 0.2f, null);
+    public static final Block BIN = new BlockMagicalWashingBin(Material.ROCK, MapColor.GRAY, "bin", 2.3f, 6f, null);
 
     //Compressed Blocks
     public static final Block COMPRESSED_POTATO = new MetaCompressedBase(Material.CAKE, MapColor.BROWN, Reference.MOD_ID, "potato_compr", 2.0f, 10.0f, null);
@@ -133,6 +134,7 @@ public class BlockRegistry {
         TFIBlocks.addBlock(ENDERBLOCK);
         TFIBlocks.addBlock(FUSIONPEDESTAL);
         TFIBlocks.addBlock(NUKE);
+        TFIBlocks.addBlock(BIN);
 
         TFIBlocks.addBlock(COMPRESSED_FURNACE_IDLE);
         TFIBlocks.addBlock(COMPRESSED_FURNACE_ACTIVE);
@@ -174,6 +176,20 @@ public class BlockRegistry {
         registerItemBlock(BLACK_SHULKER_BOX, new ItemSuperShulkerBox(BLACK_SHULKER_BOX));*/
 
         TFIBlocks.addBlock(WHITE_SHULKER_BOX);
+        TFIBlocks.addBlock(ORANGE_SHULKER_BOX);
+        TFIBlocks.addBlock(MAGENTA_SHULKER_BOX);
+        TFIBlocks.addBlock(LIGHT_BLUE_SHULKER_BOX);
+        TFIBlocks.addBlock(YELLOW_SHULKER_BOX);
+        TFIBlocks.addBlock(LIME_SHULKER_BOX);
+        TFIBlocks.addBlock(PINK_SHULKER_BOX);
+        TFIBlocks.addBlock(GRAY_SHULKER_BOX);
+        TFIBlocks.addBlock(SILVER_SHULKER_BOX);
+        TFIBlocks.addBlock(CYAN_SHULKER_BOX);
+        TFIBlocks.addBlock(BLUE_SHULKER_BOX);
+        TFIBlocks.addBlock(BROWN_SHULKER_BOX);
+        TFIBlocks.addBlock(GREEN_SHULKER_BOX);
+        TFIBlocks.addBlock(RED_SHULKER_BOX);
+        TFIBlocks.addBlock(BLACK_SHULKER_BOX);
 
         TFIBlocks.addBlock(DRAWBRIDGE);
 
@@ -210,6 +226,7 @@ public class BlockRegistry {
         BlockRenderer.registerBlock(ENDERBLOCK);
         BlockRenderer.registerBlock(FUSIONPEDESTAL);
         BlockRenderer.registerBlock(NUKE);
+        BlockRenderer.registerBlock(BIN);
 
         BlockRenderer.registerBlock(COMPRESSED_FURNACE_IDLE);
         BlockRenderer.registerBlock(COMPRESSED_FURNACE_ACTIVE);
@@ -251,11 +268,8 @@ public class BlockRegistry {
         TFIBlocks.registerItemBlockRenderer(Item.getItemFromBlock(RED_SHULKER_BOX));
         TFIBlocks.registerItemBlockRenderer(Item.getItemFromBlock(BLACK_SHULKER_BOX));*/
 
-        ModelBakery.registerBlockModel(WHITE_SHULKER_BOX, 0, "inventory");
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(WHITE_SHULKER_BOX), 0, new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, "super_shulker_box_white"), "inventory"));
-
-        //registerItemBlockRenderer(WHITE_SHULKER_BOX, "supershulkerbox", true);
-        /*registerItemBlockRenderer(Item.getItemFromBlock(ORANGE_SHULKER_BOX), "supershulkerbox");
+        /*registerItemBlockRenderer(Item.getItemFromBlock(WHITE_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(ORANGE_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(MAGENTA_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(LIGHT_BLUE_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(YELLOW_SHULKER_BOX), "supershulkerbox");
@@ -270,7 +284,7 @@ public class BlockRegistry {
         registerItemBlockRenderer(Item.getItemFromBlock(GREEN_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(RED_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(BLACK_SHULKER_BOX), "supershulkerbox");*/
-        
+
         BlockRenderer.registerMetaBlock(COMPRESSED_POTATO, MetaValues.COMPRESSED);
         BlockRenderer.registerMetaBlock(COMPRESSED_COBBLESTONE, MetaValues.COMPRESSED);
         BlockRenderer.registerMetaBlock(COMPRESSED_DIRT, MetaValues.COMPRESSED);
@@ -282,7 +296,43 @@ public class BlockRegistry {
         BlockRenderer.registerMetaBlock(COMPRESSED_EMERALD, MetaValues.COMPRESSED);
         BlockRenderer.registerMetaBlock(COMPRESSED_GRASS, MetaValues.COMPRESSED);
         BlockRenderer.registerMetaBlock(COMPRESSED_GRASS_EATEN, MetaValues.COMPRESSED);
+
+        registerBuiltIn(WHITE_SHULKER_BOX);
+        registerBuiltIn(ORANGE_SHULKER_BOX);
+        registerBuiltIn(MAGENTA_SHULKER_BOX);
+        registerBuiltIn(LIGHT_BLUE_SHULKER_BOX);
+        registerBuiltIn(YELLOW_SHULKER_BOX);
+        registerBuiltIn(LIME_SHULKER_BOX);
+        registerBuiltIn(PINK_SHULKER_BOX);
+        registerBuiltIn(GRAY_SHULKER_BOX);
+        registerBuiltIn(SILVER_SHULKER_BOX);
+        registerBuiltIn(CYAN_SHULKER_BOX);
+        registerBuiltIn(PURPLE_SHULKER_BOX);
+        registerBuiltIn(PURPLE_SHULKER_BOX);
+        registerBuiltIn(BLUE_SHULKER_BOX);
+        registerBuiltIn(GREEN_SHULKER_BOX);
+        registerBuiltIn(RED_SHULKER_BOX);
+        registerBuiltIn(BLACK_SHULKER_BOX);
 	}
+
+	public static void renderAltInit() {
+        registerItemBlockRenderer(Item.getItemFromBlock(WHITE_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(ORANGE_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(MAGENTA_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(LIGHT_BLUE_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(YELLOW_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(LIME_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(PINK_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(GRAY_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(SILVER_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(CYAN_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(PURPLE_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(BLUE_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(BROWN_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(GREEN_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(RED_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(BLACK_SHULKER_BOX), "supershulkerbox");
+    }
 
     public static void registerTileEntity() {
         GameRegistry.registerTileEntity(TileEntityFurnaceCompr.class, "furnacecompr");
@@ -317,5 +367,14 @@ public class BlockRegistry {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, name), "inventory"));
         if (builtin) Minecraft.getMinecraft().getRenderItem().getItemModelMesher().getModelManager().getBlockModelShapes().registerBuiltInBlocks(block);
         LogHelper.info("Registered renderdata for item with registry-name: " + new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, name), "inventory"));
+    }
+
+    private static void registerItemBlockRenderer(Item block, String name) {
+        ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, name), "inventory"));
+        LogHelper.info("Registered renderdata for item with registry-name: " + new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, name), "inventory"));
+    }
+
+    private static void registerBuiltIn(Block block) {
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().getModelManager().getBlockModelShapes().registerBuiltInBlocks(block);
     }
 }
