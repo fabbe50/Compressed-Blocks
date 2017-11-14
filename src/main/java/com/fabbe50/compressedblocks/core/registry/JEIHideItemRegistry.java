@@ -15,22 +15,6 @@ public class JEIHideItemRegistry {
     private static final int WILDCARD_VALUE = Short.MAX_VALUE;
 
     public static void init() {
-        hide.add(new ItemStack(BlockRegistry.SILVER_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.BLACK_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.BLUE_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.BROWN_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.CYAN_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.GRAY_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.GREEN_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.LIGHT_BLUE_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.LIME_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.MAGENTA_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.ORANGE_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.PINK_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.PURPLE_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.RED_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.WHITE_SHULKER_BOX));
-        hide.add(new ItemStack(BlockRegistry.YELLOW_SHULKER_BOX));
         hide.add(new ItemStack(BlockRegistry.BLACKHOLE));
         hide.add(new ItemStack(BlockRegistry.ONLINEDETECTOR));
         hide.add(new ItemStack(BlockRegistry.COMPRESSED_FURNACE_ACTIVE));
@@ -55,7 +39,6 @@ public class JEIHideItemRegistry {
         hide.add(new ItemStack(BlockRegistry.NUKE));
         hide.add(new ItemStack(BlockRegistry.DRAWBRIDGE));
 
-        hide.add(new ItemStack(ItemRegistry.INKBOTTLE, 1, WILDCARD_VALUE));
         hide.add(new ItemStack(ItemRegistry.TWOHANDITEMTEST));
         hide.add(new ItemStack(ItemRegistry.DNASAMPLE));
     }

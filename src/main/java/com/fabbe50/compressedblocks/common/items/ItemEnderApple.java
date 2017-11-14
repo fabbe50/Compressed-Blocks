@@ -1,6 +1,8 @@
 package com.fabbe50.compressedblocks.common.items;
 
+import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
 import com.thefifthidiot.tficore.common.items.ItemBase;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -45,7 +47,9 @@ public class ItemEnderApple extends ItemFood {
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
         if (!worldIn.isRemote) {
             if (stack.getMetadata() > 0) {
-                player.changeDimension(1);
+                if (!player.inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 0))) {
+                    player.changeDimension(1);
+                }
 
                 player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 400, 2));
                 player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 6000, 2));
@@ -54,18 +58,20 @@ public class ItemEnderApple extends ItemFood {
                 player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 3600, 3));
             }
             else {
-                BlockPos tpPos = new BlockPos(player.posX + getPlusMinusBound(40), player.posY + getPlusMinusBound(20), player.posZ + getPlusMinusBound(40));
-
-                if (tpPos.getY() < 1)
-                    tpPos = new BlockPos(tpPos.getX(), 1, tpPos.getZ());
-
-                EntityItem item = new EntityItem(worldIn, tpPos.getX(), tpPos.getY(), tpPos.getZ(), new ItemStack(worldIn.getBlockState(tpPos).getBlock()));
-                worldIn.setBlockState(tpPos, Blocks.AIR.getDefaultState());
-                EntityItem item2 = new EntityItem(worldIn, tpPos.getX(), tpPos.getY() + 1, tpPos.getZ(), new ItemStack(worldIn.getBlockState(tpPos.add(0, 1, 0)).getBlock()));
-                worldIn.setBlockState(tpPos.add(0, 1, 0), Blocks.AIR.getDefaultState());
-                worldIn.spawnEntity(item);
-                worldIn.spawnEntity(item2);
-                player.attemptTeleport(tpPos.getX() + 0.5, tpPos.getY(), tpPos.getZ() + 0.5);
+                if (!player.inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 0))) {
+                    BlockPos tpPos = new BlockPos(player.posX + getPlusMinusBound(40), player.posY + getPlusMinusBound(20), player.posZ + getPlusMinusBound(40));
+                    Block block1 = worldIn.getBlockState(tpPos).getBlock();
+                    Block block2 = worldIn.getBlockState(tpPos.add(0, 1, 0)).getBlock();
+                    worldIn.setBlockState(tpPos, Blocks.AIR.getDefaultState());
+                    worldIn.setBlockState(tpPos.add(0, 1, 0), Blocks.AIR.getDefaultState());
+                    if (worldIn.getBlockState(tpPos.add(0, -1, 0)).getBlock() == Blocks.AIR)
+                        worldIn.setBlockState(tpPos.add(0, -1, 0), Blocks.BARRIER.getDefaultState());
+                    player.attemptTeleport(tpPos.getX() + 0.5, tpPos.getY(), tpPos.getZ() + 0.5);
+                    worldIn.setBlockState(tpPos, block1.getDefaultState());
+                    worldIn.setBlockState(tpPos.add(0, 1, 0), block2.getDefaultState());
+                    if (worldIn.getBlockState(tpPos.add(0, -1, 0)).getBlock() == Blocks.BARRIER)
+                        worldIn.setBlockState(tpPos.add(0, -1, 0), Blocks.AIR.getDefaultState());
+                }
 
                 player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 100, 1));
                 player.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION, 2400, 0));
@@ -93,7 +99,7 @@ public class ItemEnderApple extends ItemFood {
             tooltip.add("Filled with energy!");
         }
         else {
-            tooltip.add("Portable End Portal.");
+            tooltip.add("You hear Endermen inside.");
         }
     }
 }

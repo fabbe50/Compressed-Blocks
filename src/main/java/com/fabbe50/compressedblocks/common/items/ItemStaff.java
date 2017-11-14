@@ -1,6 +1,9 @@
 package com.fabbe50.compressedblocks.common.items;
 
+import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
+import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
 import com.fabbe50.compressedblocks.core.registry.ToolMaterialRegistry;
+import com.thefifthidiot.tficore.utility.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -8,12 +11,14 @@ import net.minecraft.entity.item.EntityExpBottle;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.util.*;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -36,6 +41,55 @@ public class ItemStaff extends ItemTool {
     private void setItemName(Item item, String name) {
         item.setRegistryName(name);
         item.setUnlocalizedName(item.getRegistryName().toString());
+    }
+
+    @Override
+    public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+        if (!worldIn.isRemote) {
+            if (worldIn.getBlockState(pos).getBlock() == Blocks.CAULDRON) {
+                List<EntityItem> entityItemList = worldIn.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(pos), null);
+                if (entityItemList.size() == 1) {
+                    for (EntityItem item : entityItemList) {
+                        if (item.getEntityItem().getItem() == ItemRegistry.ENDGAMIUM_NUGGET) {
+                            item.isDead = true;
+                            worldIn.setBlockState(pos, BlockRegistry.BIN.getDefaultState());
+                        }
+                    }
+                }
+            }
+        }
+        if (worldIn.isRemote) {
+            if (worldIn.getBlockState(pos).getBlock() == Blocks.CAULDRON) {
+                List<EntityItem> entityItemList = worldIn.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(pos), null);
+                if (entityItemList.size() == 1) {
+                    for (EntityItem item : entityItemList) {
+                        if (item.getEntityItem().getItem() == ItemRegistry.ENDGAMIUM_NUGGET) {
+                            for (int i = 0; i < 1000; i++) {
+                                double d0 = (double) ((float) pos.getX() + worldIn.rand.nextFloat());
+                                double d1 = (double) ((float) pos.getY() + 1 + worldIn.rand.nextFloat());
+                                double d2 = (double) ((float) pos.getZ() + worldIn.rand.nextFloat());
+                                double d3 = d0 - pos.getX();
+                                double d4 = d1 - pos.getY();
+                                double d5 = d2 - pos.getZ();
+                                double d6 = (double) MathHelper.sqrt(d3 * d3 + d4 * d4 + d5 * d5);
+                                d3 = d3 / d6;
+                                d4 = d4 / d6;
+                                d5 = d5 / d6;
+                                double d7 = 0.5D / (d6 / (double) 4 + 0.1D);
+                                d7 = d7 * (double) (worldIn.rand.nextFloat() * worldIn.rand.nextFloat() + 0.3F);
+                                d3 = d3 * d7;
+                                d4 = d4 * d7;
+                                d5 = d5 * d7;
+                                worldIn.spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, (d0 + pos.getX()) * 0.5, (d1 + pos.getY()) * 0.5, (d2 + pos.getZ()) * 0.5, d3, d4, d5, new int[0]);
+                                worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, d3, d4, d5, new int[0]);
+                            }
+                            return EnumActionResult.SUCCESS;
+                        }
+                    }
+                }
+            }
+        }
+        return EnumActionResult.PASS;
     }
 
     @Override

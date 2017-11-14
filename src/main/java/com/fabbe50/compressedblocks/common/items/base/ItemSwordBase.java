@@ -21,6 +21,11 @@ public class ItemSwordBase extends ItemTool {
     //private final float attackDamage;
     private final Item.ToolMaterial material;
 
+    @Override
+    public float getStrVsBlock(ItemStack stack, IBlockState state) {
+        return 0;
+    }
+
     public ItemSwordBase(ToolMaterial material, String name, @Nullable CreativeTabs tab) {
         super(material.getDamageVsEntity(), 10, material, null);
         this.material = material;

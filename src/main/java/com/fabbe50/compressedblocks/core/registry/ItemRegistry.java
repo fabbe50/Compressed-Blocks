@@ -54,6 +54,7 @@ public class ItemRegistry {
     public static final Item STAFF_ENDGAMIUM;
     public static final Item EGG_HATCHER;
     public static final Item POTATO_SINGULARITY;
+    public static final Item TRINKET;
     //public static final Item COMPRESSEDSTICK;
 
     static {
@@ -86,7 +87,7 @@ public class ItemRegistry {
         STAFF_ENDGAMIUM = TFIItems.registerItem(new ItemStaff(1, 2, ToolMaterialRegistry.TOOL_ENDGAMIUM, null, "endgamium_staff")).setCreativeTab(TFITab.itemTab);
         EGG_HATCHER = TFIItems.registerItem(new ItemEggHatcher("egghatcher", TFITab.itemTab));
         POTATO_SINGULARITY = TFIItems.registerItem(new ItemPotatoSingularity("potatosingularity", TFITab.itemTab));
-        //COMPRESSEDSTICK = TFIItems.registerItem(new CompressedItemBase("stick_compr", null));
+        TRINKET = TFIItems.registerItem(new ItemTrinket("trinket", TFITab.itemTab));
     }
 
     public static void renderInit() {
@@ -119,8 +120,10 @@ public class ItemRegistry {
         ItemRenderer.registerItem(STAFF_ENDGAMIUM);
         ItemRenderer.registerItem(EGG_HATCHER);
         ItemRenderer.registerItem(POTATO_SINGULARITY);
+    }
 
-        /*registerItem(INKBOTTLE, EnumDyeColor.BLACK.getDyeDamage(), "ink_black");
+    public static void renderAltInit() {
+        registerItem(INKBOTTLE, EnumDyeColor.BLACK.getDyeDamage(), "ink_black");
         registerItem(INKBOTTLE, EnumDyeColor.RED.getDyeDamage(), "ink_red");
         registerItem(INKBOTTLE, EnumDyeColor.GREEN.getDyeDamage(), "ink_green");
         registerItem(INKBOTTLE, EnumDyeColor.BROWN.getDyeDamage(), "ink_brown");
@@ -135,30 +138,18 @@ public class ItemRegistry {
         registerItem(INKBOTTLE, EnumDyeColor.LIGHT_BLUE.getDyeDamage(), "ink_light_blue");
         registerItem(INKBOTTLE, EnumDyeColor.MAGENTA.getDyeDamage(), "ink_magenta");
         registerItem(INKBOTTLE, EnumDyeColor.ORANGE.getDyeDamage(), "ink_orange");
-        registerItem(INKBOTTLE, EnumDyeColor.WHITE.getDyeDamage(), "ink_white");*/
+        registerItem(INKBOTTLE, EnumDyeColor.WHITE.getDyeDamage(), "ink_white");
 
-        registerVariantItemModels(INKBOTTLE, MetaValues.COLORS);
-
-        //registerVariantItemModels(COMPRESSEDSTICK, "compression", EnumCompressionRate.values());
+        registerItem(TRINKET, 0, "trinket");
+        registerItem(TRINKET, 1, "trinket1");
+        registerItem(TRINKET, 2, "trinket2");
     }
 
     public static void init() {
     }
 
-    //INFO: MOVED TO TFICORE
-    private static void registerVariantItemModels(Item item, String[] variants) {
-        ResourceLocation[] locations = new ResourceLocation[16];
-        for(int i = 0; i < variants.length; i++){
-            locations[i] = new ResourceLocation(Reference.MOD_ID, item.getRegistryName().getResourcePath() + "_" + variants[i]);
-            LogHelper.info(new ResourceLocation(Reference.MOD_ID, item.getRegistryName().getResourcePath() + "_" + variants[i]));
-            ModelLoader.setCustomModelResourceLocation(item, i, new ModelResourceLocation(locations[i], "inventory"));
-            LogHelper.info(new ModelResourceLocation(locations[i], "inventory"));
-        }
-        ModelBakery.registerItemVariants(item, locations);
-    }
-
     private static void registerItem(Item item, int meta, String identifier) {
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, identifier), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, identifier), "inventory"));
         LogHelper.info(new ModelResourceLocation(item.getRegistryName(), identifier));
     }
 

@@ -20,6 +20,16 @@ item.compressedblocks:foodbowl.name=Bowl With Mixed Food
 item.compressedblocks:dnasample.name=DNA Sample [WIP]
 item.compressedblocks:twohanditemtest.name=TEST [NOT IMPLEMENTED]
 item.compressedblocks:mashedfood.name=Soup
+item.compressedblocks:bedrockingot.name=Bedrock Ingot
+item.compressedblocks:wooden_staff.name=Wooden Staff
+item.compressedblocks:stone_staff.name=Stone Staff
+item.compressedblocks:iron_staff.name=Iron Staff
+item.compressedblocks:gold_staff.name=Golden Staff
+item.compressedblocks:diamond_staff.name=Diamond Staff
+item.compressedblocks:endgamium_staff.name=Endgamium Staff
+item.compressedblocks:egghatcher.name=Egg Hatcher
+item.compressedblocks:potatosingularity.name=Singularity
+item.compressedblocks:trinket.name=Trinket
 
 #############################################################################
 #                                Meta Items                                 #
@@ -49,15 +59,6 @@ item.compressedblocks:inkbottle.lightBlue.name=Bottle of Light Blue Ink
 item.compressedblocks:inkbottle.magenta.name=Bottle of Magenta Ink
 item.compressedblocks:inkbottle.orange.name=Bottle of Orange Ink
 item.compressedblocks:inkbottle.white.name=Bottle of White Ink
-item.compressedblocks:bedrockingot.name=Bedrock Ingot
-item.compressedblocks:wooden_staff.name=Wooden Staff
-item.compressedblocks:stone_staff.name=Stone Staff
-item.compressedblocks:iron_staff.name=Iron Staff
-item.compressedblocks:gold_staff.name=Golden Staff
-item.compressedblocks:diamond_staff.name=Diamond Staff
-item.compressedblocks:endgamium_staff.name=Endgamium Staff
-item.compressedblocks:egghatcher.name=Egg Hatcher
-item.compressedblocks:potatosingularity.name=Singularity
 
 #############################################################################
 #                                  Blocks                                   #
@@ -102,7 +103,7 @@ tile.compressedblocks:blackhole.name=Black Hole [NOT IMPLEMENTED]
 tile.compressedblocks:fusionpedestal.name=Fusion Pedestal
 tile.compressedblocks:brewer.name=Brewing Stand
 tile.compressedblocks:nuke.name=Nuke [WIP]
-tile.compressedblocks:drawbridge=Drawbridge [NOT IMPLEMENTED]
+tile.compressedblocks:drawbridge.name=Drawbridge [NOT IMPLEMENTED]
 
 #############################################################################
 #                                Meta Blocks                                #

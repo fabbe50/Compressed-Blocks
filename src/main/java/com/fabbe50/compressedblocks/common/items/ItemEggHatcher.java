@@ -44,8 +44,11 @@ public class ItemEggHatcher extends ItemBase {
                 for (int i = 0; i < spawnAmount; i++) {
                     Random rand = new Random();
                     Entity entity;
-                    if (rand.nextInt(2000) == 1337)
+                    if (rand.nextInt(2000) == 1337) {
                         entity = new EntityPig(worldIn);
+                        entity.setCustomNameTag("Chicken");
+                        entity.setAlwaysRenderNameTag(true);
+                    }
                     else
                         entity = new EntityChicken(worldIn);
                     BlockPos pos2 = new BlockPos(pos.offset(facing).getX(), pos.offset(facing).getY(), pos.offset(facing).getZ());
