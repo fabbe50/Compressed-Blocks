@@ -30,6 +30,7 @@ item.compressedblocks:endgamium_staff.name=Endgamium Staff
 item.compressedblocks:egghatcher.name=Egg Hatcher
 item.compressedblocks:potatosingularity.name=Singularity
 item.compressedblocks:trinket.name=Trinket
+item.compressedblocks:minibeacon.name=Portable Beacon
 
 #############################################################################
 #                                Meta Items                                 #

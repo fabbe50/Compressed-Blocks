@@ -1,6 +1,7 @@
 package com.fabbe50.compressedblocks.core.registry;
 
 import com.fabbe50.compressedblocks.core.lib.Configs;
+import com.fabbe50.compressedblocks.core.lib.recipes.MiniBeaconRecipes;
 import com.fabbe50.compressedblocks.core.reference.MetaValues;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
@@ -41,6 +42,7 @@ public class RecipeRegistry {
         createHalfShapedRecipes();
         createShapedHCRecipes();
         createUncraft3x3Recipes();
+        createSpecialRecipes();
 
         registerReturnableRecipes();
     }
@@ -57,6 +59,13 @@ public class RecipeRegistry {
 
     private static void createReturnableRecipes() {
         ModRegistry.addReturnRecipe(new ItemStack(ItemRegistry.MASHEDFOOD, 1, 0), new Object[]{new ItemStack(ItemRegistry.FOODBOWL, 1, 0), new ItemStack(ItemRegistry.PEBBLES, 1, 0), new ItemStack(Items.POTIONITEM, 1, 0)});
+    }
+
+    private static void createSpecialRecipes() {
+        MiniBeaconRecipes.acceptedItems.add(Items.POTIONITEM);
+        MiniBeaconRecipes.acceptedItems.add(Items.SHIELD);
+        MiniBeaconRecipes.acceptedItems.add(ItemRegistry.ITEM_FOOD);
+        GameRegistry.addRecipe(new MiniBeaconRecipes());
     }
 
     private static void createShapedRecipes() {

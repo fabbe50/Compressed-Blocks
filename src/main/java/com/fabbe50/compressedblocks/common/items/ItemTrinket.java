@@ -1,11 +1,19 @@
 package com.fabbe50.compressedblocks.common.items;
 
+import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.thefifthidiot.tficore.common.items.ItemBase;
+import com.thefifthidiot.tficore.utility.helper.ChatHelper;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.potion.PotionUtils;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,6 +21,7 @@ import net.minecraftforge.event.entity.EntityTravelToDimensionEvent;
 import net.minecraftforge.event.entity.living.EnderTeleportEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,10 +35,41 @@ public class ItemTrinket extends ItemBase {
     }
 
     @Override
+    public boolean hasEffect(ItemStack stack) {
+        return stack.getMetadata() == 3;
+    }
+
+    @Override
+    public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
+        if (!worldIn.isRemote && worldIn.getTotalWorldTime() % 80L == 0L) {
+            if (entityIn instanceof EntityPlayer && stack.getMetadata() == 3) {
+                for (PotionEffect e : getPotionFromItem(stack)) {
+                    ((EntityPlayer) entityIn).addPotionEffect(new PotionEffect(e.getPotion(), 180, e.getAmplifier(), false, false));
+                }
+            }
+        }
+    }
+
+    @Override
+    public void onCreated(ItemStack stack, World worldIn, EntityPlayer playerIn) {
+        NBTTagCompound tags = stack.getTagCompound();
+
+        if (tags == null)
+            tags = new NBTTagCompound();
+
+        stack.setTagCompound(tags);
+    }
+
+    public static List<PotionEffect> getPotionFromItem(ItemStack stack) {
+        return PotionUtils.getEffectsFromStack(stack);
+    }
+
+    @Override
     public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
         subItems.add(new ItemStack(itemIn, 1, 0));
         subItems.add(new ItemStack(itemIn, 1, 1));
         subItems.add(new ItemStack(itemIn, 1, 2));
+        subItems.add(new ItemStack(itemIn, 1, 3)); //Portable Beacon
     }
 
     @Override
@@ -43,6 +83,20 @@ public class ItemTrinket extends ItemBase {
                 break;
             case 2:
                 tooltip.add("Disables dimensional teleportation.");
+                break;
+            case 3:
+                stack.setTranslatableName("item." + Reference.MOD_ID + ":minibeacon.name");
+                if (!PotionUtils.getEffectsFromStack(stack).isEmpty())
+                    tooltip.add(ChatHelper.MAGENTA + "Effects applied:");
+                else {
+                    tooltip.add(ChatHelper.MAGENTA + "No effects applied.");
+                    tooltip.add(ChatHelper.PURPLE + "Start by combining this with");
+                    tooltip.add(ChatHelper.PURPLE + "a compressed iron block and");
+                    tooltip.add(ChatHelper.PURPLE + "a potion of your choice.");
+                }
+                for (PotionEffect e : PotionUtils.getEffectsFromStack(stack)) {
+                    tooltip.add(ChatHelper.PURPLE + I18n.format(e.getEffectName()) + " " + (e.getAmplifier() + 1));
+                }
                 break;
         }
     }
