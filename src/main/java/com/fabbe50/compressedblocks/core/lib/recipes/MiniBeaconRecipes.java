@@ -19,6 +19,7 @@ import net.minecraft.world.World;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by fabbe on 17/11/2017 - 10:14 PM.
@@ -29,7 +30,7 @@ public class MiniBeaconRecipes implements IRecipe {
     @Override
     public boolean matches(InventoryCrafting inv, World worldIn) {
         int i = 0;
-        ItemStack itemstack = ItemStack.EMPTY;
+        ItemStack trinket = ItemStack.EMPTY;
         ItemStack potion = ItemStack.EMPTY;
 
         for (int j = 0; j < inv.getSizeInventory(); j++) {
@@ -37,12 +38,14 @@ public class MiniBeaconRecipes implements IRecipe {
 
             if (!itemstack1.isEmpty()) {
                 if (itemstack1.getItem() == ItemRegistry.TRINKET) {
-                    if (!itemstack.isEmpty()) {
-                        return false;
-                    }
-
-                    itemstack = itemstack1;
-                } else if (acceptedItems.contains(itemstack1.getItem())) {
+                    if (!trinket.isEmpty()) {
+                        if (!potion.isEmpty())
+                            return false;
+                        else
+                            potion = itemstack1;
+                    } else
+                        trinket = itemstack1;
+                } else if (acceptedItems.contains(itemstack1.getItem()) && potion.getItem() != ItemRegistry.TRINKET) {
                     if (!potion.isEmpty()) {
                         return false;
                     }
@@ -58,8 +61,10 @@ public class MiniBeaconRecipes implements IRecipe {
                         PotionUtils.appendEffects(potion, effect);
                     }
                 } else {
-                    if (Block.getBlockFromItem(itemstack1.getItem()) != BlockRegistry.COMPRESSED_IRON) {
-                        return false;
+                    if (potion.getItem() != ItemRegistry.TRINKET) {
+                        if (Block.getBlockFromItem(itemstack1.getItem()) != Blocks.BEACON) {
+                            return false;
+                        }
                     }
 
                     i++;
@@ -67,7 +72,7 @@ public class MiniBeaconRecipes implements IRecipe {
             }
         }
 
-        return !itemstack.isEmpty() && itemstack.hasTagCompound() && i > 0;
+        return !trinket.isEmpty() && trinket.hasTagCompound() && i > 0;
     }
 
     @Override
@@ -82,10 +87,13 @@ public class MiniBeaconRecipes implements IRecipe {
             if (!itemstack1.isEmpty()) {
                 if (itemstack1.getItem() == ItemRegistry.TRINKET) {
                     if (!trinket.isEmpty()) {
-                        return ItemStack.EMPTY;
-                    }
-                    trinket = itemstack1;
-                } else if (acceptedItems.contains(itemstack1.getItem())) {
+                        if (!potion.isEmpty())
+                            return ItemStack.EMPTY;
+                        else
+                            potion = itemstack1;
+                    } else
+                        trinket = itemstack1;
+                } else if (acceptedItems.contains(itemstack1.getItem()) && potion.getItem() != ItemRegistry.TRINKET) {
                     if (!potion.isEmpty()) {
                         return ItemStack.EMPTY;
                     }
@@ -101,8 +109,10 @@ public class MiniBeaconRecipes implements IRecipe {
                         PotionUtils.appendEffects(potion, effect);
                     }
                 } else {
-                    if (Block.getBlockFromItem(itemstack1.getItem()) != BlockRegistry.COMPRESSED_IRON) {
-                        return ItemStack.EMPTY;
+                    if (potion.getItem() != ItemRegistry.TRINKET) {
+                        if (Block.getBlockFromItem(itemstack1.getItem()) != Blocks.BEACON) {
+                            return ItemStack.EMPTY;
+                        }
                     }
 
                     i++;
@@ -111,11 +121,12 @@ public class MiniBeaconRecipes implements IRecipe {
         }
 
         if (!trinket.isEmpty() && trinket.hasTagCompound() && i >= 1) {
-            ItemStack itemStack2 = new ItemStack(trinket.getItem(), 1, 3);
+            ItemStack itemStack2 = new ItemStack(trinket.getItem(), 1, 4);
             List<PotionEffect> effects = new ArrayList<>();
             effects.addAll(PotionUtils.getEffectsFromStack(trinket));
             effects.addAll(PotionUtils.getEffectsFromStack(potion));
-            PotionUtils.appendEffects(itemStack2, effects);
+            List<PotionEffect> effects1 = effects.stream().distinct().collect(Collectors.toList());
+            PotionUtils.appendEffects(itemStack2, effects1);
             return itemStack2;
         } else {
             return ItemStack.EMPTY;

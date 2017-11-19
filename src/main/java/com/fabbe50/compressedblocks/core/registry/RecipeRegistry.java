@@ -226,6 +226,13 @@ public class RecipeRegistry {
                 "S",
                 'E', new ItemStack(ItemRegistry.ENDGAMIUM_INGOT, 1, 0),
                 'S', new ItemStack(Items.STICK, 1, 0)});
+        GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.TRINKET, 1, 4), new Object[] {
+                " i ",
+                "IBI",
+                " i ",
+                'i', new ItemStack(Blocks.IRON_BLOCK, 1, 0),
+                'I', new ItemStack(BlockRegistry.COMPRESSED_IRON, 1, 1),
+                'B', new ItemStack(Items.DIAMOND, 1, 0)});
     }
 
     private static void createHalfShapedRecipes() {

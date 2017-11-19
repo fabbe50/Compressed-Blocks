@@ -140,10 +140,11 @@ public class ItemRegistry {
         registerItem(INKBOTTLE, EnumDyeColor.ORANGE.getDyeDamage(), "ink_orange");
         registerItem(INKBOTTLE, EnumDyeColor.WHITE.getDyeDamage(), "ink_white");
 
-        registerItem(TRINKET, 0, "trinket");
-        registerItem(TRINKET, 1, "trinket1");
-        registerItem(TRINKET, 2, "trinket2");
-        registerItem(TRINKET, 3, "portablebeacon");
+        registerItem(TRINKET, 0, "trinket0");
+        registerItem(TRINKET, 1, "trinket");
+        registerItem(TRINKET, 2, "trinket1");
+        registerItem(TRINKET, 3, "trinket2");
+        registerItem(TRINKET, 4, "portablebeacon");
     }
 
     public static void init() {

@@ -18,7 +18,7 @@ public class ModRegistry {
     public static List<RecipeReturnItem> returnRecipes = new ArrayList<>();
 
     public static void addEndgameRecipe(ItemStack stack, Object... recipeComponents) {
-        List<ItemStack> list = Lists.<ItemStack>newArrayList();
+        List<ItemStack> list = Lists.newArrayList();
 
         for (Object object : recipeComponents) {
             if (object instanceof ItemStack) {

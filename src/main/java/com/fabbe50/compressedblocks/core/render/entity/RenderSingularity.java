@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  */
 @SideOnly(Side.CLIENT)
 public class RenderSingularity<T extends Entity> extends Render<T>{
-    private static final ResourceLocation texture = new ResourceLocation(Reference.MOD_ID, "textures/items/potatosingularity.png");
+    private static final ResourceLocation texture = new ResourceLocation(Reference.MOD_ID, "textures/items/potatosingularitye");
 
     protected final Item item;
     private final RenderItem itemRenderer;

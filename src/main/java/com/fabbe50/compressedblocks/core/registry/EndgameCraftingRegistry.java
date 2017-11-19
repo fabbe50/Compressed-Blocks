@@ -21,5 +21,9 @@ public class EndgameCraftingRegistry {
         ModRegistry.addEndgameRecipe(new ItemStack(Blocks.MELON_BLOCK, 1, 0), new Object[]{new ItemStack(Items.MELON_SEEDS, 1, 0), new ItemStack(Items.DYE, 1, 15)});
         ModRegistry.addEndgameRecipe(new ItemStack(Blocks.PUMPKIN, 1, 0), new Object[]{new ItemStack(Items.PUMPKIN_SEEDS, 1, 0), new ItemStack(Items.DYE, 1, 15)});
         ModRegistry.addEndgameRecipe(new ItemStack(Items.BEETROOT, 1, 0), new Object[]{new ItemStack(Items.BEETROOT_SEEDS, 1, 0), new ItemStack(Items.DYE, 1, 15)});
+        ModRegistry.addEndgameRecipe(new ItemStack(ItemRegistry.TRINKET, 1, 0), new Object[]{new ItemStack(BlockRegistry.COMPRESSED_IRON, 1, 0)});
+        ModRegistry.addEndgameRecipe(new ItemStack(ItemRegistry.TRINKET, 1, 1), new Object[]{new ItemStack(ItemRegistry.TRINKET, 1, 0), new ItemStack(ItemRegistry.ENDERAPPLE, 1, 1)});
+        ModRegistry.addEndgameRecipe(new ItemStack(ItemRegistry.TRINKET, 1, 2), new Object[]{new ItemStack(ItemRegistry.TRINKET, 1, 0), new ItemStack(BlockRegistry.ENDERBLOCK, 1, 0)});
+        ModRegistry.addEndgameRecipe(new ItemStack(ItemRegistry.TRINKET, 1, 3), new Object[]{new ItemStack(ItemRegistry.TRINKET, 1, 0), new ItemStack(Blocks.END_BRICKS, 1, 0), new ItemStack(Blocks.NETHER_BRICK, 1, 0)});
     }
 }

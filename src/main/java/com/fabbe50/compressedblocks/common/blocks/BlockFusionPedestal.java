@@ -95,7 +95,7 @@ public class BlockFusionPedestal extends BlockBase {
                 for(EndgameRecipes recipes : ModRegistry.endgameRecipes) {
                     if (CraftingHelper.compareItemsFromListedStacks(items, recipes.recipeItems)) {
                         EntityItem outputItem = new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5);
-                        outputItem.setEntityItemStack(new ItemStack(recipes.getRecipeOutput().getItem(), 1, 0));
+                        outputItem.setEntityItemStack(recipes.getRecipeOutput());
                         outputItem.setVelocity(0, 0, 0);
                         worldIn.spawnEntity(outputItem);
                         worldIn.addWeatherEffect(new EntityLightningBolt(worldIn, pos.getX(), pos.getY(), pos.getZ(), true));

@@ -47,7 +47,7 @@ public class ItemEnderApple extends ItemFood {
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
         if (!worldIn.isRemote) {
             if (stack.getMetadata() > 0) {
-                if (!player.inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 0))) {
+                if (!player.inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 1))) {
                     player.changeDimension(1);
                 }
 
@@ -58,7 +58,7 @@ public class ItemEnderApple extends ItemFood {
                 player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 3600, 3));
             }
             else {
-                if (!player.inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 0))) {
+                if (!player.inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 1))) {
                     BlockPos tpPos = new BlockPos(player.posX + getPlusMinusBound(40), player.posY + getPlusMinusBound(20), player.posZ + getPlusMinusBound(40));
                     Block block1 = worldIn.getBlockState(tpPos).getBlock();
                     Block block2 = worldIn.getBlockState(tpPos.add(0, 1, 0)).getBlock();

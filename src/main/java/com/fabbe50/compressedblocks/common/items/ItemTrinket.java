@@ -36,13 +36,13 @@ public class ItemTrinket extends ItemBase {
 
     @Override
     public boolean hasEffect(ItemStack stack) {
-        return stack.getMetadata() == 3;
+        return stack.getMetadata() == 4;
     }
 
     @Override
     public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         if (!worldIn.isRemote && worldIn.getTotalWorldTime() % 80L == 0L) {
-            if (entityIn instanceof EntityPlayer && stack.getMetadata() == 3) {
+            if (entityIn instanceof EntityPlayer && stack.getMetadata() == 4) {
                 for (PotionEffect e : getPotionFromItem(stack)) {
                     ((EntityPlayer) entityIn).addPotionEffect(new PotionEffect(e.getPotion(), 180, e.getAmplifier(), false, false));
                 }
@@ -69,30 +69,33 @@ public class ItemTrinket extends ItemBase {
         subItems.add(new ItemStack(itemIn, 1, 0));
         subItems.add(new ItemStack(itemIn, 1, 1));
         subItems.add(new ItemStack(itemIn, 1, 2));
-        subItems.add(new ItemStack(itemIn, 1, 3)); //Portable Beacon
+        subItems.add(new ItemStack(itemIn, 1, 3));
+        subItems.add(new ItemStack(itemIn, 1, 4)); //Portable Beacon
     }
 
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
         switch (stack.getMetadata()) {
             case 0:
-                tooltip.add("Counters the Ender Apples quirks.");
+                tooltip.add("No effects");
                 break;
             case 1:
-                tooltip.add("Prevents Ender teleportation.");
+                tooltip.add("Counters the Ender Apples quirks.");
                 break;
             case 2:
-                tooltip.add("Disables dimensional teleportation.");
+                tooltip.add("Prevents Ender teleportation.");
                 break;
             case 3:
+                tooltip.add("Disables dimensional teleportation.");
+                break;
+            case 4:
                 stack.setTranslatableName("item." + Reference.MOD_ID + ":minibeacon.name");
                 if (!PotionUtils.getEffectsFromStack(stack).isEmpty())
                     tooltip.add(ChatHelper.MAGENTA + "Effects applied:");
                 else {
                     tooltip.add(ChatHelper.MAGENTA + "No effects applied.");
                     tooltip.add(ChatHelper.PURPLE + "Start by combining this with");
-                    tooltip.add(ChatHelper.PURPLE + "a compressed iron block and");
-                    tooltip.add(ChatHelper.PURPLE + "a potion of your choice.");
+                    tooltip.add(ChatHelper.PURPLE + "a beacon and a potion.");
                 }
                 for (PotionEffect e : PotionUtils.getEffectsFromStack(stack)) {
                     tooltip.add(ChatHelper.PURPLE + I18n.format(e.getEffectName()) + " " + (e.getAmplifier() + 1));
