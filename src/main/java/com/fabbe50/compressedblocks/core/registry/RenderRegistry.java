@@ -22,7 +22,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class RenderRegistry {
     public static void init() {
         RenderingRegistry.registerEntityRenderingHandler(EntityCorgi.class, renderManager -> new RenderCorgi(renderManager, new ModelCorgi(), 0.3f));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySquidColored.class, RenderSquidColored::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntitySquidColored.class, renderManager -> new RenderSquidColored(renderManager));
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBeaconXray.class, new TileEntityBeaconXrayRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySuperShulkerBox.class, new TileEntitySuperShulkerBoxRenderer());
     }

@@ -113,8 +113,15 @@ public class EntitySquidColored extends EntityWaterMob {
     @Override
     protected void entityInit() {
         super.entityInit();
-        this.dataManager.register(SQUIDCOLOR, (byte) 0);
+        this.dataManager.register(SQUIDCOLOR, Byte.valueOf((byte) 0));
     }
+
+    @Override
+    public boolean isChild() {
+        return false;
+    }
+
+
 
     @Override
     @Nullable
