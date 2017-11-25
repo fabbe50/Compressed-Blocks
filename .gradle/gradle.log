@@ -1,7 +1,7 @@
 This mapping 'snapshot_20170528' was designed for MC 1.11! Use at your own peril.This mapping 'snapshot_20170528' was designed for MC 1.11! Use at your own peril.
 
 #################################################
-         ForgeGradle 2.2-SNAPSHOT-f0ba31b        
+         ForgeGradle 2.2-SNAPSHOT-d13a6c8        
   https://github.com/MinecraftForge/ForgeGradle  
 #################################################
                Powered by MCP unknown               
@@ -46,4 +46,4 @@ remapping source...
 
 BUILD SUCCESSFUL
 
-Total time: 1 mins 22.679 secs
+Total time: 2 mins 14.649 secs

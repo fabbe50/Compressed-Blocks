@@ -23,8 +23,9 @@ public class EventRegistry {
         MinecraftForge.EVENT_BUS.register(new StackableBuckets());
         MinecraftForge.EVENT_BUS.register(new PlayerTracker());
         MinecraftForge.EVENT_BUS.register(new VanillaHooks());
-        MinecraftForge.EVENT_BUS.register(new GrassEatEvent());
+        //MinecraftForge.EVENT_BUS.register(new GrassEatEvent());
         MinecraftForge.EVENT_BUS.register(new TrinketEnderEvent());
+        MinecraftForge.EVENT_BUS.register(new UpdateEntityAIEvent());
     }
 
     public static void onClientStarted() {
