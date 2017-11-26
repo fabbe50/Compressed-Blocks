@@ -4,6 +4,7 @@ import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.thefifthidiot.tficore.common.items.ItemBase;
 import com.thefifthidiot.tficore.utility.helper.ChatHelper;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -21,6 +22,7 @@ import net.minecraftforge.event.entity.EntityTravelToDimensionEvent;
 import net.minecraftforge.event.entity.living.EnderTeleportEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,16 +67,16 @@ public class ItemTrinket extends ItemBase {
     }
 
     @Override
-    public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
-        subItems.add(new ItemStack(itemIn, 1, 0));
-        subItems.add(new ItemStack(itemIn, 1, 1));
-        subItems.add(new ItemStack(itemIn, 1, 2));
-        subItems.add(new ItemStack(itemIn, 1, 3));
-        subItems.add(new ItemStack(itemIn, 1, 4)); //Portable Beacon
+    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+        subItems.add(new ItemStack(this, 1, 0));
+        subItems.add(new ItemStack(this, 1, 1));
+        subItems.add(new ItemStack(this, 1, 2));
+        subItems.add(new ItemStack(this, 1, 3));
+        subItems.add(new ItemStack(this, 1, 4)); //Portable Beacon
     }
 
     @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
         switch (stack.getMetadata()) {
             case 0:
                 tooltip.add("No effects");

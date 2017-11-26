@@ -28,7 +28,7 @@ public class TileEntitySuperShulkerBoxRenderer extends TileEntitySpecialRenderer
     }
 
     @Override
-    public void renderTileEntityAt(TileEntitySuperShulkerBox te, double x, double y, double z, float partialTicks, int destroyStage) {
+    public void render(TileEntitySuperShulkerBox te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
         renderShulker(te, x, y, z, partialTicks, destroyStage);
     }
 

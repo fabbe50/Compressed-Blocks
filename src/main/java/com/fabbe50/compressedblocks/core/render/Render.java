@@ -3,9 +3,9 @@ package com.fabbe50.compressedblocks.core.render;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.renderer.VertexBuffer;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.client.renderer.vertex.VertexFormat;
@@ -116,7 +116,7 @@ public class Render {
 
     public static void face(EnumFacing facing, TextureAtlasSprite icon, double minX, double minY, double minZ, double maxX, double maxY, double maxZ) {
         Tessellator tess = Tessellator.getInstance();
-        VertexBuffer buffer = tess.getBuffer();
+        BufferBuilder buffer = tess.getBuffer();
 
         if (icon == null) {
             switch (facing) {

@@ -50,19 +50,19 @@ public class ContainerFurnaceCompr extends Container {
             IContainerListener icontainerlistener = (IContainerListener)this.listeners.get(i);
 
             if (this.cookTime != this.tileFurnace.getField(2)) {
-                icontainerlistener.sendProgressBarUpdate(this, 2, this.tileFurnace.getField(2));
+                icontainerlistener.sendWindowProperty(this, 2, this.tileFurnace.getField(2));
             }
 
             if (this.furnaceBurnTime != this.tileFurnace.getField(0)) {
-                icontainerlistener.sendProgressBarUpdate(this, 0, this.tileFurnace.getField(0));
+                icontainerlistener.sendWindowProperty(this, 0, this.tileFurnace.getField(0));
             }
 
             if (this.currentItemBurnTime != this.tileFurnace.getField(1)) {
-                icontainerlistener.sendProgressBarUpdate(this, 1, this.tileFurnace.getField(1));
+                icontainerlistener.sendWindowProperty(this, 1, this.tileFurnace.getField(1));
             }
 
             if (this.totalCookTime != this.tileFurnace.getField(3)) {
-                icontainerlistener.sendProgressBarUpdate(this, 3, this.tileFurnace.getField(3));
+                icontainerlistener.sendWindowProperty(this, 3, this.tileFurnace.getField(3));
             }
         }
 

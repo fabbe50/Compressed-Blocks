@@ -15,7 +15,7 @@ import net.minecraftforge.oredict.ShapelessOreRecipe;
  * Created by fabbe50 on 12/02/2017.
  */
 public class RecipeOverrideRegistry {
-    public static void init() {
+    /*public static void init() {
         if (Configs.hardcoreRecipes) {addModRecipes();}
         addVanillaRecipes();
     }
@@ -73,5 +73,5 @@ public class RecipeOverrideRegistry {
                 "B",
                 'B', new ItemStack(Blocks.BEDROCK, 1, 0)
         });
-    }
+    }*/
 }

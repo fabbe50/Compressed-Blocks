@@ -3,14 +3,12 @@ package com.fabbe50.compressedblocks.core.registry;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
-import net.minecraftforge.common.AchievementPage;
 
 /**
  * Created by fabbe50 on 15/09/2016.
  */
 public class AchievementRegistry {
-    public static AchievementPage page1;
+    /*public static AchievementPage page1;
 
     //public static Achievement COMPRESSEDSTARBLOCK = (new Achievement("achievement.star", "star", 0, 0, , null)).initIndependentStat().registerStat();
     public static Achievement POTATOESFORDAYS = (new Achievement("achievement.potato", "potato", -1, 2, BlockRegistry.POTATO_BLOCK, null)).initIndependentStat().registerStat();
@@ -32,5 +30,5 @@ public class AchievementRegistry {
                 EGG_PING,
                 BUILD_HQCAKE);
         AchievementPage.registerAchievementPage(page1);
-    }
+    }*/
 }

@@ -4,6 +4,7 @@ import com.fabbe50.compressedblocks.common.entities.EntityPotatoSingularity;
 import com.fabbe50.compressedblocks.common.entities.EntityPotatoSingularityVanilla;
 import com.thefifthidiot.tficore.common.items.ItemBase;
 import com.thefifthidiot.tficore.utility.LogHelper;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
@@ -13,6 +14,7 @@ import net.minecraft.util.*;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Loader;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 /**
@@ -37,12 +39,12 @@ public class ItemPotatoSingularity extends ItemBase {
             LogHelper.info("Draconic Evolution is loaded!");
             LogHelper.info("Implementing DE-Reactor Explosion");
             EntityPotatoSingularity entity = new EntityPotatoSingularity(worldIn, playerIn);
-            entity.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.8F, 1.0F);
+            entity.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.8F, 1.0F);
             worldIn.spawnEntity(entity);
         }
         else {
             EntityPotatoSingularityVanilla entity = new EntityPotatoSingularityVanilla(worldIn, playerIn);
-            entity.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0f, 1.8f, 1.0f);
+            entity.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0f, 1.8f, 1.0f);
             worldIn.spawnEntity(entity);
         }
 
@@ -51,7 +53,7 @@ public class ItemPotatoSingularity extends ItemBase {
     }
 
     @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
         tooltip.add("Infinite Potatoes");
     }
 }

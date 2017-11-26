@@ -30,8 +30,8 @@ public class CompressedItemBase extends ItemBase {
 
     @SideOnly(Side.CLIENT)
     @Override
-    public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
-        final List<ItemStack> items = Stream.of(EnumCompressed.values()).map(enumType -> new ItemStack(itemIn, 1, enumType.getMetadata())).collect(Collectors.toList());
+    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+        final List<ItemStack> items = Stream.of(EnumCompressed.values()).map(enumType -> new ItemStack(this, 1, enumType.getMetadata())).collect(Collectors.toList());
         subItems.addAll(items);
     }
 }

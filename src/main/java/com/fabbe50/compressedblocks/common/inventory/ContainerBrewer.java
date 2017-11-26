@@ -1,6 +1,5 @@
 package com.fabbe50.compressedblocks.common.inventory;
 
-import com.fabbe50.compressedblocks.common.tileentities.TileEntityBrewer;
 import com.fabbe50.compressedblocks.core.utils.VanillaHooks;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -10,7 +9,6 @@ import net.minecraft.inventory.*;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionType;
 import net.minecraft.potion.PotionUtils;
-import net.minecraft.stats.AchievementList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -54,11 +52,11 @@ public class ContainerBrewer extends Container {
             IContainerListener icontainerlistener = (IContainerListener) listener;
 
             if (this.prevBrewTime != this.tileBrewingStand.getField(0)) {
-                icontainerlistener.sendProgressBarUpdate(this, 0, this.tileBrewingStand.getField(0));
+                //icontainerlistener.(this, 0, this.tileBrewingStand.getField(0));
             }
 
             if (this.prevFuel != this.tileBrewingStand.getField(1)) {
-                icontainerlistener.sendProgressBarUpdate(this, 1, this.tileBrewingStand.getField(1));
+                //icontainerlistener.sendProgressBarUpdate(this, 1, this.tileBrewingStand.getField(1));
             }
         }
 
@@ -194,7 +192,7 @@ public class ContainerBrewer extends Container {
 
             if (potiontype != PotionTypes.WATER && potiontype != PotionTypes.EMPTY) {
                 net.minecraftforge.event.ForgeEventFactory.onPlayerBrewedPotion(thePlayer, stack);
-                this.player.addStat(AchievementList.POTION);
+                //this.player.addStat(AchievementList.POTION);
             }
 
             super.onTake(thePlayer, stack);

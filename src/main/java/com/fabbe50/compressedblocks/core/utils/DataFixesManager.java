@@ -1,6 +1,5 @@
 package com.fabbe50.compressedblocks.core.utils;
 
-import com.fabbe50.compressedblocks.common.entities.EntitySquidColored;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntityBrewer;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntitySuperShulkerBox;
 import com.fabbe50.compressedblocks.core.utils.datafix.SuperShulkerBoxEntityColor;

@@ -33,7 +33,7 @@ public class BlockNuke extends BlockBase {
         if (!worldIn.isRemote) {
             if (!exploded) {
                 LogHelper.info("Nuke Active");
-                ProcessExplosion explosion = new ProcessExplosion(pos, 350, worldIn.getMinecraftServer().worldServerForDimension(playerIn.dimension), 0);
+                ProcessExplosion explosion = new ProcessExplosion(pos, 350, worldIn.getMinecraftServer().getWorld(playerIn.dimension), 0);
                 ProcessHandler.addProcess(explosion);
                 exploded = true;
             }

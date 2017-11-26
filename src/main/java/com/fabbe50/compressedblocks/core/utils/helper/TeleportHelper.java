@@ -46,8 +46,8 @@ public class TeleportHelper {
         BlockPos blockPos = new BlockPos(tags.getDouble("posX"), tags.getDouble("posY"), tags.getDouble("posZ"));
         ChunkPos chunkPos = new ChunkPos(blockPos);
         if (Configs.enableCrossDimensionalTP) {
-            oldWorld = minecraftServer.worldServerForDimension(playermp.dimension);
-            newWorld = minecraftServer.worldServerForDimension(tags.getInteger("dimension"));
+            oldWorld = minecraftServer.getWorld(playermp.dimension);
+            newWorld = minecraftServer.getWorld(tags.getInteger("dimension"));
             oldDim = playermp.dimension;
             dimension = tags.getInteger("dimension");
         }

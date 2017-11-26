@@ -1,6 +1,7 @@
 package com.fabbe50.compressedblocks.common.items;
 
 import com.thefifthidiot.tficore.common.items.ItemBase;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.passive.EntityChicken;
@@ -16,6 +17,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
 
@@ -71,7 +73,7 @@ public class ItemEggHatcher extends ItemBase {
     }
 
     @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
         tooltip.add("100% hatch-rate!");
         tooltip.add("Shift + Right Click to Hatch full stack");
     }

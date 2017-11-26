@@ -2,6 +2,7 @@ package com.fabbe50.compressedblocks.common.items.base;
 
 import com.thefifthidiot.tficore.common.creativetabs.TFITab;
 import com.thefifthidiot.tficore.lib.Configs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -86,7 +87,7 @@ public class TwoHandItemBase extends ItemMap {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
 
     }
 

@@ -31,7 +31,7 @@ public class EntityAIBegDecoy extends EntityAIBase {
     }
 
     public boolean continueExecuting() {
-        return !this.thePlayer.isEntityAlive() ? false : (this.theCorgi.getDistanceSqToEntity(this.thePlayer) > (double)(this.minPlayerDistance * this.minPlayerDistance) ? false : this.timeoutCounter > 0 && this.hasPlayerGotBoneInHand(this.thePlayer));
+        return !this.thePlayer.isEntityAlive() ? false : (this.theCorgi.getDistance(this.thePlayer) > (double)(this.minPlayerDistance * this.minPlayerDistance) ? false : this.timeoutCounter > 0 && this.hasPlayerGotBoneInHand(this.thePlayer));
     }
 
     public void startExecuting() {

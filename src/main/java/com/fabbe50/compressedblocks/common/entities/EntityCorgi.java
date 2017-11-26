@@ -268,7 +268,7 @@ public class EntityCorgi extends EntityTameable {
             return false;
         }
         else {
-            Entity entity = source.getEntity();
+            Entity entity = source.getImmediateSource();
 
             if (this.aiSit != null) {
                 this.aiSit.setSitting(false);
@@ -336,7 +336,7 @@ public class EntityCorgi extends EntityTameable {
             if (this.isOwner(player) && !this.world.isRemote && !this.isBreedingItem(stack)) {
                 this.aiSit.setSitting(!this.isSitting());
                 this.isJumping = false;
-                this.navigator.clearPathEntity();
+                this.navigator.clearPath();
                 this.setAttackTarget((EntityLivingBase)null);
             }
         }
@@ -347,7 +347,7 @@ public class EntityCorgi extends EntityTameable {
             if (!this.world.isRemote) {
                 if (this.rand.nextInt(3) == 0) {
                     this.setTamed(true);
-                    this.navigator.clearPathEntity();
+                    this.navigator.clearPath();
                     this.setAttackTarget((EntityLivingBase)null);
                     this.aiSit.setSitting(true);
                     this.setHealth(60.0F);

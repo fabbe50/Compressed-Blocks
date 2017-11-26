@@ -20,8 +20,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.stats.AchievementList;
-import net.minecraft.tileentity.TileEntityBeacon;
 import net.minecraft.tileentity.TileEntityLockable;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
@@ -88,7 +86,7 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
             int k = this.pos.getX();
             int l = this.pos.getY();
             int i1 = this.pos.getZ();
-            AxisAlignedBB axisalignedbb = (new AxisAlignedBB((double)k, (double)l, (double)i1, (double)(k + 1), (double)(l + 1), (double)(i1 + 1))).expandXyz(d0).addCoord(0.0D, (double)this.world.getHeight(), 0.0D);
+            AxisAlignedBB axisalignedbb = (new AxisAlignedBB((double)k, (double)l, (double)i1, (double)(k + 1), (double)(l + 1), (double)(i1 + 1))).grow(d0).contract(0.0D, (double)this.world.getHeight(), 0.0D);
             List<EntityPlayer> list = this.world.<EntityPlayer>getEntitiesWithinAABB(EntityPlayer.class, axisalignedbb);
 
             for (EntityPlayer entityplayer : list) {
@@ -192,7 +190,7 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
 
         if (!this.world.isRemote && this.levels == 4 && i < this.levels) {
             for (EntityPlayer entityplayer : this.world.getEntitiesWithinAABB(EntityPlayer.class, (new AxisAlignedBB((double)j, (double)k, (double)l, (double)j, (double)(k - 4), (double)l)).expand(10.0D, 5.0D, 10.0D))) {
-                entityplayer.addStat(AchievementList.FULL_BEACON);
+                //entityplayer.addStat(AchievementList.FULL_BEACON);
             }
         }
     }

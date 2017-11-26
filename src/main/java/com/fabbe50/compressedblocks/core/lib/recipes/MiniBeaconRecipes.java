@@ -12,11 +12,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemPotion;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionUtils;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -134,8 +137,8 @@ public class MiniBeaconRecipes implements IRecipe {
     }
 
     @Override
-    public int getRecipeSize() {
-        return 9;
+    public boolean canFit(int width, int height) {
+        return width > 1 && height > 1;
     }
 
     @Override
@@ -158,5 +161,36 @@ public class MiniBeaconRecipes implements IRecipe {
         }
 
         return nonnulllist;
+    }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return null;
+    }
+
+    @Override
+    public boolean isDynamic() {
+        return false;
+    }
+
+    @Override
+    public String getGroup() {
+        return null;
+    }
+
+    @Override
+    public IRecipe setRegistryName(ResourceLocation name) {
+        return null;
+    }
+
+    @Nullable
+    @Override
+    public ResourceLocation getRegistryName() {
+        return null;
+    }
+
+    @Override
+    public Class<IRecipe> getRegistryType() {
+        return null;
     }
 }

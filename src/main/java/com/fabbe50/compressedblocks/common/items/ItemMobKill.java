@@ -30,7 +30,7 @@ public class ItemMobKill extends ItemSword {
         this.material = material;
         this.maxStackSize = 1;
         setItemName(this, name);
-        this.attackDamage = material.getDamageVsEntity();
+        this.attackDamage = material.getAttackDamage();
     }
 
     public static void setItemName(Item item, String itemName) {
@@ -39,13 +39,13 @@ public class ItemMobKill extends ItemSword {
     }
 
     @Override
-    public float getDamageVsEntity() {
-        return this.material.getDamageVsEntity();
+    public float getAttackDamage() {
+        return this.material.getAttackDamage();
     }
 
     @Override
-    public float getStrVsBlock(ItemStack stack, IBlockState state) {
-        return 0;
+    public float getDestroySpeed(ItemStack stack, IBlockState state) {
+        return super.getDestroySpeed(stack, state);
     }
 
     @Override

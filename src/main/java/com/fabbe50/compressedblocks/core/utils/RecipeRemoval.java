@@ -20,7 +20,7 @@ import java.util.List;
  * Created by fabbe50 on 12/02/2017.
  */
 public class RecipeRemoval {
-    private static List<Item> forRemoval = new ArrayList<>();
+    /*private static List<Item> forRemoval = new ArrayList<>();
     private static CraftingManager craftingManager = CraftingManager.getInstance();
     private static List<IRecipe> recipes = craftingManager.getRecipeList();
     private static Iterator<IRecipe> recipeOutput = recipes.iterator();
@@ -68,5 +68,5 @@ public class RecipeRemoval {
             if (is != null && forRemoval.contains(is.getItem()))
                 recipeOutput.remove();
         };
-    }
+    }*/
 }

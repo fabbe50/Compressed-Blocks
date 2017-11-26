@@ -26,7 +26,7 @@ public class TileEntityItemStackRenderer extends net.minecraft.client.renderer.t
         //LogHelper.info(item);
         if(Block.getBlockFromItem(item) instanceof BlockSuperShulkerBox) {
             //LogHelper.info("Before Shulker Render");
-            TileEntityRendererDispatcher.instance.renderTileEntityAt(SHULKER_BOXES[BlockSuperShulkerBox.getColorFromItem(item).getMetadata()], 0.0D, 0.0D, 0.0D, 0.0F);
+            TileEntityRendererDispatcher.instance.render(SHULKER_BOXES[BlockSuperShulkerBox.getColorFromItem(item).getMetadata()], 0.0D, 0.0D, 0.0D, 0.0F);
             //LogHelper.info("After Shulker Render");
         }
 

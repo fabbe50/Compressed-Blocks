@@ -90,12 +90,12 @@ public class BlockFusionPedestal extends BlockBase {
             AxisAlignedBB checkingBounds = new AxisAlignedBB(pos.getX(), pos.getY() + 0.75, pos.getZ(), pos.getX() + 0.9375, pos.getY() + 1.5, pos.getZ() + 0.9375);
             if (!worldIn.getEntitiesWithinAABB(EntityItem.class, checkingBounds).isEmpty()) {
                 List<EntityItem> entities = worldIn.getEntitiesWithinAABB(EntityItem.class, checkingBounds);
-                List<ItemStack> items = entities.stream().map(EntityItem::getEntityItem).collect(Collectors.toList());
+                List<ItemStack> items = entities.stream().map(EntityItem::getItem).collect(Collectors.toList());
 
                 for(EndgameRecipes recipes : ModRegistry.endgameRecipes) {
                     if (CraftingHelper.compareItemsFromListedStacks(items, recipes.recipeItems)) {
                         EntityItem outputItem = new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5);
-                        outputItem.setEntityItemStack(recipes.getRecipeOutput());
+                        outputItem.setItem(recipes.getRecipeOutput());
                         outputItem.setVelocity(0, 0, 0);
                         worldIn.spawnEntity(outputItem);
                         worldIn.addWeatherEffect(new EntityLightningBolt(worldIn, pos.getX(), pos.getY(), pos.getZ(), true));

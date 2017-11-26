@@ -7,9 +7,11 @@ import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.event.ForgeEventFactory;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 /**
@@ -59,8 +61,8 @@ public class RecipeReturnItem implements IRecipe {
     }
 
     @Override
-    public int getRecipeSize() {
-        return this.recipeItems.size();
+    public boolean canFit(int width, int height) {
+        return width > 1 && height > 1;
     }
 
     @Override
@@ -93,5 +95,21 @@ public class RecipeReturnItem implements IRecipe {
             return stack;
         }
         return ItemStack.EMPTY;
+    }
+
+    @Override
+    public IRecipe setRegistryName(ResourceLocation name) {
+        return null;
+    }
+
+    @Nullable
+    @Override
+    public ResourceLocation getRegistryName() {
+        return null;
+    }
+
+    @Override
+    public Class<IRecipe> getRegistryType() {
+        return null;
     }
 }

@@ -26,6 +26,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class BlockRegistry {
@@ -343,16 +345,17 @@ public class BlockRegistry {
     }
 
     //INFO: MOVED TO TFICORE
-    private static final Map<Block, Item> BLOCK_TO_ITEM = net.minecraftforge.fml.common.registry.GameData.getBlockItemMap();
+    private static List<Block> blocks = new ArrayList<>();
+	private static List<Item> itemblocks = new ArrayList<>();
 
     private static void registerItemBlock(Block blockIn) {
         registerItemBlock(blockIn, new ItemBlock(blockIn));
     }
 
     private static void registerItemBlock(Block blockIn, Item itemIn) {
-        GameRegistry.register(blockIn);
+        blocks.add(blockIn);
+        itemblocks.add(itemIn);
         registerItem(Block.getIdFromBlock(blockIn), (ResourceLocation)Block.REGISTRY.getNameForObject(blockIn), itemIn);
-        BLOCK_TO_ITEM.put(blockIn, itemIn);
     }
 
     private static void registerItem(int id, String textualID, Item itemIn) {

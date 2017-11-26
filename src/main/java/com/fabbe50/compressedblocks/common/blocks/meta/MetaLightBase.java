@@ -62,9 +62,9 @@ public class MetaLightBase extends MetaBlockBase {
     }
 
     @Override
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
+    public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
         for (EnumLight type : EnumLight.values()) {
-            list.add(new ItemStack(itemIn, 1, type.getMetadata()));
+            list.add(new ItemStack(this, 1, type.getMetadata()));
         }
     }
 }

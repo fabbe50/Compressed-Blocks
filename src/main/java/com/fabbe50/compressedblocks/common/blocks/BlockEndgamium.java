@@ -6,6 +6,7 @@ import com.thefifthidiot.tficore.utility.helper.LogHelper;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -44,7 +45,7 @@ public class BlockEndgamium extends BlockBase {
                     item.setPosition(pos.getX() + getPlusMinusBound(20), pos.getY() + getPlusMinusBound(20), pos.getZ() + getPlusMinusBound(20));
                     if (item.posY <= 0)
                         item.posY = 1;
-                    item.setEntityItemStack(new ItemStack(Blocks.DIAMOND_BLOCK));
+                    item.setItem(new ItemStack(Blocks.DIAMOND_BLOCK));
                     worldIn.spawnEntity(item);
                 }
                 else if (r <= 999 && r >= 800) {
@@ -71,7 +72,7 @@ public class BlockEndgamium extends BlockBase {
     }
 
     @Override
-    public void addInformation(ItemStack stack, EntityPlayer player, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
     }
 
     @Override

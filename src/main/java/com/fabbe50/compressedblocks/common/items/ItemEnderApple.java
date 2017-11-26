@@ -3,6 +3,7 @@ package com.fabbe50.compressedblocks.common.items;
 import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
 import com.thefifthidiot.tficore.common.items.ItemBase;
 import net.minecraft.block.Block;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,6 +21,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
 
@@ -88,13 +90,13 @@ public class ItemEnderApple extends ItemFood {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
-        subItems.add(new ItemStack(itemIn));
-        subItems.add(new ItemStack(itemIn, 1, 1));
+    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+        subItems.add(new ItemStack(this));
+        subItems.add(new ItemStack(this, 1, 1));
     }
 
     @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
         if (stack.getMetadata() == 0) {
             tooltip.add("Filled with energy!");
         }

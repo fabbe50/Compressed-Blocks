@@ -104,7 +104,7 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
     }
 
     public AxisAlignedBB getBoundingBox(EnumFacing p_190587_1_) {
-        return Block.FULL_BLOCK_AABB.addCoord((double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetX()), (double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetY()), (double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetZ()));
+        return Block.FULL_BLOCK_AABB.contract((double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetX()), (double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetY()), (double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetZ()));
     }
 
     private AxisAlignedBB getTopBoundingBox(EnumFacing p_190588_1_) {

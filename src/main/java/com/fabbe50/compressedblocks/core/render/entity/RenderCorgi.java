@@ -28,7 +28,7 @@ public class RenderCorgi extends RenderLiving<EntityCorgi> {
     {
         if (entity.isWet())
         {
-            float f = entity.getBrightness(partialTicks) * entity.getShadingWhileWet(partialTicks);
+            float f = entity.getBrightness() * entity.getShadingWhileWet(partialTicks);
             GlStateManager.color(f, f, f);
         }
 

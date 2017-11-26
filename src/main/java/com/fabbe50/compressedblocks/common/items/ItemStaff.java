@@ -50,7 +50,7 @@ public class ItemStaff extends ItemTool {
                 List<EntityItem> entityItemList = worldIn.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(pos), null);
                 if (entityItemList.size() == 1) {
                     for (EntityItem item : entityItemList) {
-                        if (item.getEntityItem().getItem() == ItemRegistry.ENDGAMIUM_NUGGET) {
+                        if (item.getItem().getItem() == ItemRegistry.ENDGAMIUM_NUGGET) {
                             item.isDead = true;
                             worldIn.setBlockState(pos, BlockRegistry.BIN.getDefaultState());
                         }
@@ -63,7 +63,7 @@ public class ItemStaff extends ItemTool {
                 List<EntityItem> entityItemList = worldIn.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(pos), null);
                 if (entityItemList.size() == 1) {
                     for (EntityItem item : entityItemList) {
-                        if (item.getEntityItem().getItem() == ItemRegistry.ENDGAMIUM_NUGGET) {
+                        if (item.getItem().getItem() == ItemRegistry.ENDGAMIUM_NUGGET) {
                             for (int i = 0; i < 1000; i++) {
                                 double d0 = (double) ((float) pos.getX() + worldIn.rand.nextFloat());
                                 double d1 = (double) ((float) pos.getY() + 1 + worldIn.rand.nextFloat());

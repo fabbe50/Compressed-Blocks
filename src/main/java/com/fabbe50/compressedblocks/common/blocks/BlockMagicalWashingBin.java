@@ -52,7 +52,7 @@ public class BlockMagicalWashingBin extends BlockBase {
                 double posX = entityItem.posX;
                 double posY = entityItem.posY;
                 double posZ = entityItem.posZ;
-                ItemStack entityItemStack = entityItem.getEntityItem();
+                ItemStack entityItemStack = entityItem.getItem();
                 int itemDamage = entityItemStack.getItemDamage();
                 int itemStackSize = entityItemStack.getCount();
                 Item item = entityItemStack.getItem();
@@ -83,7 +83,7 @@ public class BlockMagicalWashingBin extends BlockBase {
         if (worldIn.isRemote) {
             if (entityIn instanceof EntityItem) {
                 EntityItem entityItem = (EntityItem)entityIn;
-                ItemStack entityItemStack = entityItem.getEntityItem();
+                ItemStack entityItemStack = entityItem.getItem();
                 Item item = entityItemStack.getItem();
 
                 if (item == Items.ENCHANTED_BOOK || (item instanceof ItemSword && entityItemStack.isItemEnchanted()) || (item instanceof ItemTool && entityItemStack.isItemEnchanted()) || (item instanceof ItemHoe && entityItemStack.isItemEnchanted()) || (item instanceof ItemBow && entityItemStack.isItemEnchanted())) {

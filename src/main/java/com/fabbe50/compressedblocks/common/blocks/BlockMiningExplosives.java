@@ -11,6 +11,7 @@ import net.minecraft.block.BlockChest;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
@@ -206,7 +207,7 @@ public class BlockMiningExplosives extends BlockBase {
     }
 
     @Override
-    public void addInformation(ItemStack stack, EntityPlayer player, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag flags) {
         tooltip.add(ChatHelper.MAGENTA + "[Experimental]");
         tooltip.add("");
         tooltip.add(ChatHelper.LIME + "Stay close if you can't fly!");
