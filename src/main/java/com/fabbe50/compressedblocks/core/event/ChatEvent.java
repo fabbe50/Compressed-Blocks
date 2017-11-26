@@ -51,7 +51,7 @@ public class ChatEvent {
             }
             else if (botActive) {
                 event.getPlayer().sendMessage(new TextComponentString("<" + name + "> " + message));
-                /*CleverBotQuery query = new CleverBotQuery("", message);
+                /*CleverBotQuery query = new CleverBotQuery("yadadadad", message);
                 try {
                     query.sendRequest();
                     event.getPlayer().sendMessage(new TextComponentString("[Compressed Bot] " + query.getResponse()));
