@@ -1,5 +1,6 @@
 package com.fabbe50.compressedblocks.core.registry;
 
+import com.fabbe50.compressedblocks.common.entities.EntityColoredSquid;
 import com.fabbe50.compressedblocks.core.event.*;
 import com.fabbe50.compressedblocks.core.tweaks.StackableBuckets;
 import com.fabbe50.compressedblocks.core.utils.PlayerTracker;

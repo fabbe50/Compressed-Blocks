@@ -55,6 +55,7 @@ public class ItemRegistry {
     public static final Item EGG_HATCHER;
     public static final Item POTATO_SINGULARITY;
     public static final Item TRINKET;
+    public static final Item INK_EXTRACTOR;
     //public static final Item COMPRESSEDSTICK;
 
     static {
@@ -88,6 +89,7 @@ public class ItemRegistry {
         EGG_HATCHER = TFIItems.registerItem(new ItemEggHatcher("egghatcher", TFITab.itemTab));
         POTATO_SINGULARITY = TFIItems.registerItem(new ItemPotatoSingularity("potatosingularity", TFITab.itemTab));
         TRINKET = TFIItems.registerItem(new ItemTrinket("trinket", TFITab.itemTab));
+        INK_EXTRACTOR = TFIItems.registerItem(new ItemBase("inkextr", TFITab.itemTab));
     }
 
     public static void renderInit() {
@@ -120,6 +122,7 @@ public class ItemRegistry {
         ItemRenderer.registerItem(STAFF_ENDGAMIUM);
         ItemRenderer.registerItem(EGG_HATCHER);
         ItemRenderer.registerItem(POTATO_SINGULARITY);
+        ItemRenderer.registerItem(INK_EXTRACTOR);
     }
 
     public static void renderAltInit() {
