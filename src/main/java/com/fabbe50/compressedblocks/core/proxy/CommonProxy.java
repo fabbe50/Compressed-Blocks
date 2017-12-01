@@ -29,6 +29,8 @@ public class CommonProxy {
 		ItemRegistry.init();	                                        //Initialize Items
         EntityRegistry.init();                                          //Initialize Entities
         CBLibrary.init();                                               //Initialize Special Data for Compressed Blocks
+        PotionRegistry.init();
+        PotionRegistry.subInit();
 	}
 	
     public void init(FMLInitializationEvent event) {

@@ -33,6 +33,12 @@ item.compressedblocks:trinket.name=Trinket
 item.compressedblocks:minibeacon.name=Portable Beacon
 item.compressedblocks:inkextr.name=Ink Extractor
 
+#Potions
+potion.effect.magnetization=Potion of Magnetization
+splash_potion.effect.magnetization=Splash Potion of Magnetization
+lingering_potion.effect.magnetization=Lingering Potion of Magnetization
+lingering_potion.effect.magnetization=Lingering Potion of Magnetization
+
 #############################################################################
 #                                Meta Items                                 #
 #############################################################################
