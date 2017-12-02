@@ -6,6 +6,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.MoverType;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -17,40 +18,17 @@ import java.util.List;
  * Created by fabbe on 28/11/2017 - 9:12 PM.
  */
 public class PotionCustom extends Potion {
-    private int magnet_range = 5;
-
     public PotionCustom(boolean isBadEffectIn, int liquidColorIn) {
         super(isBadEffectIn, liquidColorIn);
     }
 
     @Override
     public boolean isReady(int duration, int amplifier) {
-        if (this == PotionRegistry.POTION_MAGNET)
-            return true;
-        else
-            return false;
+        return false;
     }
 
     @Override
-    public void performEffect(EntityLivingBase entity, int p_76394_2_) {
-        if (this == PotionRegistry.POTION_MAGNET) {
-            if (entity instanceof EntityPlayer && !entity.isSneaking()) {
-                List<EntityItem> items = entity.world.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(entity.getPosition().add(-magnet_range, -magnet_range, -magnet_range), entity.getPosition().add(magnet_range, magnet_range, magnet_range)));
-                for (EntityItem item : items) {
-                    lookAt(((EntityPlayer) entity).posX, ((EntityPlayer) entity).posY, ((EntityPlayer) entity).posZ, item);
-                    double factor = 0.02d;
-                    item.setNoGravity(true);
-                    item.motionX += (entity.posX - item.posX) * factor;
-                    item.motionY += (entity.posY - item.posY) * factor;
-                    item.motionZ += (entity.posZ - item.posZ) * factor;
-                }
-                List<EntityItem> itemsOutOfBounds = entity.world.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(entity.getPosition().add(-magnet_range - 3, -magnet_range - 3, -magnet_range - 3), entity.getPosition().add(magnet_range + 3, magnet_range + 3, magnet_range + 3)));
-                for (EntityItem item : itemsOutOfBounds) {
-                    if (item.getDistanceToEntity(entity) >= 6)
-                        item.setNoGravity(false);
-                }
-            }
-        }
+    public void performEffect(EntityLivingBase entity, int isActive) {
     }
 
     public static void lookAt(double px, double py, double pz , EntityItem me) {

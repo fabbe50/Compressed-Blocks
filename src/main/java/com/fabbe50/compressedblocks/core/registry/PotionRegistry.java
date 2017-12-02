@@ -1,6 +1,8 @@
 package com.fabbe50.compressedblocks.core.registry;
 
 import com.fabbe50.compressedblocks.common.potions.PotionCustom;
+import com.fabbe50.compressedblocks.common.potions.PotionFlight;
+import com.fabbe50.compressedblocks.common.potions.PotionMagnet;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.thefifthidiot.tficore.utility.LogHelper;
 import net.minecraft.potion.Potion;
@@ -14,16 +16,20 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * Created by fabbe on 28/11/2017 - 9:16 PM.
  */
 public class PotionRegistry {
-    public static Potion POTION_MAGNET = new PotionCustom(false, 0x00ff00).setRegistryName(Reference.MOD_ID, "magnetization").setBeneficial().setPotionName("Magnetization");
+    public static Potion POTION_MAGNET = new PotionMagnet(false, 0x00ff00).setRegistryName(Reference.MOD_ID, "magnetization").setBeneficial().setPotionName("Magnetization");
+    public static Potion POTION_FLIGHT = new PotionFlight(false, 0xff0077).setRegistryName(Reference.MOD_ID, "flight").setBeneficial().setPotionName("Flight");
 
     public static PotionEffect POTIONEFFECT_MAGNET = new PotionEffect(POTION_MAGNET, 3600);
+    public static PotionEffect POTIONEFFECT_FLIGHT = new PotionEffect(POTION_FLIGHT, 3600);
 
     public static void init() {
         registerPotionType(POTION_MAGNET, POTIONEFFECT_MAGNET, "magnetization", true);
+        registerPotionType(POTION_FLIGHT, POTIONEFFECT_FLIGHT, "flight", true);
     }
 
     public static void subInit() {
         registerPotion(POTION_MAGNET, "magnetization");
+        registerPotion(POTION_FLIGHT, "flight");
     }
 
     private static void registerPotionType(Potion potion, PotionEffect effect, String name, boolean extend) {

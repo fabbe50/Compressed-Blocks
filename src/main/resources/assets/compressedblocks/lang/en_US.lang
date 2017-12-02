@@ -37,7 +37,9 @@ item.compressedblocks:inkextr.name=Ink Extractor
 potion.effect.magnetization=Potion of Magnetization
 splash_potion.effect.magnetization=Splash Potion of Magnetization
 lingering_potion.effect.magnetization=Lingering Potion of Magnetization
-lingering_potion.effect.magnetization=Lingering Potion of Magnetization
+potion.effect.flight=Potion of Flight
+splash_potion.effect.flight=Splash Potion of Flight
+lingering_potion.effect.flight=Lingering Potion of Flight
 
 #############################################################################
 #                                Meta Items                                 #
