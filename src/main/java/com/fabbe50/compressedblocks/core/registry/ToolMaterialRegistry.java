@@ -9,9 +9,11 @@ import net.minecraftforge.common.util.EnumHelper;
 public class ToolMaterialRegistry {
     public static Item.ToolMaterial TOOL_ENDGAMIUM;
     public static Item.ToolMaterial INSTAKILL;
+    public static Item.ToolMaterial SINGULARITY;
 
     public static void init() {
         INSTAKILL = EnumHelper.addToolMaterial("instakill", 0, 1, 1, 9996, 0);
         TOOL_ENDGAMIUM = EnumHelper.addToolMaterial("endgamium", 3, 64000, 20f, 18f, 30);
+        SINGULARITY = EnumHelper.addToolMaterial("singularity", 3, -1, 20f, 18f, 30);
     }
 }
