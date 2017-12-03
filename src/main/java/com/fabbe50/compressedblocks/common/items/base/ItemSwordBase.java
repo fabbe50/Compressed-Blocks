@@ -1,13 +1,11 @@
 package com.fabbe50.compressedblocks.common.items.base;
 
+import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import com.fabbe50.compressedblocks.core.registry.ToolMaterialRegistry;
-import com.thefifthidiot.tficore.common.creativetabs.TFITab;
-import com.thefifthidiot.tficore.lib.Configs;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -21,18 +19,13 @@ public class ItemSwordBase extends ItemTool {
     //private final float attackDamage;
     private final Item.ToolMaterial material;
 
-    @Override
-    public float getStrVsBlock(ItemStack stack, IBlockState state) {
-        return 0;
-    }
-
     public ItemSwordBase(ToolMaterial material, String name, @Nullable CreativeTabs tab) {
-        super(material.getDamageVsEntity(), 10, material, null);
+        super(material.getAttackDamage(), 10, material, null);
         this.material = material;
         this.maxStackSize = 1;
         setItemName(this, name);
         //this.attackDamage = material.getDamageVsEntity();
-        setCreativeTab(tab != null ? tab : (Configs.tfitabs ? TFITab.blockTab : null));
+        setCreativeTab(tab != null ? tab : CBTab.itemTab);
     }
 
     private static void setItemName(Item item, String itemName) {

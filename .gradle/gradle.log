@@ -12,32 +12,26 @@ This mapping 'snapshot_20171126' was designed for MC 1.12! Use at your own peril
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
 :getVersionJson
-:extractUserdev
-Download http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.1.2554/forge-1.12.2-14.23.1.2554.pom
-Download http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.1.2554/forge-1.12.2-14.23.1.2554-userdev.jar
+:extractUserdev UP-TO-DATE
 :extractDependencyATs SKIPPED
-:extractMcpData
-Download http://files.minecraftforge.net/maven/de/oceanlabs/mcp/mcp/1.12.2/mcp-1.12.2-srg.zip
-:extractMcpMappings
-Download http://files.minecraftforge.net/maven/de/oceanlabs/mcp/mcp_snapshot/20171126-1.12/mcp_snapshot-20171126-1.12.zip
-:genSrgs
-:downloadClient
-:downloadServer
-:splitServerJar
-:mergeJars
-:deobfMcSRG
-Applying SpecialSource...
-Applying Exceptor...
-:decompileMc
-:fixMcSources
+:extractMcpData SKIPPED
+:extractMcpMappings SKIPPED
+:genSrgs SKIPPED
+:downloadClient SKIPPED
+:downloadServer SKIPPED
+:splitServerJar SKIPPED
+:mergeJars SKIPPED
+:deobfMcSRG SKIPPED
+:decompileMc SKIPPED
+:fixMcSources SKIPPED
 :applySourcePatches
-:remapMcSources
-:recompileMc
-:extractNatives
+:remapMcSources SKIPPED
+:recompileMc SKIPPED
+:extractNatives SKIPPED
 :getAssetIndex UP-TO-DATE
 :getAssets
-Current status: 473/1281   36%
-Current status: 959/1281   74%
+Current status: 548/1281   42%
+Current status: 1119/1281   87%
 :makeStart
 :setupDecompWorkspace
 :ideaModule
@@ -48,4 +42,4 @@ Current status: 959/1281   74%
 
 BUILD SUCCESSFUL
 
-Total time: 5 mins 27.779 secs
+Total time: 53.495 secs

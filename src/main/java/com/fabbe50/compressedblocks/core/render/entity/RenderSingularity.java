@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -32,7 +33,8 @@ public class RenderSingularity<T extends Entity> extends Render<T>{
 
     private RenderSingularity(RenderManager renderManager) {
         super(renderManager);
-        this.item = ItemRegistry.POTATO_SINGULARITY;
+        //this.item = ItemRegistry.POTATO_SINGULARITY;
+        this.item = Items.POTATO;
         this.itemRenderer = Minecraft.getMinecraft().getRenderItem();
     }
 

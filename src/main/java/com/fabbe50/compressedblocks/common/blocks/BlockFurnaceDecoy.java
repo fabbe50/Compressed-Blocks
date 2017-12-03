@@ -1,10 +1,9 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
+import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntityFurnaceCompr;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
-import com.thefifthidiot.tficore.common.creativetabs.TFITab;
-import com.thefifthidiot.tficore.lib.Configs;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.SoundType;
@@ -46,7 +45,7 @@ public class BlockFurnaceDecoy extends BlockContainer {
         setUnlocalizedName(Reference.MOD_ID + ":" + unlocalizedName);
         setRegistryName(Reference.MOD_ID, !active ? unlocalizedName : unlocalizedName + "active");
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        setCreativeTab(tab != null ? tab : (Configs.tfitabs ? TFITab.blockTab : null));
+        setCreativeTab(tab != null ? tab : CBTab.blockTab);
         setLightLevel(lightLevel);
         blockSoundType = SoundType.STONE;
         blockParticleGravity = 1.0f;

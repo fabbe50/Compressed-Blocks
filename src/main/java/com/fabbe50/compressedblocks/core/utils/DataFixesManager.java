@@ -24,7 +24,6 @@ public class DataFixesManager {
 
         TileEntitySuperShulkerBox.registerFixesSuperShulkerBox(dataFixer);
         TileEntityBrewer.registerFixesBrewingStand(dataFixer);
-        EntitySquidColored.registerFixesSquidColored(dataFixer);
 
         registerFixes(dataFixer);
         return dataFixer;

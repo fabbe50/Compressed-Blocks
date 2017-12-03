@@ -11,9 +11,9 @@ public class SmeltingEvent {
     @SubscribeEvent
     public void smelting(PlayerEvent.ItemSmeltedEvent event) {
         if (!event.player.world.isRemote) {
-            if (event.smelting.getItem() == ItemRegistry.BEDROCK_INGOT) {
-                event.player.addExperienceLevel(100);
-            }
+            //if (event.smelting.getItem() == ItemRegistry.BEDROCK_INGOT) {
+            //    event.player.addExperienceLevel(100);
+            //}
         }
     }
 }

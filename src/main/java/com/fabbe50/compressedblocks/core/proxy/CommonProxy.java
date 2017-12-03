@@ -22,40 +22,42 @@ import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
  */
 public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) {
-        ConfigurationHandler.load(event);                               //Initialize Configuration
-        ToolMaterialRegistry.init();                                    //Initialize Tool Material
+        //ConfigurationHandler.load(event);                               //Initialize Configuration
+        //ToolMaterialRegistry.init();                                    //Initialize Tool Material
 		BlockRegistry.init();	                                        //Initialize Blocks
-        BlockRegistry.registerTileEntity();                             //Initialize TileEntities
-		ItemRegistry.init();	                                        //Initialize Items
-        EntityRegistry.init();                                          //Initialize Entities
-        CBLibrary.init();                                               //Initialize Special Data for Compressed Blocks
+        //BlockRegistry.registerTileEntity();                             //Initialize TileEntities
+		//ItemRegistry.init();	                                        //Initialize Items
+        //EntityRegistry.init();                                          //Initialize Entities
+        //CBLibrary.init();                                               //Initialize Special Data for Compressed Blocks
+        //PotionRegistry.init();
+        //PotionRegistry.subInit();
 	}
 	
     public void init(FMLInitializationEvent event) {
-        StatsRegistry.init();                                           //Initialize Statistics
-        AchievementRegistry.init();                                     //Initialize Achievements
-        EventRegistry.init();                                           //Initialize Events
-        ModItemRegistry.init();                                         //Initialize Mod Items
-        OreDictRegistry.init();                                         //Initialize OreDictionary
-        ReturnableItemRegistry.init();                                  //Initialize ReturnableItemRegistry
-        RecipeRegistry.init();                                          //Initialize Recipes
-        Payments.init();                                                //Initialize Payments
-        EndgameCraftingRegistry.init();                                 //Initialize Endgame Recipes
-    	SmeltingRegistry.init();                                        //Initialize Smelting Recipes
-        OregenRegistry.init();                                          //Initialize Ore Generation
+        //StatsRegistry.init();                                           //Initialize Statistics
+        //AchievementRegistry.init();                                     //Initialize Achievements
+        //EventRegistry.init();                                           //Initialize Events
+        //ModItemRegistry.init();                                         //Initialize Mod Items
+        //OreDictRegistry.init();                                         //Initialize OreDictionary
+        //ReturnableItemRegistry.init();                                  //Initialize ReturnableItemRegistry
+        //RecipeRegistry.init();                                          //Initialize Recipes
+        //Payments.init();                                                //Initialize Payments
+        //EndgameCraftingRegistry.init();                                 //Initialize Endgame Recipes
+    	//SmeltingRegistry.init();                                        //Initialize Smelting Recipes
+        //OregenRegistry.init();                                          //Initialize Ore Generation
         //BiomeRegistry.init();                                           //Initialize Biomes //FIXME: Create custom world generator. INFO: NETHER_STONE is generated through ore-veins for now.
-        Configs.init();                                                 //Initialize Configs
-        RecipeRemoval.init();                                           //Remove Recipes
-        RecipeOverrideRegistry.init();                                  //Add Replacements for Recipes
-        DataFixesManager.createFixer();
+        //Configs.init();                                                 //Initialize Configs
+        //RecipeRemoval.init();                                           //Remove Recipes
+        //RecipeOverrideRegistry.init();                                  //Add Replacements for Recipes
+        //DataFixesManager.createFixer();
     }
     
     public void postInit(FMLPostInitializationEvent event) {
-        VanillaHooks.init();
-        EntityBlacklistStorage.init();
+        //VanillaHooks.init();
+        //EntityBlacklistStorage.init();
     }
 
     public void onServerStarted(FMLServerStartedEvent event) {
-        EventRegistry.onServerStarted();
+        //EventRegistry.onServerStarted();
     }
 }

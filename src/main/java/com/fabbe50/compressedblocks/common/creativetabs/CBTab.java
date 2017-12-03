@@ -15,4 +15,16 @@ public class CBTab {
             return new ItemStack(BlockRegistry.ENDGAMIUMBLOCKC);
         }
     };
+    public static CreativeTabs blockTab = new CreativeTabs(Reference.MOD_ID.toLowerCase() + ".blocks") {
+        @Override
+        public ItemStack getTabIconItem() {
+            return new ItemStack(BlockRegistry.POTATO_BLOCK);
+        }
+    };
+    public static CreativeTabs itemTab = new CreativeTabs(Reference.MOD_ID.toLowerCase() + ".items") {
+        @Override
+        public ItemStack getTabIconItem() {
+            return null;
+        }
+    };
 }

@@ -1,6 +1,6 @@
 package com.fabbe50.compressedblocks.common.items;
 
-import com.thefifthidiot.tficore.common.items.ItemBase;
+import com.fabbe50.compressedblocks.common.items.base.ItemBase;
 import net.minecraft.block.BlockColored;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;

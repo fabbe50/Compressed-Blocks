@@ -1,8 +1,5 @@
 package com.fabbe50.compressedblocks.core.registry;
 
-import com.thefifthidiot.tficore.common.world.gen.GenWorldVeins;
-import net.minecraft.init.Blocks;
-
 /**
  * Created by fabbe50 on 13/01/2017.
  */
@@ -18,7 +15,7 @@ public class OregenRegistry {
     }
 
     private static void addNetherOres() {
-        GenWorldVeins.addToNether(BlockRegistry.NETHER_STONE, 16, 64, 6, 10, 120, Blocks.NETHERRACK);
+        //GenWorldVeins.addToNether(BlockRegistry.NETHER_STONE, 16, 64, 6, 10, 120, Blocks.NETHERRACK);
     }
 
     private static void addEndOres() {

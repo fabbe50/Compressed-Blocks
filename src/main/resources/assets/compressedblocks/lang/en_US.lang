@@ -31,6 +31,15 @@ item.compressedblocks:egghatcher.name=Egg Hatcher
 item.compressedblocks:potatosingularity.name=Singularity
 item.compressedblocks:trinket.name=Trinket
 item.compressedblocks:minibeacon.name=Portable Beacon
+item.compressedblocks:inkextr.name=Ink Extractor
+
+#Potions
+potion.effect.magnetization=Potion of Magnetization
+splash_potion.effect.magnetization=Splash Potion of Magnetization
+lingering_potion.effect.magnetization=Lingering Potion of Magnetization
+potion.effect.flight=Potion of Flight
+splash_potion.effect.flight=Splash Potion of Flight
+lingering_potion.effect.flight=Lingering Potion of Flight
 
 #############################################################################
 #                                Meta Items                                 #
@@ -44,6 +53,7 @@ item.compressedblocks:stick_compr_quintuple.name=Quintuple Compressed Stick
 item.compressedblocks:stick_compr_sextuple.name=Sextuple Compressed Stick
 item.compressedblocks:stick_compr_septuple.name=Septuple Compressed Stick
 item.compressedblocks:stick_compr_octuple.name=Octuple Compressed Stick
+#Inkbottles
 item.compressedblocks:inkbottle.black.name=Bottle of Black Ink
 item.compressedblocks:inkbottle.red.name=Bottle of Red Ink
 item.compressedblocks:inkbottle.green.name=Bottle of Green Ink
@@ -204,6 +214,7 @@ tile.compressedblocks:grass_compr_octuple.name=Octuple Compressed Grass Block
 #                                   Mobs                                    #
 #############################################################################
 entity.corgi.name=Corgi
+entity.csquid.name=Colored Squid
 
 #############################################################################
 #                               Miscellaneous                               #

@@ -1,7 +1,8 @@
 package com.fabbe50.compressedblocks.common.items;
 
-import com.thefifthidiot.tficore.common.items.ItemBase;
-import com.thefifthidiot.tficore.utility.helper.ChatHelper;
+import com.fabbe50.compressedblocks.common.items.base.ItemBase;
+import com.fabbe50.compressedblocks.core.utils.helper.ChatHelper;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -9,12 +10,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.lwjgl.input.Keyboard;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Objects;
 
@@ -68,7 +67,7 @@ public class ItemDNASample extends ItemBase {
     }
 
     @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World world, List<String> tooltip, ITooltipFlag advanced) {
         tooltip.add(ChatHelper.MAGENTA + "Insert nice looking texture here.");
         tooltip.add("");
 

@@ -1,11 +1,10 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
+import com.fabbe50.compressedblocks.common.blocks.base.BlockBase;
 import com.fabbe50.compressedblocks.core.lib.Configs;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
-import com.thefifthidiot.tficore.common.blocks.FuseRock;
-import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
-import com.thefifthidiot.tficore.utility.helper.ChatHelper;
-import com.thefifthidiot.tficore.utility.helper.LogHelper;
+import com.fabbe50.compressedblocks.core.utils.helper.ChatHelper;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;
 import net.minecraft.block.material.MapColor;
@@ -148,18 +147,19 @@ public class BlockMiningExplosives extends BlockBase {
                 ores.add(Blocks.EMERALD_ORE);
             } else if (block == Blocks.COAL_ORE) {
                 ores.add(Blocks.COAL_ORE);
-            } else if (block instanceof FuseRock) {
-                boolean overworld = false;
+            } /*else if (block instanceof FuseRock) {
                 switch (world.provider.getDimension()) {
                     case -1:
                         ores.add(com.thefifthidiot.tficore.core.registry.BlockRegistry.fuseRockNether);
+                        break;
                     case 0:
                         ores.add(com.thefifthidiot.tficore.core.registry.BlockRegistry.fuseRock);
-                        overworld = true;
+                        break;
                     case 1:
-                        if (!overworld) ores.add(com.thefifthidiot.tficore.core.registry.BlockRegistry.fuseRockEnd);
+                        com.thefifthidiot.tficore.core.registry.BlockRegistry.fuseRockEnd;
+                        break;
                 }
-            } else if (OreDictionary.getOres("oreCopper").contains(new ItemStack(Item.getItemFromBlock(block)))) {
+            }*/ else if (OreDictionary.getOres("oreCopper").contains(new ItemStack(Item.getItemFromBlock(block)))) {
                 ores.add(Block.getBlockFromItem(OreDictionary.getOres("oreCopper").get(0).getItem()));
             } else if (OreDictionary.getOres("oreTin").contains(new ItemStack(Item.getItemFromBlock(block)))) {
                 ores.add(Block.getBlockFromItem(OreDictionary.getOres("oreTin").get(0).getItem()));

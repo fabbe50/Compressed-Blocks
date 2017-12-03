@@ -1,23 +1,17 @@
 package com.fabbe50.compressedblocks.core.registry;
 
 import com.fabbe50.compressedblocks.common.items.*;
+import com.fabbe50.compressedblocks.common.items.base.ItemBase;
 import com.fabbe50.compressedblocks.common.items.base.ItemBaseEnchanted;
 import com.fabbe50.compressedblocks.common.items.base.ItemSwordBase;
 import com.fabbe50.compressedblocks.common.items.base.TwoHandItemBase;
-import com.fabbe50.compressedblocks.core.reference.MetaValues;
 import com.fabbe50.compressedblocks.core.reference.Reference;
-import com.thefifthidiot.tficore.common.creativetabs.TFITab;
-import com.thefifthidiot.tficore.common.items.ItemBase;
-import com.thefifthidiot.tficore.init.TFIItems;
-import com.thefifthidiot.tficore.render.ItemRenderer;
-import com.thefifthidiot.tficore.utility.helper.LogHelper;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemSword;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 
@@ -25,7 +19,7 @@ import net.minecraftforge.client.model.ModelLoader;
  * Created by fabbe50 on 23/06/2016.
  */
 public class ItemRegistry {
-    public static final Item ENDGAMIUM_INGOT;
+    /*public static final Item ENDGAMIUM_INGOT;
     public static final Item ENDGAMIUM_NUGGET;
     public static final Item ENDGAMIUM_SWORD;
     public static final Item ENDGAMIUM_BONE;
@@ -55,6 +49,7 @@ public class ItemRegistry {
     public static final Item EGG_HATCHER;
     public static final Item POTATO_SINGULARITY;
     public static final Item TRINKET;
+    public static final Item INK_EXTRACTOR;
     //public static final Item COMPRESSEDSTICK;
 
     static {
@@ -88,6 +83,7 @@ public class ItemRegistry {
         EGG_HATCHER = TFIItems.registerItem(new ItemEggHatcher("egghatcher", TFITab.itemTab));
         POTATO_SINGULARITY = TFIItems.registerItem(new ItemPotatoSingularity("potatosingularity", TFITab.itemTab));
         TRINKET = TFIItems.registerItem(new ItemTrinket("trinket", TFITab.itemTab));
+        INK_EXTRACTOR = TFIItems.registerItem(new ItemBase("inkextr", TFITab.itemTab));
     }
 
     public static void renderInit() {
@@ -120,6 +116,7 @@ public class ItemRegistry {
         ItemRenderer.registerItem(STAFF_ENDGAMIUM);
         ItemRenderer.registerItem(EGG_HATCHER);
         ItemRenderer.registerItem(POTATO_SINGULARITY);
+        ItemRenderer.registerItem(INK_EXTRACTOR);
     }
 
     public static void renderAltInit() {
@@ -145,7 +142,7 @@ public class ItemRegistry {
         registerItem(TRINKET, 2, "trinket1");
         registerItem(TRINKET, 3, "trinket2");
         registerItem(TRINKET, 4, "portablebeacon");
-    }
+    }*/
 
     public static void init() {
     }

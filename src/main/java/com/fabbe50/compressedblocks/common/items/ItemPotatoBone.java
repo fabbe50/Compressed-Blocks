@@ -2,13 +2,13 @@ package com.fabbe50.compressedblocks.common.items;
 
 import com.fabbe50.compressedblocks.common.blocks.meta.MetaCompressedBase;
 import com.fabbe50.compressedblocks.common.entities.EntityCorgi;
+import com.fabbe50.compressedblocks.common.items.base.ItemBase;
+import com.fabbe50.compressedblocks.core.lib.EnumCompressed;
 import com.fabbe50.compressedblocks.core.lib.EnumCorgiType;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
 import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
 import com.fabbe50.compressedblocks.core.utils.Utilities;
-import com.thefifthidiot.tficore.common.items.ItemBase;
-import com.thefifthidiot.tficore.lib.EnumCompressed;
-import com.thefifthidiot.tficore.utility.helper.LogHelper;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -32,6 +32,7 @@ public class ItemPotatoBone extends ItemBase {
         super(itemName, tab);
     }
 
+    /*
     @Override
     @Nonnull
     @SuppressWarnings("unchecked")
@@ -76,4 +77,5 @@ public class ItemPotatoBone extends ItemBase {
         tooltip.add("Type of Corgi is randomized unless the potato on a bone");
         tooltip.add("is named to the wanted corgi's name.");
     }
+    */
 }

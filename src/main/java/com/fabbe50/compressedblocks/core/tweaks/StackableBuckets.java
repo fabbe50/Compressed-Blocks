@@ -1,17 +1,11 @@
 package com.fabbe50.compressedblocks.core.tweaks;
 
 import com.fabbe50.compressedblocks.core.lib.Configs;
-import com.thefifthidiot.tficore.utility.helper.LogHelper;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockAir;
-import net.minecraft.block.BlockContainer;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

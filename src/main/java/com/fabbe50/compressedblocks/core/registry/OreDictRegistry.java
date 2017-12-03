@@ -42,7 +42,7 @@ public class OreDictRegistry {
 
     private static void addDyeOreDict() {
         for (int i = 0; i <= 15; i++) {
-            OreDictionary.registerOre("dye" + color[i], new ItemStack(ItemRegistry.INKBOTTLE, 1, i));
+            //OreDictionary.registerOre("dye" + color[i], new ItemStack(ItemRegistry.INKBOTTLE, 1, i));
             OreDictionary.registerOre("dye" + color[i], new ItemStack(Items.DYE, 1, i));
         }
     }

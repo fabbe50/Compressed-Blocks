@@ -1,9 +1,7 @@
 package com.fabbe50.compressedblocks.common.items.base;
 
-import com.thefifthidiot.tficore.common.items.ItemBase;
-import com.thefifthidiot.tficore.lib.EnumCompressed;
+import com.fabbe50.compressedblocks.core.lib.EnumCompressed;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;

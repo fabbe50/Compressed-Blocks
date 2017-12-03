@@ -1,9 +1,9 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
+import com.fabbe50.compressedblocks.common.blocks.base.BlockBase;
 import com.fabbe50.compressedblocks.core.lib.Configs;
 import com.fabbe50.compressedblocks.core.lib.EntityBlacklistStorage;
 import com.fabbe50.compressedblocks.core.utils.Utilities;
-import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

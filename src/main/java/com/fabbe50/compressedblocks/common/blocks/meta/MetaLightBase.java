@@ -2,7 +2,6 @@ package com.fabbe50.compressedblocks.common.blocks.meta;
 
 import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import com.fabbe50.compressedblocks.core.lib.EnumLight;
-import com.thefifthidiot.tficore.common.blocks.meta.MetaBlockBase;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -10,7 +9,6 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.NonNullList;

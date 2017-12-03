@@ -2,8 +2,8 @@ package com.fabbe50.compressedblocks.common.items;
 
 import com.fabbe50.compressedblocks.common.entities.EntityPotatoSingularity;
 import com.fabbe50.compressedblocks.common.entities.EntityPotatoSingularityVanilla;
-import com.thefifthidiot.tficore.common.items.ItemBase;
-import com.thefifthidiot.tficore.utility.LogHelper;
+import com.fabbe50.compressedblocks.common.items.base.ItemBase;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;

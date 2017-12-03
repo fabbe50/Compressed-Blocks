@@ -1,6 +1,5 @@
 package com.fabbe50.compressedblocks.core.utils.helper;
 
-import com.thefifthidiot.tficore.lib.GameInfo;
 import net.minecraft.world.GameRules;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -12,6 +11,6 @@ public class GameHelper {
 
     @SubscribeEvent
     public static void registerGamerules() {
-        gameRules = GameInfo.gameRules;
+        //gameRules = GameInfo.gameRules;
     }
 }

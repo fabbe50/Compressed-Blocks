@@ -2,7 +2,6 @@ package com.fabbe50.compressedblocks.core.utils;
 
 import com.fabbe50.compressedblocks.core.lib.Configs;
 import com.fabbe50.compressedblocks.core.registry.ModItemRegistry;
-import com.thefifthidiot.tficore.utility.helper.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

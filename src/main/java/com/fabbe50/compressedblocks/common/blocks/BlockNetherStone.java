@@ -1,6 +1,6 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
-import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
+import com.fabbe50.compressedblocks.common.blocks.base.BlockBase;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;

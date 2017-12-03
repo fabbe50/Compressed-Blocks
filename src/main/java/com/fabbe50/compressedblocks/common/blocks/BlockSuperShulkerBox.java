@@ -1,9 +1,8 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
+import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntitySuperShulkerBox;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
-import com.thefifthidiot.tficore.common.creativetabs.TFITab;
-import com.thefifthidiot.tficore.lib.Configs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.EnumPushReaction;
@@ -52,7 +51,7 @@ public class BlockSuperShulkerBox extends BlockContainer {
         super(Material.ROCK, MapColor.AIR);
         setBlockName(this, name);
         this.color = colorIn;
-        this.setCreativeTab(tab != null ? tab : (Configs.tfitabs ? TFITab.blockTab : null));
+        this.setCreativeTab(tab != null ? tab : CBTab.blockTab);
         this.setHardness(hardness);
         this.setResistance(resistance);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.UP));

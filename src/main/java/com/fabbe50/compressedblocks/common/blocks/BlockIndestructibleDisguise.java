@@ -1,18 +1,14 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
-import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
-import com.thefifthidiot.tficore.common.creativetabs.TFITab;
-import com.thefifthidiot.tficore.lib.Configs;
+import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -25,7 +21,7 @@ public class BlockIndestructibleDisguise extends BlockContainer {
     protected BlockIndestructibleDisguise(Material materialIn, MapColor mapColor, String name, float hardness, float resistance, CreativeTabs tab) {
         super(materialIn, mapColor);
         setBlockName(this, name);
-        this.setCreativeTab(tab != null ? tab : (Configs.tfitabs ? TFITab.blockTab : null));
+        this.setCreativeTab(tab != null ? tab : CBTab.blockTab);
         this.setHardness(hardness);
         this.setResistance(resistance);
     }

@@ -1,7 +1,6 @@
 package com.fabbe50.compressedblocks.common.items.base;
 
-import com.thefifthidiot.tficore.common.creativetabs.TFITab;
-import com.thefifthidiot.tficore.lib.Configs;
+import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -25,7 +24,7 @@ public class TwoHandItemBase extends ItemMap {
     public TwoHandItemBase(String name, CreativeTabs tab) {
         this.setHasSubtypes(false);
         setItemName(this, name);
-        setCreativeTab(tab != null ? tab : (Configs.tfitabs == true ? TFITab.itemTab : null));
+        setCreativeTab(tab != null ? tab : CBTab.itemTab);
     }
 
     public static void setItemName(Item item, String itemName) {

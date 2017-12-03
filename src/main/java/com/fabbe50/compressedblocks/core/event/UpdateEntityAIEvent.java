@@ -1,7 +1,6 @@
 package com.fabbe50.compressedblocks.core.event;
 
 import com.fabbe50.compressedblocks.common.entities.ai.EntityAIEatCompressedGrass;
-import com.thefifthidiot.tficore.utility.helper.LogHelper;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;

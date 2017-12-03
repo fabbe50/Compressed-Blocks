@@ -1,6 +1,6 @@
 package com.fabbe50.compressedblocks.core.lib;
 
-import com.thefifthidiot.tficore.utility.helper.LogHelper;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 

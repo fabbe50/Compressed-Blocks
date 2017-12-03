@@ -1,9 +1,10 @@
 package com.fabbe50.compressedblocks.common.items;
 
+import com.fabbe50.compressedblocks.common.items.base.ItemBase;
 import com.fabbe50.compressedblocks.core.lib.Configs;
+import com.fabbe50.compressedblocks.core.utils.helper.ChatHelper;
 import com.fabbe50.compressedblocks.core.utils.helper.TeleportHelper;
-import com.thefifthidiot.tficore.common.items.ItemBase;
-import com.thefifthidiot.tficore.utility.helper.ChatHelper;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -16,6 +17,7 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import org.lwjgl.input.Keyboard;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 /**
@@ -80,7 +82,7 @@ public class ItemTeleportOrb extends ItemBase {
     }
 
     @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World world, List<String> tooltip, ITooltipFlag advanced) {
         NBTTagCompound tags = stack.getTagCompound();
 
         tooltip.add(ChatHelper.MAGENTA + "EXPERIMENTAL");

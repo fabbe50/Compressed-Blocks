@@ -1,9 +1,9 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
+import com.fabbe50.compressedblocks.common.blocks.base.BlockBase;
 import com.fabbe50.compressedblocks.common.items.ItemDNASample;
 import com.fabbe50.compressedblocks.core.utils.PlayerTracker;
-import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
-import com.thefifthidiot.tficore.utility.helper.LogHelper;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

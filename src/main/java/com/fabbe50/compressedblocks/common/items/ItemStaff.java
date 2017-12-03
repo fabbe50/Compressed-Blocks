@@ -3,11 +3,9 @@ package com.fabbe50.compressedblocks.common.items;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
 import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
 import com.fabbe50.compressedblocks.core.registry.ToolMaterialRegistry;
-import com.thefifthidiot.tficore.utility.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.item.EntityExpBottle;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
@@ -43,6 +41,7 @@ public class ItemStaff extends ItemTool {
         item.setUnlocalizedName(item.getRegistryName().toString());
     }
 
+    /*
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!worldIn.isRemote) {
@@ -134,5 +133,5 @@ public class ItemStaff extends ItemTool {
     @Override
     public double getDurabilityForDisplay(ItemStack stack) {
         return super.getDurabilityForDisplay(stack);
-    }
+    }*/
 }

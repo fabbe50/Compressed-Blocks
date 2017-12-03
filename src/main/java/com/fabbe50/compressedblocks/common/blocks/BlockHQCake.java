@@ -1,9 +1,9 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
+import com.fabbe50.compressedblocks.common.blocks.base.BlockBase;
+import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import com.fabbe50.compressedblocks.core.registry.StatsRegistry;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
-import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
-import com.thefifthidiot.tficore.common.creativetabs.TFITab;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -42,7 +42,7 @@ public class BlockHQCake extends BlockBase {
     };
 
     public BlockHQCake() {
-        super(Material.CAKE, MapColor.SNOW, "hqcake", 0.6f, 0.6f, TFITab.blockTab);
+        super(Material.CAKE, MapColor.SNOW, "hqcake", 0.6f, 0.6f, CBTab.blockTab);
         this.setDefaultState(this.blockState.getBaseState().withProperty(BITES, Integer.valueOf(0)));
         this.setTickRandomly(true);
     }

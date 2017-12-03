@@ -1,9 +1,9 @@
 package com.fabbe50.compressedblocks.common.items;
 
+import com.fabbe50.compressedblocks.common.items.base.ItemBase;
 import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
 import com.fabbe50.compressedblocks.core.utils.Utilities;
-import com.thefifthidiot.tficore.common.items.ItemBase;
-import com.thefifthidiot.tficore.utility.helper.ChatHelper;
+import com.fabbe50.compressedblocks.core.utils.helper.ChatHelper;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -30,6 +30,7 @@ public class ItemBedrockBreaker extends ItemBase {
         durability = setDurability();
     }
 
+    /*
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!worldIn.isRemote) {
@@ -50,7 +51,7 @@ public class ItemBedrockBreaker extends ItemBase {
             }
         }
         return EnumActionResult.FAIL;
-    }
+    }*/
 
     private int setDurability() {
         return 16;

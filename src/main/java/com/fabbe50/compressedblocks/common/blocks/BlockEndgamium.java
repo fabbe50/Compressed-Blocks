@@ -1,8 +1,8 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
+import com.fabbe50.compressedblocks.common.blocks.base.BlockBase;
 import com.fabbe50.compressedblocks.core.lib.Payments;
-import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
-import com.thefifthidiot.tficore.utility.helper.LogHelper;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -11,6 +11,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -37,7 +38,7 @@ public class BlockEndgamium extends BlockBase {
                 EntityItem item = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ());
                 Random rand = new Random();
                 int r = rand.nextInt(1001);
-                if (playerIn.getHeldItem(hand).getItem() == com.thefifthidiot.tficore.core.registry.ItemRegistry.testItem) {
+                if (playerIn.getHeldItem(hand).getItem() == Items.AIR) {
                     r = 1000;
                 }
                 LogHelper.info(r);

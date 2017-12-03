@@ -1,6 +1,5 @@
 package com.fabbe50.compressedblocks.core.lib;
 
-import com.thefifthidiot.tficore.core.registry.ItemRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
@@ -14,7 +13,7 @@ public class Payments {
     public static List<Item> payment = new ArrayList<>();
 
     public static void init() {
-        payment.add(ItemRegistry.testItem);
+        //payment.add(ItemRegistry.testItem);
         payment.add(Items.DIAMOND);
         payment.add(Items.EMERALD);
     }

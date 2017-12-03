@@ -1,9 +1,9 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
+import com.fabbe50.compressedblocks.common.blocks.base.BlockBase;
 import com.fabbe50.compressedblocks.core.lib.recipes.EndgameRecipes;
 import com.fabbe50.compressedblocks.core.registry.ModRegistry;
 import com.fabbe50.compressedblocks.core.utils.helper.CraftingHelper;
-import com.thefifthidiot.tficore.common.blocks.base.BlockBase;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;

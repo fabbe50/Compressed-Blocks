@@ -14,18 +14,18 @@ public class TrinketEnderEvent {
     @SubscribeEvent
     public void preventDimensionTeleport(EntityTravelToDimensionEvent event) {
         if (event.getEntity() instanceof EntityPlayer) {
-            if ((((EntityPlayer)event.getEntity()).inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 2)))) {
-                event.setCanceled(true);
-            }
+            //if ((((EntityPlayer)event.getEntity()).inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 2)))) {
+            //    event.setCanceled(true);
+            //}
         }
     }
 
     @SubscribeEvent
     public void preventEnderTeleport(EnderTeleportEvent event) {
         if (event.getEntity() instanceof EntityPlayer) {
-            if ((((EntityPlayer)event.getEntity()).inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 1)))) {
-                event.setCanceled(true);
-            }
+            //if ((((EntityPlayer)event.getEntity()).inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 1)))) {
+            //    event.setCanceled(true);
+            //}
         }
     }
 }

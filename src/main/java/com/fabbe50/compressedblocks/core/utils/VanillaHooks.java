@@ -1,12 +1,8 @@
 package com.fabbe50.compressedblocks.core.utils;
 
 import com.fabbe50.compressedblocks.core.lib.Configs;
-import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
-import com.thefifthidiot.tficore.utility.helper.ChatHelper;
-import com.thefifthidiot.tficore.utility.helper.LogHelper;
-import net.minecraft.entity.item.EntityMinecartChest;
-import net.minecraft.entity.item.EntityMinecartHopper;
-import net.minecraft.init.Blocks;
+import com.fabbe50.compressedblocks.core.utils.helper.ChatHelper;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -16,7 +12,6 @@ import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -46,7 +41,8 @@ public class VanillaHooks {
                 Items.HOPPER_MINECART.setMaxStackSize(16);
                 Items.TNT_MINECART.setMaxStackSize(16);
                 Items.COMMAND_BLOCK_MINECART.setMaxStackSize(16);
-            } else {LogHelper.info("Found 'Quark', disabling similar features.");}
+            } else {
+                LogHelper.info("Found 'Quark', disabling similar features.");}
 
             Items.BOAT.setMaxStackSize(16);
             Items.BIRCH_BOAT.setMaxStackSize(16);
@@ -59,7 +55,7 @@ public class VanillaHooks {
             Items.SNOWBALL.setMaxStackSize(64);
             Items.EGG.setMaxStackSize(64);
             Items.ENCHANTED_BOOK.setMaxStackSize(16);
-            Items.TOTEM.setMaxStackSize(16);
+            Items.TOTEM_OF_UNDYING.setMaxStackSize(16);
             Items.CAKE.setMaxStackSize(16);
 
             //Items.POTIONITEM.setMaxStackSize(16);

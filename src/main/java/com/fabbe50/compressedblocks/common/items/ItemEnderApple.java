@@ -1,20 +1,14 @@
 package com.fabbe50.compressedblocks.common.items;
 
 import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
-import com.thefifthidiot.tficore.common.items.ItemBase;
 import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.*;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -49,9 +43,9 @@ public class ItemEnderApple extends ItemFood {
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
         if (!worldIn.isRemote) {
             if (stack.getMetadata() > 0) {
-                if (!player.inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 1))) {
-                    player.changeDimension(1);
-                }
+                //if (!player.inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 1))) {
+                //    player.changeDimension(1);
+                //}
 
                 player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 400, 2));
                 player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 6000, 2));
@@ -60,7 +54,7 @@ public class ItemEnderApple extends ItemFood {
                 player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 3600, 3));
             }
             else {
-                if (!player.inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 1))) {
+                /*if (!player.inventory.hasItemStack(new ItemStack(ItemRegistry.TRINKET, 1, 1))) {
                     BlockPos tpPos = new BlockPos(player.posX + getPlusMinusBound(40), player.posY + getPlusMinusBound(20), player.posZ + getPlusMinusBound(40));
                     Block block1 = worldIn.getBlockState(tpPos).getBlock();
                     Block block2 = worldIn.getBlockState(tpPos.add(0, 1, 0)).getBlock();
@@ -73,7 +67,7 @@ public class ItemEnderApple extends ItemFood {
                     worldIn.setBlockState(tpPos.add(0, 1, 0), block2.getDefaultState());
                     if (worldIn.getBlockState(tpPos.add(0, -1, 0)).getBlock() == Blocks.BARRIER)
                         worldIn.setBlockState(tpPos.add(0, -1, 0), Blocks.AIR.getDefaultState());
-                }
+                }*/
 
                 player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 100, 1));
                 player.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION, 2400, 0));

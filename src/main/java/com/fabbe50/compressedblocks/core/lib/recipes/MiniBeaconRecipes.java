@@ -1,8 +1,6 @@
 package com.fabbe50.compressedblocks.core.lib.recipes;
 
-import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
 import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
-import com.thefifthidiot.tficore.utility.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -32,7 +30,7 @@ public class MiniBeaconRecipes implements IRecipe {
 
     @Override
     public boolean matches(InventoryCrafting inv, World worldIn) {
-        int i = 0;
+        /*int i = 0;
         ItemStack trinket = ItemStack.EMPTY;
         ItemStack potion = ItemStack.EMPTY;
 
@@ -75,11 +73,12 @@ public class MiniBeaconRecipes implements IRecipe {
             }
         }
 
-        return !trinket.isEmpty() && trinket.hasTagCompound() && i > 0;
+        return !trinket.isEmpty() && trinket.hasTagCompound() && i > 0;*/
+        return false;
     }
 
     @Override
-    public ItemStack getCraftingResult(InventoryCrafting inv) {
+    public ItemStack getCraftingResult(InventoryCrafting inv) {/*
         int i = 0;
         ItemStack trinket = ItemStack.EMPTY;
         ItemStack potion = ItemStack.EMPTY;
@@ -133,7 +132,9 @@ public class MiniBeaconRecipes implements IRecipe {
             return itemStack2;
         } else {
             return ItemStack.EMPTY;
-        }
+        }*/
+
+        return null;
     }
 
     @Override

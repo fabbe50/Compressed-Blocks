@@ -26,6 +26,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
  * Created by fabbe50 on 16/09/2016.
  */
 public class RecipeRegistry {
+    /*
     private static ItemEnchantedBook enchantedBook;
     private static ItemStack mendingBook = new ItemStack(Items.ENCHANTED_BOOK, 1, 0);
     private static NBTTagList bookTags;
@@ -48,7 +49,7 @@ public class RecipeRegistry {
     }
 
     private static void addDataToItemStack() {
-        //mendingBook.addEnchantment(Enchantment.getEnchantmentByID(70), 1);
+        mendingBook.addEnchantment(Enchantment.getEnchantmentByID(70), 1);
         Items.ENCHANTED_BOOK.addEnchantment(mendingBook, new EnchantmentData(Enchantment.getEnchantmentByID(70), 1));
         endgamiumSword.addEnchantment(Enchantment.getEnchantmentByID(16), 5);
         endgamiumSword.addEnchantment(Enchantment.getEnchantmentByID(21), 3);
@@ -313,4 +314,5 @@ public class RecipeRegistry {
         }
         GameRegistry.addShapelessRecipe(new ItemStack(out, 9, 0), new Object[]{new ItemStack(in, 1, 0)});
     }
+    */
 }

@@ -1,8 +1,6 @@
 package com.fabbe50.compressedblocks.core.event;
 
-import com.michaelwflaherty.cleverbotapi.CleverBotQuery;
-import com.thefifthidiot.tficore.utility.LogHelper;
-import com.thefifthidiot.tficore.utility.helper.ChatHelper;
+import com.fabbe50.compressedblocks.core.utils.helper.ChatHelper;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
