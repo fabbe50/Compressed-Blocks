@@ -7,6 +7,7 @@ import com.fabbe50.compressedblocks.common.blocks.meta.MetaCompressedBase;
 import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import com.fabbe50.compressedblocks.common.items.base.ItemBlockVariants;
 import com.fabbe50.compressedblocks.common.tileentities.*;
+import com.fabbe50.compressedblocks.core.lib.EnumCompressed;
 import com.fabbe50.compressedblocks.core.reference.MetaValues;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 
@@ -194,6 +195,16 @@ public class BlockRegistry {
         */
 
         registerBlock(COMPRESSED_POTATO, new ItemBlockVariants(COMPRESSED_POTATO));
+        registerBlock(COMPRESSED_COBBLESTONE, new ItemBlockVariants(COMPRESSED_COBBLESTONE));
+        registerBlock(COMPRESSED_DIRT, new ItemBlockVariants(COMPRESSED_DIRT));
+        registerBlock(COMPRESSED_GRASS, new ItemBlockVariants(COMPRESSED_GRASS));
+        registerBlock(COMPRESSED_GRASS_EATEN, new ItemBlockVariants(COMPRESSED_GRASS_EATEN));
+        registerBlock(COMPRESSED_SAND, new ItemBlockVariants(COMPRESSED_SAND));
+        registerBlock(COMPRESSED_GRAVEL, new ItemBlockVariants(COMPRESSED_GRAVEL));
+        registerBlock(COMPRESSED_IRON, new ItemBlockVariants(COMPRESSED_IRON));
+        registerBlock(COMPRESSED_GOLD, new ItemBlockVariants(COMPRESSED_GOLD));
+        registerBlock(COMPRESSED_DIAMOND, new ItemBlockVariants(COMPRESSED_DIAMOND));
+        registerBlock(COMPRESSED_EMERALD, new ItemBlockVariants(COMPRESSED_EMERALD));
     }
 	
 	public static void renderInit() {
@@ -252,6 +263,7 @@ public class BlockRegistry {
         BlockRenderer.registerMetaBlock(COMPRESSED_EMERALD, MetaValues.COMPRESSED);
         BlockRenderer.registerMetaBlock(COMPRESSED_GRASS, MetaValues.COMPRESSED);
         BlockRenderer.registerMetaBlock(COMPRESSED_GRASS_EATEN, MetaValues.COMPRESSED);
+        */
 
         registerBuiltIn(WHITE_SHULKER_BOX);
         registerBuiltIn(ORANGE_SHULKER_BOX);
@@ -268,7 +280,7 @@ public class BlockRegistry {
         registerBuiltIn(BLUE_SHULKER_BOX);
         registerBuiltIn(GREEN_SHULKER_BOX);
         registerBuiltIn(RED_SHULKER_BOX);
-        registerBuiltIn(BLACK_SHULKER_BOX);*/
+        registerBuiltIn(BLACK_SHULKER_BOX);
 	}
 
 	public static void renderAltInit() {
@@ -293,9 +305,9 @@ public class BlockRegistry {
     public static void registerTileEntity() {
         GameRegistry.registerTileEntity(TileEntityFurnaceCompr.class, "furnacecompr");
         GameRegistry.registerTileEntity(TileEntityBeaconXray.class, "beaconxray");
-        GameRegistry.registerTileEntity(TileEntityBrewer.class, "brewer");
+        //GameRegistry.registerTileEntity(TileEntityBrewer.class, "brewer");
         GameRegistry.registerTileEntity(TileEntitySuperShulkerBox.class, "supershulkerbox");
-        GameRegistry.registerTileEntity(TileEntityDrawbridge.class, "drawbridge");
+        //GameRegistry.registerTileEntity(TileEntityDrawbridge.class, "drawbridge");
     }
 
     //INFO: MOVED TO TFICORE
@@ -379,6 +391,20 @@ public class BlockRegistry {
             for (Block block : BLOCK_LIST)
                 if (!registeredBlockList.contains(block))
                     registerBlockModel(block);
+
+            for (int i = 0; i < EnumCompressed.values().length; i++) {
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_POTATO, i, "potato_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_COBBLESTONE, i, "cobble_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_DIRT, i, "dirt_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_GRASS, i, "grass_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_GRASS_EATEN, i, "dirt_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_SAND, i, "sand_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_GRAVEL, i, "gravel_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_IRON, i, "potato_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_GOLD, i, "potato_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_DIAMOND, i, "potato_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_EMERALD, i, "potato_compr_" + EnumCompressed.byMetadata(i).getName());
+            }
         }
 
         private static void registerBlockModel(final Block block) {

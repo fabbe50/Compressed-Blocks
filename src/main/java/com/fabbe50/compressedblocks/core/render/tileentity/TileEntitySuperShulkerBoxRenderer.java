@@ -35,6 +35,9 @@ public class TileEntitySuperShulkerBoxRenderer extends TileEntitySpecialRenderer
     public static void renderShulker(TileEntitySuperShulkerBox box, double x, double y, double z, float partialTicks, int destroyStage) {
         EnumFacing enumfacing = EnumFacing.UP;
 
+        if (box == null)
+            return;
+
         if (box.hasWorld()) {
             IBlockState iblockstate = box.getWorld().getBlockState(box.getPos());
 

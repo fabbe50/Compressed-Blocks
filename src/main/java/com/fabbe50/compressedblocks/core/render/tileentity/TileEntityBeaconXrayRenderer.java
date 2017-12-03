@@ -22,8 +22,8 @@ public class TileEntityBeaconXrayRenderer extends TileEntitySpecialRenderer<Tile
 {
     public static final ResourceLocation TEXTURE_BEACON_BEAM = new ResourceLocation("textures/entity/beacon_beam.png");
 
-    public void renderTileEntityAt(TileEntityBeaconXray te, double x, double y, double z, float partialTicks, int destroyStage)
-    {
+    @Override
+    public void render(TileEntityBeaconXray te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
         this.renderBeacon(x, y, z, (double)partialTicks, (double)te.shouldBeamRender(), te.getBeamSegments(), (double)te.getWorld().getTotalWorldTime());
     }
 

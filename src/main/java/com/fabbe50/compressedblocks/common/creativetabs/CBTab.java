@@ -3,6 +3,7 @@ package com.fabbe50.compressedblocks.common.creativetabs;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 /**
@@ -24,7 +25,7 @@ public class CBTab {
     public static CreativeTabs itemTab = new CreativeTabs(Reference.MOD_ID.toLowerCase() + ".items") {
         @Override
         public ItemStack getTabIconItem() {
-            return null;
+            return new ItemStack(Items.STICK);
         }
     };
 }

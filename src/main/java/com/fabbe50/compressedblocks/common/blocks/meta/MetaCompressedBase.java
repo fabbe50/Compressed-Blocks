@@ -36,6 +36,7 @@ public class MetaCompressedBase extends MetaBlockBase {
         super(material);
         setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumCompressed.SINGLE));
         this.setRegistryName(modID, itemName);
+        this.setUnlocalizedName(this.getRegistryName().toString());
         this.setHardness(hardness);
         this.setResistance(resistance);
         this.setCreativeTab(CBTab.compressedBlocksTab);

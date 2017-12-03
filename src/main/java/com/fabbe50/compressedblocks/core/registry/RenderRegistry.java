@@ -17,8 +17,8 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
  */
 public class RenderRegistry {
     public static void init() {
-        RenderingRegistry.registerEntityRenderingHandler(EntityCorgi.class, renderManager -> new RenderCorgi(renderManager, new ModelCorgi(), 0.3f));
-        RenderingRegistry.registerEntityRenderingHandler(EntityColoredSquid.class, RenderColoredSquid::new);
+        //RenderingRegistry.registerEntityRenderingHandler(EntityCorgi.class, renderManager -> new RenderCorgi(renderManager, new ModelCorgi(), 0.3f));
+        //RenderingRegistry.registerEntityRenderingHandler(EntityColoredSquid.class, RenderColoredSquid::new);
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBeaconXray.class, new TileEntityBeaconXrayRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySuperShulkerBox.class, new TileEntitySuperShulkerBoxRenderer());
     }

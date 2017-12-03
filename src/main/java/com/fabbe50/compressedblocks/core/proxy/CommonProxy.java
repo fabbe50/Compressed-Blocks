@@ -25,7 +25,7 @@ public class CommonProxy {
         //ConfigurationHandler.load(event);                               //Initialize Configuration
         //ToolMaterialRegistry.init();                                    //Initialize Tool Material
 		BlockRegistry.init();	                                        //Initialize Blocks
-        //BlockRegistry.registerTileEntity();                             //Initialize TileEntities
+        BlockRegistry.registerTileEntity();                             //Initialize TileEntities
 		//ItemRegistry.init();	                                        //Initialize Items
         //EntityRegistry.init();                                          //Initialize Entities
         //CBLibrary.init();                                               //Initialize Special Data for Compressed Blocks

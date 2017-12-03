@@ -11,8 +11,8 @@ import net.minecraft.item.ItemStack;
 public class ItemBlockVariants extends ItemBlock {
     public ItemBlockVariants(Block block) {
         super(block);
-        setHasSubtypes(true);
-        setMaxDamage(0);
+        this.setHasSubtypes(true);
+        this.setMaxDamage(0);
     }
 
     @Override

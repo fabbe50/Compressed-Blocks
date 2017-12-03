@@ -2,12 +2,14 @@ package com.fabbe50.compressedblocks.common.tileentities;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStainedGlass;
 import net.minecraft.block.BlockStainedGlassPane;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
@@ -38,9 +40,9 @@ import java.util.Set;
  * Created by fabbe50 on 10/12/2016.
  */
 public class TileEntityBeaconXray extends TileEntityLockable implements ITickable, ISidedInventory {
-    public static final Potion[][] EFFECTS_LIST = new Potion[][] {{MobEffects.SPEED, MobEffects.HASTE}, {MobEffects.RESISTANCE, MobEffects.JUMP_BOOST}, {MobEffects.STRENGTH}, {MobEffects.REGENERATION}};
-    private static final Set<Potion> VALID_EFFECTS = Sets.<Potion>newHashSet();
-    private final List<TileEntityBeaconXray.BeamSegment> beamSegments = Lists.<TileEntityBeaconXray.BeamSegment>newArrayList();
+    public static final Potion[][] EFFECTS_LIST = new Potion[][]{{MobEffects.SPEED, MobEffects.HASTE}, {MobEffects.RESISTANCE, MobEffects.JUMP_BOOST}, {MobEffects.STRENGTH}, {MobEffects.REGENERATION}};
+    private static final Set<Potion> VALID_EFFECTS = Sets.newHashSet();
+    private final List<TileEntityBeaconXray.BeamSegment> beamSegments = Lists.newArrayList();
     @SideOnly(Side.CLIENT)
     private long beamRenderCounter;
     @SideOnly(Side.CLIENT)
@@ -60,12 +62,6 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
         }
     }
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public AxisAlignedBB getRenderBoundingBox() {
-        return INFINITE_EXTENT_AABB;
-    }
-
     public void updateBeacon() {
         if (this.world != null) {
             this.updateSegmentColors();
@@ -75,7 +71,7 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
 
     private void addEffectsToPlayers() {
         if (this.isComplete && this.levels > 0 && !this.world.isRemote && this.primaryEffect != null) {
-            double d0 = (double)(this.levels * 20 + 20);
+            double d0 = (double) (this.levels * 10 + 10);
             int i = 0;
 
             if (this.levels >= 4 && this.primaryEffect == this.secondaryEffect) {
@@ -86,7 +82,7 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
             int k = this.pos.getX();
             int l = this.pos.getY();
             int i1 = this.pos.getZ();
-            AxisAlignedBB axisalignedbb = (new AxisAlignedBB((double)k, (double)l, (double)i1, (double)(k + 1), (double)(l + 1), (double)(i1 + 1))).grow(d0).contract(0.0D, (double)this.world.getHeight(), 0.0D);
+            AxisAlignedBB axisalignedbb = (new AxisAlignedBB((double) k, (double) l, (double) i1, (double) (k + 1), (double) (l + 1), (double) (i1 + 1))).grow(d0).expand(0.0D, (double) this.world.getHeight(), 0.0D);
             List<EntityPlayer> list = this.world.<EntityPlayer>getEntitiesWithinAABB(EntityPlayer.class, axisalignedbb);
 
             for (EntityPlayer entityplayer : list) {
@@ -102,33 +98,29 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
     }
 
     private void updateSegmentColors() {
-        int i = this.levels;
-        int j = this.pos.getX();
-        int k = this.pos.getY();
-        int l = this.pos.getZ();
+        int i = this.pos.getX();
+        int j = this.pos.getY();
+        int k = this.pos.getZ();
+        int l = this.levels;
         this.levels = 0;
         this.beamSegments.clear();
         this.isComplete = true;
-        TileEntityBeaconXray.BeamSegment tileentitybeacon$beamsegment = new TileEntityBeaconXray.BeamSegment(EntitySheep.getDyeRgb(EnumDyeColor.WHITE));
+        TileEntityBeaconXray.BeamSegment tileentitybeacon$beamsegment = new TileEntityBeaconXray.BeamSegment(EnumDyeColor.WHITE.getColorComponentValues());
         this.beamSegments.add(tileentitybeacon$beamsegment);
         boolean flag = true;
         BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
 
-        for (int i1 = k + 1; i1 < 256; ++i1) {
-            IBlockState iblockstate = this.world.getBlockState(blockpos$mutableblockpos.setPos(j, i1, l));
+        for (int i1 = j + 1; i1 < 256; ++i1) {
+            IBlockState iblockstate = this.world.getBlockState(blockpos$mutableblockpos.setPos(i, i1, k));
             float[] afloat;
 
             if (iblockstate.getBlock() == Blocks.STAINED_GLASS) {
-                afloat = EntitySheep.getDyeRgb((EnumDyeColor)iblockstate.getValue(BlockStainedGlass.COLOR));
-            }
-            else {
+                afloat = (iblockstate.getValue(BlockStainedGlass.COLOR)).getColorComponentValues();
+            } else {
                 if (iblockstate.getBlock() != Blocks.STAINED_GLASS_PANE) {
-                    if (iblockstate.getLightOpacity(this.world, blockpos$mutableblockpos) >= 15 && iblockstate.getBlock() != Blocks.BEDROCK) {
+                    if (iblockstate.getLightOpacity(world, blockpos$mutableblockpos) >= 15 && iblockstate.getBlock() != Blocks.BEDROCK) {
                         this.isComplete = true;
-                        //this.beamSegments.clear();
-                        //break;
                     }
-
                     float[] customColor = iblockstate.getBlock().getBeaconColorMultiplier(iblockstate, this.world, blockpos$mutableblockpos, getPos());
                     if (customColor != null)
                         afloat = customColor;
@@ -136,20 +128,17 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
                         tileentitybeacon$beamsegment.incrementHeight();
                         continue;
                     }
-                }
-
-                else
-                    afloat = EntitySheep.getDyeRgb((EnumDyeColor)iblockstate.getValue(BlockStainedGlassPane.COLOR));
+                } else
+                    afloat = (iblockstate.getValue(BlockStainedGlassPane.COLOR)).getColorComponentValues();
             }
 
             if (!flag) {
-                afloat = new float[] {(tileentitybeacon$beamsegment.getColors()[0] + afloat[0]) / 2.0F, (tileentitybeacon$beamsegment.getColors()[1] + afloat[1]) / 2.0F, (tileentitybeacon$beamsegment.getColors()[2] + afloat[2]) / 2.0F};
+                afloat = new float[]{(tileentitybeacon$beamsegment.getColors()[0] + afloat[0]) / 2.0F, (tileentitybeacon$beamsegment.getColors()[1] + afloat[1]) / 2.0F, (tileentitybeacon$beamsegment.getColors()[2] + afloat[2]) / 2.0F};
             }
 
             if (Arrays.equals(afloat, tileentitybeacon$beamsegment.getColors())) {
                 tileentitybeacon$beamsegment.incrementHeight();
-            }
-            else {
+            } else {
                 tileentitybeacon$beamsegment = new TileEntityBeaconXray.BeamSegment(afloat);
                 this.beamSegments.add(tileentitybeacon$beamsegment);
             }
@@ -159,7 +148,7 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
 
         if (this.isComplete) {
             for (int l1 = 1; l1 <= 4; this.levels = l1++) {
-                int i2 = k - l1;
+                int i2 = j - l1;
 
                 if (i2 < 0) {
                     break;
@@ -167,8 +156,8 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
 
                 boolean flag1 = true;
 
-                for (int j1 = j - l1; j1 <= j + l1 && flag1; ++j1) {
-                    for (int k1 = l - l1; k1 <= l + l1; ++k1) {
+                for (int j1 = i - l1; j1 <= i + l1 && flag1; ++j1) {
+                    for (int k1 = k - l1; k1 <= k + l1; ++k1) {
                         Block block = this.world.getBlockState(new BlockPos(j1, i2, k1)).getBlock();
 
                         if (!block.isBeaconBase(this.world, new BlockPos(j1, i2, k1), getPos())) {
@@ -188,9 +177,9 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
             }
         }
 
-        if (!this.world.isRemote && this.levels == 4 && i < this.levels) {
-            for (EntityPlayer entityplayer : this.world.getEntitiesWithinAABB(EntityPlayer.class, (new AxisAlignedBB((double)j, (double)k, (double)l, (double)j, (double)(k - 4), (double)l)).expand(10.0D, 5.0D, 10.0D))) {
-                //entityplayer.addStat(AchievementList.FULL_BEACON);
+        if (!this.world.isRemote && l < this.levels) {
+            for (EntityPlayerMP entityplayermp : this.world.getEntitiesWithinAABB(EntityPlayerMP.class, (new AxisAlignedBB((double) i, (double) j, (double) k, (double) i, (double) (j - 4), (double) k)).grow(10.0D, 5.0D, 10.0D))) {
+                //CriteriaTriggers.CONSTRUCT_BEACON.trigger(entityplayermp, this);
             }
         }
     }
@@ -204,13 +193,12 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
     public float shouldBeamRender() {
         if (!this.isComplete) {
             return 0.0F;
-        }
-        else {
-            int i = (int)(this.world.getTotalWorldTime() - this.beamRenderCounter);
+        } else {
+            int i = (int) (this.world.getTotalWorldTime() - this.beamRenderCounter);
             this.beamRenderCounter = this.world.getTotalWorldTime();
 
             if (i > 1) {
-                this.beamRenderScale -= (float)i / 40.0F;
+                this.beamRenderScale -= (float) i / 40.0F;
 
                 if (this.beamRenderScale < 0.0F) {
                     this.beamRenderScale = 0.0F;
@@ -225,6 +213,10 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
 
             return this.beamRenderScale;
         }
+    }
+
+    public int getLevels() {
+        return this.levels;
     }
 
     @Nullable
@@ -280,12 +272,10 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
                 ItemStack itemstack = this.payment;
                 this.payment = ItemStack.EMPTY;
                 return itemstack;
-            }
-            else {
+            } else {
                 return this.payment.splitStack(count);
             }
-        }
-        else {
+        } else {
             return ItemStack.EMPTY;
         }
     }
@@ -295,8 +285,7 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
             ItemStack itemstack = this.payment;
             this.payment = ItemStack.EMPTY;
             return itemstack;
-        }
-        else {
+        } else {
             return ItemStack.EMPTY;
         }
     }
@@ -324,7 +313,11 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
     }
 
     public boolean isUsableByPlayer(EntityPlayer player) {
-        return this.world.getTileEntity(this.pos) != this ? false : player.getDistanceSq((double)this.pos.getX() + 0.5D, (double)this.pos.getY() + 0.5D, (double)this.pos.getZ() + 0.5D) <= 64.0D;
+        if (this.world.getTileEntity(this.pos) != this) {
+            return false;
+        } else {
+            return player.getDistanceSq((double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D, (double) this.pos.getZ() + 0.5D) <= 64.0D;
+        }
     }
 
     public void openInventory(EntityPlayer player) {
@@ -383,8 +376,7 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
         if (id == 1) {
             this.updateBeacon();
             return true;
-        }
-        else {
+        } else {
             return super.receiveClientEvent(id, type);
         }
     }
@@ -417,7 +409,7 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
         }
 
         protected void incrementHeight() {
-            this.height++;
+            ++this.height;
         }
 
         public float[] getColors() {
@@ -428,5 +420,11 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
         public int getHeight() {
             return this.height;
         }
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public AxisAlignedBB getRenderBoundingBox() {
+        return INFINITE_EXTENT_AABB;
     }
 }
