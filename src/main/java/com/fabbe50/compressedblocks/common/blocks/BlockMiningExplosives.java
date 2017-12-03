@@ -147,16 +147,19 @@ public class BlockMiningExplosives extends BlockBase {
                 ores.add(Blocks.EMERALD_ORE);
             } else if (block == Blocks.COAL_ORE) {
                 ores.add(Blocks.COAL_ORE);
+            } else if (block == Blocks.QUARTZ_ORE) {
+                ores.add(Blocks.QUARTZ_ORE);
             } else if (block instanceof FuseRock) {
-                boolean overworld = false;
                 switch (world.provider.getDimension()) {
                     case -1:
                         ores.add(com.thefifthidiot.tficore.core.registry.BlockRegistry.fuseRockNether);
+                        break;
                     case 0:
                         ores.add(com.thefifthidiot.tficore.core.registry.BlockRegistry.fuseRock);
-                        overworld = true;
+                        break;
                     case 1:
-                        if (!overworld) ores.add(com.thefifthidiot.tficore.core.registry.BlockRegistry.fuseRockEnd);
+                        ores.add(com.thefifthidiot.tficore.core.registry.BlockRegistry.fuseRockEnd);
+                        break;
                 }
             } else if (OreDictionary.getOres("oreCopper").contains(new ItemStack(Item.getItemFromBlock(block)))) {
                 ores.add(Block.getBlockFromItem(OreDictionary.getOres("oreCopper").get(0).getItem()));
