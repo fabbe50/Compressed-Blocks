@@ -67,9 +67,10 @@ public class ItemInkBottle extends ItemBase {
     }
 
     @SideOnly(Side.CLIENT)
-    public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
+    @Override
+    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
         for (int i = 0; i < 16; ++i) {
-            subItems.add(new ItemStack(itemIn, 1, i));
+            subItems.add(new ItemStack(this, 1, i));
         }
     }
 }

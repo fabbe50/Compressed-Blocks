@@ -32,7 +32,6 @@ public class ItemPotatoBone extends ItemBase {
         super(itemName, tab);
     }
 
-    /*
     @Override
     @Nonnull
     @SuppressWarnings("unchecked")
@@ -77,5 +76,4 @@ public class ItemPotatoBone extends ItemBase {
         tooltip.add("Type of Corgi is randomized unless the potato on a bone");
         tooltip.add("is named to the wanted corgi's name.");
     }
-    */
 }

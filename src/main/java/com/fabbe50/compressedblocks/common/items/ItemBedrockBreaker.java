@@ -30,7 +30,6 @@ public class ItemBedrockBreaker extends ItemBase {
         durability = setDurability();
     }
 
-    /*
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!worldIn.isRemote) {
@@ -51,7 +50,7 @@ public class ItemBedrockBreaker extends ItemBase {
             }
         }
         return EnumActionResult.FAIL;
-    }*/
+    }
 
     private int setDurability() {
         return 16;

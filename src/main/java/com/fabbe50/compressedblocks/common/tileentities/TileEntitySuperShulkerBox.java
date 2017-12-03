@@ -47,7 +47,7 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
     private boolean destroyedByCreativePlayer;
 
     public TileEntitySuperShulkerBox() {
-        this((EnumDyeColor)null);
+        this(EnumDyeColor.PURPLE);
     }
 
     public TileEntitySuperShulkerBox(@Nullable EnumDyeColor colorIn) {

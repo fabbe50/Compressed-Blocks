@@ -91,22 +91,22 @@ public class BlockRegistry {
     public static final Block COMPRESSED_FURNACE_ACTIVE = new BlockFurnaceDecoy("furnacecompr", 0.875f, null, true).setCreativeTab(null);
     public static final Block BEACON_XRAY = new BlockBeaconXRAY(Material.GLASS, MapColor.DIAMOND, Reference.MOD_ID, "beacon_xray", 3.0f, 13.5f, CBTab.blockTab);
     public static final Block BREWER = new BlockBrewer().setRegistryName(Reference.MOD_ID, "brewer").setUnlocalizedName(Reference.MOD_ID + ":brewer").setHardness(0.5F).setLightLevel(0.125F);
-    public static final Block WHITE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.WHITE, Material.ROCK, MapColor.SNOW, "white_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block ORANGE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.ORANGE, Material.ROCK, MapColor.ADOBE, "orange_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block MAGENTA_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.MAGENTA, Material.ROCK, MapColor.MAGENTA, "magenta_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block LIGHT_BLUE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.LIGHT_BLUE, Material.ROCK, MapColor.LIGHT_BLUE, "light_blue_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block YELLOW_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.YELLOW, Material.ROCK, MapColor.YELLOW, "yellow_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block LIME_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.LIME, Material.ROCK, MapColor.LIME, "lime_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block PINK_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.PINK, Material.ROCK, MapColor.PINK, "pink_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block GRAY_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.GRAY, Material.ROCK, MapColor.GRAY, "gray_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block SILVER_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.SILVER, Material.ROCK, MapColor.SILVER, "silver_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block CYAN_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.CYAN, Material.ROCK, MapColor.CYAN, "cyan_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block PURPLE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.PURPLE, Material.ROCK, MapColor.PURPLE, "purple_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block BLUE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.BLUE, Material.ROCK, MapColor.BLUE, "blue_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block BROWN_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.BROWN, Material.ROCK, MapColor.BROWN, "brown_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block GREEN_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.GREEN, Material.ROCK, MapColor.GREEN, "green_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block RED_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.RED, Material.ROCK, MapColor.RED, "red_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
-    public static final Block BLACK_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.BLACK, Material.ROCK, MapColor.BLACK, "black_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(null);
+    public static final Block WHITE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.WHITE, Material.ROCK, MapColor.SNOW, "white_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block ORANGE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.ORANGE, Material.ROCK, MapColor.ADOBE, "orange_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block MAGENTA_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.MAGENTA, Material.ROCK, MapColor.MAGENTA, "magenta_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block LIGHT_BLUE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.LIGHT_BLUE, Material.ROCK, MapColor.LIGHT_BLUE, "light_blue_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block YELLOW_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.YELLOW, Material.ROCK, MapColor.YELLOW, "yellow_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block LIME_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.LIME, Material.ROCK, MapColor.LIME, "lime_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block PINK_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.PINK, Material.ROCK, MapColor.PINK, "pink_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block GRAY_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.GRAY, Material.ROCK, MapColor.GRAY, "gray_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block SILVER_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.SILVER, Material.ROCK, MapColor.SILVER, "silver_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block CYAN_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.CYAN, Material.ROCK, MapColor.CYAN, "cyan_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block PURPLE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.PURPLE, Material.ROCK, MapColor.PURPLE, "purple_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block BLUE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.BLUE, Material.ROCK, MapColor.BLUE, "blue_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block BROWN_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.BROWN, Material.ROCK, MapColor.BROWN, "brown_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block GREEN_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.GREEN, Material.ROCK, MapColor.GREEN, "green_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block RED_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.RED, Material.ROCK, MapColor.RED, "red_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
+    public static final Block BLACK_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.BLACK, Material.ROCK, MapColor.BLACK, "black_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
     public static final Block DRAWBRIDGE = new BlockDrawbridge(Material.ROCK).setRegistryName(Reference.MOD_ID, "drawbridge").setUnlocalizedName(Reference.MOD_ID+":drawbridge").setHardness(2.0f).setResistance(10.0f).setCreativeTab(CBTab.blockTab);
 
     /*  If more data on a block is needed
@@ -144,6 +144,7 @@ public class BlockRegistry {
         registerBlock(COMPRESSED_FURNACE_ACTIVE);
         registerBlock(BEACON_XRAY);
         registerBlock(BREWER);
+        registerBlock(DRAWBRIDGE);
 
         registerBlock(LIGHTBLOCK);
         registerBlock(LIGHTBLOCK1);
@@ -178,22 +179,6 @@ public class BlockRegistry {
         registerBlock(RED_SHULKER_BOX);
         registerBlock(BLACK_SHULKER_BOX);
 
-        registerBlock(DRAWBRIDGE);
-
-        /*
-        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "potato_compr"), COMPRESSED_POTATO);
-        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "cobble_compr"), COMPRESSED_COBBLESTONE);
-        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "dirt_compr"), COMPRESSED_DIRT);
-        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "sand_compr"), COMPRESSED_SAND);
-        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "gravel_compr"), COMPRESSED_GRAVEL);
-        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "iron_compr"), COMPRESSED_IRON);
-        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "gold_compr"), COMPRESSED_GOLD);
-        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "diamond_compr"), COMPRESSED_DIAMOND);
-        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "emerald_compr"), COMPRESSED_EMERALD);
-        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "grass_compr"), COMPRESSED_GRASS);
-        TFIBlocks.registerMetaBlock(new ResourceLocation(Reference.MOD_ID, "grass_eaten_compr"), COMPRESSED_GRASS_EATEN);
-        */
-
         registerBlock(COMPRESSED_POTATO, new ItemBlockVariants(COMPRESSED_POTATO));
         registerBlock(COMPRESSED_COBBLESTONE, new ItemBlockVariants(COMPRESSED_COBBLESTONE));
         registerBlock(COMPRESSED_DIRT, new ItemBlockVariants(COMPRESSED_DIRT));
@@ -208,63 +193,6 @@ public class BlockRegistry {
     }
 	
 	public static void renderInit() {
-		/*BlockRenderer.registerBlock(POTATO_BLOCK);
-        BlockRenderer.registerBlock(HIGH_QUALITY_CAKE);
-        BlockRenderer.registerBlock(FALLTRAPBLOCK);
-        BlockRenderer.registerBlock(OVERLAYTEST);
-        BlockRenderer.registerBlock(SURPRISEBLOCK);
-        BlockRenderer.registerBlock(COLORBLOCK);
-        BlockRenderer.registerBlock(NETHER_STONE);
-        BlockRenderer.registerBlock(NETHER_STAR_BLOCK);
-        BlockRenderer.registerBlock(ENDGAMIUMBLOCK);
-        BlockRenderer.registerBlock(ENDGAMIUMBLOCKC);
-        BlockRenderer.registerBlock(BLACKHOLE);
-        BlockRenderer.registerBlock(SINGLECOMPRESSSEDTNT);
-        BlockRenderer.registerBlock(DOUBLECOMPRESSSEDTNT);
-        BlockRenderer.registerBlock(TRIPLECOMPRESSSEDTNT);
-        BlockRenderer.registerBlock(MININGEXPLOSIVES);
-        BlockRenderer.registerBlock(ONLINEDETECTOR);
-        BlockRenderer.registerBlock(ENDERBLOCK);
-        BlockRenderer.registerBlock(FUSIONPEDESTAL);
-        BlockRenderer.registerBlock(NUKE);
-        BlockRenderer.registerBlock(BIN);
-
-        BlockRenderer.registerBlock(COMPRESSED_FURNACE_IDLE);
-        BlockRenderer.registerBlock(COMPRESSED_FURNACE_ACTIVE);
-        BlockRenderer.registerBlock(BEACON_XRAY);
-        BlockRenderer.registerBlock(BREWER);
-        BlockRenderer.registerBlock(DRAWBRIDGE);
-
-        BlockRenderer.registerBlock(LIGHTBLOCK);
-        BlockRenderer.registerBlock(LIGHTBLOCK1);
-        BlockRenderer.registerBlock(LIGHTBLOCK2);
-        BlockRenderer.registerBlock(LIGHTBLOCK3);
-        BlockRenderer.registerBlock(LIGHTBLOCK4);
-        BlockRenderer.registerBlock(LIGHTBLOCK5);
-        BlockRenderer.registerBlock(LIGHTBLOCK6);
-        BlockRenderer.registerBlock(LIGHTBLOCK7);
-        BlockRenderer.registerBlock(LIGHTBLOCK8);
-        BlockRenderer.registerBlock(LIGHTBLOCK9);
-        BlockRenderer.registerBlock(LIGHTBLOCK10);
-        BlockRenderer.registerBlock(LIGHTBLOCK11);
-        BlockRenderer.registerBlock(LIGHTBLOCK12);
-        BlockRenderer.registerBlock(LIGHTBLOCK13);
-        BlockRenderer.registerBlock(LIGHTBLOCK14);
-        BlockRenderer.registerBlock(LIGHTBLOCK15);
-
-        BlockRenderer.registerMetaBlock(COMPRESSED_POTATO, MetaValues.COMPRESSED);
-        BlockRenderer.registerMetaBlock(COMPRESSED_COBBLESTONE, MetaValues.COMPRESSED);
-        BlockRenderer.registerMetaBlock(COMPRESSED_DIRT, MetaValues.COMPRESSED);
-        BlockRenderer.registerMetaBlock(COMPRESSED_SAND, MetaValues.COMPRESSED);
-        BlockRenderer.registerMetaBlock(COMPRESSED_GRAVEL, MetaValues.COMPRESSED);
-        BlockRenderer.registerMetaBlock(COMPRESSED_IRON, MetaValues.COMPRESSED);
-        BlockRenderer.registerMetaBlock(COMPRESSED_GOLD, MetaValues.COMPRESSED);
-        BlockRenderer.registerMetaBlock(COMPRESSED_DIAMOND, MetaValues.COMPRESSED);
-        BlockRenderer.registerMetaBlock(COMPRESSED_EMERALD, MetaValues.COMPRESSED);
-        BlockRenderer.registerMetaBlock(COMPRESSED_GRASS, MetaValues.COMPRESSED);
-        BlockRenderer.registerMetaBlock(COMPRESSED_GRASS_EATEN, MetaValues.COMPRESSED);
-        */
-
         registerBuiltIn(WHITE_SHULKER_BOX);
         registerBuiltIn(ORANGE_SHULKER_BOX);
         registerBuiltIn(MAGENTA_SHULKER_BOX);
@@ -284,7 +212,7 @@ public class BlockRegistry {
 	}
 
 	public static void renderAltInit() {
-        registerItemBlockRenderer(Item.getItemFromBlock(WHITE_SHULKER_BOX), "supershulkerbox");
+        /*registerItemBlockRenderer(Item.getItemFromBlock(WHITE_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(ORANGE_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(MAGENTA_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(LIGHT_BLUE_SHULKER_BOX), "supershulkerbox");
@@ -299,7 +227,7 @@ public class BlockRegistry {
         registerItemBlockRenderer(Item.getItemFromBlock(BROWN_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(GREEN_SHULKER_BOX), "supershulkerbox");
         registerItemBlockRenderer(Item.getItemFromBlock(RED_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(BLACK_SHULKER_BOX), "supershulkerbox");
+        registerItemBlockRenderer(Item.getItemFromBlock(BLACK_SHULKER_BOX), "supershulkerbox");*/
     }
 
     public static void registerTileEntity() {
@@ -308,34 +236,6 @@ public class BlockRegistry {
         //GameRegistry.registerTileEntity(TileEntityBrewer.class, "brewer");
         GameRegistry.registerTileEntity(TileEntitySuperShulkerBox.class, "supershulkerbox");
         //GameRegistry.registerTileEntity(TileEntityDrawbridge.class, "drawbridge");
-    }
-
-    //INFO: MOVED TO TFICORE
-    private static List<Block> blocks = new ArrayList<>();
-	private static List<Item> itemblocks = new ArrayList<>();
-
-    private static void registerItemBlock(Block blockIn) {
-        registerItemBlock(blockIn, new ItemBlock(blockIn));
-    }
-
-    private static void registerItemBlock(Block blockIn, Item itemIn) {
-        blocks.add(blockIn);
-        itemblocks.add(itemIn);
-        registerItem(Block.getIdFromBlock(blockIn), (ResourceLocation)Block.REGISTRY.getNameForObject(blockIn), itemIn);
-    }
-
-    private static void registerItem(int id, String textualID, Item itemIn) {
-        registerItem(id, new ResourceLocation(textualID), itemIn);
-    }
-
-    private static void registerItem(int id, ResourceLocation textualID, Item itemIn) {
-        Item.REGISTRY.register(id, textualID, itemIn);
-    }
-
-    private static void registerItemBlockRenderer(Block block, String name, boolean builtin) {
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, name), "inventory"));
-        if (builtin) Minecraft.getMinecraft().getRenderItem().getItemModelMesher().getModelManager().getBlockModelShapes().registerBuiltInBlocks(block);
-        LogHelper.info("Registered renderdata for item with registry-name: " + new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, name), "inventory"));
     }
 
     private static void registerItemBlockRenderer(Item block, String name) {
@@ -400,11 +300,28 @@ public class BlockRegistry {
                 registerBlockModelVariants(BlockRegistry.COMPRESSED_GRASS_EATEN, i, "dirt_compr_" + EnumCompressed.byMetadata(i).getName());
                 registerBlockModelVariants(BlockRegistry.COMPRESSED_SAND, i, "sand_compr_" + EnumCompressed.byMetadata(i).getName());
                 registerBlockModelVariants(BlockRegistry.COMPRESSED_GRAVEL, i, "gravel_compr_" + EnumCompressed.byMetadata(i).getName());
-                registerBlockModelVariants(BlockRegistry.COMPRESSED_IRON, i, "potato_compr_" + EnumCompressed.byMetadata(i).getName());
-                registerBlockModelVariants(BlockRegistry.COMPRESSED_GOLD, i, "potato_compr_" + EnumCompressed.byMetadata(i).getName());
-                registerBlockModelVariants(BlockRegistry.COMPRESSED_DIAMOND, i, "potato_compr_" + EnumCompressed.byMetadata(i).getName());
-                registerBlockModelVariants(BlockRegistry.COMPRESSED_EMERALD, i, "potato_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_IRON, i, "iron_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_GOLD, i, "gold_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_DIAMOND, i, "diamond_compr_" + EnumCompressed.byMetadata(i).getName());
+                registerBlockModelVariants(BlockRegistry.COMPRESSED_EMERALD, i, "emerald_compr_" + EnumCompressed.byMetadata(i).getName());
             }
+
+            registerBlockModel(BlockRegistry.WHITE_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=white"));
+            registerBlockModel(BlockRegistry.ORANGE_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=orange"));
+            registerBlockModel(BlockRegistry.MAGENTA_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=magenta"));
+            registerBlockModel(BlockRegistry.LIGHT_BLUE_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=light_blue"));
+            registerBlockModel(BlockRegistry.YELLOW_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=yellow"));
+            registerBlockModel(BlockRegistry.LIME_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=lime"));
+            registerBlockModel(BlockRegistry.PINK_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=pink"));
+            registerBlockModel(BlockRegistry.GRAY_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=gray"));
+            registerBlockModel(BlockRegistry.SILVER_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=silver"));
+            registerBlockModel(BlockRegistry.CYAN_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=cyan"));
+            registerBlockModel(BlockRegistry.PURPLE_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=purple"));
+            registerBlockModel(BlockRegistry.BLUE_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=blue"));
+            registerBlockModel(BlockRegistry.BROWN_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=brown"));
+            registerBlockModel(BlockRegistry.GREEN_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=green"));
+            registerBlockModel(BlockRegistry.RED_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=red"));
+            registerBlockModel(BlockRegistry.BLACK_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=black"));
         }
 
         private static void registerBlockModel(final Block block) {

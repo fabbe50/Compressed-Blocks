@@ -2,11 +2,13 @@ package com.fabbe50.compressedblocks.common.blocks;
 
 import com.fabbe50.compressedblocks.common.tileentities.TileEntityBeaconXray;
 import com.fabbe50.compressedblocks.core.registry.StatsRegistry;
+import com.fabbe50.compressedblocks.core.utils.helper.ChatHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -126,10 +128,10 @@ public class BlockBeaconXRAY extends BlockContainer {
     }
 
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-        tooltip.add("A beacon that can be put underground.");
-        tooltip.add("Has double the range of a normal beacon.");
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World world, List<String> tooltip, ITooltipFlag advanced) {
+        tooltip.add(ChatHelper.PURPLE + "Emits a beam of light strong enough to pass through blocks.");
         tooltip.add("");
-        tooltip.add("Broken item texture :(");
+        tooltip.add(ChatHelper.DARK_GRAY + "Broken item texture :(");
     }
 }

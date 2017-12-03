@@ -1,5 +1,6 @@
 package com.fabbe50.compressedblocks.core.proxy;
 
+import com.fabbe50.compressedblocks.core.event.TooltipEvent;
 import com.fabbe50.compressedblocks.core.handler.ConfigurationHandler;
 import com.fabbe50.compressedblocks.core.lib.CBLibrary;
 import com.fabbe50.compressedblocks.core.lib.Configs;
@@ -23,10 +24,10 @@ import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
 public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) {
         //ConfigurationHandler.load(event);                               //Initialize Configuration
-        //ToolMaterialRegistry.init();                                    //Initialize Tool Material
+        ToolMaterialRegistry.init();                                    //Initialize Tool Material
 		BlockRegistry.init();	                                        //Initialize Blocks
         BlockRegistry.registerTileEntity();                             //Initialize TileEntities
-		//ItemRegistry.init();	                                        //Initialize Items
+		ItemRegistry.init();	                                          //Initialize Items
         //EntityRegistry.init();                                          //Initialize Entities
         //CBLibrary.init();                                               //Initialize Special Data for Compressed Blocks
         //PotionRegistry.init();
@@ -36,6 +37,7 @@ public class CommonProxy {
     public void init(FMLInitializationEvent event) {
         //StatsRegistry.init();                                           //Initialize Statistics
         //AchievementRegistry.init();                                     //Initialize Achievements
+        TooltipEvent.init();
         //EventRegistry.init();                                           //Initialize Events
         //ModItemRegistry.init();                                         //Initialize Mod Items
         //OreDictRegistry.init();                                         //Initialize OreDictionary
@@ -58,6 +60,6 @@ public class CommonProxy {
     }
 
     public void onServerStarted(FMLServerStartedEvent event) {
-        //EventRegistry.onServerStarted();
+        EventRegistry.onServerStarted();
     }
 }

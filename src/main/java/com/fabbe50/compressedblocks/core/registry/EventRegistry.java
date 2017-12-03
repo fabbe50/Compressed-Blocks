@@ -20,14 +20,14 @@ public class EventRegistry {
     }
 
     public static void onServerStarted() {
-        MinecraftForge.EVENT_BUS.register(new ChatEvent());
+        /*MinecraftForge.EVENT_BUS.register(new ChatEvent());
         MinecraftForge.EVENT_BUS.register(new StackableBuckets());
         MinecraftForge.EVENT_BUS.register(new PlayerTracker());
         MinecraftForge.EVENT_BUS.register(new VanillaHooks());
-        //MinecraftForge.EVENT_BUS.register(new GrassEatEvent());
         MinecraftForge.EVENT_BUS.register(new TrinketEnderEvent());
         MinecraftForge.EVENT_BUS.register(new UpdateEntityAIEvent());
-        MinecraftForge.EVENT_BUS.register(new CustomLivingEvent());
+        MinecraftForge.EVENT_BUS.register(new CustomLivingEvent());*/
+        MinecraftForge.EVENT_BUS.register(new TooltipEvent());
     }
 
     public static void onClientStarted() {

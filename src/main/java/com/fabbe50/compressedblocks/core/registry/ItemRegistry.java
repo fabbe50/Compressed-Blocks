@@ -1,5 +1,6 @@
 package com.fabbe50.compressedblocks.core.registry;
 
+import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import com.fabbe50.compressedblocks.common.items.*;
 import com.fabbe50.compressedblocks.common.items.base.ItemBase;
 import com.fabbe50.compressedblocks.common.items.base.ItemBaseEnchanted;
@@ -7,120 +8,98 @@ import com.fabbe50.compressedblocks.common.items.base.ItemSwordBase;
 import com.fabbe50.compressedblocks.common.items.base.TwoHandItemBase;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
+import jdk.nashorn.internal.ir.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.registries.IForgeRegistry;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by fabbe50 on 23/06/2016.
  */
 public class ItemRegistry {
-    /*public static final Item ENDGAMIUM_INGOT;
-    public static final Item ENDGAMIUM_NUGGET;
-    public static final Item ENDGAMIUM_SWORD;
-    public static final Item ENDGAMIUM_BONE;
-    public static final Item POTATO_BONE;
-    public static final Item ITEM_FOOD;
-    public static final Item BEDROCK_BREAKER;
-    public static final Item BEDROCK_OBTAINER;
-    public static final Item BOW_ITEMS;
-    public static final Item MILK_FLASK;
-    public static final Item COLOR_CORE;
-    public static final Item TWOHANDITEMTEST;
-    public static final Item TELEPORTORB;
-    public static final Item MOBKILLER;
-    public static final Item DNASAMPLE;
-    public static final Item ENDERAPPLE;
-    public static final Item PEBBLES;
-    public static final Item FOODBOWL;
-    public static final Item MASHEDFOOD;
-    public static final Item INKBOTTLE;
-    public static final Item BEDROCK_INGOT;
-    public static final Item STAFF_WOOD;
-    public static final Item STAFF_STONE;
-    public static final Item STAFF_IRON;
-    public static final Item STAFF_GOLD;
-    public static final Item STAFF_DIAMOND;
-    public static final Item STAFF_ENDGAMIUM;
-    public static final Item EGG_HATCHER;
-    public static final Item POTATO_SINGULARITY;
-    public static final Item TRINKET;
-    public static final Item INK_EXTRACTOR;
+    public static final Item ENDGAMIUM_INGOT = new ItemBaseEnchanted("endgamiumingot", null);
+    public static final Item ENDGAMIUM_NUGGET = new ItemBaseEnchanted("endgamiumnugget", null);
+    public static final Item ENDGAMIUM_SWORD = new ItemSwordBase(ToolMaterialRegistry.TOOL_ENDGAMIUM, "endgamiumsword", CreativeTabs.COMBAT);
+    public static final Item ENDGAMIUM_BONE = new ItemBaseEnchanted("endgamiumbone", null);
+    public static final Item POTATO_BONE = new ItemPotatoBone("potatobone", null);
+    public static final Item ITEM_FOOD = new ItemFood(20, 20.0f, false, "fooditem");
+    public static final Item BEDROCK_BREAKER = new ItemBedrockBreaker("bedrockbreaker", null);
+    public static final Item BEDROCK_OBTAINER = new ItemBedrockObtainer("bedrockobtainer", null);
+    public static final Item BOW_ITEMS = new ItemBase("bowitems", null);
+    public static final Item MILK_FLASK = new ItemMilkFlask("milkflask", null);
+    public static final Item COLOR_CORE = new ItemBase("colorcore", null);
+    public static final Item TWOHANDITEMTEST = new TwoHandItemBase("twohanditemtest", null).setCreativeTab(null);
+    public static final Item TELEPORTORB = new ItemTeleportOrb("teleportorb", null);
+    public static final Item MOBKILLER = new ItemMobKill(ToolMaterialRegistry.INSTAKILL, "mobkiller");
+    public static final Item DNASAMPLE = new ItemDNASample("dnasample", null).setCreativeTab(null);
+    public static final Item ENDERAPPLE = new ItemEnderApple(10, 15.0f, false, "enderapple").setAlwaysEdible();
+    public static final Item PEBBLES = new ItemBase("pebble", null);
+    public static final Item FOODBOWL = new ItemBowledFood(10, 15, false, "foodbowl").setMaxStackSize(16);
+    public static final Item MASHEDFOOD = new ItemBowledFood(15, 25, true, "mashedfood").setMaxStackSize(16);
+    public static final Item INKBOTTLE = new ItemInkBottle("inkbottle", null);
+    public static final Item BEDROCK_INGOT = new ItemBase("bedrockingot", null);
+    public static final Item STAFF_WOOD = new ItemStaff(1, 2, Item.ToolMaterial.WOOD, null, "wooden_staff");
+    public static final Item STAFF_STONE = new ItemStaff(1, 2, Item.ToolMaterial.STONE, null, "stone_staff");
+    public static final Item STAFF_IRON = new ItemStaff(1, 2, Item.ToolMaterial.IRON, null, "iron_staff");
+    public static final Item STAFF_GOLD = new ItemStaff(1, 2, Item.ToolMaterial.GOLD, null, "gold_staff");
+    public static final Item STAFF_DIAMOND = new ItemStaff(1, 2, Item.ToolMaterial.DIAMOND, null, "diamond_staff");
+    public static final Item STAFF_ENDGAMIUM = new ItemStaff(1, 2, ToolMaterialRegistry.TOOL_ENDGAMIUM, null, "endgamium_staff");
+    public static final Item EGG_HATCHER = new ItemEggHatcher("egghatcher", CBTab.itemTab);
+    public static final Item POTATO_SINGULARITY = new ItemPotatoSingularity("potatosingularity", CBTab.itemTab);
+    public static final Item TRINKET = new ItemTrinket("trinket", CBTab.itemTab);
+    public static final Item INK_EXTRACTOR = new ItemBase("inkextr", CBTab.itemTab);
     //public static final Item COMPRESSEDSTICK;
 
-    static {
-        ENDGAMIUM_INGOT = TFIItems.registerItem(new ItemBaseEnchanted("endgamiumingot", null));
-        ENDGAMIUM_NUGGET = TFIItems.registerItem(new ItemBaseEnchanted("endgamiumnugget", null));
-        ENDGAMIUM_SWORD = TFIItems.registerItem(new ItemSwordBase(ToolMaterialRegistry.TOOL_ENDGAMIUM, "endgamiumsword", CreativeTabs.COMBAT));
-        ENDGAMIUM_BONE = TFIItems.registerItem(new ItemBaseEnchanted("endgamiumbone", null));
-        POTATO_BONE = TFIItems.registerItem(new ItemPotatoBone("potatobone", null));
-        ITEM_FOOD = TFIItems.registerItem(new ItemFood(20, 20.0f, false, "fooditem"));
-        BEDROCK_BREAKER = TFIItems.registerItem(new ItemBedrockBreaker("bedrockbreaker", null));
-        BEDROCK_OBTAINER = TFIItems.registerItem(new ItemBedrockObtainer("bedrockobtainer", null));
-        BOW_ITEMS = TFIItems.registerItem(new ItemBase("bowitems", null));
-        MILK_FLASK = TFIItems.registerItem(new ItemMilkFlask("milkflask", null));
-        COLOR_CORE = TFIItems.registerItem(new ItemBase("colorcore", null));
-        TWOHANDITEMTEST = TFIItems.registerItem(new TwoHandItemBase("twohanditemtest", null)).setCreativeTab(null);
-        TELEPORTORB = TFIItems.registerItem(new ItemTeleportOrb("teleportorb", null));
-        MOBKILLER = TFIItems.registerItem(new ItemMobKill(ToolMaterialRegistry.INSTAKILL, "mobkiller"));
-        DNASAMPLE = TFIItems.registerItem(new ItemDNASample("dnasample", null)).setCreativeTab(null);
-        ENDERAPPLE = TFIItems.registerItem(new ItemEnderApple(10, 15.0f, false, "enderapple").setAlwaysEdible());
-        PEBBLES = TFIItems.registerItem(new ItemBase("pebble", null));
-        FOODBOWL = TFIItems.registerItem(new ItemBowledFood(10, 15, false, "foodbowl")).setMaxStackSize(16);
-        MASHEDFOOD = TFIItems.registerItem(new ItemBowledFood(15, 25, true, "mashedfood")).setMaxStackSize(16);
-        INKBOTTLE = TFIItems.registerItem(new ItemInkBottle("inkbottle", null)).setCreativeTab(null);
-        BEDROCK_INGOT = TFIItems.registerItem(new ItemBase("bedrockingot", null));
-        STAFF_WOOD = TFIItems.registerItem(new ItemStaff(1, 2, Item.ToolMaterial.WOOD, null, "wooden_staff")).setCreativeTab(TFITab.itemTab);
-        STAFF_STONE = TFIItems.registerItem(new ItemStaff(1, 2, Item.ToolMaterial.STONE, null, "stone_staff")).setCreativeTab(TFITab.itemTab);
-        STAFF_IRON = TFIItems.registerItem(new ItemStaff(1, 2, Item.ToolMaterial.IRON, null, "iron_staff")).setCreativeTab(TFITab.itemTab);
-        STAFF_GOLD = TFIItems.registerItem(new ItemStaff(1, 2, Item.ToolMaterial.GOLD, null, "gold_staff")).setCreativeTab(TFITab.itemTab);
-        STAFF_DIAMOND = TFIItems.registerItem(new ItemStaff(1, 2, Item.ToolMaterial.DIAMOND, null, "diamond_staff")).setCreativeTab(TFITab.itemTab);
-        STAFF_ENDGAMIUM = TFIItems.registerItem(new ItemStaff(1, 2, ToolMaterialRegistry.TOOL_ENDGAMIUM, null, "endgamium_staff")).setCreativeTab(TFITab.itemTab);
-        EGG_HATCHER = TFIItems.registerItem(new ItemEggHatcher("egghatcher", TFITab.itemTab));
-        POTATO_SINGULARITY = TFIItems.registerItem(new ItemPotatoSingularity("potatosingularity", TFITab.itemTab));
-        TRINKET = TFIItems.registerItem(new ItemTrinket("trinket", TFITab.itemTab));
-        INK_EXTRACTOR = TFIItems.registerItem(new ItemBase("inkextr", TFITab.itemTab));
-    }
-
-    public static void renderInit() {
-        ItemRenderer.registerItem(ENDGAMIUM_INGOT);
-        ItemRenderer.registerItem(ENDGAMIUM_NUGGET);
-        ItemRenderer.registerItem(ENDGAMIUM_BONE);
-        ItemRenderer.registerItem(ENDGAMIUM_SWORD);
-        ItemRenderer.registerItem(POTATO_BONE);
-        ItemRenderer.registerItem(ITEM_FOOD);
-        ItemRenderer.registerItem(BEDROCK_BREAKER);
-        ItemRenderer.registerItem(BEDROCK_OBTAINER);
-        ItemRenderer.registerItem(BOW_ITEMS);
-        ItemRenderer.registerItem(MILK_FLASK);
-        ItemRenderer.registerItem(COLOR_CORE);
-        ItemRenderer.registerItem(TWOHANDITEMTEST);
-        ItemRenderer.registerItem(TELEPORTORB);
-        ItemRenderer.registerItem(MOBKILLER);
-        ItemRenderer.registerItem(DNASAMPLE);
-        ItemRenderer.registerItem(ENDERAPPLE);
-        registerItem(ENDERAPPLE, 1);
-        ItemRenderer.registerItem(PEBBLES);
-        ItemRenderer.registerItem(FOODBOWL);
-        ItemRenderer.registerItem(MASHEDFOOD);
-        ItemRenderer.registerItem(BEDROCK_INGOT);
-        ItemRenderer.registerItem(STAFF_WOOD);
-        ItemRenderer.registerItem(STAFF_STONE);
-        ItemRenderer.registerItem(STAFF_IRON);
-        ItemRenderer.registerItem(STAFF_GOLD);
-        ItemRenderer.registerItem(STAFF_DIAMOND);
-        ItemRenderer.registerItem(STAFF_ENDGAMIUM);
-        ItemRenderer.registerItem(EGG_HATCHER);
-        ItemRenderer.registerItem(POTATO_SINGULARITY);
-        ItemRenderer.registerItem(INK_EXTRACTOR);
+    public static void init() {
+        registerItem(ENDGAMIUM_INGOT);
+        registerItem(ENDGAMIUM_NUGGET);
+        registerItem(ENDGAMIUM_BONE);
+        registerItem(ENDGAMIUM_SWORD);
+        registerItem(POTATO_BONE);
+        registerItem(ITEM_FOOD);
+        registerItem(BEDROCK_BREAKER);
+        registerItem(BEDROCK_OBTAINER);
+        registerItem(BOW_ITEMS);
+        registerItem(MILK_FLASK);
+        registerItem(COLOR_CORE);
+        registerItem(TWOHANDITEMTEST);
+        registerItem(TELEPORTORB);
+        registerItem(MOBKILLER);
+        registerItem(DNASAMPLE);
+        registerItem(ENDERAPPLE);
+        registerItem(PEBBLES);
+        registerItem(FOODBOWL);
+        registerItem(MASHEDFOOD);
+        registerItem(INKBOTTLE);
+        registerItem(BEDROCK_INGOT);
+        registerItem(STAFF_WOOD);
+        registerItem(STAFF_STONE);
+        registerItem(STAFF_IRON);
+        registerItem(STAFF_GOLD);
+        registerItem(STAFF_DIAMOND);
+        registerItem(STAFF_ENDGAMIUM);
+        registerItem(EGG_HATCHER);
+        registerItem(POTATO_SINGULARITY);
+        registerItem(TRINKET);
+        registerItem(INK_EXTRACTOR);
     }
 
     public static void renderAltInit() {
-        registerItem(INKBOTTLE, EnumDyeColor.BLACK.getDyeDamage(), "ink_black");
+        /*registerItem(INKBOTTLE, EnumDyeColor.BLACK.getDyeDamage(), "ink_black");
         registerItem(INKBOTTLE, EnumDyeColor.RED.getDyeDamage(), "ink_red");
         registerItem(INKBOTTLE, EnumDyeColor.GREEN.getDyeDamage(), "ink_green");
         registerItem(INKBOTTLE, EnumDyeColor.BROWN.getDyeDamage(), "ink_brown");
@@ -135,25 +114,62 @@ public class ItemRegistry {
         registerItem(INKBOTTLE, EnumDyeColor.LIGHT_BLUE.getDyeDamage(), "ink_light_blue");
         registerItem(INKBOTTLE, EnumDyeColor.MAGENTA.getDyeDamage(), "ink_magenta");
         registerItem(INKBOTTLE, EnumDyeColor.ORANGE.getDyeDamage(), "ink_orange");
-        registerItem(INKBOTTLE, EnumDyeColor.WHITE.getDyeDamage(), "ink_white");
-
-        registerItem(TRINKET, 0, "trinket0");
-        registerItem(TRINKET, 1, "trinket");
-        registerItem(TRINKET, 2, "trinket1");
-        registerItem(TRINKET, 3, "trinket2");
-        registerItem(TRINKET, 4, "portablebeacon");
-    }*/
-
-    public static void init() {
+        registerItem(INKBOTTLE, EnumDyeColor.WHITE.getDyeDamage(), "ink_white");*/
     }
 
-    private static void registerItem(Item item, int meta, String identifier) {
-        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, identifier), "inventory"));
-        LogHelper.info(new ModelResourceLocation(item.getRegistryName(), identifier));
+    public static void registerItem(Item item) {
+        ItemRegistrationHandler.items.add(item);
     }
 
-    private static void registerItem(Item item, int meta) {
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-        LogHelper.info("Registered renderdata for item with registry-name: " + item.getRegistryName());
+    @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
+    public static class ItemRegistrationHandler {
+        public static final Set<Item> ITEM_LIST = new HashSet<>();
+        private static final Set<Item> registeredItemList = new HashSet<>();
+        public static final List<Item> items = new ArrayList<>();
+
+        @SubscribeEvent
+        public static void registerItems(RegistryEvent.Register<Item> event) {
+            IForgeRegistry<Item> reg = event.getRegistry();
+            for (Item item : items) {
+                reg.register(item);
+                ITEM_LIST.add(item);
+            }
+        }
+
+        @SubscribeEvent
+        public static void registerModels(ModelRegistryEvent event) {
+            for (Item item : ITEM_LIST) {
+                if (!registeredItemList.contains(item)) {
+                    registerItemModel(item);
+                }
+            }
+
+            for (int i = 0; i < EnumDyeColor.values().length; i++) {
+                registerItemModel(ItemRegistry.INKBOTTLE, i, new ModelResourceLocation(Reference.MOD_ID + ":ink_" + EnumDyeColor.byDyeDamage(i).getName(), "inventory"));
+            }
+
+            registerItemModel(ItemRegistry.ENDERAPPLE, 0, "enderapple");
+            registerItemModel(ItemRegistry.ENDERAPPLE, 1, "enderapple");
+            registerItemModel(ItemRegistry.TRINKET, 0, "trinket0");
+            registerItemModel(ItemRegistry.TRINKET, 1, "trinket");
+            registerItemModel(ItemRegistry.TRINKET, 2, "trinket1");
+            registerItemModel(ItemRegistry.TRINKET, 3, "trinket2");
+            registerItemModel(ItemRegistry.TRINKET, 4, "portablebeacon");
+        }
+
+        private static void registerItemModel(Item item) {
+            String registryName = item.getRegistryName().toString();
+            ModelResourceLocation location = new ModelResourceLocation(registryName, "inventory");
+            registerItemModel(item, 0, location);
+        }
+
+        private static void registerItemModel(Item item, int meta, String name) {
+            registerItemModel(item, meta, new ModelResourceLocation(Reference.MOD_ID + ":" + name, "inventory"));
+        }
+
+        private static void registerItemModel(Item item, int meta, ModelResourceLocation location) {
+            ModelLoader.setCustomModelResourceLocation(item, meta, location);
+            registeredItemList.add(item);
+        }
     }
 }

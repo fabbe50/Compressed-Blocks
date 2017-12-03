@@ -30,7 +30,6 @@ public class ItemBedrockObtainer extends ItemBaseEnchanted {
         durability = setDurability();
     }
 
-    /*
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!worldIn.isRemote) {
@@ -50,7 +49,7 @@ public class ItemBedrockObtainer extends ItemBaseEnchanted {
             }
         }
         return EnumActionResult.FAIL;
-    }*/
+    }
 
     private int setDurability() {
         return 16;

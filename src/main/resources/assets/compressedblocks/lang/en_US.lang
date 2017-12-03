@@ -251,3 +251,5 @@ container.furnacecompr=Compressed Furnace
 container.superShulkerBox=Compressed Shulker Box
 #CreativeTabs
 itemGroup.compressedblocks.compressedblocks=Compresssed Blocks
+itemGroup.compressedblocks.blocks=CB2: Blocks
+itemGroup.compressedblocks.items=CB2: Items

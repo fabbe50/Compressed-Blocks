@@ -71,7 +71,7 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
 
     private void addEffectsToPlayers() {
         if (this.isComplete && this.levels > 0 && !this.world.isRemote && this.primaryEffect != null) {
-            double d0 = (double) (this.levels * 10 + 10);
+            double d0 = (double) (this.levels * 20 + 20);
             int i = 0;
 
             if (this.levels >= 4 && this.primaryEffect == this.secondaryEffect) {
@@ -316,7 +316,7 @@ public class TileEntityBeaconXray extends TileEntityLockable implements ITickabl
         if (this.world.getTileEntity(this.pos) != this) {
             return false;
         } else {
-            return player.getDistanceSq((double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D, (double) this.pos.getZ() + 0.5D) <= 64.0D;
+            return player.getDistanceSq((double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D, (double) this.pos.getZ() + 0.5D) <= 128.0D;
         }
     }
 

@@ -26,7 +26,7 @@ public class LogHelper {
 	 */
 
     private static void log(Level logLevel, Object object) {
-        FMLLog.log(Reference.MOD_NAME, logLevel, "", object);
+        FMLLog.log(Reference.MOD_NAME, logLevel, String.valueOf(object), "");
     }
 
     public static void all(Object object) {log(Level.ALL, object);}

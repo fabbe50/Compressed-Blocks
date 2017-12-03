@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.entity.RenderShulker;
+import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
@@ -36,7 +37,7 @@ public class TileEntitySuperShulkerBoxRenderer extends TileEntitySpecialRenderer
         EnumFacing enumfacing = EnumFacing.UP;
 
         if (box == null)
-            return;
+            box = new TileEntitySuperShulkerBox();
 
         if (box.hasWorld()) {
             IBlockState iblockstate = box.getWorld().getBlockState(box.getPos());
@@ -47,17 +48,17 @@ public class TileEntitySuperShulkerBoxRenderer extends TileEntitySpecialRenderer
         }
 
         GlStateManager.enableDepth();
-        GlStateManager.depthFunc(GL11.GL_LEQUAL);
+        GlStateManager.depthFunc(515);
         GlStateManager.depthMask(true);
         GlStateManager.disableCull();
 
         if (destroyStage >= 0) {
             Render.bindTexture(DESTROY_STAGES[destroyStage]);
-            GlStateManager.matrixMode(GL11.GL_TEXTURE);
+            GlStateManager.matrixMode(5890);
             GlStateManager.pushMatrix();
             GlStateManager.scale(4.0F, 4.0F, 1.0F);
             GlStateManager.translate(0.0625F, 0.0625F, 0.0625F);
-            GlStateManager.matrixMode(GL11.GL_MODELVIEW);
+            GlStateManager.matrixMode(5888);
         }
         else {
             Render.bindTexture(RenderShulker.SHULKER_ENDERGOLEM_TEXTURE[box.getColor().getMetadata()]);
@@ -114,9 +115,9 @@ public class TileEntitySuperShulkerBoxRenderer extends TileEntitySpecialRenderer
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 
         if (destroyStage >= 0) {
-            GlStateManager.matrixMode(GL11.GL_TEXTURE);
+            GlStateManager.matrixMode(5890);
             GlStateManager.popMatrix();
-            GlStateManager.matrixMode(GL11.GL_MODELVIEW);
+            GlStateManager.matrixMode(5888);
         }
     }
 

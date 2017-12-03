@@ -46,43 +46,60 @@ public class BlockMiningExplosives extends BlockBase {
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!worldIn.isRemote) {
-            List<Block> blocks = new ArrayList<>();
-            int xx = pos.getX() % 16;
-            int zz = pos.getZ() % 16;
-            int x2 = pos.getX() - xx;
-            int z2 = 0;
-            if (pos.getZ() % 16 == 0) {
+            int xx = (pos.getX() % 16);
+            int zz = (pos.getZ() % 16);
+            int x2;
+            int z2;
+
+            if (zz == 0 && pos.getZ() < 0)
+                z2 = pos.getZ() - zz + 16;
+            else
                 z2 = pos.getZ() - zz;
-            } else {
-                z2 = pos.getZ() - zz - 16;
-            }
+
+            if (xx == 0 && pos.getX() < 0)
+                x2 = pos.getX() - xx + 16;
+            else
+                x2 = pos.getX() - xx;
+
+            if (z2 < 0)
+                z2--;
+            if (x2 < 0)
+                x2--;
 
             BlockPos bPos = new BlockPos(x2, 0, z2);
+            LogHelper.info(bPos);
+
+            List<Block> ores = getOres();
+            List<Block> collectedOres = new ArrayList<>();
 
             for (int x = 0; x < 16; x++) {
                 for (int y = 0; y < 255; y++) {
                     for (int z = 0; z < 16; z++) {
-                        blocks.add(worldIn.getBlockState(bPos).getBlock());
                         if (worldIn.getBlockState(bPos).getBlock() != Blocks.BEDROCK && worldIn.getBlockState(bPos).getBlock() != BlockRegistry.MININGEXPLOSIVES) {
-                            worldIn.setBlockState(bPos, Blocks.AIR.getDefaultState());
+                            if (ores.contains(worldIn.getBlockState(bPos).getBlock())) {
+                                collectedOres.add(worldIn.getBlockState(bPos).getBlock());
+                                worldIn.setBlockState(bPos, Blocks.AIR.getDefaultState());
+                                worldIn.setBlockState(bPos, Blocks.STONE.getDefaultState());
+                            }
                         }
-                        bPos = new BlockPos(x2 + x, y, z2 + z);
+                        if (x2 > 0 && z2 > 0)
+                            bPos = new BlockPos(x2 + x, y, z2 + z);
+                        else if (x2 > 0 && z2 < 0)
+                            bPos = new BlockPos(x2 + x, y, z2 - z);
+                        else if (x2 < 0 && z2 > 0)
+                            bPos = new BlockPos(x2 - x, y, z2 + z);
+                        else if (x2 < 0 && z2 < 0)
+                            bPos = new BlockPos(x2 - x, y, z2 - z);
                     }
                 }
             }
-            List<Block> ores = getOres(worldIn, blocks);
+
             List<Block> oresAfterChested = new ArrayList<>();
             BlockPos chestPos = new BlockPos(pos.getX(), pos.getY() + 1, pos.getZ());
             ItemStack stack = null;
             worldIn.setBlockState(chestPos, Configs.parseChest().getDefaultState());
 
-            for (int x3 = -1; x3 < 2; x3++) {
-                for (int z3 = -1; z3 < 2; z3++) {
-                    worldIn.setBlockState(new BlockPos(pos.getX() + x3, pos.getY() - 1, pos.getZ() + z3), Blocks.GRASS.getDefaultState());
-                }
-            }
-
-            for (Block ore : ores) {
+            for (Block ore : collectedOres) {
                 try {
                     if (worldIn.getBlockState(chestPos).getBlock() instanceof BlockChest) {
                         IInventory inventory = getInventoryAtPosition(worldIn, pos.getX(), pos.getY() + 1, pos.getZ());
@@ -131,42 +148,19 @@ public class BlockMiningExplosives extends BlockBase {
         return itemStack;
     }
 
-    private List<Block> getOres(World world, List<Block> blocks) {
+    private List<Block> getOres() {
         List<Block> ores = new ArrayList<>();
 
-        for (Block block : blocks) {
-            if (block == Blocks.IRON_ORE) {
-                ores.add(Blocks.IRON_ORE);
-            } else if (block == Blocks.GOLD_ORE) {
-                ores.add(Blocks.GOLD_ORE);
-            } else if (block == Blocks.DIAMOND_ORE) {
-                ores.add(Blocks.DIAMOND_ORE);
-            } else if (block == Blocks.LAPIS_ORE) {
-                ores.add(Blocks.LAPIS_ORE);
-            } else if (block == Blocks.EMERALD_ORE) {
-                ores.add(Blocks.EMERALD_ORE);
-            } else if (block == Blocks.COAL_ORE) {
-                ores.add(Blocks.COAL_ORE);
-            } /*else if (block instanceof FuseRock) {
-                switch (world.provider.getDimension()) {
-                    case -1:
-                        ores.add(com.thefifthidiot.tficore.core.registry.BlockRegistry.fuseRockNether);
-                        break;
-                    case 0:
-                        ores.add(com.thefifthidiot.tficore.core.registry.BlockRegistry.fuseRock);
-                        break;
-                    case 1:
-                        com.thefifthidiot.tficore.core.registry.BlockRegistry.fuseRockEnd;
-                        break;
-                }
-            }*/ else if (OreDictionary.getOres("oreCopper").contains(new ItemStack(Item.getItemFromBlock(block)))) {
-                ores.add(Block.getBlockFromItem(OreDictionary.getOres("oreCopper").get(0).getItem()));
-            } else if (OreDictionary.getOres("oreTin").contains(new ItemStack(Item.getItemFromBlock(block)))) {
-                ores.add(Block.getBlockFromItem(OreDictionary.getOres("oreTin").get(0).getItem()));
-            } else if (OreDictionary.getOres("oreSilver").contains(new ItemStack(Item.getItemFromBlock(block)))) {
-                ores.add(Block.getBlockFromItem(OreDictionary.getOres("oreSilver").get(0).getItem()));
-            }
-        }
+        ores.add(Blocks.COAL_ORE);
+        ores.add(Blocks.IRON_ORE);
+        ores.add(Blocks.GOLD_ORE);
+        ores.add(Blocks.REDSTONE_ORE);
+        ores.add(Blocks.LIT_REDSTONE_ORE);
+        ores.add(Blocks.LAPIS_ORE);
+        ores.add(Blocks.DIAMOND_ORE);
+        ores.add(Blocks.EMERALD_ORE);
+        ores.add(Blocks.QUARTZ_ORE);
+
         return ores;
     }
 
