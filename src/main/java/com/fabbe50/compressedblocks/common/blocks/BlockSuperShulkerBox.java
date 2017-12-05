@@ -3,14 +3,17 @@ package com.fabbe50.compressedblocks.common.blocks;
 import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntitySuperShulkerBox;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.EnumPushReaction;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
@@ -43,7 +46,7 @@ import java.util.List;
  * Created by fabbe50 on 19/02/2017.
  */
 @SuppressWarnings("deprecation")
-public class BlockSuperShulkerBox extends BlockContainer {
+public class BlockSuperShulkerBox extends BlockContainer implements ITileEntityProvider {
     public static final PropertyEnum<EnumFacing> FACING = PropertyDirection.create("facing");
     private final EnumDyeColor color;
 
@@ -62,31 +65,38 @@ public class BlockSuperShulkerBox extends BlockContainer {
         block.setUnlocalizedName(block.getRegistryName().toString());
     }
 
+    @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
         return new TileEntitySuperShulkerBox(this.color);
     }
 
+    @Override
     public boolean isOpaqueCube(IBlockState state) {
         return false;
     }
 
+    @Override
     public boolean causesSuffocation(IBlockState state) {
         return true;
     }
 
+    @Override
     public boolean isFullCube(IBlockState state) {
         return false;
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public boolean hasCustomBreakingProgress(IBlockState state) {
         return true;
     }
 
+    @Override
     public EnumBlockRenderType getRenderType(IBlockState state) {
         return EnumBlockRenderType.ENTITYBLOCK_ANIMATED;
     }
 
+    @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (worldIn.isRemote) {
             return true;
@@ -102,7 +112,7 @@ public class BlockSuperShulkerBox extends BlockContainer {
                 boolean flag;
 
                 if (((TileEntitySuperShulkerBox)tileentity).getAnimationStatus() == TileEntitySuperShulkerBox.AnimationStatus.CLOSED) {
-                    AxisAlignedBB axisalignedbb = FULL_BLOCK_AABB.contract((double)(0.5F * (float)enumfacing.getFrontOffsetX()), (double)(0.5F * (float)enumfacing.getFrontOffsetY()), (double)(0.5F * (float)enumfacing.getFrontOffsetZ())).contract((double)enumfacing.getFrontOffsetX(), (double)enumfacing.getFrontOffsetY(), (double)enumfacing.getFrontOffsetZ());
+                    AxisAlignedBB axisalignedbb = FULL_BLOCK_AABB.expand((double)(0.5F * (float)enumfacing.getFrontOffsetX()), (double)(0.5F * (float)enumfacing.getFrontOffsetY()), (double)(0.5F * (float)enumfacing.getFrontOffsetZ())).contract((double)enumfacing.getFrontOffsetX(), (double)enumfacing.getFrontOffsetY(), (double)enumfacing.getFrontOffsetZ());
                     flag = !worldIn.collidesWithAnyBlock(axisalignedbb.offset(pos.offset(enumfacing)));
                 }
                 else {
@@ -122,33 +132,42 @@ public class BlockSuperShulkerBox extends BlockContainer {
         }
     }
 
+    @Override
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
         return this.getDefaultState().withProperty(FACING, facing);
     }
 
+    @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, new IProperty[] {FACING});
     }
 
+    @Override
     public int getMetaFromState(IBlockState state) {
         return ((EnumFacing)state.getValue(FACING)).getIndex();
     }
 
+    @Override
     @SuppressWarnings("deprecation")
     public IBlockState getStateFromMeta(int meta) {
         EnumFacing enumfacing = EnumFacing.getFront(meta);
         return this.getDefaultState().withProperty(FACING, enumfacing);
     }
 
+    @Override
     public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-        TileEntitySuperShulkerBox tileentitysupershulkerbox = (TileEntitySuperShulkerBox)worldIn.getTileEntity(pos);
-        tileentitysupershulkerbox.setDestroyedByCreativePlayer(player.capabilities.isCreativeMode);
-        tileentitysupershulkerbox.fillWithLoot(player);
+        if (worldIn.getTileEntity(pos) instanceof TileEntitySuperShulkerBox) {
+            TileEntitySuperShulkerBox tileentitysupershulkerbox = (TileEntitySuperShulkerBox) worldIn.getTileEntity(pos);
+            tileentitysupershulkerbox.setDestroyedByCreativePlayer(player.capabilities.isCreativeMode);
+            tileentitysupershulkerbox.fillWithLoot(player);
+        }
     }
 
+    @Override
     public void dropBlockAsItemWithChance(World worldIn, BlockPos pos, IBlockState state, float chance, int fortune) {
     }
 
+    @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
         if (stack.hasDisplayName()) {
             TileEntity tileentity = worldIn.getTileEntity(pos);
@@ -157,8 +176,24 @@ public class BlockSuperShulkerBox extends BlockContainer {
                 ((TileEntitySuperShulkerBox)tileentity).setCustomName(stack.getDisplayName());
             }
         }
+        if (stack.hasTagCompound()) {
+            TileEntity box = worldIn.getTileEntity(pos);
+            if (stack.hasTagCompound()) {
+                NBTTagCompound tag = stack.getTagCompound();
+                box.writeToNBT(tag);
+                if (stack.hasDisplayName()) {
+                    tag.setString("name", stack.getDisplayName());
+                }
+                box.readFromNBT(tag);
+                box.validate();
+                worldIn.setTileEntity(pos, box);
+            }
+        }
     }
 
+
+
+    @Override
     public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
         TileEntity tileentity = worldIn.getTileEntity(pos);
 
@@ -183,6 +218,7 @@ public class BlockSuperShulkerBox extends BlockContainer {
         super.breakBlock(worldIn, pos, state);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
         super.addInformation(stack, player, tooltip, advanced);
@@ -219,23 +255,28 @@ public class BlockSuperShulkerBox extends BlockContainer {
         }
     }
 
+    @Override
     public EnumPushReaction getMobilityFlag(IBlockState state) {
         return EnumPushReaction.DESTROY;
     }
 
+    @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
         TileEntity tileentity = source.getTileEntity(pos);
         return tileentity instanceof TileEntitySuperShulkerBox ? ((TileEntitySuperShulkerBox)tileentity).getBoundingBox(state) : FULL_BLOCK_AABB;
     }
 
+    @Override
     public boolean hasComparatorInputOverride(IBlockState state) {
         return true;
     }
 
+    @Override
     public int getComparatorInputOverride(IBlockState blockState, World worldIn, BlockPos pos) {
         return Container.calcRedstoneFromInventory((IInventory)worldIn.getTileEntity(pos));
     }
 
+    @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
         ItemStack itemstack = super.getItem(worldIn, pos, state);
         TileEntitySuperShulkerBox tileentityshulkerbox = (TileEntitySuperShulkerBox)worldIn.getTileEntity(pos);
@@ -300,12 +341,22 @@ public class BlockSuperShulkerBox extends BlockContainer {
         return blockIn instanceof BlockSuperShulkerBox ? ((BlockSuperShulkerBox)blockIn).getColor() : EnumDyeColor.PURPLE;
     }
 
+    @Override
     public IBlockState withRotation(IBlockState state, Rotation rot) {
         return state.withProperty(FACING, rot.rotate((EnumFacing)state.getValue(FACING)));
     }
 
+    @Override
     public IBlockState withMirror(IBlockState state, Mirror mirrorIn) {
         return state.withRotation(mirrorIn.toRotation((EnumFacing)state.getValue(FACING)));
+    }
+
+    @Override
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face) {
+        state = this.getActualState(state, worldIn, pos);
+        EnumFacing enumfacing = (EnumFacing)state.getValue(FACING);
+        TileEntitySuperShulkerBox.AnimationStatus TileEntitySuperShulkerBox$animationstatus = ((TileEntitySuperShulkerBox)worldIn.getTileEntity(pos)).getAnimationStatus();
+        return TileEntitySuperShulkerBox$animationstatus != TileEntitySuperShulkerBox.AnimationStatus.CLOSED && (TileEntitySuperShulkerBox$animationstatus != TileEntitySuperShulkerBox.AnimationStatus.OPENED || enumfacing != face.getOpposite() && enumfacing != face) ? BlockFaceShape.UNDEFINED : BlockFaceShape.SOLID;
     }
 
     @SideOnly(Side.CLIENT)

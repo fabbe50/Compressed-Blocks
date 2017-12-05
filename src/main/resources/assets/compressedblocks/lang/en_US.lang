@@ -34,12 +34,16 @@ item.compressedblocks:minibeacon.name=Portable Beacon
 item.compressedblocks:inkextr.name=Ink Extractor
 
 #Potions
-potion.effect.magnetization=Potion of Magnetization
-splash_potion.effect.magnetization=Splash Potion of Magnetization
-lingering_potion.effect.magnetization=Lingering Potion of Magnetization
-potion.effect.flight=Potion of Flight
-splash_potion.effect.flight=Splash Potion of Flight
-lingering_potion.effect.flight=Lingering Potion of Flight
+potion.effect.compressedblocks.magnet=Potion of Magnetization
+splash_potion.effect.compressedblocks.magnet=Splash Potion of Magnetization
+lingering_potion.effect.compressedblocks.magnet=Lingering Potion of Magnetization
+potion.effect.compressedblocks.flight=Potion of Flight
+splash_potion.effect.compressedblocks.flight=Splash Potion of Flight
+lingering_potion.effect.compressedblocks.flight=Lingering Potion of Flight
+
+#PotionEffects
+effect.compressedblocks.magnet=Magnetization
+effect.compressedblocks.flight=Flight
 
 #############################################################################
 #                                Meta Items                                 #
@@ -87,25 +91,28 @@ tile.compressedblocks:endgamiumblockc.name=Compressed Endgamium Block
 tile.compressedblocks:nether_stone.name=Nether Stone
 tile.compressedblocks:netherstarblock.name=Nether Star Block
 tile.compressedblocks:color_block.name=Color Block
-tile.compressedblocks:white_super_shulker_box.name=White Compressed Shulker Box [WIP]
-tile.compressedblocks:orange_super_shulker_box.name=Orange Compressed Shulker Box [WIP]
-tile.compressedblocks:magenta_super_shulker_box.name=Magenta Compressed Shulker Box [WIP]
-tile.compressedblocks:light_blue_super_shulker_box.name=Light Blue Compressed Shulker Box [WIP]
-tile.compressedblocks:yellow_super_shulker_box.name=Yellow Compressed Shulker Box [WIP]
-tile.compressedblocks:lime_super_shulker_box.name=Lime Compressed Shulker Box [WIP]
-tile.compressedblocks:pink_super_shulker_box.name=Pink Compressed Shulker Box [WIP]
-tile.compressedblocks:gray_super_shulker_box.name=Gray Compressed Shulker Box [WIP]
-tile.compressedblocks:silver_super_shulker_box.name=Silver Compressed Shulker Box [WIP]
-tile.compressedblocks:cyan_super_shulker_box.name=Cyan Compressed Shulker Box [WIP]
-tile.compressedblocks:purple_super_shulker_box.name=Purple Compressed Shulker Box [WIP]
-tile.compressedblocks:blue_super_shulker_box.name=Blue Compressed Shulker Box [WIP]
-tile.compressedblocks:brown_super_shulker_box.name=Brown Compressed Shulker Box [WIP]
-tile.compressedblocks:green_super_shulker_box.name=Green Compressed Shulker Box [WIP]
-tile.compressedblocks:red_super_shulker_box.name=Red Compressed Shulker Box [WIP]
-tile.compressedblocks:black_super_shulker_box.name=Black Compressed Shulker Box [WIP]
+tile.compressedblocks:white_super_shulker_box.name=White Compressed Shulker Box
+tile.compressedblocks:orange_super_shulker_box.name=Orange Compressed Shulker Box
+tile.compressedblocks:magenta_super_shulker_box.name=Magenta Compressed Shulker Box
+tile.compressedblocks:light_blue_super_shulker_box.name=Light Blue Compressed Shulker Box
+tile.compressedblocks:yellow_super_shulker_box.name=Yellow Compressed Shulker Box
+tile.compressedblocks:lime_super_shulker_box.name=Lime Compressed Shulker Box
+tile.compressedblocks:pink_super_shulker_box.name=Pink Compressed Shulker Box
+tile.compressedblocks:gray_super_shulker_box.name=Gray Compressed Shulker Box
+tile.compressedblocks:silver_super_shulker_box.name=Silver Compressed Shulker Box
+tile.compressedblocks:cyan_super_shulker_box.name=Cyan Compressed Shulker Box
+tile.compressedblocks:purple_super_shulker_box.name=Purple Compressed Shulker Box
+tile.compressedblocks:blue_super_shulker_box.name=Blue Compressed Shulker Box
+tile.compressedblocks:brown_super_shulker_box.name=Brown Compressed Shulker Box
+tile.compressedblocks:green_super_shulker_box.name=Green Compressed Shulker Box
+tile.compressedblocks:red_super_shulker_box.name=Red Compressed Shulker Box
+tile.compressedblocks:black_super_shulker_box.name=Black Compressed Shulker Box
 tile.compressedblocks:singlecompressedtnt.name=Single Compressed TNT
 tile.compressedblocks:doublecompressedtnt.name=Double Compressed TNT
 tile.compressedblocks:triplecompressedtnt.name=Triple Compressed TNT
+tile.compressedblocks:fuserock.name=Fuserock
+tile.compressedblocks:fuserocknether.name=Fuserock
+tile.compressedblocks:fuserockend.name=Fuserock
 tile.compressedblocks:miningexplosives.name=Chunk Miner
 tile.compressedblocks:enderblock.name=Ender Pearl Block
 tile.compressedblocks:light_block.name=Adjustable Light [WIP]

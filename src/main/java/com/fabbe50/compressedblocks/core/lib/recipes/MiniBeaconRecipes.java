@@ -25,12 +25,12 @@ import java.util.stream.Collectors;
 /**
  * Created by fabbe on 17/11/2017 - 10:14 PM.
  */
-public class MiniBeaconRecipes implements IRecipe {
+public class MiniBeaconRecipes extends net.minecraftforge.registries.IForgeRegistryEntry.Impl<IRecipe> implements IRecipe {
     public static List<Item> acceptedItems = new ArrayList<>();
 
     @Override
     public boolean matches(InventoryCrafting inv, World worldIn) {
-        /*int i = 0;
+        int i = 0;
         ItemStack trinket = ItemStack.EMPTY;
         ItemStack potion = ItemStack.EMPTY;
 
@@ -73,12 +73,11 @@ public class MiniBeaconRecipes implements IRecipe {
             }
         }
 
-        return !trinket.isEmpty() && trinket.hasTagCompound() && i > 0;*/
-        return false;
+        return !trinket.isEmpty() && trinket.hasTagCompound() && i > 0;
     }
 
     @Override
-    public ItemStack getCraftingResult(InventoryCrafting inv) {/*
+    public ItemStack getCraftingResult(InventoryCrafting inv) {
         int i = 0;
         ItemStack trinket = ItemStack.EMPTY;
         ItemStack potion = ItemStack.EMPTY;
@@ -132,9 +131,7 @@ public class MiniBeaconRecipes implements IRecipe {
             return itemStack2;
         } else {
             return ItemStack.EMPTY;
-        }*/
-
-        return null;
+        }
     }
 
     @Override
@@ -165,33 +162,7 @@ public class MiniBeaconRecipes implements IRecipe {
     }
 
     @Override
-    public NonNullList<Ingredient> getIngredients() {
-        return null;
-    }
-
-    @Override
     public boolean isDynamic() {
-        return false;
-    }
-
-    @Override
-    public String getGroup() {
-        return null;
-    }
-
-    @Override
-    public IRecipe setRegistryName(ResourceLocation name) {
-        return null;
-    }
-
-    @Nullable
-    @Override
-    public ResourceLocation getRegistryName() {
-        return null;
-    }
-
-    @Override
-    public Class<IRecipe> getRegistryType() {
-        return null;
+        return true;
     }
 }

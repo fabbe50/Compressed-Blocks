@@ -38,7 +38,7 @@ public class ItemTrinket extends ItemBase {
         if (!worldIn.isRemote && worldIn.getTotalWorldTime() % 80L == 0L) {
             if (entityIn instanceof EntityPlayer && stack.getMetadata() == 4) {
                 for (PotionEffect e : getPotionFromItem(stack)) {
-                    ((EntityPlayer) entityIn).addPotionEffect(new PotionEffect(e.getPotion(), 180, e.getAmplifier(), false, false));
+                    ((EntityPlayer) entityIn).addPotionEffect(new PotionEffect(e.getPotion(), 340, e.getAmplifier(), false, false));
                 }
             }
         }
@@ -60,11 +60,13 @@ public class ItemTrinket extends ItemBase {
 
     @Override
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
-        subItems.add(new ItemStack(this, 1, 0));
-        subItems.add(new ItemStack(this, 1, 1));
-        subItems.add(new ItemStack(this, 1, 2));
-        subItems.add(new ItemStack(this, 1, 3));
-        subItems.add(new ItemStack(this, 1, 4)); //Portable Beacon
+        if (this.isInCreativeTab(tab)) {
+            subItems.add(new ItemStack(this, 1, 0));
+            subItems.add(new ItemStack(this, 1, 1));
+            subItems.add(new ItemStack(this, 1, 2));
+            subItems.add(new ItemStack(this, 1, 3));
+            subItems.add(new ItemStack(this, 1, 4)); //Portable Beacon
+        }
     }
 
     @Override

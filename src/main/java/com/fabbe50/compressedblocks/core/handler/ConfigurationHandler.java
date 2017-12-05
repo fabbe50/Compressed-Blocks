@@ -27,7 +27,7 @@ public class ConfigurationHandler {
     public static ConfigCategory vanillaTweaks;
 
     public static void load(FMLPreInitializationEvent event) {
-        configFile = new Configuration(event.getSuggestedConfigurationFile(), "Alpha4", false);
+        configFile = new Configuration(event.getSuggestedConfigurationFile(), "Alpha5", false);
 
         MinecraftForge.EVENT_BUS.register(configuration);
 
@@ -68,6 +68,11 @@ public class ConfigurationHandler {
             prop = configFile.get(cat, "Compressed TNT Spread", Configs.compressedTNTSpread);
             prop.setComment("Should the TNT spawned from compressed TNT spread out?");
             Configs.compressedTNTSpread = prop.getBoolean();
+            propOrder.add(prop.getName());
+
+            prop = configFile.get(cat, "Fuserock Strength", Configs.fuseRockStrength);
+            prop.setComment("Strength the fuserock explodes with. [TNT is 4, default=6]");
+            Configs.fuseRockStrength = prop.getInt();
             propOrder.add(prop.getName());
         }
 

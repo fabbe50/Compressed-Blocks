@@ -10,7 +10,7 @@ import net.minecraft.item.Item;
 public class ItemBase extends Item {
     public ItemBase(String itemName, CreativeTabs tab) {
         setItemName(this, itemName);
-        setCreativeTab(tab != null ? tab : CBTab.itemTab);
+        this.setCreativeTab(tab);
     }
 
     public static void setItemName(Item item, String itemName) {

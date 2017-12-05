@@ -31,6 +31,13 @@ public class TileEntitySuperShulkerBoxRenderer extends TileEntitySpecialRenderer
     @Override
     public void render(TileEntitySuperShulkerBox te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
         renderShulker(te, x, y, z, partialTicks, destroyStage);
+
+        GlStateManager.pushMatrix();
+        {
+            GlStateManager.translate(0, 0, 0);
+            super.render(te, x, y, z, partialTicks, destroyStage, alpha);
+        }
+        GlStateManager.popMatrix();
     }
 
     public static void renderShulker(TileEntitySuperShulkerBox box, double x, double y, double z, float partialTicks, int destroyStage) {

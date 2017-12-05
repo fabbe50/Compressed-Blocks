@@ -13,6 +13,8 @@ import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -93,22 +95,54 @@ public class BlockFusionPedestal extends BlockBase {
                 List<ItemStack> items = entities.stream().map(EntityItem::getItem).collect(Collectors.toList());
 
                 for(EndgameRecipes recipes : ModRegistry.endgameRecipes) {
-                    if (CraftingHelper.compareItemsFromListedStacks(items, recipes.recipeItems)) {
-                        EntityItem outputItem = new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5);
-                        outputItem.setItem(recipes.getRecipeOutput());
-                        outputItem.setVelocity(0, 0, 0);
-                        worldIn.spawnEntity(outputItem);
-                        worldIn.addWeatherEffect(new EntityLightningBolt(worldIn, pos.getX(), pos.getY(), pos.getZ(), true));
-                        worldIn.addWeatherEffect(new EntityLightningBolt(worldIn, pos.getX(), pos.getY(), pos.getZ(), true));
-                        worldIn.addWeatherEffect(new EntityLightningBolt(worldIn, pos.getX(), pos.getY(), pos.getZ(), true));
-                        worldIn.addWeatherEffect(new EntityLightningBolt(worldIn, pos.getX(), pos.getY(), pos.getZ(), true));
-                        worldIn.spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, pos.getX(), pos.getY() + 1, pos.getZ(), 0, 0, 0);
-                        entities.forEach(EntityItem::setDead);
-                        return true;
+                    if (CraftingHelper.compareItemsFromListedStacks(items, recipes.recipeItems) || Block.getBlockFromItem(recipes.getRecipeOutput().getItem()) instanceof BlockSuperShulkerBox) {
+                        if (Block.getBlockFromItem(recipes.getRecipeOutput().getItem()) instanceof BlockSuperShulkerBox) {
+                            EntityItem outputItem = new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5);
+                            ItemStack output = recipes.getRecipeOutput();
+                            NBTTagCompound compound = items.get(0).getTagCompound();
+                            output.setTagCompound(compound);
+                            outputItem.setItem(output);
+                            outputItem.setVelocity(0, 0, 0);
+                            worldIn.spawnEntity(outputItem);
+                            doEffects(worldIn, pos);
+                            entities.forEach(EntityItem::setDead);
+                            return true;
+                        } else {
+                            EntityItem outputItem = new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5);
+                            outputItem.setItem(recipes.getRecipeOutput());
+                            outputItem.setVelocity(0, 0, 0);
+                            worldIn.spawnEntity(outputItem);
+                            doEffects(worldIn, pos);
+                            entities.forEach(EntityItem::setDead);
+                            return true;
+                        }
                     }
                 }
             }
         }
+        if (worldIn.isRemote) {
+            AxisAlignedBB checkingBounds = new AxisAlignedBB(pos.getX(), pos.getY() + 0.75, pos.getZ(), pos.getX() + 0.9375, pos.getY() + 1.5, pos.getZ() + 0.9375);
+            if (!worldIn.getEntitiesWithinAABB(EntityItem.class, checkingBounds).isEmpty()) {
+                List<EntityItem> entities = worldIn.getEntitiesWithinAABB(EntityItem.class, checkingBounds);
+                List<ItemStack> items = entities.stream().map(EntityItem::getItem).collect(Collectors.toList());
+
+                for (EndgameRecipes recipes : ModRegistry.endgameRecipes)
+                    if (CraftingHelper.compareItemsFromListedStacks(items, recipes.recipeItems)) {
+                        doEffects(worldIn, pos);
+                        return true;
+                    }
+            }
+        }
         return false;
+    }
+
+    private void doEffects(World worldIn, BlockPos pos) {
+        worldIn.addWeatherEffect(new EntityLightningBolt(worldIn, pos.getX(), pos.getY(), pos.getZ(), true));
+        worldIn.addWeatherEffect(new EntityLightningBolt(worldIn, pos.getX(), pos.getY(), pos.getZ(), true));
+        worldIn.addWeatherEffect(new EntityLightningBolt(worldIn, pos.getX(), pos.getY(), pos.getZ(), true));
+        worldIn.addWeatherEffect(new EntityLightningBolt(worldIn, pos.getX(), pos.getY(), pos.getZ(), true));
+        if (worldIn.isRemote) {
+            worldIn.spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, pos.getX(), pos.getY() + 1, pos.getZ(), 0, 0, 0);
+        }
     }
 }

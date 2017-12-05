@@ -22,6 +22,8 @@ public class Configs {
     public static boolean compressedTNTSpread = true;
     public static String chestToFill = "minecraft:chest";
 
+    public static int fuseRockStrength = 6;
+
     //Vanilla Hooks
     public static boolean vanillaHooks = true;
     public static boolean stackSizes = true;

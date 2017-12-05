@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "explode=true": { "model": "compressedblocks:fuserockend" },
+        "explode=false": { "model": "compressedblocks:fuserockend" }
+    }
+}

@@ -48,6 +48,9 @@ public class BlockRegistry {
     public static final Block SINGLECOMPRESSSEDTNT = new BlockCompressedTNT(Material.TNT, MapColor.RED, "singlecompressedtnt", 0.7f, 0.2f, CBTab.compressedBlocksTab);
     public static final Block DOUBLECOMPRESSSEDTNT = new BlockCompressedTNT(Material.TNT, MapColor.RED, "doublecompressedtnt", 0.7f, 0.2f, CBTab.compressedBlocksTab);
     public static final Block TRIPLECOMPRESSSEDTNT = new BlockCompressedTNT(Material.TNT, MapColor.RED, "triplecompressedtnt", 0.7f, 0.2f, CBTab.compressedBlocksTab);
+    public static final Block FUSEROCK = new BlockFuseRock(Material.ROCK, MapColor.GRAY, "fuserock", 2.0f, 10.0f, null);
+    public static final Block FUSEROCKNETHER = new BlockFuseRock(Material.ROCK, MapColor.GRAY, "fuserocknether", 2.0f, 10.0f, null);
+    public static final Block FUSEROCKEND = new BlockFuseRock(Material.ROCK, MapColor.GRAY, "fuserockend", 2.0f, 10.0f, null);
     public static final Block MININGEXPLOSIVES = new BlockMiningExplosives(Material.TNT, MapColor.RED, "miningexplosives", 0.7f, 0.2f, null);
     public static final Block ONLINEDETECTOR = new BlockOnlineDetector(Material.REDSTONE_LIGHT, MapColor.BLUE, "onlinedetector", 1.3f, 6f, null).setCreativeTab(null);
     public static final Block ENDERBLOCK = new BlockEnder(Material.CAKE, MapColor.CYAN, "enderblock", 2.3f, 12.2f, null);
@@ -133,6 +136,9 @@ public class BlockRegistry {
         registerBlock(SINGLECOMPRESSSEDTNT);
         registerBlock(DOUBLECOMPRESSSEDTNT);
         registerBlock(TRIPLECOMPRESSSEDTNT);
+        registerBlock(FUSEROCK);
+        registerBlock(FUSEROCKNETHER);
+        registerBlock(FUSEROCKEND);
         registerBlock(MININGEXPLOSIVES);
         registerBlock(ONLINEDETECTOR);
         registerBlock(ENDERBLOCK);
@@ -210,25 +216,6 @@ public class BlockRegistry {
         registerBuiltIn(RED_SHULKER_BOX);
         registerBuiltIn(BLACK_SHULKER_BOX);
 	}
-
-	public static void renderAltInit() {
-        /*registerItemBlockRenderer(Item.getItemFromBlock(WHITE_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(ORANGE_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(MAGENTA_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(LIGHT_BLUE_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(YELLOW_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(LIME_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(PINK_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(GRAY_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(SILVER_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(CYAN_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(PURPLE_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(BLUE_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(BROWN_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(GREEN_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(RED_SHULKER_BOX), "supershulkerbox");
-        registerItemBlockRenderer(Item.getItemFromBlock(BLACK_SHULKER_BOX), "supershulkerbox");*/
-    }
 
     public static void registerTileEntity() {
         GameRegistry.registerTileEntity(TileEntityFurnaceCompr.class, "furnacecompr");

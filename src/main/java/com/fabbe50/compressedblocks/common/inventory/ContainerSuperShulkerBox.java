@@ -37,10 +37,12 @@ public class ContainerSuperShulkerBox extends Container{
         }
     }
 
+    @Override
     public boolean canInteractWith(EntityPlayer playerIn) {
         return this.inventory.isUsableByPlayer(playerIn);
     }
 
+    @Override
     public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
         ItemStack itemstack = ItemStack.EMPTY;
         Slot slot = (Slot)this.inventorySlots.get(index);
@@ -69,6 +71,7 @@ public class ContainerSuperShulkerBox extends Container{
         return itemstack;
     }
 
+    @Override
     public void onContainerClosed(EntityPlayer playerIn) {
         super.onContainerClosed(playerIn);
         this.inventory.closeInventory(playerIn);

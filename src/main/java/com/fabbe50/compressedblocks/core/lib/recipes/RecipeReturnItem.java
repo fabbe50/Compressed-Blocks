@@ -1,6 +1,7 @@
 package com.fabbe50.compressedblocks.core.lib.recipes;
 
 import com.fabbe50.compressedblocks.core.lib.ReturnableItems;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import com.google.common.collect.Lists;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryCrafting;
@@ -13,11 +14,12 @@ import net.minecraftforge.event.ForgeEventFactory;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by fabbe on 09/05/2017.
  */
-public class RecipeReturnItem implements IRecipe {
+public class RecipeReturnItem extends net.minecraftforge.registries.IForgeRegistryEntry.Impl<IRecipe> implements IRecipe {
     private final ItemStack recipeOutput;
     public final List<ItemStack> recipeItems;
 
@@ -87,29 +89,11 @@ public class RecipeReturnItem implements IRecipe {
         if (ReturnableItems.getItems().contains(originalItem.getItem())) {
             return new ItemStack(stack.getItem(), 1, stack.getMetadata());
         }
-        if (stack.getItem().hasContainerItem(stack)) {
-            stack = stack.getItem().getContainerItem(stack);
-            if (!stack.isEmpty() && stack.isItemStackDamageable() && stack.getMetadata() > stack.getMaxDamage()) {
-                return ItemStack.EMPTY;
-            }
+        if (stack.isItemStackDamageable() && stack.getItemDamage() > 0) {
+            LogHelper.info("Stack contains: " + stack);
+            stack.attemptDamageItem(1, new Random(), null);
             return stack;
         }
         return ItemStack.EMPTY;
-    }
-
-    @Override
-    public IRecipe setRegistryName(ResourceLocation name) {
-        return null;
-    }
-
-    @Nullable
-    @Override
-    public ResourceLocation getRegistryName() {
-        return null;
-    }
-
-    @Override
-    public Class<IRecipe> getRegistryType() {
-        return null;
     }
 }

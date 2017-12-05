@@ -25,9 +25,6 @@ public class ClientProxy extends CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) {
 		super.preInit(event);
 
- 		//ItemRegistry.renderAltInit();
- 		BlockRegistry.renderAltInit();
-
 		RenderRegistry.init();
 	}
 	
@@ -35,9 +32,7 @@ public class ClientProxy extends CommonProxy {
 		super.init(event);
 
 		BlockRegistry.renderInit(); //Register block-rendering
-		//ItemRegistry.renderInit(); //Register item-rendering
-		//EntityRegistry.renderInit(); //Register entity-renderering
-		//ModelBakery.init();
+		EntityRegistry.renderInit(); //Register entity-renderering
 
 		ClientRegistry.registerTileEntity(TileEntitySuperShulkerBox.class, "supershulkerbox", new TileEntitySuperShulkerBoxRenderer());
 

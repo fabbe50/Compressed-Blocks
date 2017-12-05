@@ -39,7 +39,7 @@ public class JEIHideItemRegistry {
         hide.add(new ItemStack(BlockRegistry.NUKE));
         hide.add(new ItemStack(BlockRegistry.DRAWBRIDGE));
 
-        //hide.add(new ItemStack(ItemRegistry.TWOHANDITEMTEST));
-        //hide.add(new ItemStack(ItemRegistry.DNASAMPLE));
+        hide.add(new ItemStack(ItemRegistry.TWOHANDITEMTEST));
+        hide.add(new ItemStack(ItemRegistry.DNASAMPLE));
     }
 }

@@ -20,6 +20,7 @@ import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.PotionUtils;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
@@ -120,20 +121,19 @@ public class EntityColoredSquid extends EntityWaterMob {
 
     @Override
     protected boolean processInteract(EntityPlayer player, EnumHand hand) {
-        if (!player.world.isRemote) {
-            ItemStack stack = player.getHeldItem(hand);
+        ItemStack stack = player.getHeldItem(hand);
 
-            /*
-            if (stack.getItem() == ItemRegistry.INK_EXTRACTOR) {
-                if (player.inventory.hasItemStack(new ItemStack(Items.GLASS_BOTTLE)) || player.capabilities.isCreativeMode) {
-                    setInked(true);
-                    if (!player.capabilities.isCreativeMode)
-                        player.inventory.decrStackSize(player.inventory.getSlotFor(new ItemStack(Items.GLASS_BOTTLE)), 1);
-                    player.inventory.addItemStackToInventory(new ItemStack(ItemRegistry.INKBOTTLE, 1, this.getInkColor().getDyeDamage()));
-                    return true;
-                }
+        if (stack.getItem() == ItemRegistry.INK_EXTRACTOR && this.isEntityAlive()) {
+            if (player.inventory.hasItemStack(new ItemStack(Items.GLASS_BOTTLE)) || player.capabilities.isCreativeMode) {
+                setInked(true);
+                if (!player.capabilities.isCreativeMode)
+                    player.inventory.decrStackSize(player.inventory.getSlotFor(new ItemStack(Items.GLASS_BOTTLE)), 1);
+                player.inventory.addItemStackToInventory(new ItemStack(ItemRegistry.INKBOTTLE, 1, this.getInkColor().getDyeDamage()));
+                this.damageEntity(DamageSource.causePlayerDamage(player), rand.nextInt(3));
+                this.performHurtAnimation();
+                stack.damageItem(1, player);
+                return true;
             }
-            */
         }
         return false;
     }

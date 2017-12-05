@@ -67,7 +67,6 @@ public class BlockMiningExplosives extends BlockBase {
                 x2--;
 
             BlockPos bPos = new BlockPos(x2, 0, z2);
-            LogHelper.info(bPos);
 
             List<Block> ores = getOres();
             List<Block> collectedOres = new ArrayList<>();
@@ -160,6 +159,9 @@ public class BlockMiningExplosives extends BlockBase {
         ores.add(Blocks.DIAMOND_ORE);
         ores.add(Blocks.EMERALD_ORE);
         ores.add(Blocks.QUARTZ_ORE);
+        ores.add(BlockRegistry.FUSEROCK);
+        ores.add(BlockRegistry.FUSEROCKNETHER);
+        ores.add(BlockRegistry.FUSEROCKEND);
 
         return ores;
     }
@@ -204,9 +206,7 @@ public class BlockMiningExplosives extends BlockBase {
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag flags) {
         tooltip.add(ChatHelper.MAGENTA + "[Experimental]");
         tooltip.add("");
-        tooltip.add(ChatHelper.LIME + "Stay close if you can't fly!");
-        tooltip.add("");
-        tooltip.add("Clear the chunk it's in and deposits all ores in a chest.");
+        tooltip.add("Clears the ores in the chunk it's in and deposits all ores in a chest.");
         tooltip.add("If chest gets filled up for whatever reason, the rest of the stuff will drop on the ground.");
     }
 }

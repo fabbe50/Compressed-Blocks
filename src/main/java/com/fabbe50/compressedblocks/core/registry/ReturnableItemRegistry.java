@@ -7,6 +7,6 @@ import com.fabbe50.compressedblocks.core.lib.ReturnableItems;
  */
 public class ReturnableItemRegistry {
     public static void init() {
-        //ReturnableItems.add(ItemRegistry.PEBBLES);
+        ReturnableItems.add(ItemRegistry.PEBBLES);
     }
 }

@@ -2,9 +2,12 @@ package com.fabbe50.compressedblocks.common.tileentities;
 
 import com.fabbe50.compressedblocks.common.blocks.BlockSuperShulkerBox;
 import com.fabbe50.compressedblocks.common.inventory.ContainerSuperShulkerBox;
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
+import com.fabbe50.compressedblocks.core.utils.helper.TileEntityHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.EnumPushReaction;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.MoverType;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,6 +19,7 @@ import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntityLockableLoot;
 import net.minecraft.util.EnumFacing;
@@ -26,8 +30,13 @@ import net.minecraft.util.datafix.DataFixer;
 import net.minecraft.util.datafix.FixTypes;
 import net.minecraft.util.datafix.walkers.ItemStackDataLists;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.wrapper.SidedInvWrapper;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -45,9 +54,11 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
     private float progressOld;
     private EnumDyeColor color;
     private boolean destroyedByCreativePlayer;
+    private NBTTagCompound bufferTag = new NBTTagCompound();
+    private String name = "Compressed Shulker Box";
 
     public TileEntitySuperShulkerBox() {
-        this(EnumDyeColor.PURPLE);
+        this((EnumDyeColor)null);
     }
 
     public TileEntitySuperShulkerBox(@Nullable EnumDyeColor colorIn) {
@@ -56,6 +67,9 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
         this.color = colorIn;
     }
 
+
+
+    @Override
     public void update() {
         this.updateAnimation();
 
@@ -95,6 +109,12 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
         }
     }
 
+    @Override
+    public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt) {
+        NBTTagCompound tag = pkt.getNbtCompound();
+        this.readFromNBT(tag);
+    }
+
     public TileEntitySuperShulkerBox.AnimationStatus getAnimationStatus() {
         return this.animationStatus;
     }
@@ -104,7 +124,7 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
     }
 
     public AxisAlignedBB getBoundingBox(EnumFacing p_190587_1_) {
-        return Block.FULL_BLOCK_AABB.contract((double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetX()), (double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetY()), (double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetZ()));
+        return Block.FULL_BLOCK_AABB.expand((double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetX()), (double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetY()), (double)(0.5F * this.getProgress(1.0F) * (float)p_190587_1_.getFrontOffsetZ()));
     }
 
     private AxisAlignedBB getTopBoundingBox(EnumFacing p_190588_1_) {
@@ -116,13 +136,13 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
         IBlockState iblockstate = this.world.getBlockState(this.getPos());
 
         if (iblockstate.getBlock() instanceof BlockSuperShulkerBox) {
-            EnumFacing enumfacing = (EnumFacing)iblockstate.getValue(BlockSuperShulkerBox.FACING);
+            EnumFacing enumfacing = (EnumFacing) iblockstate.getValue(BlockSuperShulkerBox.FACING);
             AxisAlignedBB axisalignedbb = this.getTopBoundingBox(enumfacing).offset(this.pos);
-            List<Entity> list = this.world.getEntitiesWithinAABBExcludingEntity((Entity)null, axisalignedbb);
+            List<Entity> list = this.world.getEntitiesWithinAABBExcludingEntity((Entity) null, axisalignedbb);
 
             if (!list.isEmpty()) {
                 for (int i = 0; i < list.size(); ++i) {
-                    Entity entity = (Entity)list.get(i);
+                    Entity entity = (Entity) list.get(i);
 
                     if (entity.getPushReaction() != EnumPushReaction.IGNORE) {
                         double d0 = 0.0D;
@@ -135,8 +155,7 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
 
                                 if (enumfacing.getAxisDirection() == EnumFacing.AxisDirection.POSITIVE) {
                                     d0 = axisalignedbb.maxX - axisalignedbb1.minX;
-                                }
-                                else {
+                                } else {
                                     d0 = axisalignedbb1.maxX - axisalignedbb.minX;
                                 }
 
@@ -146,8 +165,7 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
 
                                 if (enumfacing.getAxisDirection() == EnumFacing.AxisDirection.POSITIVE) {
                                     d1 = axisalignedbb.maxY - axisalignedbb1.minY;
-                                }
-                                else {
+                                } else {
                                     d1 = axisalignedbb1.maxY - axisalignedbb.minY;
                                 }
 
@@ -157,29 +175,31 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
 
                                 if (enumfacing.getAxisDirection() == EnumFacing.AxisDirection.POSITIVE) {
                                     d2 = axisalignedbb.maxZ - axisalignedbb1.minZ;
-                                }
-                                else {
+                                } else {
                                     d2 = axisalignedbb1.maxZ - axisalignedbb.minZ;
                                 }
 
                                 d2 = d2 + 0.01D;
                         }
 
-                        entity.move(MoverType.SHULKER_BOX, d0 * (double)enumfacing.getFrontOffsetX(), d1 * (double)enumfacing.getFrontOffsetY(), d2 * (double)enumfacing.getFrontOffsetZ());
+                        entity.move(MoverType.SHULKER_BOX, d0 * (double) enumfacing.getFrontOffsetX(), d1 * (double) enumfacing.getFrontOffsetY(), d2 * (double) enumfacing.getFrontOffsetZ());
                     }
                 }
             }
         }
     }
 
+    @Override
     public int getSizeInventory() {
         return this.items.size();
     }
 
+    @Override
     public int getInventoryStackLimit() {
         return 64;
     }
 
+    @Override
     public boolean receiveClientEvent(int id, int type) {
         if (id == 1) {
             this.openCount = type;
@@ -199,6 +219,7 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
         }
     }
 
+    @Override
     public void openInventory(EntityPlayer player) {
         if (!player.isSpectator()) {
             if (this.openCount < 0) {
@@ -214,6 +235,7 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
         }
     }
 
+    @Override
     public void closeInventory(EntityPlayer player) {
         if (!player.isSpectator()) {
             --this.openCount;
@@ -225,30 +247,46 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
         }
     }
 
+    @Override
     public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn) {
         return new ContainerSuperShulkerBox(playerInventory, this, playerIn);
     }
 
+    @Override
     public String getGuiID() {
         return "minecraft:generic_54";
     }
 
+    @Override
     public String getName() {
-        return this.hasCustomName() ? this.customName : "container.superShulkerBox";
+        return this.name;
     }
 
     public static void registerFixesSuperShulkerBox(DataFixer fixer) {
         fixer.registerWalker(FixTypes.BLOCK_ENTITY, new ItemStackDataLists(TileEntitySuperShulkerBox.class, new String[] {"Items"}));
     }
 
+    @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
+
+        if(compound.hasKey("name", Constants.NBT.TAG_STRING)) {
+            this.name = compound.getString("name");
+        }
+
         this.loadFromNbt(compound);
     }
 
+
+
+    @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);
-        return this.saveToNbt(compound);
+
+        compound = this.saveToNbt(compound);
+        compound.setString("name", name);
+
+        return compound;
     }
 
     public void loadFromNbt(NBTTagCompound compound) {
@@ -279,10 +317,22 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
         return compound;
     }
 
+    @Nullable
+    @Override
+    public ITextComponent getDisplayName() {
+        return new TextComponentString(name);
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
     protected NonNullList<ItemStack> getItems() {
         return this.items;
     }
 
+    @Override
     public boolean isEmpty() {
         for (ItemStack itemstack : this.items) {
             if (!itemstack.isEmpty()) {
@@ -293,18 +343,22 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
         return true;
     }
 
+    @Override
     public int[] getSlotsForFace(EnumFacing side) {
         return SLOTS;
     }
 
+    @Override
     public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction) {
         return !(Block.getBlockFromItem(itemStackIn.getItem()) instanceof BlockSuperShulkerBox);
     }
 
+    @Override
     public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction) {
         return true;
     }
 
+    @Override
     public void clear() {
         this.hasBeenCleared = true;
         super.clear();
@@ -325,6 +379,16 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
         }
 
         return this.color;
+    }
+
+    @Override
+    public NBTTagCompound getUpdateTag() {
+        if (!bufferTag.hasNoTags()) {
+            NBTTagCompound updateTag = super.writeToNBT(bufferTag);
+            bufferTag = new NBTTagCompound();
+            return updateTag;
+        }
+        return this.writeToNBT(new NBTTagCompound());
     }
 
     @Nullable
@@ -355,5 +419,10 @@ public class TileEntitySuperShulkerBox extends TileEntityLockableLoot implements
         OPENING,
         OPENED,
         CLOSING;
+    }
+
+    @Override
+    protected IItemHandler createUnSidedHandler() {
+        return new SidedInvWrapper(this, EnumFacing.UP);
     }
 }
