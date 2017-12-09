@@ -106,7 +106,6 @@ public class ItemRegistry {
     public static class ItemRegistrationHandler {
         public static final Set<Item> ITEM_LIST = new HashSet<>();
         private static final Set<Item> registeredItemList = new HashSet<>();
-        private static final Set<Item> customRegistered = new HashSet<>();
         public static final List<Item> items = new ArrayList<>();
 
         @SubscribeEvent
