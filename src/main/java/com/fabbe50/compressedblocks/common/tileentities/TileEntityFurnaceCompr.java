@@ -1,6 +1,6 @@
 package com.fabbe50.compressedblocks.common.tileentities;
 
-import com.fabbe50.compressedblocks.common.blocks.BlockFurnaceDecoy;
+import com.fabbe50.compressedblocks.common.blocks.BlockFurnaceCompr;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -182,7 +182,7 @@ public class TileEntityFurnaceCompr extends TileEntityLockable implements ITicka
 
             if (flag != this.isBurning()) {
                 flag1 = true;
-                BlockFurnaceDecoy.setState(this.isBurning(), this.world, this.pos);
+                BlockFurnaceCompr.setState(this.isBurning(), this.world, this.pos);
             }
         }
 

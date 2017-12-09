@@ -8,7 +8,6 @@ import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import com.fabbe50.compressedblocks.common.items.base.ItemBlockVariants;
 import com.fabbe50.compressedblocks.common.tileentities.*;
 import com.fabbe50.compressedblocks.core.lib.EnumCompressed;
-import com.fabbe50.compressedblocks.core.reference.MetaValues;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 
 import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
@@ -90,8 +89,8 @@ public class BlockRegistry {
     public static final Block LIGHTBLOCK15 = new BlockAdjustableLight(Material.REDSTONE_LIGHT, MapColor.SNOW, "light_block15", 1.3f, 6f, null, 1).setCreativeTab(null);
 
     //TileEntity
-    public static final Block COMPRESSED_FURNACE_IDLE = new BlockFurnaceDecoy("furnacecompr", 0, null, false);
-    public static final Block COMPRESSED_FURNACE_ACTIVE = new BlockFurnaceDecoy("furnacecompr", 0.875f, null, true).setCreativeTab(null);
+    public static final Block COMPRESSED_FURNACE_IDLE = new BlockFurnaceCompr("furnacecompr", 0, null, false);
+    public static final Block COMPRESSED_FURNACE_ACTIVE = new BlockFurnaceCompr("furnacecompr", 0.875f, null, true).setCreativeTab(null);
     public static final Block BEACON_XRAY = new BlockBeaconXRAY(Material.GLASS, MapColor.DIAMOND, Reference.MOD_ID, "beacon_xray", 3.0f, 13.5f, CBTab.blockTab);
     public static final Block BREWER = new BlockBrewer().setRegistryName(Reference.MOD_ID, "brewer").setUnlocalizedName(Reference.MOD_ID + ":brewer").setHardness(0.5F).setLightLevel(0.125F);
     public static final Block WHITE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.WHITE, Material.ROCK, MapColor.SNOW, "white_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);

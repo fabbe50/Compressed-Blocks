@@ -37,12 +37,12 @@ import java.util.Random;
  * Created by fabbe50 on 26/06/2016.
  */
 @SuppressWarnings("deprecation")
-public class BlockFurnaceDecoy extends BlockContainer {
+public class BlockFurnaceCompr extends BlockContainer {
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
     private final boolean isBurning;
     private static boolean keepInventory;
 
-    public BlockFurnaceDecoy(String unlocalizedName, float lightLevel, @Nullable CreativeTabs tab, boolean active) {
+    public BlockFurnaceCompr(String unlocalizedName, float lightLevel, @Nullable CreativeTabs tab, boolean active) {
         super(Material.ROCK);
         setUnlocalizedName(Reference.MOD_ID + ":" + unlocalizedName);
         setRegistryName(Reference.MOD_ID, !active ? unlocalizedName : unlocalizedName + "active");
