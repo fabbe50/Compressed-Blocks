@@ -4,6 +4,7 @@ import com.fabbe50.compressedblocks.core.proxy.CommonProxy;
 import com.fabbe50.compressedblocks.core.reference.Dependencies;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 
+import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -23,7 +24,8 @@ public class CompressedBlocks {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		this.proxy.preInit(event);
+        LogHelper.setLogger(event.getModLog());
+        this.proxy.preInit(event);
 	}
     @EventHandler
     public void init(FMLInitializationEvent event) {

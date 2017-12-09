@@ -5,6 +5,7 @@ import com.fabbe50.compressedblocks.core.reference.Reference;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.relauncher.FMLRelaunchLog;
 import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by fabbe on 03/12/2017 - 3:03 AM.
@@ -25,8 +26,17 @@ public class LogHelper {
 	 * 	@func warn  - An event that might possible lead to an error.
 	 */
 
-    private static void log(Level logLevel, Object object) {
-        FMLLog.log(Reference.MOD_NAME, logLevel, String.valueOf(object), "");
+    private static void log(Level level, Object object) {
+        getLogger().log(level, object);
+    }
+
+    private static Logger logger;
+    private static Logger getLogger() {
+        return logger;
+    }
+
+    public static void setLogger(Logger logger) {
+        LogHelper.logger = logger;
     }
 
     public static void all(Object object) {log(Level.ALL, object);}
