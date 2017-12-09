@@ -21,7 +21,7 @@ public class EntityRegistry {
         createEntity(Reference.modResourceLoc("corgi"), EntityCorgi.class, "corgi", CompressedBlocks.instance, 0, 64, 1, true, 0xedc67d, 0x8f6830);
         createEntity(Reference.modResourceLoc("csquid"), EntityColoredSquid.class, "csquid", CompressedBlocks.instance, 1, 64, 1, true, 0x00ffff, 0x008b8b);
 
-        addSpawning(EntityColoredSquid.class, 20, 5, 12, EnumCreatureType.WATER_CREATURE, new Biome[]{Biomes.OCEAN, Biomes.DEEP_OCEAN, Biomes.FROZEN_OCEAN});
+        addSpawning(EntityColoredSquid.class, 20, 5, 12, EnumCreatureType.WATER_CREATURE, new Biome[]{Biomes.OCEAN, Biomes.DEEP_OCEAN, Biomes.FROZEN_OCEAN, Biomes.RIVER, Biomes.FROZEN_RIVER});
     }
 
     private static void createEntity(ResourceLocation location, Class<? extends Entity> clazz, String name, Object modInstance, int id, int trackingRange, int updateFrequency, boolean sendsVelocityUpdates, int eggPrimary, int eggSecondary) {
