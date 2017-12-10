@@ -26,6 +26,7 @@ public class EndgameCraftingRegistry {
         ModRegistry.addEndgameRecipe(new ItemStack(ItemRegistry.TRINKET, 1, 1), new Object[]{new ItemStack(ItemRegistry.TRINKET, 1, 0), new ItemStack(ItemRegistry.ENDERAPPLE, 1, 1)});
         ModRegistry.addEndgameRecipe(new ItemStack(ItemRegistry.TRINKET, 1, 2), new Object[]{new ItemStack(ItemRegistry.TRINKET, 1, 0), new ItemStack(BlockRegistry.ENDERBLOCK, 1, 0)});
         ModRegistry.addEndgameRecipe(new ItemStack(ItemRegistry.TRINKET, 1, 3), new Object[]{new ItemStack(ItemRegistry.TRINKET, 1, 0), new ItemStack(Blocks.END_BRICKS, 1, 0), new ItemStack(Blocks.NETHER_BRICK, 1, 0)});
+        ModRegistry.addEndgameRecipe(new ItemStack(ItemRegistry.POTATO_SINGULARITY, 1, 0), new Object[]{new ItemStack(BlockRegistry.COMPRESSED_POTATO, 9, 7)});
 
         ModRegistry.addEndgameRecipe(new ItemStack(BlockRegistry.WHITE_SHULKER_BOX, 1), new ItemStack(Blocks.WHITE_SHULKER_BOX, 1), new ItemStack(Blocks.CHEST, 1));
         ModRegistry.addEndgameRecipe(new ItemStack(BlockRegistry.ORANGE_SHULKER_BOX, 1), new ItemStack(Blocks.ORANGE_SHULKER_BOX, 1), new ItemStack(Blocks.CHEST, 1));

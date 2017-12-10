@@ -102,7 +102,8 @@ public class BlockFusionPedestal extends BlockBase {
                             NBTTagCompound compound = items.get(0).getTagCompound();
                             output.setTagCompound(compound);
                             outputItem.setItem(output);
-                            outputItem.setVelocity(0, 0, 0);
+                            //outputItem.setVelocity(0, 0, 0);
+                            outputItem.addVelocity(-outputItem.motionX, -outputItem.motionY, -outputItem.motionZ);
                             worldIn.spawnEntity(outputItem);
                             doEffects(worldIn, pos);
                             entities.forEach(EntityItem::setDead);
@@ -110,7 +111,8 @@ public class BlockFusionPedestal extends BlockBase {
                         } else {
                             EntityItem outputItem = new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5);
                             outputItem.setItem(recipes.getRecipeOutput());
-                            outputItem.setVelocity(0, 0, 0);
+                            //outputItem.setVelocity(0, 0, 0);
+                            outputItem.addVelocity(-outputItem.motionX, -outputItem.motionY, -outputItem.motionZ);
                             worldIn.spawnEntity(outputItem);
                             doEffects(worldIn, pos);
                             entities.forEach(EntityItem::setDead);
@@ -118,19 +120,6 @@ public class BlockFusionPedestal extends BlockBase {
                         }
                     }
                 }
-            }
-        }
-        if (worldIn.isRemote) {
-            AxisAlignedBB checkingBounds = new AxisAlignedBB(pos.getX(), pos.getY() + 0.75, pos.getZ(), pos.getX() + 0.9375, pos.getY() + 1.5, pos.getZ() + 0.9375);
-            if (!worldIn.getEntitiesWithinAABB(EntityItem.class, checkingBounds).isEmpty()) {
-                List<EntityItem> entities = worldIn.getEntitiesWithinAABB(EntityItem.class, checkingBounds);
-                List<ItemStack> items = entities.stream().map(EntityItem::getItem).collect(Collectors.toList());
-
-                for (EndgameRecipes recipes : ModRegistry.endgameRecipes)
-                    if (CraftingHelper.compareItemsFromListedStacks(items, recipes.recipeItems)) {
-                        doEffects(worldIn, pos);
-                        return true;
-                    }
             }
         }
         return false;

@@ -50,18 +50,20 @@ public class ItemEggHatcher extends ItemBase {
                         entity.setAlwaysRenderNameTag(true);
                     }
                     else
-                        entity = new EntityChicken(worldIn);
-                    BlockPos pos2 = new BlockPos(pos.offset(facing).getX(), pos.offset(facing).getY(), pos.offset(facing).getZ());
+                        if (rand.nextInt(2000) <= 1600) {
+                            entity = new EntityChicken(worldIn);
+                            BlockPos pos2 = new BlockPos(pos.offset(facing).getX(), pos.offset(facing).getY(), pos.offset(facing).getZ());
 
-                    if (facing == EnumFacing.UP || facing == EnumFacing.DOWN) {
-                        entity.setPosition(pos2.getX() + hitX, pos2.getY(), pos2.getZ() + hitZ);
-                    } else if (facing == EnumFacing.EAST || facing == EnumFacing.WEST) {
-                        entity.setPosition(pos2.getX() + 0.5, pos2.getY() + hitY, pos2.getZ() + hitZ);
-                    } else if (facing == EnumFacing.NORTH || facing == EnumFacing.SOUTH) {
-                        entity.setPosition(pos2.getX() + hitX, pos2.getY() + hitY, pos2.getZ() + 0.5);
-                    }
+                            if (facing == EnumFacing.UP || facing == EnumFacing.DOWN) {
+                                entity.setPosition(pos2.getX() + hitX, pos2.getY(), pos2.getZ() + hitZ);
+                            } else if (facing == EnumFacing.EAST || facing == EnumFacing.WEST) {
+                                entity.setPosition(pos2.getX() + 0.5, pos2.getY() + hitY, pos2.getZ() + hitZ);
+                            } else if (facing == EnumFacing.NORTH || facing == EnumFacing.SOUTH) {
+                                entity.setPosition(pos2.getX() + hitX, pos2.getY() + hitY, pos2.getZ() + 0.5);
+                            }
 
-                    worldIn.spawnEntity(entity);
+                            worldIn.spawnEntity(entity);
+                        }
                 }
                 return EnumActionResult.SUCCESS;
             }
@@ -72,7 +74,7 @@ public class ItemEggHatcher extends ItemBase {
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
-        tooltip.add("100% hatch-rate!");
+        tooltip.add("80% hatch-rate!");
         tooltip.add("Shift + Right Click to Hatch full stack");
     }
 }

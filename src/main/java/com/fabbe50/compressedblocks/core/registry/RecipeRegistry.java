@@ -244,6 +244,24 @@ public class RecipeRegistry {
                 'i', new ItemStack(Blocks.IRON_BLOCK, 1, 0),
                 'I', new ItemStack(BlockRegistry.COMPRESSED_IRON, 1, 1),
                 'B', new ItemStack(Items.DIAMOND, 1, 0)});
+        addRecipe("inkextractor", new ItemStack(ItemRegistry.INK_EXTRACTOR, 1), new Object[] {
+                "I L",
+                " I ",
+                "  I",
+                'I', new ItemStack(Items.IRON_INGOT, 1),
+                'L', new ItemStack(Blocks.LEVER, 1)});
+        addRecipe("egghatcher", new ItemStack(ItemRegistry.EGG_HATCHER, 1), new Object[] {
+                "  E",
+                " B ",
+                "B  ",
+                'E', new ItemStack(Items.EGG, 1),
+                'B', new ItemStack(Items.BLAZE_ROD, 1)});
+        addRecipe("adjustablelight", new ItemStack(BlockRegistry.LIGHTBLOCK, 8), new Object[] {
+                "LLL",
+                "LCL",
+                "LLL",
+                'L', new ItemStack(Blocks.REDSTONE_LAMP, 1),
+                'C', new ItemStack(Items.COMPARATOR, 1)});
     }
 
 
@@ -297,13 +315,14 @@ public class RecipeRegistry {
                             "CCC",
                             'C', itemIn
                     });
+                } else {
+                    addRecipe("craft_" + itemOut.getRegistryName().getResourcePath() + "_meta-" + i, new ItemStack(itemOut, 1, i + 1), new Object[]{
+                            "CCC",
+                            "CCC",
+                            "CCC",
+                            'C', new ItemStack(itemOut, 1, i)
+                    });
                 }
-                addRecipe("craft_" + itemOut.getRegistryName().getResourcePath() + "_meta-" + i, new ItemStack(itemOut, 1, i + 1), new Object[]{
-                        "CCC",
-                        "CCC",
-                        "CCC",
-                        'C', new ItemStack(itemOut, 1, i)
-                });
             }
         }
     }

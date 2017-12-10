@@ -267,6 +267,8 @@ public class BlockRegistry {
 
             for (final Block item : blocks) {
                 ItemBlock itemBlock = (ItemBlock) new ItemBlock(item).setRegistryName(item.getRegistryName());
+                if (Block.getBlockFromItem(itemBlock) instanceof BlockSuperShulkerBox)
+                    itemBlock.setMaxStackSize(1);
                 reg.register(itemBlock);
                 ITEM_LIST.add(itemBlock);
             }

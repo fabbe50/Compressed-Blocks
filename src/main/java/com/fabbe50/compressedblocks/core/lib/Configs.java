@@ -23,6 +23,7 @@ public class Configs {
     public static String chestToFill = "minecraft:chest";
 
     public static int fuseRockStrength = 6;
+    public static boolean singularityCraftable = false;
 
     //Vanilla Hooks
     public static boolean vanillaHooks = true;

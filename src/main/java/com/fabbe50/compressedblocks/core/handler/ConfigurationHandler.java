@@ -27,7 +27,7 @@ public class ConfigurationHandler {
     public static ConfigCategory vanillaTweaks;
 
     public static void load(FMLPreInitializationEvent event) {
-        configFile = new Configuration(event.getSuggestedConfigurationFile(), "Alpha5", false);
+        configFile = new Configuration(event.getSuggestedConfigurationFile(), Reference.VERSION, false);
 
         MinecraftForge.EVENT_BUS.register(configuration);
 
@@ -73,6 +73,11 @@ public class ConfigurationHandler {
             prop = configFile.get(cat, "Fuserock Strength", Configs.fuseRockStrength);
             prop.setComment("Strength the fuserock explodes with. [TNT is 4, default=6]");
             Configs.fuseRockStrength = prop.getInt();
+            propOrder.add(prop.getName());
+
+            prop = configFile.get(cat, "Singularity Crafting Recipe", Configs.singularityCraftable);
+            prop.setComment("Enable singularity crafting recipe here. \n I'm not responsible for any destruction or issues caused by this item.");
+            Configs.singularityCraftable = prop.getBoolean();
             propOrder.add(prop.getName());
         }
 
