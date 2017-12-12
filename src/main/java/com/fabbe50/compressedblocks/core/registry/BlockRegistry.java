@@ -110,6 +110,7 @@ public class BlockRegistry {
     public static final Block RED_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.RED, Material.ROCK, MapColor.RED, "red_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
     public static final Block BLACK_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.BLACK, Material.ROCK, MapColor.BLACK, "black_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
     public static final Block DRAWBRIDGE = new BlockDrawbridge(Material.ROCK).setRegistryName(Reference.MOD_ID, "drawbridge").setUnlocalizedName(Reference.MOD_ID+":drawbridge").setHardness(2.0f).setResistance(10.0f).setCreativeTab(CBTab.blockTab);
+    public static final Block CHUNK_SCANNER = new BlockChunkScanner(Material.TNT).setRegistryName(Reference.MOD_ID, "chunkscanner").setUnlocalizedName(Reference.MOD_ID+":chunkscanner").setHardness(2.0f).setResistance(10.0f).setCreativeTab(CBTab.blockTab);
 
     /*  If more data on a block is needed
      *  Example 1:
@@ -150,6 +151,7 @@ public class BlockRegistry {
         registerBlock(BEACON_XRAY);
         registerBlock(BREWER);
         registerBlock(DRAWBRIDGE);
+        registerBlock(CHUNK_SCANNER);
 
         registerBlock(LIGHTBLOCK);
         registerBlock(LIGHTBLOCK1);
@@ -222,6 +224,7 @@ public class BlockRegistry {
         //GameRegistry.registerTileEntity(TileEntityBrewer.class, "brewer");
         GameRegistry.registerTileEntity(TileEntitySuperShulkerBox.class, "supershulkerbox");
         //GameRegistry.registerTileEntity(TileEntityDrawbridge.class, "drawbridge");
+        GameRegistry.registerTileEntity(TileEntityChunkScanner.class, "chunkscanner");
     }
 
     private static void registerItemBlockRenderer(Item block, String name) {

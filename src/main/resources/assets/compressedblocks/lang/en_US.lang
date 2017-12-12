@@ -256,6 +256,7 @@ achievement.compressedtnt.desc=Craft a block of Compressed TNT.
 #Titles
 container.furnacecompr=Compressed Furnace
 container.superShulkerBox=Compressed Shulker Box
+container.chunkScanner=Chunk Scanner
 #CreativeTabs
 itemGroup.compressedblocks.compressedblocks=Compresssed Blocks
 itemGroup.compressedblocks.blocks=CB2: Blocks

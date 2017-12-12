@@ -30,6 +30,18 @@ public class ModItemRegistry {
     public static Block RAINBOWGENERATOR = null;
     @GameRegistry.ObjectHolder("extrautils2:decorativebedrock")
     public static Block DECORATIVEBEDROCK = null;
+    @GameRegistry.ObjectHolder("actuallyadditions:block_misc") //Meta 3 = BLACK QUARTZ ORE
+    public static Block BLACK_QUARTZ = null;
+    @GameRegistry.ObjectHolder("appliedenergistics2:quartz_ore")
+    public static Block AE2_QUARTZ_ORE = null;
+    @GameRegistry.ObjectHolder("appliedenergistics2:charged_quartz_ore")
+    public static Block AE2_CHARGED_QUARTZ_ORE = null;
+    @GameRegistry.ObjectHolder("deepresonance:resonating_ore")
+    public static Block RESONATING_ORE = null;
+    @GameRegistry.ObjectHolder("draconicevolution:draconium_ore")
+    public static Block DRACONIUM_ORE = null;
+    @GameRegistry.ObjectHolder("bigreactors:brore")
+    public static Block YELLORITE_ORE = null;
 
     public static void init() {}
 }

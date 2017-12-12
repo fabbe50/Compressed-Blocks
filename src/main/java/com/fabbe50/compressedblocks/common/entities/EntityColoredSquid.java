@@ -1,8 +1,10 @@
 package com.fabbe50.compressedblocks.common.entities;
 
 import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
+import com.fabbe50.compressedblocks.core.utils.Utilities;
 import com.google.common.collect.Maps;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.MoverType;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -25,6 +27,8 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.loot.LootTableList;
@@ -109,6 +113,11 @@ public class EntityColoredSquid extends EntityWaterMob {
 
     public static EnumDyeColor getRandomSquidColor(Random random) {
         return EnumDyeColor.byDyeDamage(random.nextInt(15));
+    }
+
+    @Override
+    public ITextComponent getDisplayName() {
+        return new TextComponentString(Utilities.upperCaseFirstLetter(this.getInkColor().getName()) + " " + this.getName());
     }
 
     @Nullable
