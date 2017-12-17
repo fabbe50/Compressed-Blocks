@@ -19,4 +19,8 @@ public class Reference {
     public static ResourceLocation modResourceLoc(String name) {
         return new ResourceLocation(MOD_ID, name);
     }
+
+
+    //GUI ID's
+    public static final int GUI_CHUNKSCANNER = 0;
 }

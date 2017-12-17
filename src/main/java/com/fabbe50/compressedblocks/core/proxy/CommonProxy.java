@@ -1,7 +1,9 @@
 package com.fabbe50.compressedblocks.core.proxy;
 
+import com.fabbe50.compressedblocks.CompressedBlocks;
 import com.fabbe50.compressedblocks.core.event.TooltipEvent;
 import com.fabbe50.compressedblocks.core.handler.ConfigurationHandler;
+import com.fabbe50.compressedblocks.core.handler.GuiHandler;
 import com.fabbe50.compressedblocks.core.lib.CBLibrary;
 import com.fabbe50.compressedblocks.core.lib.Configs;
 import com.fabbe50.compressedblocks.core.lib.EntityBlacklistStorage;
@@ -15,6 +17,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) {
@@ -32,6 +35,7 @@ public class CommonProxy {
     public void init(FMLInitializationEvent event) {
         //StatsRegistry.init();                                           //Initialize Statistics
         //AchievementRegistry.init();                                     //Initialize Achievements
+        NetworkRegistry.INSTANCE.registerGuiHandler(CompressedBlocks.instance, new GuiHandler());
         TooltipEvent.init();
         EventRegistry.init();                                           //Initialize Events
         ModItemRegistry.init();                                         //Initialize Mod Items

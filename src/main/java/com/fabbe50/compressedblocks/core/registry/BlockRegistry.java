@@ -10,11 +10,9 @@ import com.fabbe50.compressedblocks.common.tileentities.*;
 import com.fabbe50.compressedblocks.core.lib.EnumCompressed;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 
-import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
