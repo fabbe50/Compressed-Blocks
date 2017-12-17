@@ -52,13 +52,8 @@ public class TileEntityChunkScanner extends TileEntityLockableLoot implements IT
     }
 
     @Override
-    public void setInventorySlotContents(int index, ItemStack stack) {
-
-    }
-
-    @Override
     public int getInventoryStackLimit() {
-        return 8192;
+        return 64;
     }
 
     @Override

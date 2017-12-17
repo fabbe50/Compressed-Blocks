@@ -2,6 +2,7 @@ package com.fabbe50.compressedblocks.common.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.ClickType;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
@@ -64,6 +65,11 @@ public class InventoryChunkScanner extends Container {
         }
 
         return itemstack;
+    }
+
+    @Override
+    public ItemStack slotClick(int slotId, int dragType, ClickType clickTypeIn, EntityPlayer player) {
+        return slotId < 54 ? ItemStack.EMPTY : null;
     }
 
     @Override

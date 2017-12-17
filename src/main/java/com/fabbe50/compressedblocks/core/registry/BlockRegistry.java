@@ -32,6 +32,9 @@ import net.minecraftforge.registries.IForgeRegistry;
 import java.util.*;
 
 public class BlockRegistry {
+    //NonRenderList - Used for builtin blocks that have their own rendering code.
+    private static List<Block> nonRenderBlocks = new ArrayList<>();
+
     //Using TFICore, basic blocks do not need a block-class on it's own.
 	public static final Block POTATO_BLOCK = new BlockBase(Material.CAKE, MapColor.YELLOW, "potatoBlock", 2.0f, 10.0f, null);
     public static final Block HIGH_QUALITY_CAKE = new BlockHQCake();
@@ -227,13 +230,8 @@ public class BlockRegistry {
         GameRegistry.registerTileEntity(TileEntityChunkScanner.class, "chunkscanner");
     }
 
-    private static void registerItemBlockRenderer(Item block, String name) {
-        ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, name), "inventory"));
-        LogHelper.info("Registered renderdata for item with registry-name: " + new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, name), "inventory"));
-    }
-
     private static void registerBuiltIn(Block block) {
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().getModelManager().getBlockModelShapes().registerBuiltInBlocks(block);
+        nonRenderBlocks.add(block);
     }
 
     public static void registerBlock(Block block) {
@@ -279,10 +277,6 @@ public class BlockRegistry {
 
         @SubscribeEvent
         public static void registerModels(final ModelRegistryEvent event) {
-            for (Block block : BLOCK_LIST)
-                if (!registeredBlockList.contains(block))
-                    registerBlockModel(block);
-
             for (int i = 0; i < EnumCompressed.values().length; i++) {
                 registerBlockModelVariants(BlockRegistry.COMPRESSED_POTATO, i, "potato_compr_" + EnumCompressed.byMetadata(i).getName());
                 registerBlockModelVariants(BlockRegistry.COMPRESSED_COBBLESTONE, i, "cobble_compr_" + EnumCompressed.byMetadata(i).getName());
@@ -313,6 +307,10 @@ public class BlockRegistry {
             registerBlockModel(BlockRegistry.GREEN_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=green"));
             registerBlockModel(BlockRegistry.RED_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=red"));
             registerBlockModel(BlockRegistry.BLACK_SHULKER_BOX, new ModelResourceLocation(Reference.MOD_ID + ":supershulkerbox", "type=black"));
+
+            for (Block block : BLOCK_LIST)
+                if (!registeredBlockList.contains(block) && !BlockRegistry.nonRenderBlocks.contains(block))
+                    registerBlockModel(block);
         }
 
         private static void registerBlockModel(final Block block) {

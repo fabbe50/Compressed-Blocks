@@ -122,6 +122,7 @@ tile.compressedblocks:fusionpedestal.name=Fusion Pedestal
 tile.compressedblocks:brewer.name=Brewing Stand
 tile.compressedblocks:nuke.name=Nuke [WIP]
 tile.compressedblocks:drawbridge.name=Drawbridge [NOT IMPLEMENTED]
+tile.compressedblocks:chunkscanner.name=Chunk Scanner
 
 #############################################################################
 #                                Meta Blocks                                #
