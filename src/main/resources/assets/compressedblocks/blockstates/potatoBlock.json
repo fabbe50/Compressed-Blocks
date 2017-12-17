@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "compressedblocks:potatoBlock" }
+        "normal": { "model": "compressedblocks:potatoblock" }
     }
 }
