@@ -1,5 +1,6 @@
 {
     "variants": {
-        "normal": { "model": "compressedblocks:light_block" }
+        "normal": { "model": "compressedblocks:light_block" },
+        "inventory": { "model": "compressedblocks:light_block" }
     }
 }
