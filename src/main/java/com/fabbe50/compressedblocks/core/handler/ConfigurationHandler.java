@@ -1,7 +1,6 @@
 package com.fabbe50.compressedblocks.core.handler;
 
 import com.fabbe50.compressedblocks.core.lib.Configs;
-import com.fabbe50.compressedblocks.core.lib.EntityBlacklistStorage;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.google.common.collect.Lists;
 import net.minecraftforge.common.MinecraftForge;
@@ -12,7 +11,6 @@ import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import java.io.File;
 import java.util.List;
 
 /**

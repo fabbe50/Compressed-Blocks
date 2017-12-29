@@ -1,9 +1,5 @@
 package com.fabbe50.compressedblocks.common.entities;
 
-import com.fabbe50.compressedblocks.common.blocks.BlockCompressedTNT;
-import com.fabbe50.compressedblocks.core.lib.CompressedTNTPositionalData;
-import com.fabbe50.compressedblocks.core.lib.Configs;
-import net.minecraft.block.BlockTNT;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.MoverType;

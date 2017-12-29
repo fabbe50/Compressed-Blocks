@@ -12,8 +12,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 
-import java.util.ArrayList;
-
 /**
  * Created by fabbe on 11/12/2017 - 1:27 PM.
  */

@@ -1,16 +1,9 @@
 package com.fabbe50.compressedblocks.core.network;
 
 import com.fabbe50.compressedblocks.core.utils.helper.FluidHelper;
-import com.fabbe50.compressedblocks.core.utils.helper.ItemHelper;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import javafx.scene.chart.XYChart;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompressedStreamTools;
-import net.minecraft.nbt.NBTSizeTracker;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.fluids.FluidStack;
 

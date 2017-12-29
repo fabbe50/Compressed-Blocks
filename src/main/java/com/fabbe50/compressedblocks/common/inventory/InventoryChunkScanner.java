@@ -7,7 +7,6 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.ITextComponent;
 
 /**
  * Created by fabbe on 11/12/2017 - 3:02 PM.

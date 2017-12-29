@@ -1,10 +1,5 @@
 package com.fabbe50.compressedblocks.core.event;
 
-import com.fabbe50.compressedblocks.core.registry.AchievementRegistry;
-import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
-import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 

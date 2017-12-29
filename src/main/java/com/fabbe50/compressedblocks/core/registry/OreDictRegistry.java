@@ -4,9 +4,7 @@ import com.fabbe50.compressedblocks.core.reference.MetaValues;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.oredict.OreDictionary;
-import scala.tools.nsc.doc.model.Public;
 
 /**
  * Created by fabbe50 on 17/09/2016.

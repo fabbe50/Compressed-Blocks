@@ -10,7 +10,6 @@ import mezz.jei.recipes.BrokenCraftingRecipeException;
 import mezz.jei.util.ErrorUtil;
 import net.minecraft.item.ItemStack;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**

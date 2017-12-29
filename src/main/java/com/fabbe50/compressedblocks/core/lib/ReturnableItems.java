@@ -2,7 +2,6 @@ package com.fabbe50.compressedblocks.core.lib;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;

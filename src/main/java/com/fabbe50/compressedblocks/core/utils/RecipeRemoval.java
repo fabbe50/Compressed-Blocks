@@ -1,20 +1,5 @@
 package com.fabbe50.compressedblocks.core.utils;
 
-import com.fabbe50.compressedblocks.core.lib.Configs;
-import com.fabbe50.compressedblocks.core.registry.ModItemRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraftforge.fml.common.Loader;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 /**
  * Created by fabbe50 on 12/02/2017.
  */

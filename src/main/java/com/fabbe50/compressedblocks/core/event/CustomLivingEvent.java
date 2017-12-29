@@ -7,8 +7,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import java.util.List;
-
 /**
  * Created by fabbe on 01/12/2017 - 9:45 PM.
  */

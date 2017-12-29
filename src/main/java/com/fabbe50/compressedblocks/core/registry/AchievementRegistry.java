@@ -1,9 +1,5 @@
 package com.fabbe50.compressedblocks.core.registry;
 
-import com.fabbe50.compressedblocks.core.reference.Reference;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-
 /**
  * Created by fabbe50 on 15/09/2016.
  */

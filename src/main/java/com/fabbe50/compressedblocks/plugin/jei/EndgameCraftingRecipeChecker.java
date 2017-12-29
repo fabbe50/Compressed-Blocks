@@ -4,10 +4,8 @@ import com.fabbe50.compressedblocks.core.lib.recipes.EndgameRecipes;
 import com.fabbe50.compressedblocks.core.registry.ModRegistry;
 import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import mezz.jei.plugins.vanilla.crafting.CraftingRecipeChecker;
 import mezz.jei.util.ErrorUtil;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 
 import java.util.ArrayList;

@@ -1,7 +1,6 @@
 package com.fabbe50.compressedblocks.common.blocks.base;
 
 import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
-import com.fabbe50.compressedblocks.core.lib.Configs;
 import com.fabbe50.compressedblocks.core.lib.SpecialDropStorage;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;

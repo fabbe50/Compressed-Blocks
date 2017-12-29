@@ -21,10 +21,7 @@ import net.minecraft.util.datafix.DataFixer;
 import net.minecraft.util.datafix.FixTypes;
 import net.minecraft.util.datafix.walkers.ItemStackDataLists;
 import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
-import net.minecraftforge.common.brewing.IBrewingRecipe;
 
-import javax.annotation.Nonnull;
 import java.util.Arrays;
 
 /**

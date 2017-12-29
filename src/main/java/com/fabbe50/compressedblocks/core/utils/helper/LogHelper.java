@@ -1,9 +1,5 @@
 package com.fabbe50.compressedblocks.core.utils.helper;
 
-import com.fabbe50.compressedblocks.core.lib.Configs;
-import com.fabbe50.compressedblocks.core.reference.Reference;
-import net.minecraftforge.fml.common.FMLLog;
-import net.minecraftforge.fml.relauncher.FMLRelaunchLog;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 

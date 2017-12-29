@@ -1,7 +1,5 @@
 package com.fabbe50.compressedblocks.core.registry;
 
-import mezz.jei.api.ingredients.IIngredientRegistry;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import java.util.ArrayList;

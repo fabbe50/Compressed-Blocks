@@ -8,8 +8,6 @@ import net.minecraft.network.Packet;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 
-import java.util.jar.Pack200;
-
 /**
  * Created by fabbe50 on 11/10/2016.
  */

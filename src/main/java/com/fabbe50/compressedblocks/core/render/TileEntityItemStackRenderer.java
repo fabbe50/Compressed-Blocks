@@ -2,7 +2,6 @@ package com.fabbe50.compressedblocks.core.render;
 
 import com.fabbe50.compressedblocks.common.blocks.BlockSuperShulkerBox;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntitySuperShulkerBox;
-import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.item.EnumDyeColor;

@@ -1,7 +1,6 @@
 package com.fabbe50.compressedblocks.core.proxy;
 
 import com.fabbe50.compressedblocks.common.tileentities.TileEntitySuperShulkerBox;
-import com.fabbe50.compressedblocks.core.model.ModelBakery;
 import com.fabbe50.compressedblocks.core.registry.*;
 
 import com.fabbe50.compressedblocks.core.render.TileEntityItemStackRenderer;

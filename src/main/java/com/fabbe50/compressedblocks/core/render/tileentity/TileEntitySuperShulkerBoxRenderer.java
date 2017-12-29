@@ -4,19 +4,13 @@ import com.fabbe50.compressedblocks.common.blocks.BlockSuperShulkerBox;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntitySuperShulkerBox;
 import com.fabbe50.compressedblocks.core.render.Render;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelShulker;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.renderer.RenderHelper;
-import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.entity.RenderShulker;
-import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.lwjgl.opengl.GL11;
 
 /**
  * Created by fabbe50 on 19/02/2017.

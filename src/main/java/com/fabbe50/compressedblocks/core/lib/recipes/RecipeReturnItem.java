@@ -3,16 +3,12 @@ package com.fabbe50.compressedblocks.core.lib.recipes;
 import com.fabbe50.compressedblocks.core.lib.ReturnableItems;
 import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import com.google.common.collect.Lists;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-import net.minecraftforge.event.ForgeEventFactory;
 
-import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
 

@@ -1,8 +1,6 @@
 package com.fabbe50.compressedblocks.core.event;
 
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.ai.EntityAIEatGrass;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

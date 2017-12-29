@@ -24,7 +24,7 @@ public class TwoHandItemBase extends ItemMap {
     public TwoHandItemBase(String name, CreativeTabs tab) {
         this.setHasSubtypes(false);
         setItemName(this, name);
-        setCreativeTab(tab != null ? tab : CBTab.itemTab);
+        setCreativeTab(tab);
     }
 
     public static void setItemName(Item item, String itemName) {

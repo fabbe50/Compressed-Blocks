@@ -1,16 +1,5 @@
 package com.fabbe50.compressedblocks.core.registry;
 
-import com.fabbe50.compressedblocks.core.lib.Configs;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.OreDictionary;
-import net.minecraftforge.oredict.ShapedOreRecipe;
-import net.minecraftforge.oredict.ShapelessOreRecipe;
-
 /**
  * Created by fabbe50 on 12/02/2017.
  */

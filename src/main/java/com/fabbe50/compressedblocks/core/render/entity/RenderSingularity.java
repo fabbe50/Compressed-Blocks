@@ -2,7 +2,6 @@ package com.fabbe50.compressedblocks.core.render.entity;
 
 import com.fabbe50.compressedblocks.common.entities.EntityPotatoSingularity;
 import com.fabbe50.compressedblocks.core.reference.Reference;
-import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderItem;
@@ -14,7 +13,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;

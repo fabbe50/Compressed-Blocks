@@ -11,8 +11,6 @@ import mezz.jei.api.ingredients.IIngredientRegistry;
 import mezz.jei.api.ingredients.IModIngredientRegistration;
 import mezz.jei.api.recipe.IRecipeCategory;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
-import mezz.jei.api.recipe.IRecipeWrapper;
-import mezz.jei.api.recipe.IRecipeWrapperFactory;
 import mezz.jei.plugins.vanilla.ingredients.ItemStackHelper;
 import mezz.jei.plugins.vanilla.ingredients.ItemStackListFactory;
 import mezz.jei.plugins.vanilla.ingredients.ItemStackRenderer;

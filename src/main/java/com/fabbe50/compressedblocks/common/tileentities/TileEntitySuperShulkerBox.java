@@ -2,12 +2,9 @@ package com.fabbe50.compressedblocks.common.tileentities;
 
 import com.fabbe50.compressedblocks.common.blocks.BlockSuperShulkerBox;
 import com.fabbe50.compressedblocks.common.inventory.ContainerSuperShulkerBox;
-import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
-import com.fabbe50.compressedblocks.core.utils.helper.TileEntityHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.EnumPushReaction;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.MoverType;
 import net.minecraft.entity.player.EntityPlayer;

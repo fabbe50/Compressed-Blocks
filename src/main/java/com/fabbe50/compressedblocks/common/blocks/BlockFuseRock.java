@@ -31,8 +31,6 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import java.util.Random;
-
 /**
  * Created by fabbe on 04/12/2017 - 11:13 AM.
  */

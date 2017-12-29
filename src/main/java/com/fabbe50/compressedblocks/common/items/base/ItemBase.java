@@ -1,6 +1,5 @@
 package com.fabbe50.compressedblocks.common.items.base;
 
-import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

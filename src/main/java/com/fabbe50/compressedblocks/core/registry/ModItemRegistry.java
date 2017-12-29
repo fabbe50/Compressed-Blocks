@@ -1,7 +1,6 @@
 package com.fabbe50.compressedblocks.core.registry;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**

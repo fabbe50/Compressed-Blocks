@@ -5,8 +5,6 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import java.io.IOException;
-
 /**
  * Created by fabbe on 01/07/2017.
  */

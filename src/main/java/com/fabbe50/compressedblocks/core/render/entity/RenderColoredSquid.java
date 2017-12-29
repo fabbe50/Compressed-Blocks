@@ -1,7 +1,6 @@
 package com.fabbe50.compressedblocks.core.render.entity;
 
 import com.fabbe50.compressedblocks.common.entities.EntityColoredSquid;
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelSquid;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;

@@ -1,6 +1,5 @@
 package com.fabbe50.compressedblocks.core.asm;
 
-import com.fabbe50.compressedblocks.core.tweaks.StackableBuckets;
 import net.minecraft.item.ItemBucket;
 
 /**

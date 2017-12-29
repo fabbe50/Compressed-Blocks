@@ -3,9 +3,6 @@ package com.fabbe50.compressedblocks.core.lib;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import net.minecraft.util.ResourceLocation;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by fabbe50 on 26/09/2016.
  */
