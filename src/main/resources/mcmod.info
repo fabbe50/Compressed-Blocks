@@ -7,10 +7,10 @@
   "mcversion": "${mc_version}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["fabbe50", "Levinaxr", "Zirlian"],
-  "credits": "",
+  "authorList": ["fabbe50"],
+  "credits": "Levinaxr for some textures and models. Zirlian for ideas. CoffeeCatRailway for help with updating to 1.12",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": [tficore]
+  "dependencies": []
 }
 ]
