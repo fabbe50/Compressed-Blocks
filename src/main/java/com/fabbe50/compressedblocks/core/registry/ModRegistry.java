@@ -60,7 +60,7 @@ public class ModRegistry {
             }
         }
 
-        GameData.register_impl(new RecipeReturnItem(stack, list).setRegistryName(Reference.MOD_ID, "recipeReturn." + stack.getItem().getUnlocalizedName()));
+        GameData.register_impl(new RecipeReturnItem(stack, list).setRegistryName(Reference.MOD_ID + ":recipeReturn." + stack.getItem().getRegistryName().getResourcePath()));
         //returnRecipes.add(new RecipeReturnItem(stack, list));
     }
 }
