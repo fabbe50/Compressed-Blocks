@@ -19,10 +19,14 @@ public class StackableBuckets {
     public void onRightClick(PlayerInteractEvent.RightClickItem event) {
         if (!event.getEntityPlayer().world.isRemote && Configs.vanillaHooks) {
             if (event.getItemStack().getItem() == Items.WATER_BUCKET) {
-                event.setCanceled(true);
+                if (event.getWorld().getTileEntity(event.getPos()) != null) {}
+                else
+                    event.setCanceled(true);
             }
             else if (event.getItemStack().getItem() == Items.LAVA_BUCKET) {
-                event.setCanceled(true);
+                if (event.getWorld().getTileEntity(event.getPos()) != null) {}
+                else
+                    event.setCanceled(true);
             }
             else if (event.getItemStack().getItem() == Items.MILK_BUCKET && Configs.undrinkableBuckets) {
                 event.setCanceled(true);
