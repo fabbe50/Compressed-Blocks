@@ -307,7 +307,7 @@ public class RecipeRegistry {
             });
         }
         else if (compressed) {
-            for (int i = 0; i < 7; i++) {
+            for (int i = 0; i <= 7; i++) {
                 if (i == 0) {
                     addRecipe("craft_" + itemOut.getRegistryName().getResourcePath() + "_meta-" + i, new ItemStack(itemOut, 1, i), new Object[]{
                             "CCC",
@@ -316,11 +316,11 @@ public class RecipeRegistry {
                             'C', itemIn
                     });
                 } else {
-                    addRecipe("craft_" + itemOut.getRegistryName().getResourcePath() + "_meta-" + i, new ItemStack(itemOut, 1, i + 1), new Object[]{
+                    addRecipe("craft_" + itemOut.getRegistryName().getResourcePath() + "_meta-" + i, new ItemStack(itemOut, 1, i), new Object[]{
                             "CCC",
                             "CCC",
                             "CCC",
-                            'C', new ItemStack(itemOut, 1, i)
+                            'C', new ItemStack(itemOut, 1, i - 1)
                     });
                 }
             }
@@ -352,9 +352,9 @@ public class RecipeRegistry {
     }
 
     private static void uncraft3x3(Item in, Item out) {
-        for (int i = 6; i >= 0; i--) {
-            createShapeless("uncraft_" + in.getRegistryName().getResourcePath().toLowerCase() + "_meta-"+i, new ItemStack(in, 9, i), new ItemStack(in, 1, i + 1));
+        for (int i = 7; i >= 1; i--) {
+            createShapeless("uncraft_" + in.getRegistryName().getResourcePath().toLowerCase() + "_meta-"+i, new ItemStack(in, 9, i - 1), new ItemStack(in, 1, i));
         }
-        createShapeless("uncraft_" + in.getRegistryName().getResourcePath().toLowerCase() + "_meta-"+0, new ItemStack(out, 9, 0), new ItemStack(in, 1, 0));
+        createShapeless("uncraft_" + in.getRegistryName().getResourcePath().toLowerCase() + "_meta-base", new ItemStack(out, 9, 0), new ItemStack(in, 1, 0));
     }
 }
