@@ -110,6 +110,7 @@ public class BlockChunkScanner extends BlockContainer implements ITileEntityProv
         public void drawScreen(int mouseX, int mouseY, float partialTicks) {
             this.drawDefaultBackground();
             super.drawScreen(mouseX, mouseY, partialTicks);
+            GlStateManager.pushMatrix();
             TextureManager manager = mc.getTextureManager();
             manager.bindTexture(new ResourceLocation("textures/gui/demo_background.png"));
             GlStateManager.disableLighting();
@@ -118,20 +119,21 @@ public class BlockChunkScanner extends BlockContainer implements ITileEntityProv
             GlStateManager.enableLighting();
             int i = 0;
             int j = 0;
-            RenderHelper.enableStandardItemLighting();
+            RenderHelper.disableStandardItemLighting();
+            RenderHelper.enableGUIStandardItemLighting();
             RenderManager rendermanager = Minecraft.getMinecraft().getRenderManager();
             rendermanager.setRenderShadow(false);
             for (Block block : blockIntegerMap.keySet()) {
                 if (!(block instanceof BlockAir)) {
                     if (j < 4) {
                         ItemStack stack = new ItemStack(block);
-                        GlStateManager.enableDepth();
                         if (block instanceof BlockStaticLiquid) {
                             if (block == Blocks.WATER)
                                 stack = new ItemStack(Items.WATER_BUCKET);
                             else if (block == Blocks.LAVA)
                                 stack = new ItemStack(Items.LAVA_BUCKET);
                         }
+                        this.itemRender.zLevel = 1;
                         this.itemRender.renderItemAndEffectIntoGUI(this.mc.player, stack, (width / 2 - 125 + 8) + (j * 62), (height / 2 - 100 + 24) + (i * 17));
                         drawString(mc.fontRenderer, "" + blockIntegerMap.get(block), (width / 2 - 125 + 28) + (j * 62), (height / 2 - 100 + 28) + (i * 17), Color.WHITE.getRGB());
                         i++;
@@ -143,7 +145,8 @@ public class BlockChunkScanner extends BlockContainer implements ITileEntityProv
                 }
             }
             rendermanager.setRenderShadow(true);
-            RenderHelper.disableStandardItemLighting();
+            RenderHelper.enableStandardItemLighting();
+            GlStateManager.popMatrix();
         }
 
         @Override
