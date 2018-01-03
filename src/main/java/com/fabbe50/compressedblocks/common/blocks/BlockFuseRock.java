@@ -4,12 +4,14 @@ import com.fabbe50.compressedblocks.common.blocks.base.BlockBase;
 import com.fabbe50.compressedblocks.common.entities.EntityFuseRockPrimed;
 import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -31,6 +33,9 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+import javax.annotation.Nullable;
+import java.util.Random;
+
 /**
  * Created by fabbe on 04/12/2017 - 11:13 AM.
  */
@@ -40,7 +45,11 @@ public class BlockFuseRock extends BlockBase {
     public BlockFuseRock(Material material, MapColor mapColor, String name, float hardness, float resistance, CreativeTabs tab) {
         super(material, mapColor, name, hardness, resistance, tab);
         this.setDefaultState(this.blockState.getBaseState().withProperty(EXPLODE, false));
-        Blocks.FIRE.setFireInfo(this, 5, 5);
+    }
+
+    @Override
+    public SoundType getSoundType(IBlockState state, World world, BlockPos pos, @Nullable Entity entity) {
+        return SoundType.STONE;
     }
 
     @Override
@@ -65,6 +74,11 @@ public class BlockFuseRock extends BlockBase {
         if (worldIn.isBlockPowered(pos)) {
             this.trigger(worldIn, pos, state.withProperty(EXPLODE, true));
             worldIn.setBlockToAir(pos);
+        }
+        for (EnumFacing facing : EnumFacing.values()) {
+            if (worldIn.getBlockState(pos.offset(facing)).getBlock() == Blocks.FIRE) {
+                trigger(worldIn, pos, state.withProperty(EXPLODE, true));
+            }
         }
     }
 

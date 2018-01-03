@@ -48,9 +48,9 @@ public class BlockRegistry {
     public static final Block SINGLECOMPRESSSEDTNT = new BlockCompressedTNT(Material.TNT, MapColor.RED, "singlecompressedtnt", 0.7f, 0.2f, CBTab.compressedBlocksTab);
     public static final Block DOUBLECOMPRESSSEDTNT = new BlockCompressedTNT(Material.TNT, MapColor.RED, "doublecompressedtnt", 0.7f, 0.2f, CBTab.compressedBlocksTab);
     public static final Block TRIPLECOMPRESSSEDTNT = new BlockCompressedTNT(Material.TNT, MapColor.RED, "triplecompressedtnt", 0.7f, 0.2f, CBTab.compressedBlocksTab);
-    public static final Block FUSEROCK = new BlockFuseRock(Material.ROCK, MapColor.GRAY, "fuserock", 2.0f, 10.0f, null);
-    public static final Block FUSEROCKNETHER = new BlockFuseRock(Material.ROCK, MapColor.GRAY, "fuserocknether", 2.0f, 10.0f, null);
-    public static final Block FUSEROCKEND = new BlockFuseRock(Material.ROCK, MapColor.GRAY, "fuserockend", 2.0f, 10.0f, null);
+    public static final Block FUSEROCK = new BlockFuseRock(Material.WOOD, MapColor.GRAY, "fuserock", 2.0f, 10.0f, null);
+    public static final Block FUSEROCKNETHER = new BlockFuseRock(Material.WOOD, MapColor.GRAY, "fuserocknether", 2.0f, 10.0f, null);
+    public static final Block FUSEROCKEND = new BlockFuseRock(Material.WOOD, MapColor.GRAY, "fuserockend", 2.0f, 10.0f, null);
     public static final Block MININGEXPLOSIVES = new BlockMiningExplosives(Material.TNT, MapColor.RED, "miningexplosives", 0.7f, 0.2f, null);
     public static final Block ONLINEDETECTOR = new BlockOnlineDetector(Material.REDSTONE_LIGHT, MapColor.BLUE, "onlinedetector", 1.3f, 6f, null).setCreativeTab(null);
     public static final Block ENDERBLOCK = new BlockEnder(Material.CAKE, MapColor.CYAN, "enderblock", 2.3f, 12.2f, null);
