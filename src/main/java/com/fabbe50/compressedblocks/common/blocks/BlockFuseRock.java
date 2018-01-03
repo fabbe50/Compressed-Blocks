@@ -2,6 +2,7 @@ package com.fabbe50.compressedblocks.common.blocks;
 
 import com.fabbe50.compressedblocks.common.blocks.base.BlockBase;
 import com.fabbe50.compressedblocks.common.entities.EntityFuseRockPrimed;
+import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
 import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -76,7 +77,7 @@ public class BlockFuseRock extends BlockBase {
             worldIn.setBlockToAir(pos);
         }
         for (EnumFacing facing : EnumFacing.values()) {
-            if (worldIn.getBlockState(pos.offset(facing)).getBlock() == Blocks.FIRE) {
+            if (worldIn.getBlockState(pos.offset(facing)).getBlock() == Blocks.FIRE && worldIn.getBlockState(pos).getBlock() != BlockRegistry.FUSEROCKNETHER) {
                 trigger(worldIn, pos, state.withProperty(EXPLODE, true));
             }
         }
