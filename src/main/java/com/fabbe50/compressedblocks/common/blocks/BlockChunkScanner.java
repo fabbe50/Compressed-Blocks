@@ -4,10 +4,8 @@ import com.fabbe50.compressedblocks.CompressedBlocks;
 import com.fabbe50.compressedblocks.common.tileentities.TileEntityChunkScanner;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockAir;
-import net.minecraft.block.BlockContainer;
-import net.minecraft.block.ITileEntityProvider;
+import com.fabbe50.compressedblocks.core.utils.helper.BlockHelper;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -18,11 +16,13 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import javax.annotation.Nullable;
 import java.awt.*;
@@ -79,7 +79,8 @@ public class BlockChunkScanner extends BlockContainer implements ITileEntityProv
             for (int y = 0; y < 255; y++) {
                 for (int z = 0; z < 16; z++) {
                     if (worldIn.getBlockState(bPos).getBlock() != Blocks.BEDROCK && worldIn.getBlockState(bPos).getBlock() != BlockRegistry.CHUNK_SCANNER) {
-                        blocks.add(worldIn.getBlockState(bPos).getBlock());
+                        if (BlockHelper.isSourceBlock(worldIn, bPos) || !(worldIn.getBlockState(bPos).getBlock() instanceof BlockStaticLiquid))
+                            blocks.add(worldIn.getBlockState(bPos).getBlock());
                     }
                     if (x2 > 0 && z2 > 0)
                         bPos = new BlockPos(x2 + x, y, z2 + z);
@@ -121,10 +122,16 @@ public class BlockChunkScanner extends BlockContainer implements ITileEntityProv
             RenderManager rendermanager = Minecraft.getMinecraft().getRenderManager();
             rendermanager.setRenderShadow(false);
             for (Block block : blockIntegerMap.keySet()) {
-                if (!(block instanceof BlockAir) && block != Blocks.WATER && block != Blocks.FLOWING_WATER && block != Blocks.LAVA && block != Blocks.FLOWING_LAVA) {
+                if (!(block instanceof BlockAir)) {
                     if (j < 4) {
                         ItemStack stack = new ItemStack(block);
                         GlStateManager.enableDepth();
+                        if (block instanceof BlockStaticLiquid) {
+                            if (block == Blocks.WATER)
+                                stack = new ItemStack(Items.WATER_BUCKET);
+                            else if (block == Blocks.LAVA)
+                                stack = new ItemStack(Items.LAVA_BUCKET);
+                        }
                         this.itemRender.renderItemAndEffectIntoGUI(this.mc.player, stack, (width / 2 - 125 + 8) + (j * 62), (height / 2 - 100 + 24) + (i * 17));
                         drawString(mc.fontRenderer, "" + blockIntegerMap.get(block), (width / 2 - 125 + 28) + (j * 62), (height / 2 - 100 + 28) + (i * 17), Color.WHITE.getRGB());
                         i++;
