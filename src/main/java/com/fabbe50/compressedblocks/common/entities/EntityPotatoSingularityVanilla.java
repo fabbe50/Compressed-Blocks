@@ -39,7 +39,7 @@ public class EntityPotatoSingularityVanilla extends EntityThrowable {
 
     @Override
     protected void onImpact(RayTraceResult result) {
-        if (!hasHit && false) {
+        if (!hasHit) {
             for (int i = 0; i < 9; i++) {
                 for (int j = 0; j < 9; j++) {
                     for (int l = 0; l < 3; l++) {

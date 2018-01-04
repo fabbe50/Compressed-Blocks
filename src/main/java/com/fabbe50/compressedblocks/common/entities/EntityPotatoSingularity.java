@@ -41,7 +41,7 @@ public class EntityPotatoSingularity extends EntityThrowable {
     @Override
     protected void onImpact(RayTraceResult result) {
         BlockPos pos = new BlockPos(result.getBlockPos());
-        if (!hasHit && false) {
+        if (!hasHit) {
             com.brandon3055.draconicevolution.blocks.reactor.ProcessExplosion explosion = new com.brandon3055.draconicevolution.blocks.reactor.ProcessExplosion(pos, 150, this.world.getMinecraftServer().getWorld(this.dimension), 0);
             com.brandon3055.brandonscore.handlers.ProcessHandler.addProcess(explosion);
         }
