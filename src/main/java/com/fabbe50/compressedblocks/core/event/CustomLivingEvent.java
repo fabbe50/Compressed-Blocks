@@ -14,20 +14,23 @@ public class CustomLivingEvent {
     @SubscribeEvent
     public void endPotionEvent(LivingEvent event) {
         if (event.getEntityLiving() instanceof EntityPlayer) {
-            if (event.getEntityLiving().getActivePotionEffect(PotionRegistry.POTION_FLIGHT) == null) {
-                if (!((EntityPlayer) event.getEntityLiving()).capabilities.isCreativeMode) {
-                    try {
-                        PotionFlight.killEffects(event.getEntityLiving());
-                    } catch (Exception e) {
-
-                    }
+            if (event.getEntityLiving().getActivePotionEffect(PotionRegistry.POTION_FLIGHT) != null) {
+                if (!event.getEntityLiving().getTags().contains("potionFlight"))
+                    event.getEntityLiving().addTag("potionFlight");
+            } else if (event.getEntityLiving().getActivePotionEffect(PotionRegistry.POTION_FLIGHT) == null) {
+                if (event.getEntityLiving().getTags().contains("potionFlight")) {
+                    event.getEntityLiving().removeTag("potionFlight");
+                    PotionFlight.killEffects(event.getEntityLiving());
                 }
             }
-            if (event.getEntityLiving().getActivePotionEffect(PotionRegistry.POTION_MAGNET) == null) {
-                try {
-                    PotionMagnet.killEffects(event.getEntityLiving());
-                } catch (Exception e) {
 
+            if (event.getEntityLiving().getActivePotionEffect(PotionRegistry.POTION_MAGNET) != null) {
+                if (!event.getEntityLiving().getTags().contains("potionMagnet"))
+                    event.getEntityLiving().addTag("potionMagnet");
+            } else if (event.getEntityLiving().getActivePotionEffect(PotionRegistry.POTION_MAGNET) == null) {
+                if (event.getEntityLiving().getTags().contains("potionMagnet")) {
+                    event.getEntityLiving().removeTag("potionMagnet");
+                    PotionMagnet.killEffects(event.getEntityLiving());
                 }
             }
         }
