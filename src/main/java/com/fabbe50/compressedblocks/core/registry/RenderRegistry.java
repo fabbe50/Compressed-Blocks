@@ -7,6 +7,7 @@ import com.fabbe50.compressedblocks.common.tileentities.TileEntitySuperShulkerBo
 import com.fabbe50.compressedblocks.core.model.entity.ModelCorgi;
 import com.fabbe50.compressedblocks.core.render.entity.RenderColoredSquid;
 import com.fabbe50.compressedblocks.core.render.entity.RenderCorgi;
+import com.fabbe50.compressedblocks.core.render.entity.RenderSingularity;
 import com.fabbe50.compressedblocks.core.render.tileentity.TileEntityBeaconXrayRenderer;
 import com.fabbe50.compressedblocks.core.render.tileentity.TileEntitySuperShulkerBoxRenderer;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
@@ -21,5 +22,6 @@ public class RenderRegistry {
         RenderingRegistry.registerEntityRenderingHandler(EntityColoredSquid.class, RenderColoredSquid::new);
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBeaconXray.class, new TileEntityBeaconXrayRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySuperShulkerBox.class, new TileEntitySuperShulkerBoxRenderer());
+        RenderSingularity.registerRender();
     }
 }

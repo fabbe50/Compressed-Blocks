@@ -1,7 +1,10 @@
 package com.fabbe50.compressedblocks.core.render.entity;
 
 import com.fabbe50.compressedblocks.common.entities.EntityPotatoSingularity;
+import com.fabbe50.compressedblocks.common.entities.EntityPotatoSingularityVanilla;
 import com.fabbe50.compressedblocks.core.reference.Reference;
+import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
+import com.fabbe50.compressedblocks.core.registry.RenderRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderItem;
@@ -14,6 +17,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -24,20 +28,22 @@ import javax.annotation.Nullable;
  */
 @SideOnly(Side.CLIENT)
 public class RenderSingularity<T extends Entity> extends Render<T>{
-    private static final ResourceLocation texture = new ResourceLocation(Reference.MOD_ID, "textures/items/potatosingularitye");
+    private static final ResourceLocation texture = new ResourceLocation(Reference.MOD_ID, "textures/items/potatosingularity");
 
     protected final Item item;
     private final RenderItem itemRenderer;
 
     private RenderSingularity(RenderManager renderManager) {
         super(renderManager);
-        //this.item = ItemRegistry.POTATO_SINGULARITY;
-        this.item = Items.POTATO;
+        this.item = ItemRegistry.POTATO_SINGULARITY;
         this.itemRenderer = Minecraft.getMinecraft().getRenderItem();
     }
 
     public static void registerRender() {
-        RenderingRegistry.registerEntityRenderingHandler(EntityPotatoSingularity.class, RenderSingularity::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityPotatoSingularityVanilla.class, RenderSingularity::new);
+        if (Loader.isModLoaded("brandonscore") && Loader.isModLoaded("draconicevolution")) {
+            RenderingRegistry.registerEntityRenderingHandler(EntityPotatoSingularity.class, RenderSingularity::new);
+        }
     }
 
     @Nullable
