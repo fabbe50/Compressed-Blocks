@@ -13,6 +13,7 @@ import javax.annotation.Nullable;
 
 /**
  * Created by fabbe on 02/06/2017.
+ * Will be deprecated, gonna move functionality to more dynamic classes
  */
 public class ItemSwordBase extends ItemTool {
     private final float attackDamage;
