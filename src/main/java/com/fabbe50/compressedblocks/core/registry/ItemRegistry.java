@@ -26,26 +26,30 @@ import java.util.Set;
 public class ItemRegistry {
     public static final Item ENDGAMIUM_INGOT = new ItemBaseEnchanted("endgamiumingot", CBTab.itemTab);
     public static final Item ENDGAMIUM_NUGGET = new ItemBaseEnchanted("endgamiumnugget", CBTab.itemTab);
-    public static final Item ENDGAMIUM_SWORD = new ItemSwordBase(ToolMaterialRegistry.TOOL_ENDGAMIUM, "endgamiumsword", CreativeTabs.COMBAT);
     public static final Item ENDGAMIUM_BONE = new ItemBaseEnchanted("endgamiumbone", CBTab.itemTab);
     public static final Item POTATO_BONE = new ItemPotatoBone("potatobone", CBTab.itemTab);
     public static final Item ITEM_FOOD = new ItemFood(20, 20.0f, false, "fooditem").setCreativeTab(CBTab.itemTab);
-    public static final Item BEDROCK_BREAKER = new ItemBedrockBreaker("bedrockbreaker", CBTab.itemTab);
-    public static final Item BEDROCK_OBTAINER = new ItemBedrockObtainer("bedrockobtainer", CBTab.itemTab);
     public static final Item BOW_ITEMS = new ItemBase("bowitems", CBTab.itemTab);
     public static final Item MILK_FLASK = new ItemMilkFlask("milkflask", CBTab.itemTab);
     public static final Item COLOR_CORE = new ItemBase("colorcore", CBTab.itemTab);
-    public static final Item TWOHANDITEMTEST = new TwoHandItemBase("twohanditemtest", null).setCreativeTab(null);
-    public static final Item TELEPORTORB = new ItemTeleportOrb("teleportorb", CBTab.itemTab);
-    public static final Item MOBKILLER = new ItemMobKill(ToolMaterialRegistry.INSTAKILL, "mobkiller");
-    public static final Item DNASAMPLE = new ItemDNASample("dnasample", null).setCreativeTab(null);
     public static final Item ENDERAPPLE = new ItemEnderApple(10, 15.0f, false, "enderapple").setAlwaysEdible().setCreativeTab(CBTab.itemTab);
     public static final Item PEBBLES = new ItemBase("pebble", CBTab.itemTab);
     public static final Item FOODBOWL = new ItemBowledFood(10, 15, false, "foodbowl").setMaxStackSize(16).setCreativeTab(CBTab.itemTab);
     public static final Item MASHEDFOOD = new ItemBowledFood(15, 25, true, "mashedfood").setMaxStackSize(16).setCreativeTab(CBTab.itemTab);
     public static final Item INKBOTTLE = new ItemInkBottle("inkbottle", CBTab.itemTab).setCreativeTab(CBTab.itemTab);
     public static final Item BEDROCK_INGOT = new ItemBase("bedrockingot", CBTab.itemTab);
+    public static final Item POTATO_SINGULARITY = new ItemPotatoSingularity("potatosingularity", CBTab.itemTab);
     public static final Item BEDROCK_ROD = new ItemBase("bedrockrod", CBTab.itemTab);
+    public static final Item DIAMOND_ROD = new ItemBase("diamondrod", CBTab.itemTab);
+
+    //Custom Tools
+    public static final Item ENDGAMIUM_SWORD = new ItemSwordBase(ToolMaterialRegistry.TOOL_ENDGAMIUM, "endgamiumsword", CreativeTabs.COMBAT);
+    public static final Item BEDROCK_BREAKER = new ItemBedrockBreaker("bedrockbreaker", CBTab.itemTab);
+    public static final Item BEDROCK_OBTAINER = new ItemBedrockObtainer("bedrockobtainer", CBTab.itemTab);
+    public static final Item TWOHANDITEMTEST = new TwoHandItemBase("twohanditemtest", null).setCreativeTab(null);
+    public static final Item TELEPORTORB = new ItemTeleportOrb("teleportorb", CBTab.itemTab);
+    public static final Item MOBKILLER = new ItemMobKill(ToolMaterialRegistry.INSTAKILL, "mobkiller");
+    public static final Item DNASAMPLE = new ItemDNASample("dnasample", null).setCreativeTab(null);
     public static final Item STAFF_WOOD = new ItemStaff(1, 2, Item.ToolMaterial.WOOD, null, "wooden_staff").setCreativeTab(CBTab.itemTab);
     public static final Item STAFF_STONE = new ItemStaff(1, 2, Item.ToolMaterial.STONE, null, "stone_staff").setCreativeTab(CBTab.itemTab);
     public static final Item STAFF_IRON = new ItemStaff(1, 2, Item.ToolMaterial.IRON, null, "iron_staff").setCreativeTab(CBTab.itemTab);
@@ -53,10 +57,8 @@ public class ItemRegistry {
     public static final Item STAFF_DIAMOND = new ItemStaff(1, 2, Item.ToolMaterial.DIAMOND, null, "diamond_staff").setCreativeTab(CBTab.itemTab);
     public static final Item STAFF_ENDGAMIUM = new ItemStaff(1, 2, ToolMaterialRegistry.TOOL_ENDGAMIUM, null, "endgamium_staff").setCreativeTab(CBTab.itemTab);
     public static final Item EGG_HATCHER = new ItemEggHatcher("egghatcher", CBTab.itemTab);
-    public static final Item POTATO_SINGULARITY = new ItemPotatoSingularity("potatosingularity", CBTab.itemTab);
     public static final Item TRINKET = new ItemTrinket("trinket", CBTab.itemTab).setCreativeTab(CBTab.itemTab);
     public static final Item INK_EXTRACTOR = new ItemInkExtractor("inkextr", CBTab.itemTab);
-    //public static final Item COMPRESSEDSTICK;
     public static final Item DIA_BEDROCK_SWORD = new ItemCustomSword(Item.ToolMaterial.DIAMOND, 0, 2.6f, 2.6f, false, "beddia_sword", CBTab.itemTab);
     public static final Item DIA_BEDROCK_PICKAXE = new ItemDiamondBedrockPickaxe(Item.ToolMaterial.DIAMOND, 0, 4, "beddia_pickaxe", CBTab.itemTab);
     public static final Item DIA_BEDROCK_SHOVEL = new ItemCustomShovel(Item.ToolMaterial.DIAMOND, 0, 4, "beddia_shovel", CBTab.itemTab);
