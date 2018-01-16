@@ -2,10 +2,7 @@ package com.fabbe50.compressedblocks.core.registry;
 
 import com.fabbe50.compressedblocks.common.creativetabs.CBTab;
 import com.fabbe50.compressedblocks.common.items.*;
-import com.fabbe50.compressedblocks.common.items.base.ItemBase;
-import com.fabbe50.compressedblocks.common.items.base.ItemBaseEnchanted;
-import com.fabbe50.compressedblocks.common.items.base.ItemSwordBase;
-import com.fabbe50.compressedblocks.common.items.base.TwoHandItemBase;
+import com.fabbe50.compressedblocks.common.items.base.*;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -48,6 +45,7 @@ public class ItemRegistry {
     public static final Item MASHEDFOOD = new ItemBowledFood(15, 25, true, "mashedfood").setMaxStackSize(16).setCreativeTab(CBTab.itemTab);
     public static final Item INKBOTTLE = new ItemInkBottle("inkbottle", CBTab.itemTab).setCreativeTab(CBTab.itemTab);
     public static final Item BEDROCK_INGOT = new ItemBase("bedrockingot", CBTab.itemTab);
+    public static final Item BEDROCK_ROD = new ItemBase("bedrockrod", CBTab.itemTab);
     public static final Item STAFF_WOOD = new ItemStaff(1, 2, Item.ToolMaterial.WOOD, null, "wooden_staff").setCreativeTab(CBTab.itemTab);
     public static final Item STAFF_STONE = new ItemStaff(1, 2, Item.ToolMaterial.STONE, null, "stone_staff").setCreativeTab(CBTab.itemTab);
     public static final Item STAFF_IRON = new ItemStaff(1, 2, Item.ToolMaterial.IRON, null, "iron_staff").setCreativeTab(CBTab.itemTab);
@@ -59,6 +57,11 @@ public class ItemRegistry {
     public static final Item TRINKET = new ItemTrinket("trinket", CBTab.itemTab).setCreativeTab(CBTab.itemTab);
     public static final Item INK_EXTRACTOR = new ItemInkExtractor("inkextr", CBTab.itemTab);
     //public static final Item COMPRESSEDSTICK;
+    public static final Item DIA_BEDROCK_SWORD = new ItemCustomSword(Item.ToolMaterial.DIAMOND, 0, 2.6f, 2.6f, false, "beddia_sword", CBTab.itemTab);
+    public static final Item DIA_BEDROCK_PICKAXE = new ItemDiamondBedrockPickaxe(Item.ToolMaterial.DIAMOND, 0, 4, "beddia_pickaxe", CBTab.itemTab);
+    public static final Item DIA_BEDROCK_SHOVEL = new ItemCustomShovel(Item.ToolMaterial.DIAMOND, 0, 4, "beddia_shovel", CBTab.itemTab);
+    public static final Item DIA_BEDROCK_AXE = new ItemDiamondBedrockAxe(Item.ToolMaterial.DIAMOND, 0, 4, "beddia_axe", CBTab.itemTab);
+    public static final Item DIA_BEDROCK_HOE = new ItemCustomHoe(Item.ToolMaterial.DIAMOND, 0, "beddia_hoe", CBTab.itemTab);
 
     public static void init() {
         registerItem(ENDGAMIUM_INGOT);
@@ -92,6 +95,12 @@ public class ItemRegistry {
         registerItem(POTATO_SINGULARITY);
         registerItem(TRINKET);
         registerItem(INK_EXTRACTOR);
+        registerItem(BEDROCK_ROD);
+        registerItem(DIA_BEDROCK_SWORD);
+        registerItem(DIA_BEDROCK_PICKAXE);
+        registerItem(DIA_BEDROCK_SHOVEL);
+        registerItem(DIA_BEDROCK_AXE);
+        registerItem(DIA_BEDROCK_HOE);
     }
 
     public static void registerItem(Item item) {
