@@ -245,7 +245,7 @@ public class TileEntityFurnaceCompr extends TileEntityLockable implements ITicka
             return 0;
         } else {
             int burnTime = net.minecraftforge.event.ForgeEventFactory.getItemBurnTime(stack);
-            if (burnTime >= 0) return burnTime;
+            if (burnTime >= 0) return burnTime / speedMultiplier;
             Item item = stack.getItem();
 
             if (item == Item.getItemFromBlock(Blocks.WOODEN_SLAB)) {
