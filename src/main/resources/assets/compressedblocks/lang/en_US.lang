@@ -33,11 +33,17 @@ item.compressedblocks:trinket.name=Trinket
 item.compressedblocks:minibeacon.name=Portable Beacon
 item.compressedblocks:inkextr.name=Ink Extractor
 item.compressedblocks:bedrockrod.name=Bedrock Rod
+item.compressedblocks:diamondrod.name=Diamond Rod
 item.compressedblocks:beddia_sword.name=Bedrock-Diamond Sword
 item.compressedblocks:beddia_pickaxe.name=Bedrock-Diamond Pickaxe
 item.compressedblocks:beddia_shovel.name=Bedrock-Diamond Shovel
 item.compressedblocks:beddia_axe.name=Bedrock-Diamond Axe
 item.compressedblocks:beddia_hoe.name=Bedrock-Diamond Hoe
+item.compressedblocks:dia_sword.name=Diamond Sword
+item.compressedblocks:dia_pickaxe.name=Diamond Pickaxe
+item.compressedblocks:dia_shovel.name=Diamond Shovel
+item.compressedblocks:dia_axe.name=Diamond Axe
+item.compressedblocks:dia_hoe.name=Diamond Hoe
 
 #Potions
 potion.effect.compressedblocks.magnet=Potion of Magnetization

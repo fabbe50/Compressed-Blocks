@@ -64,6 +64,11 @@ public class ItemRegistry {
     public static final Item DIA_BEDROCK_SHOVEL = new ItemCustomShovel(Item.ToolMaterial.DIAMOND, 0, 4, "beddia_shovel", CBTab.itemTab);
     public static final Item DIA_BEDROCK_AXE = new ItemDiamondBedrockAxe(Item.ToolMaterial.DIAMOND, 0, 4, "beddia_axe", CBTab.itemTab);
     public static final Item DIA_BEDROCK_HOE = new ItemCustomHoe(Item.ToolMaterial.DIAMOND, 0, "beddia_hoe", CBTab.itemTab);
+    public static final Item DIA_SWORD = new ItemCustomSword(Item.ToolMaterial.DIAMOND, 2, 2, 2, false, "dia_sword", CBTab.itemTab);
+    public static final Item DIA_PICKAXE = new ItemCustomPickaxe(Item.ToolMaterial.DIAMOND, 2, 2, "dia_pickaxe", CBTab.itemTab);
+    public static final Item DIA_SHOVEL = new ItemCustomShovel(Item.ToolMaterial.DIAMOND, 2, 2, "dia_shovel", CBTab.itemTab);
+    public static final Item DIA_AXE = new ItemCustomAxe(Item.ToolMaterial.DIAMOND, 2, 2, "dia_axe", CBTab.itemTab);
+    public static final Item DIA_HOE = new ItemCustomHoe(Item.ToolMaterial.DIAMOND, 2, "dia_hoe", CBTab.itemTab);
 
     public static void init() {
         registerItem(ENDGAMIUM_INGOT);
@@ -98,11 +103,17 @@ public class ItemRegistry {
         registerItem(TRINKET);
         registerItem(INK_EXTRACTOR);
         registerItem(BEDROCK_ROD);
+        registerItem(DIAMOND_ROD);
         registerItem(DIA_BEDROCK_SWORD);
         registerItem(DIA_BEDROCK_PICKAXE);
         registerItem(DIA_BEDROCK_SHOVEL);
         registerItem(DIA_BEDROCK_AXE);
         registerItem(DIA_BEDROCK_HOE);
+        registerItem(DIA_SWORD);
+        registerItem(DIA_PICKAXE);
+        registerItem(DIA_SHOVEL);
+        registerItem(DIA_AXE);
+        registerItem(DIA_HOE);
     }
 
     public static void registerItem(Item item) {
