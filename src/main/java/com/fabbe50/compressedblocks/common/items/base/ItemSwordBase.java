@@ -44,7 +44,22 @@ public class ItemSwordBase extends ItemTool {
     }
 
     @Override
+    public void setHarvestLevel(String toolClass, int level) {
+        super.setHarvestLevel(toolClass, 0);
+    }
+
+    @Override
+    public float getDestroySpeed(ItemStack stack, IBlockState state) {
+        return 0;
+    }
+
+    @Override
     public boolean canHarvestBlock(IBlockState blockIn) {
+        return false;
+    }
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
         return false;
     }
 }
