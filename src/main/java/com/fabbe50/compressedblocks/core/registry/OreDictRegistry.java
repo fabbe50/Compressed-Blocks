@@ -21,7 +21,7 @@ public class OreDictRegistry {
 
     private static void addCompressedOreDict() {
         for (int i = 0; i < 8; i++) {
-            if (Loader.isModLoaded("ExtraUtils2")) {
+            if (Loader.isModLoaded("extrautils2")) {
                 OreDictionary.registerOre(MetaValues.COMPRESSED[i] + "Cobble", new ItemStack(ModItemRegistry.EU2_COBBLE, 1, i));
                 if (i < 4)
                     OreDictionary.registerOre(MetaValues.COMPRESSED[i] + "Dirt", new ItemStack(ModItemRegistry.EU2_DIRT, 1, i));
