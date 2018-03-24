@@ -116,28 +116,6 @@ public class BlockFuseRock extends BlockBase {
     }
 
     @Override
-    public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state) {
-        EntityPlayer player = worldIn.getClosestPlayer(pos.getX(), pos.getY(), pos.getZ(), 10.0d, false);
-        try {
-            if (!player.capabilities.isCreativeMode) {
-                if (player.getHeldItem(EnumHand.MAIN_HAND).getItem() instanceof ItemTool) {
-                } else
-                    this.trigger(worldIn, pos, state.withProperty(EXPLODE, true));
-            }
-        }
-        catch (Exception e) {
-            try {
-                if (!player.capabilities.isCreativeMode)
-                    this.trigger(worldIn, pos, state.withProperty(EXPLODE, true));
-            }
-            catch (Exception e2) {
-                LogHelper.error(e2 + ": This is caused by an unrelated mod. Under normal conditions, this wont happen.");
-                this.trigger(worldIn, pos, state.withProperty(EXPLODE, true));
-            }
-        }
-    }
-
-    @Override
     public boolean isFlammable(IBlockAccess world, BlockPos pos, EnumFacing face) {
         return true;
     }
