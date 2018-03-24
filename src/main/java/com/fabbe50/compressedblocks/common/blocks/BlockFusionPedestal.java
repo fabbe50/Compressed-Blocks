@@ -101,7 +101,6 @@ public class BlockFusionPedestal extends BlockBase {
                             NBTTagCompound compound = items.get(0).getTagCompound();
                             output.setTagCompound(compound);
                             outputItem.setItem(output);
-                            //outputItem.setVelocity(0, 0, 0);
                             outputItem.addVelocity(-outputItem.motionX, -outputItem.motionY, -outputItem.motionZ);
                             worldIn.spawnEntity(outputItem);
                             doEffects(worldIn, pos);
@@ -110,7 +109,6 @@ public class BlockFusionPedestal extends BlockBase {
                         } else {
                             EntityItem outputItem = new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5);
                             outputItem.setItem(recipes.getRecipeOutput());
-                            //outputItem.setVelocity(0, 0, 0);
                             outputItem.addVelocity(-outputItem.motionX, -outputItem.motionY, -outputItem.motionZ);
                             worldIn.spawnEntity(outputItem);
                             doEffects(worldIn, pos);

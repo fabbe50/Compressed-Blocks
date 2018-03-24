@@ -21,7 +21,8 @@ public class EntityRegistry {
         createEntity(Reference.modResourceLoc("corgi"), EntityCorgi.class, "corgi", CompressedBlocks.instance, 0, 64, 1, true, 0xedc67d, 0x8f6830);
         createEntity(Reference.modResourceLoc("csquid"), EntityColoredSquid.class, "csquid", CompressedBlocks.instance, 1, 64, 1, true, 0x00ffff, 0x008b8b);
 
-        addSpawning(EntityColoredSquid.class, 20, 5, 12, EnumCreatureType.WATER_CREATURE, new Biome[]{Biomes.OCEAN, Biomes.DEEP_OCEAN, Biomes.FROZEN_OCEAN, Biomes.RIVER, Biomes.FROZEN_RIVER});
+        addSpawning(EntityColoredSquid.class, 20, 5, 12, EnumCreatureType.WATER_CREATURE, Biomes.OCEAN, Biomes.DEEP_OCEAN, Biomes.FROZEN_OCEAN, Biomes.RIVER, Biomes.FROZEN_RIVER);
+        EntitySpawnPlacementRegistry.setPlacementType(EntityColoredSquid.class, EntityLiving.SpawnPlacementType.IN_WATER);
     }
 
     private static void createEntity(ResourceLocation location, Class<? extends Entity> clazz, String name, Object modInstance, int id, int trackingRange, int updateFrequency, boolean sendsVelocityUpdates, int eggPrimary, int eggSecondary) {
@@ -30,7 +31,6 @@ public class EntityRegistry {
 
     private static void addSpawning(Class <? extends EntityLiving> entityClass, int weightedProb, int min, int max, EnumCreatureType typeOfCreature, Biome... biomes) {
         net.minecraftforge.fml.common.registry.EntityRegistry.addSpawn(entityClass, weightedProb, min, max, typeOfCreature, biomes);
-        EntitySpawnPlacementRegistry.setPlacementType(EntityColoredSquid.class, EntityLiving.SpawnPlacementType.IN_WATER);
     }
 
     public static void renderInit() {

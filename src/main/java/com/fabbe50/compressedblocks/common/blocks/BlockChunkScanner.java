@@ -98,8 +98,6 @@ public class BlockChunkScanner extends BlockContainer implements ITileEntityProv
             playerIn.openGui(CompressedBlocks.instance, Reference.GUI_CHUNKSCANNER, worldIn, pos.getX(), pos.getY(), pos.getZ());
         }
 
-
-
         return true;
     }
 

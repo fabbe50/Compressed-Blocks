@@ -40,22 +40,4 @@ public class PotionRegistry {
     private static void registerPotion(Potion potion) {
         ForgeRegistries.POTIONS.register(potion);
     }
-
-    private static int checkIDPotion(Potion potion) {
-        int highestValue = 0;
-        for (Potion p : Potion.REGISTRY) {
-            highestValue = Potion.REGISTRY.getIDForObject(p);
-        }
-        LogHelper.info("Registered potion " + potion + " with id: " + highestValue);
-        return highestValue + 1;
-    }
-
-    private static int checkIDPotionType(PotionType potion) {
-        int highestValue = 0;
-        for (PotionType p : PotionType.REGISTRY) {
-            highestValue = PotionType.REGISTRY.getIDForObject(p);
-        }
-        LogHelper.info("Registered potiontype " + potion + " with id: " + highestValue);
-        return highestValue + 1;
-    }
 }

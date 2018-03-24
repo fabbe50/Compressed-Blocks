@@ -11,13 +11,13 @@ import net.minecraftforge.registries.GameData;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by fabbe on 09/05/2017.
  */
 public class ModRegistry {
     public static List<EndgameRecipes> endgameRecipes = new ArrayList<>();
-    public static List<RecipeReturnItem> returnRecipes = new ArrayList<>();
 
     public static void addEndgameRecipe(ItemStack stack, Object... recipeComponents) {
         List<ItemStack> list = Lists.newArrayList();
@@ -25,11 +25,9 @@ public class ModRegistry {
         for (Object object : recipeComponents) {
             if (object instanceof ItemStack) {
                 list.add(((ItemStack)object).copy());
-            }
-            else if (object instanceof Item) {
+            } else if (object instanceof Item) {
                 list.add(new ItemStack((Item)object));
-            }
-            else {
+            } else {
                 if (!(object instanceof Block)) {
                     throw new IllegalArgumentException("Invalid endgame recipe: unknown type " + object.getClass().getName() + "!");
                 }
@@ -42,16 +40,14 @@ public class ModRegistry {
     }
 
     public static void addReturnRecipe(ItemStack stack, Object... recipeComponents) {
-        List<ItemStack> list = Lists.<ItemStack>newArrayList();
+        List<ItemStack> list = Lists.newArrayList();
 
         for (Object object : recipeComponents) {
             if (object instanceof ItemStack) {
                 list.add(((ItemStack)object).copy());
-            }
-            else if (object instanceof Item) {
+            } else if (object instanceof Item) {
                 list.add(new ItemStack((Item)object));
-            }
-            else {
+            } else {
                 if (!(object instanceof Block)) {
                     throw new IllegalArgumentException("Invalid return recipe: unknown type " + object.getClass().getName() + "!");
                 }
@@ -60,7 +56,6 @@ public class ModRegistry {
             }
         }
 
-        GameData.register_impl(new RecipeReturnItem(stack, list).setRegistryName(Reference.MOD_ID + ":recipeReturn." + stack.getItem().getRegistryName().getResourcePath()));
-        //returnRecipes.add(new RecipeReturnItem(stack, list));
+        GameData.register_impl(new RecipeReturnItem(stack, list).setRegistryName(Reference.MOD_ID + ":recipeReturn." + Objects.requireNonNull(stack.getItem().getRegistryName()).getResourcePath()));
     }
 }

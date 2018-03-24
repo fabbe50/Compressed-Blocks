@@ -2,6 +2,7 @@ package com.fabbe50.compressedblocks.common.world.gen;
 
 import com.fabbe50.compressedblocks.core.handler.OregenHandler;
 import com.fabbe50.compressedblocks.core.lib.OreStorage;
+import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;

@@ -10,6 +10,7 @@ import com.fabbe50.compressedblocks.common.tileentities.*;
 import com.fabbe50.compressedblocks.core.lib.EnumCompressed;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 
+import com.fabbe50.compressedblocks.development.common.block.BlockWorkbenchTest;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -17,6 +18,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.launchwrapper.Launch;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
@@ -113,6 +115,9 @@ public class BlockRegistry {
     public static final Block DRAWBRIDGE = new BlockDrawbridge(Material.ROCK).setRegistryName(Reference.MOD_ID, "drawbridge").setUnlocalizedName(Reference.MOD_ID+":drawbridge").setHardness(2.0f).setResistance(10.0f).setCreativeTab(CBTab.blockTab);
     public static final Block CHUNK_SCANNER = new BlockChunkScanner(Material.TNT).setRegistryName(Reference.MOD_ID, "chunkscanner").setUnlocalizedName(Reference.MOD_ID+":chunkscanner").setHardness(2.0f).setResistance(10.0f).setCreativeTab(CBTab.blockTab);
 
+    //Test blocks
+    public static final Block WORKBENCH_TEST = new BlockWorkbenchTest();
+
     /*  If more data on a block is needed
      *  Example 1:
      *  public static final Block compressedCobbleWithData = new CompressedBlock(Material.ROCK, MapColor.GRAY, Reference.MOD_ID, "cobble_compr", 2.0f, 10.0f, null).setLightLevel(0.8f);
@@ -198,6 +203,11 @@ public class BlockRegistry {
         registerBlock(COMPRESSED_GOLD, new ItemBlockVariants(COMPRESSED_GOLD));
         registerBlock(COMPRESSED_DIAMOND, new ItemBlockVariants(COMPRESSED_DIAMOND));
         registerBlock(COMPRESSED_EMERALD, new ItemBlockVariants(COMPRESSED_EMERALD));
+
+        if ((Boolean) Launch.blackboard.get("fml.deobfuscatedEnvironment")) {
+            //Register all debug blocks here, these will only show up in a development environment!
+            registerBlock(WORKBENCH_TEST);
+        }
     }
 	
 	public static void renderInit() {
@@ -244,8 +254,8 @@ public class BlockRegistry {
 
     @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
     public static class BlockRegistrationHandler {
-        public static final Set<Block> BLOCK_LIST = new HashSet<>();
-        public static final Set<Item> ITEM_LIST = new HashSet<>();
+        static final Set<Block> BLOCK_LIST = new HashSet<>();
+        static final Set<Item> ITEM_LIST = new HashSet<>();
 
         private static final Set<Block> registeredBlockList = new HashSet<>();
         public static final List<Block> blocks = new ArrayList<>();
@@ -265,7 +275,7 @@ public class BlockRegistry {
             final IForgeRegistry<Item> reg = event.getRegistry();
 
             for (final Block item : blocks) {
-                ItemBlock itemBlock = (ItemBlock) new ItemBlock(item).setRegistryName(item.getRegistryName());
+                ItemBlock itemBlock = (ItemBlock) new ItemBlock(item).setRegistryName(Objects.requireNonNull(item.getRegistryName()));
                 if (Block.getBlockFromItem(itemBlock) instanceof BlockSuperShulkerBox)
                     itemBlock.setMaxStackSize(1);
                 reg.register(itemBlock);
@@ -312,7 +322,7 @@ public class BlockRegistry {
         }
 
         private static void registerBlockModel(final Block block) {
-            final String registryName = block.getRegistryName().toString();
+            final String registryName = Objects.requireNonNull(block.getRegistryName()).toString();
             final ModelResourceLocation location = new ModelResourceLocation(registryName, "inventory");
             registerBlockModel(block, location);
         }
@@ -322,7 +332,7 @@ public class BlockRegistry {
             registeredBlockList.add(block);
         }
 
-        public static void registerBlockModelVariants(Block block, int meta, String filename) {
+        static void registerBlockModelVariants(Block block, int meta, String filename) {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, filename), "inventory"));
         }
     }

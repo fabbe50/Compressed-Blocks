@@ -20,7 +20,7 @@ public class TileEntityChunkScanner extends TileEntityLockableLoot implements IT
     private NonNullList<ItemStack> items;
 
     public TileEntityChunkScanner() {
-        this.items = NonNullList.<ItemStack>withSize(54, ItemStack.EMPTY);
+        this.items = NonNullList.withSize(54, ItemStack.EMPTY);
     }
 
     @Override
