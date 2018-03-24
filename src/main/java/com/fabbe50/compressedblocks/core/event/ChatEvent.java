@@ -19,7 +19,7 @@ public class ChatEvent {
                 event.getPlayer().sendMessage(new TextComponentString(ChatHelper.MAGENTA + "[Server] " + ChatHelper.RESET + "Your ping is " + event.getPlayer().ping + "ms!"));
                 event.setCanceled(true);
             }
-            else if (message.toLowerCase().contains("ping")) {
+            else if (message.toLowerCase().equals("ping")) {
                 event.getPlayer().sendMessage(new TextComponentString("<" + name + "> " + message));
                 event.getPlayer().sendMessage(new TextComponentString(ChatHelper.MAGENTA + "[Server] " + ChatHelper.RESET + "Pong!"));
                 event.setCanceled(true);
