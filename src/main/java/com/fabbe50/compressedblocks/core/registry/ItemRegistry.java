@@ -41,6 +41,7 @@ public class ItemRegistry {
     public static final Item POTATO_SINGULARITY = new ItemPotatoSingularity("potatosingularity", CBTab.itemTab);
     public static final Item BEDROCK_ROD = new ItemBase("bedrockrod", CBTab.itemTab);
     public static final Item DIAMOND_ROD = new ItemBase("diamondrod", CBTab.itemTab);
+    public static final Item NUTELLA = new ItemFood(5, 6, false, "nutella");
 
     //Custom Tools
     public static final Item ENDGAMIUM_SWORD = new ItemSwordBase(ToolMaterialRegistry.TOOL_ENDGAMIUM, "endgamiumsword", CreativeTabs.COMBAT);
@@ -104,6 +105,7 @@ public class ItemRegistry {
         registerItem(INK_EXTRACTOR);
         registerItem(BEDROCK_ROD);
         registerItem(DIAMOND_ROD);
+        registerItem(NUTELLA);
         registerItem(DIA_BEDROCK_SWORD);
         registerItem(DIA_BEDROCK_PICKAXE);
         registerItem(DIA_BEDROCK_SHOVEL);
