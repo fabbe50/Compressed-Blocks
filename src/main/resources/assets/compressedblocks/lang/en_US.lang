@@ -136,6 +136,8 @@ tile.compressedblocks:brewer.name=Brewing Stand
 tile.compressedblocks:nuke.name=Nuke [WIP]
 tile.compressedblocks:drawbridge.name=Drawbridge [NOT IMPLEMENTED]
 tile.compressedblocks:chunkscanner.name=Chunk Scanner
+tile.compressedblocks:dead_leaves.name=Dead Leaves
+tile.compressedblocks:life_exterminator.name=Life Exterminator [WIP]
 
 #############################################################################
 #                                Meta Blocks                                #

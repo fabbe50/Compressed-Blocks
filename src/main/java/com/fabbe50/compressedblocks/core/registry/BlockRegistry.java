@@ -59,6 +59,8 @@ public class BlockRegistry {
     public static final Block FUSIONPEDESTAL = new BlockFusionPedestal(Material.IRON, MapColor.BLUE, "fusionpedestal", 5.0f, 2000.0f, null);
     public static final Block NUKE = new BlockNuke(Material.TNT, MapColor.YELLOW, "nuke", 0.3f, 0.2f, null);
     public static final Block BIN = new BlockMagicalWashingBin(Material.ROCK, MapColor.GRAY, "bin", 2.3f, 6f, null);
+    public static final Block LIFE_EXTERMINATOR = new BlockLifeExterminator(Material.ROCK, MapColor.BROWN, "life_exterminator", 2.3f, 6f, null);
+    public static final Block DEAD_LEAVES = new BlockLeaves(Material.LEAVES, MapColor.SNOW, "dead_leaves", 0.2f, 0f, null);
 
     //Compressed Blocks
     public static final Block COMPRESSED_POTATO = new MetaCompressedBase(Material.CAKE, MapColor.BROWN, Reference.MOD_ID, "potato_compr", 2.0f, 10.0f, null);
@@ -118,15 +120,6 @@ public class BlockRegistry {
     //Test blocks
     public static final Block WORKBENCH_TEST = new BlockWorkbenchTest();
 
-    /*  If more data on a block is needed
-     *  Example 1:
-     *  public static final Block compressedCobbleWithData = new CompressedBlock(Material.ROCK, MapColor.GRAY, Reference.MOD_ID, "cobble_compr", 2.0f, 10.0f, null).setLightLevel(0.8f);
-     *  Using Ex1, you can easily add one or two things without having to make an extra class.
-     *  Example 2:
-     *  public static final Block compressedCobbleWithData = new CompressedCobbleBlock(Material.ROCK, MapColor.GRAY, Reference.MOD_ID, "cobble_compr", 2.0f, 10.0f, null);
-     *  Using Ex2, you extend the base class and add your extra data in the constructor of that class.
-     */
-
 	public static void init() {
 		registerBlock(POTATO_BLOCK);
         registerBlock(HIGH_QUALITY_CAKE);
@@ -151,6 +144,8 @@ public class BlockRegistry {
         registerBlock(FUSIONPEDESTAL);
         registerBlock(NUKE);
         registerBlock(BIN);
+        registerBlock(LIFE_EXTERMINATOR);
+        registerBlock(DEAD_LEAVES);
 
         registerBlock(COMPRESSED_FURNACE_IDLE);
         registerBlock(COMPRESSED_FURNACE_ACTIVE);

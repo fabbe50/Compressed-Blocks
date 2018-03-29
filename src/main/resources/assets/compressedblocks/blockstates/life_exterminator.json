@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "compressedblocks:life_exterminator" },
+        "inventory": { "model": "compressedblocks:life_exterminator" }
+    }
+}
