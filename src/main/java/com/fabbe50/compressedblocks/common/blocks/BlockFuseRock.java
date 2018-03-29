@@ -95,13 +95,11 @@ public class BlockFuseRock extends BlockBase {
     @Override
     public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, @javax.annotation.Nullable TileEntity te, @javax.annotation.Nullable ItemStack stack) {
         if (player.capabilities.isCreativeMode) {
-
-        }
-        else if (this.canSilkHarvest(worldIn, pos, state, player) && EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, stack) > 0) {
+        } else if (this.canSilkHarvest(worldIn, pos, state, player) && EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, stack) > 0) {
             java.util.List<ItemStack> items = new java.util.ArrayList<ItemStack>();
             ItemStack itemstack = this.getSilkTouchDrop(state);
 
-            if (itemstack != null) {
+            if (itemstack != ItemStack.EMPTY) {
                 items.add(itemstack);
             }
 
@@ -109,8 +107,7 @@ public class BlockFuseRock extends BlockBase {
             for (ItemStack item : items) {
                 spawnAsEntity(worldIn, pos, item);
             }
-        }
-        else {
+        } else {
             this.trigger(worldIn, pos, state.withProperty(EXPLODE, true));
         }
     }
