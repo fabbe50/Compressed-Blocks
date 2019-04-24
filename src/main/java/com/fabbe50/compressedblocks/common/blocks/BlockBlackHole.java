@@ -69,7 +69,7 @@ public class BlockBlackHole extends BlockBase {
     }
 
     @Override
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+    public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
         entityIn.attackEntityFrom(DamageSource.GENERIC, 3f);
     }
 

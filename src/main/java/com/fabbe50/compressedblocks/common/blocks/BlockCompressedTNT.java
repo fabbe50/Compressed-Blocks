@@ -12,6 +12,7 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -31,6 +32,9 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 /**
  * Created by fabbe50 on 25/03/2017.
@@ -63,7 +67,7 @@ public class BlockCompressedTNT extends BlockBase {
     }
 
     @Override
-    public void onBlockDestroyedByExplosion(World worldIn, BlockPos pos, Explosion explosionIn) {
+    public void onBlockExploded(World worldIn, BlockPos pos, Explosion explosionIn) {
         if (!worldIn.isRemote) {
             if (Configs.compressedTNTSpread) {
                 for (int i = 0; i < CompressedTNTPositionalData.getCompressed(getCompression()).length; i++) {
@@ -108,7 +112,7 @@ public class BlockCompressedTNT extends BlockBase {
     }
 
     @Override
-    public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state) {
+    public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
         EntityPlayer player = worldIn.getClosestPlayer(pos.getX(), pos.getY(), pos.getZ(), 10.0d, false);
         try {
             if (!player.capabilities.isCreativeMode) {
@@ -180,7 +184,7 @@ public class BlockCompressedTNT extends BlockBase {
     }
 
     @Override
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+    public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
         if (!worldIn.isRemote && entityIn instanceof EntityArrow) {
             EntityArrow entityarrow = (EntityArrow)entityIn;
 
@@ -231,6 +235,11 @@ public class BlockCompressedTNT extends BlockBase {
     }
 
     private int getCompression() {
-        return CompressedTNTPositionalData.getCompression(getRegistryName().getResourcePath());
+        return CompressedTNTPositionalData.getCompression(getRegistryName().getPath());
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        tooltip.add("");
     }
 }

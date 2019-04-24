@@ -14,6 +14,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionUtils;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,20 @@ import java.util.stream.Collectors;
  * Created by fabbe on 17/11/2017 - 10:14 PM.
  */
 public class MiniBeaconRecipes extends net.minecraftforge.registries.IForgeRegistryEntry.Impl<IRecipe> implements IRecipe {
-    public static List<Item> acceptedItems = new ArrayList<>();
+    private static List<Item> acceptedItems = new ArrayList<>();
+
+    private final ItemStack recipeOutput;
+    public final List<ItemStack> recipeItems;
+
+    public MiniBeaconRecipes(ItemStack output, List<ItemStack> input, Item item) {
+        recipeOutput = output;
+        recipeItems = input;
+        addItems(item);
+    }
+
+    public static void addItems(Item item) {
+        acceptedItems.add(item);
+    }
 
     @Override
     public boolean matches(InventoryCrafting inv, World worldIn) {
@@ -118,7 +132,7 @@ public class MiniBeaconRecipes extends net.minecraftforge.registries.IForgeRegis
             }
         }
 
-        if (!trinket.isEmpty() && trinket.hasTagCompound() && i >= 1) {
+        if (!trinket.isEmpty() && !potion.isEmpty() && trinket.hasTagCompound() && i >= 1) {
             ItemStack itemStack2 = new ItemStack(trinket.getItem(), 1, 4);
             List<PotionEffect> effects = new ArrayList<>();
             effects.addAll(PotionUtils.getEffectsFromStack(trinket));
@@ -138,7 +152,11 @@ public class MiniBeaconRecipes extends net.minecraftforge.registries.IForgeRegis
 
     @Override
     public ItemStack getRecipeOutput() {
-        return ItemStack.EMPTY;
+        return recipeOutput;
+    }
+
+    public List<ItemStack> getInput() {
+        return recipeItems;
     }
 
     @Override

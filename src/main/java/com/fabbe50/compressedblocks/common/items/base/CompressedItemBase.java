@@ -21,11 +21,6 @@ public class CompressedItemBase extends ItemBase {
         setMaxDamage(0);
     }
 
-    @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName(stack) + "_" + EnumCompressed.byMetadata(stack.getMetadata()).getName();
-    }
-
     @SideOnly(Side.CLIENT)
     @Override
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {

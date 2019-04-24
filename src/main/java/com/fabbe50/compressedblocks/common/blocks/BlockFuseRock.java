@@ -84,7 +84,7 @@ public class BlockFuseRock extends BlockBase {
     }
 
     @Override
-    public void onBlockDestroyedByExplosion(World worldIn, BlockPos pos, Explosion explosionIn) {
+    public void onBlockExploded(World worldIn, BlockPos pos, Explosion explosionIn) {
         if (!worldIn.isRemote) {
             EntityFuseRockPrimed entityfuserockprimed = new EntityFuseRockPrimed(worldIn, (double)((float)pos.getX() + 0.5F), (double)pos.getY(), (double)((float)pos.getZ() + 0.5F), explosionIn.getExplosivePlacedBy());
             entityfuserockprimed.setFuse((short)(worldIn.rand.nextInt(entityfuserockprimed.getFuse() / 4) + entityfuserockprimed.getFuse() / 8));
@@ -154,7 +154,7 @@ public class BlockFuseRock extends BlockBase {
     }
 
     @Override
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+    public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
         if (!worldIn.isRemote && entityIn instanceof EntityArrow) {
             EntityArrow entityarrow = (EntityArrow)entityIn;
 

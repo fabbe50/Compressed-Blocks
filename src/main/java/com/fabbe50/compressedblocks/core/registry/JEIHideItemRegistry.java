@@ -13,8 +13,8 @@ public class JEIHideItemRegistry {
     private static final int WILDCARD_VALUE = Short.MAX_VALUE;
 
     public static void init() {
-        hide.add(new ItemStack(BlockRegistry.BLACKHOLE));
-        hide.add(new ItemStack(BlockRegistry.ONLINEDETECTOR));
+        //hide.add(new ItemStack(BlockRegistry.BLACKHOLE));
+        //hide.add(new ItemStack(BlockRegistry.ONLINEDETECTOR));
         hide.add(new ItemStack(BlockRegistry.COMPRESSED_FURNACE_ACTIVE));
         hide.add(new ItemStack(BlockRegistry.LIGHTBLOCK1));
         hide.add(new ItemStack(BlockRegistry.LIGHTBLOCK2));
@@ -31,11 +31,11 @@ public class JEIHideItemRegistry {
         hide.add(new ItemStack(BlockRegistry.LIGHTBLOCK13));
         hide.add(new ItemStack(BlockRegistry.LIGHTBLOCK14));
         hide.add(new ItemStack(BlockRegistry.LIGHTBLOCK15));
-        hide.add(new ItemStack(BlockRegistry.BREWER));
-        hide.add(new ItemStack(BlockRegistry.OVERLAYTEST));
+        //hide.add(new ItemStack(BlockRegistry.BREWER));
+        //hide.add(new ItemStack(BlockRegistry.OVERLAYTEST));
         hide.add(new ItemStack(BlockRegistry.COMPRESSED_GRASS_EATEN, 1, WILDCARD_VALUE));
-        hide.add(new ItemStack(BlockRegistry.NUKE));
-        hide.add(new ItemStack(BlockRegistry.DRAWBRIDGE));
+        //hide.add(new ItemStack(BlockRegistry.NUKE));
+        //hide.add(new ItemStack(BlockRegistry.DRAWBRIDGE));
 
         hide.add(new ItemStack(ItemRegistry.TWOHANDITEMTEST));
         hide.add(new ItemStack(ItemRegistry.DNASAMPLE));

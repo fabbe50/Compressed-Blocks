@@ -61,7 +61,7 @@ public class BlockSuperShulkerBox extends BlockContainer implements ITileEntityP
 
     public static void setBlockName(Block block, String blockName) {
         block.setRegistryName(blockName);
-        block.setUnlocalizedName(block.getRegistryName().toString());
+        block.setTranslationKey(block.getRegistryName().toString());
     }
 
     @Override
@@ -111,7 +111,7 @@ public class BlockSuperShulkerBox extends BlockContainer implements ITileEntityP
                 boolean flag;
 
                 if (((TileEntitySuperShulkerBox)tileentity).getAnimationStatus() == TileEntitySuperShulkerBox.AnimationStatus.CLOSED) {
-                    AxisAlignedBB axisalignedbb = FULL_BLOCK_AABB.expand((double)(0.5F * (float)enumfacing.getFrontOffsetX()), (double)(0.5F * (float)enumfacing.getFrontOffsetY()), (double)(0.5F * (float)enumfacing.getFrontOffsetZ())).contract((double)enumfacing.getFrontOffsetX(), (double)enumfacing.getFrontOffsetY(), (double)enumfacing.getFrontOffsetZ());
+                    AxisAlignedBB axisalignedbb = FULL_BLOCK_AABB.expand((double)(0.5F * (float)enumfacing.getXOffset()), (double)(0.5F * (float)enumfacing.getYOffset()), (double)(0.5F * (float)enumfacing.getZOffset())).contract((double)enumfacing.getXOffset(), (double)enumfacing.getYOffset(), (double)enumfacing.getZOffset());
                     flag = !worldIn.collidesWithAnyBlock(axisalignedbb.offset(pos.offset(enumfacing)));
                 }
                 else {
@@ -149,7 +149,7 @@ public class BlockSuperShulkerBox extends BlockContainer implements ITileEntityP
     @Override
     @SuppressWarnings("deprecation")
     public IBlockState getStateFromMeta(int meta) {
-        EnumFacing enumfacing = EnumFacing.getFront(meta);
+        EnumFacing enumfacing = EnumFacing.byIndex(meta);
         return this.getDefaultState().withProperty(FACING, enumfacing);
     }
 
@@ -253,7 +253,7 @@ public class BlockSuperShulkerBox extends BlockContainer implements ITileEntityP
     }
 
     @Override
-    public EnumPushReaction getMobilityFlag(IBlockState state) {
+    public EnumPushReaction getPushReaction(IBlockState state) {
         return EnumPushReaction.DESTROY;
     }
 
@@ -279,7 +279,7 @@ public class BlockSuperShulkerBox extends BlockContainer implements ITileEntityP
         TileEntitySuperShulkerBox tileentityshulkerbox = (TileEntitySuperShulkerBox)worldIn.getTileEntity(pos);
         NBTTagCompound nbttagcompound = tileentityshulkerbox.saveToNbt(new NBTTagCompound());
 
-        if (!nbttagcompound.hasNoTags()) {
+        if (!nbttagcompound.isEmpty()) {
             itemstack.setTagInfo("BlockEntityTag", nbttagcompound);
         }
 

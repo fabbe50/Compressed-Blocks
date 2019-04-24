@@ -3,7 +3,7 @@ package com.fabbe50.compressedblocks.core.registry;
 import com.fabbe50.compressedblocks.common.world.gen.GenWorldVeins;
 import com.fabbe50.compressedblocks.core.event.*;
 import com.fabbe50.compressedblocks.core.tweaks.StackableBuckets;
-import com.fabbe50.compressedblocks.core.utils.VanillaHooks;
+import com.fabbe50.compressedblocks.core.tweaks.VanillaHooks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 

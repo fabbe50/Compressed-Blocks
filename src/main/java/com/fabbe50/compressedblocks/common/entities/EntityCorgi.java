@@ -415,7 +415,7 @@ public class EntityCorgi extends EntityTameable {
 
     @SideOnly(Side.CLIENT)
     public float getTailRotation() {
-        return this.isAngry() ? 1.5393804F : (this.isTamed() ? (0.55F - (this.getMaxHealth() - this.dataManager.get(DATA_HEALTH_ID)) * 0.02F) * (float)Math.PI : ((float)Math.PI / 5F));
+        return this.isAngry() ? 1.5393804F : (this.isTamed() ? (0.25F - (this.getMaxHealth() - this.dataManager.get(DATA_HEALTH_ID)) * 0.01F) * (float)Math.PI : ((float)Math.PI / 5F));
     }
 
     @SuppressWarnings("NullableProblems")

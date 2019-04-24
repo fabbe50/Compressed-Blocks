@@ -44,7 +44,7 @@ public class BlockFurnaceCompr extends BlockContainer {
 
     public BlockFurnaceCompr(String unlocalizedName, float lightLevel, @Nullable CreativeTabs tab, boolean active) {
         super(Material.ROCK);
-        setUnlocalizedName(Reference.MOD_ID + ":" + unlocalizedName);
+        setTranslationKey(Reference.MOD_ID + ":" + unlocalizedName);
         setRegistryName(Reference.MOD_ID, !active ? unlocalizedName : unlocalizedName + "active");
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         setCreativeTab(tab != null ? tab : CBTab.blockTab);
@@ -206,7 +206,7 @@ public class BlockFurnaceCompr extends BlockContainer {
     }
 
     public IBlockState getStateFromMeta(int meta) {
-        EnumFacing enumfacing = EnumFacing.getFront(meta);
+        EnumFacing enumfacing = EnumFacing.byHorizontalIndex(meta);
         if (enumfacing.getAxis() == EnumFacing.Axis.Y) {
             enumfacing = EnumFacing.NORTH;
         }

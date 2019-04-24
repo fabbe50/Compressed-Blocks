@@ -28,7 +28,7 @@ public class BlockIndestructibleDisguise extends BlockContainer {
 
     public static void setBlockName(Block block, String blockName) {
         block.setRegistryName(blockName);
-        block.setUnlocalizedName(block.getRegistryName().toString());
+        block.setTranslationKey(block.getRegistryName().toString());
     }
 
     @Override

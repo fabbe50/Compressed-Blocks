@@ -11,7 +11,7 @@ import com.fabbe50.compressedblocks.core.lib.Payments;
 import com.fabbe50.compressedblocks.core.registry.*;
 
 import com.fabbe50.compressedblocks.core.utils.DataFixesManager;
-import com.fabbe50.compressedblocks.core.utils.VanillaHooks;
+import com.fabbe50.compressedblocks.core.tweaks.VanillaHooks;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

@@ -50,9 +50,11 @@ item.compressedblocks:dia_hoe.name=Diamond Hoe
 potion.effect.compressedblocks.magnet=Potion of Magnetization
 splash_potion.effect.compressedblocks.magnet=Splash Potion of Magnetization
 lingering_potion.effect.compressedblocks.magnet=Lingering Potion of Magnetization
+tipped_arrow.effect.compressedblocks.magnet=Arrow of Magnetization
 potion.effect.compressedblocks.flight=Potion of Flight
 splash_potion.effect.compressedblocks.flight=Splash Potion of Flight
 lingering_potion.effect.compressedblocks.flight=Lingering Potion of Flight
+tipped_arrow.effect.compressedblocks.flight=Arrow of Flight
 
 #PotionEffects
 effect.compressedblocks.magnet=Magnetization
@@ -138,6 +140,7 @@ tile.compressedblocks:drawbridge.name=Drawbridge [NOT IMPLEMENTED]
 tile.compressedblocks:chunkscanner.name=Chunk Scanner
 tile.compressedblocks:dead_leaves.name=Dead Leaves
 tile.compressedblocks:life_exterminator.name=Life Exterminator [WIP]
+tile.compressedblocks:bin.name=Disenchanted Cauldron
 
 #############################################################################
 #                                Meta Blocks                                #

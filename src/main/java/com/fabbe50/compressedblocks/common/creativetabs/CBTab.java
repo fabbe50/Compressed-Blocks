@@ -12,19 +12,19 @@ import net.minecraft.item.ItemStack;
 public class CBTab {
     public static CreativeTabs compressedBlocksTab = new CreativeTabs(Reference.MOD_ID.toLowerCase() + ".compressedblocks") {
         @Override
-        public ItemStack getTabIconItem() {
+        public ItemStack createIcon() {
             return new ItemStack(BlockRegistry.ENDGAMIUMBLOCKC);
         }
     };
     public static CreativeTabs blockTab = new CreativeTabs(Reference.MOD_ID.toLowerCase() + ".blocks") {
         @Override
-        public ItemStack getTabIconItem() {
+        public ItemStack createIcon() {
             return new ItemStack(BlockRegistry.POTATO_BLOCK);
         }
     };
     public static CreativeTabs itemTab = new CreativeTabs(Reference.MOD_ID.toLowerCase() + ".items") {
         @Override
-        public ItemStack getTabIconItem() {
+        public ItemStack createIcon() {
             return new ItemStack(Items.STICK);
         }
     };

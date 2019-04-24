@@ -36,7 +36,7 @@ public class MetaCompressedBase extends MetaBlockBase {
         super(material);
         setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumCompressed.SINGLE));
         this.setRegistryName(modID, itemName);
-        this.setUnlocalizedName(this.getRegistryName().toString());
+        this.setTranslationKey(this.getRegistryName().toString());
         this.setHardness(hardness);
         this.setResistance(resistance);
         this.setCreativeTab(CBTab.compressedBlocksTab);
@@ -44,7 +44,7 @@ public class MetaCompressedBase extends MetaBlockBase {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer() {
+    public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.TRANSLUCENT;
     }
 
@@ -92,7 +92,7 @@ public class MetaCompressedBase extends MetaBlockBase {
         int itemDamage = stack.getItemDamage();
 
         for (String s : CBLibrary.compressedBlocks) {
-            if (stack.getUnlocalizedName().contains(s))
+            if (stack.getTranslationKey().contains(s))
                 itemDamage++;
         }
 
@@ -152,25 +152,25 @@ public class MetaCompressedBase extends MetaBlockBase {
     }
 
     private String getBaseItem(ItemStack stack) {
-        if (stack.getUnlocalizedName().contains("potato"))
+        if (stack.getTranslationKey().contains("potato"))
             return "potatoes";
-        else if (stack.getUnlocalizedName().contains("cobble"))
+        else if (stack.getTranslationKey().contains("cobble"))
             return "cobblestone";
-        else if (stack.getUnlocalizedName().contains("dirt"))
+        else if (stack.getTranslationKey().contains("dirt"))
             return "dirt";
-        else if (stack.getUnlocalizedName().contains("sand"))
+        else if (stack.getTranslationKey().contains("sand"))
             return "sand";
-        else if (stack.getUnlocalizedName().contains("gravel"))
+        else if (stack.getTranslationKey().contains("gravel"))
             return "gravel";
-        else if (stack.getUnlocalizedName().contains("iron"))
+        else if (stack.getTranslationKey().contains("iron"))
             return "iron ingots";
-        else if (stack.getUnlocalizedName().contains("gold"))
+        else if (stack.getTranslationKey().contains("gold"))
             return "gold ingots";
-        else if (stack.getUnlocalizedName().contains("diamond"))
+        else if (stack.getTranslationKey().contains("diamond"))
             return "diamond ingots";
-        else if (stack.getUnlocalizedName().contains("emerald"))
+        else if (stack.getTranslationKey().contains("emerald"))
             return "emeralds";
-        else if (stack.getUnlocalizedName().contains("grass"))
+        else if (stack.getTranslationKey().contains("grass"))
             return "grass blocks";
         else
             return "";

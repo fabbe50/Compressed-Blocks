@@ -25,18 +25,18 @@ public class SuperShulkerBoxItemColor implements IFixableData {
             if (nbttagcompound.hasKey("BlockEntityTag", 10)) {
                 NBTTagCompound nbttagcompound1 = nbttagcompound.getCompoundTag("BlockEntityTag");
 
-                if (nbttagcompound1.getTagList("Items", 10).hasNoTags()) {
+                if (nbttagcompound1.getTagList("Items", 10).isEmpty()) {
                     nbttagcompound1.removeTag("Items");
                 }
 
                 int i = nbttagcompound1.getInteger("Color");
                 nbttagcompound1.removeTag("Color");
 
-                if (nbttagcompound1.hasNoTags()) {
+                if (nbttagcompound1.isEmpty()) {
                     nbttagcompound.removeTag("BlockEntityTag");
                 }
 
-                if (nbttagcompound.hasNoTags()) {
+                if (nbttagcompound.isEmpty()) {
                     compound.removeTag("tag");
                 }
 

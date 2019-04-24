@@ -30,6 +30,7 @@ public class Configs {
     public static boolean stackSizes = true;
     public static boolean entityDrops = true;
     public static boolean undrinkableBuckets = true;
+    public static boolean customBucketBehaviour = false;
 
     public static void init() {
         parseBlacklist();

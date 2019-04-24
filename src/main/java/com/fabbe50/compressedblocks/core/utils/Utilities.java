@@ -3,12 +3,17 @@ package com.fabbe50.compressedblocks.core.utils;
 import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityList;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemMonsterPlacer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -77,5 +82,15 @@ public class Utilities {
                 z += dz;
             }
         }
+    }
+
+    public static ItemStack getSpawnEggWithEntity(Class<? extends Entity> entity) {
+        ItemStack stack = new ItemStack(Items.SPAWN_EGG, 1);
+        ResourceLocation location = EntityList.getKey(entity);
+        if (location != null) {
+            ItemMonsterPlacer.applyEntityIdToItemStack(stack, location);
+            return stack;
+        }
+        return ItemStack.EMPTY;
     }
 }

@@ -30,7 +30,7 @@ public class ItemSwordBase extends ItemTool {
 
     private static void setItemName(Item item, String itemName) {
         item.setRegistryName(itemName);
-        item.setUnlocalizedName(item.getRegistryName().toString());
+        item.setTranslationKey(item.getRegistryName().toString());
     }
 
     @SideOnly(Side.CLIENT)

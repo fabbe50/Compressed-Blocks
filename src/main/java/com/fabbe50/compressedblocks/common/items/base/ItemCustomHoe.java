@@ -16,6 +16,6 @@ public class ItemCustomHoe extends ItemHoe {
 
     private void setItemName(String itemName) {
         this.setRegistryName(itemName);
-        this.setUnlocalizedName(this.getRegistryName().toString());
+        this.setTranslationKey(this.getRegistryName().toString());
     }
 }

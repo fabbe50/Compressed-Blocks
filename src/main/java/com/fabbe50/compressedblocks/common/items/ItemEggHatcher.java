@@ -32,14 +32,13 @@ public class ItemEggHatcher extends ItemBase {
         if (!worldIn.isRemote) {
             if (player.inventory.hasItemStack(new ItemStack(Items.EGG)) || player.isCreative()) {
                 int spawnAmount = 1;
-                if (!player.isCreative()) {
-                    if (player.isSneaking()) {
-                        spawnAmount = player.inventory.getStackInSlot(player.inventory.getSlotFor(new ItemStack(Items.EGG))).getCount();
+                if (player.isSneaking()) {
+                    spawnAmount = player.inventory.getStackInSlot(player.inventory.getSlotFor(new ItemStack(Items.EGG))).getCount();
+                    if (!player.isCreative())
                         player.inventory.deleteStack(player.inventory.getStackInSlot(player.inventory.getSlotFor(new ItemStack(Items.EGG))));
-                    }
-                    else
-                        player.inventory.decrStackSize(player.inventory.getSlotFor(new ItemStack(Items.EGG)), 1);
                 }
+                else
+                    player.inventory.decrStackSize(player.inventory.getSlotFor(new ItemStack(Items.EGG)), 1);
 
                 for (int i = 0; i < spawnAmount; i++) {
                     Random rand = new Random();

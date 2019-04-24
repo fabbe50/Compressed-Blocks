@@ -17,6 +17,6 @@ public class ItemCustomAxe extends ItemAxe {
 
     private void setItemName(String itemName) {
         this.setRegistryName(itemName);
-        this.setUnlocalizedName(this.getRegistryName().toString());
+        this.setTranslationKey(this.getRegistryName().toString());
     }
 }

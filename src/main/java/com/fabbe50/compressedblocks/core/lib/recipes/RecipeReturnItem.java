@@ -68,6 +68,10 @@ public class RecipeReturnItem extends net.minecraftforge.registries.IForgeRegist
         return this.recipeOutput;
     }
 
+    public List<ItemStack> getInput() {
+        return recipeItems;
+    }
+
     @Override
     public NonNullList<ItemStack> getRemainingItems(InventoryCrafting inv) {
         NonNullList<ItemStack> nonnulllist = NonNullList.<ItemStack>withSize(inv.getSizeInventory(), ItemStack.EMPTY);

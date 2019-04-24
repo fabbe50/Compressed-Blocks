@@ -33,7 +33,7 @@ public class BlockBeaconXRAY extends BlockContainer {
     public BlockBeaconXRAY(Material material, MapColor mapColor, String modid, String name, float hardness, float resistance, CreativeTabs tab) {
         super(material, mapColor);
         this.setRegistryName(modid, name);
-        this.setUnlocalizedName(this.getRegistryName().toString());
+        this.setTranslationKey(this.getRegistryName().toString());
         this.setHardness(hardness);
         this.setResistance(resistance);
         this.setCreativeTab(tab);
@@ -69,8 +69,15 @@ public class BlockBeaconXRAY extends BlockContainer {
         return false;
     }
 
+    @Override
     public EnumBlockRenderType getRenderType(IBlockState state) {
         return EnumBlockRenderType.MODEL;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public BlockRenderLayer getRenderLayer() {
+        return BlockRenderLayer.TRANSLUCENT;
     }
 
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
@@ -95,15 +102,10 @@ public class BlockBeaconXRAY extends BlockContainer {
         }
     }
 
-    @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer() {
-        return BlockRenderLayer.TRANSLUCENT;
-    }
-
     public static void updateColorAsync(final World worldIn, final BlockPos glassPos) {
         HttpUtil.DOWNLOADER_EXECUTOR.submit(new Runnable() {
             public void run() {
-                Chunk chunk = worldIn.getChunkFromBlockCoords(glassPos);
+                Chunk chunk = worldIn.getChunk(glassPos);
 
                 for (int i = glassPos.getY() - 1; i >= 0; --i) {
                     final BlockPos blockpos = new BlockPos(glassPos.getX(), i, glassPos.getZ());

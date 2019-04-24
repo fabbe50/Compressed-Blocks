@@ -35,7 +35,7 @@ public class BlockDisappear extends BlockBase {
     }
 
     @Override
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+    public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
         if (Configs.isWhitelist ? EntityBlacklistStorage.entityBlackList.contains(entityIn.getClass()) :
                 !EntityBlacklistStorage.entityBlackList.contains(entityIn.getClass()) &&
                         Configs.playerIsTrigger ? entityIn instanceof EntityPlayer :

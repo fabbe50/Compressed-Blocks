@@ -2,7 +2,7 @@ package com.fabbe50.compressedblocks.common.tileentities;
 
 import com.fabbe50.compressedblocks.common.blocks.BlockBrewer;
 import com.fabbe50.compressedblocks.common.inventory.ContainerBrewer;
-import com.fabbe50.compressedblocks.core.utils.VanillaHooks;
+import com.fabbe50.compressedblocks.core.tweaks.VanillaHooks;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;

@@ -9,6 +9,6 @@ public class ItemFood extends net.minecraft.item.ItemFood {
     public ItemFood(int amount, float saturation, boolean isWolfFood, String registryName) {
         super(amount, saturation, isWolfFood);
         this.setRegistryName(Reference.MOD_ID, registryName);
-        this.setUnlocalizedName(this.getRegistryName().toString());
+        this.setTranslationKey(this.getRegistryName().toString());
     }
 }

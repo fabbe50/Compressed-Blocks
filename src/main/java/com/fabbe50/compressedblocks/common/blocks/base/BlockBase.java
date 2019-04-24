@@ -45,7 +45,7 @@ public class BlockBase extends Block {
 
     public static void setBlockName(Block block, String blockName) {
         block.setRegistryName(blockName);
-        block.setUnlocalizedName(block.getRegistryName().toString());
+        block.setTranslationKey(block.getRegistryName().toString());
     }
 
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {

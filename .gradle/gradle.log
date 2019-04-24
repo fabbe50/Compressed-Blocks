@@ -1,4 +1,4 @@
-This mapping 'snapshot_20171126' was designed for MC 1.12! Use at your own peril.This mapping 'snapshot_20171126' was designed for MC 1.12! Use at your own peril.
+This mapping 'snapshot_20180814' was designed for MC 1.12! Use at your own peril.This mapping 'snapshot_20180814' was designed for MC 1.12! Use at your own peril.
 
 #################################################
          ForgeGradle 2.3-SNAPSHOT-7764e3e        
@@ -11,49 +11,40 @@ This mapping 'snapshot_20171126' was designed for MC 1.12! Use at your own peril
 #################################################
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
-:getVersionJson
-:extractUserdev
-Download https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.1.2554/forge-1.12.2-14.23.1.2554.pom
-Download https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.1.2554/forge-1.12.2-14.23.1.2554-userdev.jar
-:extractDependencyATs SKIPPED
+:sourceApiJava
+:compileApiJava UP-TO-DATE
+:processApiResources UP-TO-DATE
+:apiClasses UP-TO-DATE
+:sourceMainJava
+:compileJavaNote: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+:processResources
+:classes
+:jar
+:sourceTestJava
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
 :extractMcpData SKIPPED
 :extractMcpMappings
-Download https://files.minecraftforge.net/maven/de/oceanlabs/mcp/mcp_snapshot/20171126-1.12/mcp_snapshot-20171126-1.12.zip
-:genSrgs
-:downloadClient SKIPPED
-:downloadServer SKIPPED
-:splitServerJar SKIPPED
-:mergeJars SKIPPED
-:deobfMcSRG
-Applying SpecialSource...
-Applying Exceptor...
-:decompileMc
-Download https://repo1.maven.org/maven2/jline/jline/2.13/jline-2.13.pom
-Download https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.11/jansi-1.11.pom
-Download https://repo1.maven.org/maven2/org/fusesource/jansi/jansi-project/1.11/jansi-project-1.11.pom
-Download https://repo1.maven.org/maven2/org/fusesource/fusesource-pom/1.8/fusesource-pom-1.8.pom
-Download https://repo1.maven.org/maven2/jline/jline/2.13/jline-2.13.jar
-Download https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.11/jansi-1.11.jar
-:fixMcSources
-:applySourcePatches
-:remapMcSources
-:recompileMc
-:extractNatives SKIPPED
-:getAssetIndex UP-TO-DATE
-:getAssets
-Current status: 1060/1305   81%
-:makeStart
-:setupDecompWorkspace
-:ideaModule
-Download https://repo1.maven.org/maven2/jline/jline/2.13/jline-2.13-sources.jar
-Download https://repo1.maven.org/maven2/jline/jline/2.13/jline-2.13-javadoc.jar
-Download https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.11/jansi-1.11-sources.jar
-Download https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.11/jansi-1.11-javadoc.jar
-:ideaProject
-:ideaWorkspace
-:idea
-:genIntellijRuns
+:getVersionJson
+:extractUserdev UP-TO-DATE
+:genSrgs SKIPPED
+:reobfJar
+:extractAnnotationsJar
+:extractRangemapReplacedMain
+F:\GitHub\Compressed-Blocks\build\sources\main\java
+:retromapReplacedMain
+remapping source...
+:sourceJar
+:assemble
+:check UP-TO-DATE
+:build
 
 BUILD SUCCESSFUL
 
-Total time: 19 mins 55.482 secs
+Total time: 1 mins 37.771 secs

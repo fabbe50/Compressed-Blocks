@@ -39,14 +39,14 @@ public class BlockRegistry {
 	public static final Block POTATO_BLOCK = new BlockBase(Material.CAKE, MapColor.YELLOW, "potatoBlock", 2.0f, 10.0f, null);
     public static final Block HIGH_QUALITY_CAKE = new BlockHQCake();
     public static final Block FALLTRAPBLOCK = new BlockDisappear(Material.ROCK, MapColor.GRASS, "falltrap", 0.7f, 1.2f, null);
-    public static final Block OVERLAYTEST = new BlockOverlay(Material.ROCK, MapColor.GRAY, "overlayblock", 1.0f, 1.0f, null).setCreativeTab(null);
+    public static final Block OVERLAYTEST = new BlockOverlay(Material.ROCK, MapColor.GRAY, "overlayblock", 1.0f, 1.0f, null);
     public static final Block SURPRISEBLOCK = new BlockSurprise(Material.IRON, MapColor.YELLOW, "surpriseblock", 0.2f, 100f, null);
     public static final Block COLORBLOCK = new BlockMultiColored(Material.REDSTONE_LIGHT, null, "color_block", 1.3f, 6f, null);
     public static final Block NETHER_STONE = new BlockNetherStone(Material.ROCK, MapColor.PURPLE, "nether_stone", 2.0f, 10.0f, null);
     public static final Block NETHER_STAR_BLOCK = new BlockBeaconBase(Material.ROCK, MapColor.SNOW, "netherstarblock", 2.0f, 20f, null);
     public static final Block ENDGAMIUMBLOCK = new BlockEndgamium(Material.IRON, MapColor.DIAMOND, "endgamiumblock", 6.0f, 20f, null);
     public static final Block ENDGAMIUMBLOCKC = new BlockBeaconBase(Material.IRON, MapColor.DIAMOND, "endgamiumblockc", 8.0f, 30f, CBTab.compressedBlocksTab);
-    public static final Block BLACKHOLE = new BlockBlackHole(Material.AIR, MapColor.BLACK, "blackhole", 50f, 50f, null).setCreativeTab(null);
+    public static final Block BLACKHOLE = new BlockBlackHole(Material.AIR, MapColor.BLACK, "blackhole", 50f, 50f, null);
     public static final Block SINGLECOMPRESSSEDTNT = new BlockCompressedTNT(Material.TNT, MapColor.RED, "singlecompressedtnt", 0.7f, 0.2f, CBTab.compressedBlocksTab);
     public static final Block DOUBLECOMPRESSSEDTNT = new BlockCompressedTNT(Material.TNT, MapColor.RED, "doublecompressedtnt", 0.7f, 0.2f, CBTab.compressedBlocksTab);
     public static final Block TRIPLECOMPRESSSEDTNT = new BlockCompressedTNT(Material.TNT, MapColor.RED, "triplecompressedtnt", 0.7f, 0.2f, CBTab.compressedBlocksTab);
@@ -54,7 +54,7 @@ public class BlockRegistry {
     public static final Block FUSEROCKNETHER = new BlockFuseRock(Material.WOOD, MapColor.GRAY, "fuserocknether", 2.0f, 10.0f, null);
     public static final Block FUSEROCKEND = new BlockFuseRock(Material.WOOD, MapColor.GRAY, "fuserockend", 2.0f, 10.0f, null);
     public static final Block MININGEXPLOSIVES = new BlockMiningExplosives(Material.TNT, MapColor.RED, "miningexplosives", 0.7f, 0.2f, null);
-    public static final Block ONLINEDETECTOR = new BlockOnlineDetector(Material.REDSTONE_LIGHT, MapColor.BLUE, "onlinedetector", 1.3f, 6f, null).setCreativeTab(null);
+    public static final Block ONLINEDETECTOR = new BlockOnlineDetector(Material.REDSTONE_LIGHT, MapColor.BLUE, "onlinedetector", 1.3f, 6f, null);
     public static final Block ENDERBLOCK = new BlockEnder(Material.CAKE, MapColor.CYAN, "enderblock", 2.3f, 12.2f, null);
     public static final Block FUSIONPEDESTAL = new BlockFusionPedestal(Material.IRON, MapColor.BLUE, "fusionpedestal", 5.0f, 2000.0f, null);
     public static final Block NUKE = new BlockNuke(Material.TNT, MapColor.YELLOW, "nuke", 0.3f, 0.2f, null);
@@ -97,7 +97,7 @@ public class BlockRegistry {
     public static final Block COMPRESSED_FURNACE_IDLE = new BlockFurnaceCompr("furnacecompr", 0, null, false);
     public static final Block COMPRESSED_FURNACE_ACTIVE = new BlockFurnaceCompr("furnacecompr", 0.875f, null, true).setCreativeTab(null);
     public static final Block BEACON_XRAY = new BlockBeaconXRAY(Material.GLASS, MapColor.DIAMOND, Reference.MOD_ID, "beacon_xray", 3.0f, 13.5f, CBTab.blockTab);
-    public static final Block BREWER = new BlockBrewer().setRegistryName(Reference.MOD_ID, "brewer").setUnlocalizedName(Reference.MOD_ID + ":brewer").setHardness(0.5F).setLightLevel(0.125F);
+    public static final Block BREWER = new BlockBrewer().setRegistryName(Reference.MOD_ID, "brewer").setTranslationKey(Reference.MOD_ID + ":brewer").setHardness(0.5F).setLightLevel(0.125F);
     public static final Block WHITE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.WHITE, Material.ROCK, MapColor.SNOW, "white_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
     public static final Block ORANGE_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.ORANGE, Material.ROCK, MapColor.ADOBE, "orange_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
     public static final Block MAGENTA_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.MAGENTA, Material.ROCK, MapColor.MAGENTA, "magenta_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
@@ -114,8 +114,8 @@ public class BlockRegistry {
     public static final Block GREEN_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.GREEN, Material.ROCK, MapColor.GREEN, "green_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
     public static final Block RED_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.RED, Material.ROCK, MapColor.RED, "red_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
     public static final Block BLACK_SHULKER_BOX = new BlockSuperShulkerBox(EnumDyeColor.BLACK, Material.ROCK, MapColor.BLACK, "black_super_shulker_box", 2.0f, 10.0f, null).setCreativeTab(CBTab.compressedBlocksTab);
-    public static final Block DRAWBRIDGE = new BlockDrawbridge(Material.ROCK).setRegistryName(Reference.MOD_ID, "drawbridge").setUnlocalizedName(Reference.MOD_ID+":drawbridge").setHardness(2.0f).setResistance(10.0f).setCreativeTab(CBTab.blockTab);
-    public static final Block CHUNK_SCANNER = new BlockChunkScanner(Material.TNT).setRegistryName(Reference.MOD_ID, "chunkscanner").setUnlocalizedName(Reference.MOD_ID+":chunkscanner").setHardness(2.0f).setResistance(10.0f).setCreativeTab(CBTab.blockTab);
+    public static final Block DRAWBRIDGE = new BlockDrawbridge(Material.ROCK).setRegistryName(Reference.MOD_ID, "drawbridge").setTranslationKey(Reference.MOD_ID + ":drawbridge").setHardness(2.0f).setResistance(10.0f).setCreativeTab(CBTab.blockTab);
+    public static final Block CHUNK_SCANNER = new BlockChunkScanner(Material.TNT).setRegistryName(Reference.MOD_ID, "chunkscanner").setTranslationKey(Reference.MOD_ID + ":chunkscanner").setHardness(2.0f).setResistance(10.0f).setCreativeTab(CBTab.blockTab);
 
     //Test blocks
     public static final Block WORKBENCH_TEST = new BlockWorkbenchTest();
@@ -124,14 +124,12 @@ public class BlockRegistry {
 		registerBlock(POTATO_BLOCK);
         registerBlock(HIGH_QUALITY_CAKE);
         registerBlock(FALLTRAPBLOCK);
-        registerBlock(OVERLAYTEST);
         registerBlock(SURPRISEBLOCK);
         registerBlock(COLORBLOCK);
         registerBlock(NETHER_STONE);
         registerBlock(NETHER_STAR_BLOCK);
         registerBlock(ENDGAMIUMBLOCK);
         registerBlock(ENDGAMIUMBLOCKC);
-        registerBlock(BLACKHOLE);
         registerBlock(SINGLECOMPRESSSEDTNT);
         registerBlock(DOUBLECOMPRESSSEDTNT);
         registerBlock(TRIPLECOMPRESSSEDTNT);
@@ -139,10 +137,8 @@ public class BlockRegistry {
         registerBlock(FUSEROCKNETHER);
         registerBlock(FUSEROCKEND);
         registerBlock(MININGEXPLOSIVES);
-        registerBlock(ONLINEDETECTOR);
         registerBlock(ENDERBLOCK);
         registerBlock(FUSIONPEDESTAL);
-        registerBlock(NUKE);
         registerBlock(BIN);
         registerBlock(LIFE_EXTERMINATOR);
         registerBlock(DEAD_LEAVES);
@@ -150,8 +146,6 @@ public class BlockRegistry {
         registerBlock(COMPRESSED_FURNACE_IDLE);
         registerBlock(COMPRESSED_FURNACE_ACTIVE);
         registerBlock(BEACON_XRAY);
-        registerBlock(BREWER);
-        registerBlock(DRAWBRIDGE);
         registerBlock(CHUNK_SCANNER);
 
         registerBlock(LIGHTBLOCK);
@@ -200,6 +194,14 @@ public class BlockRegistry {
         registerBlock(COMPRESSED_EMERALD, new ItemBlockVariants(COMPRESSED_EMERALD));
 
         if ((Boolean) Launch.blackboard.get("fml.deobfuscatedEnvironment")) {
+            //Not implemented blocks.
+            registerBlock(NUKE);
+            registerBlock(BREWER);
+            registerBlock(DRAWBRIDGE);
+            registerBlock(OVERLAYTEST);
+            registerBlock(BLACKHOLE);
+            registerBlock(ONLINEDETECTOR);
+
             //Register all debug blocks here, these will only show up in a development environment!
             registerBlock(WORKBENCH_TEST);
         }

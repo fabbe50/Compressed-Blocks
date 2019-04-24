@@ -9,6 +9,7 @@ import com.fabbe50.compressedblocks.core.registry.BlockRegistry;
 import com.fabbe50.compressedblocks.core.registry.ItemRegistry;
 import com.fabbe50.compressedblocks.core.utils.Utilities;
 import com.fabbe50.compressedblocks.core.utils.helper.LogHelper;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -22,6 +23,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.List;
 
 /**
@@ -69,8 +71,9 @@ public class ItemPotatoBone extends ItemBase {
         return EnumActionResult.FAIL;
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add("It spawns Corgis when used on a octuple compressed potato block!");
         tooltip.add("");
         tooltip.add("Type of Corgi is randomized unless the potato on a bone");

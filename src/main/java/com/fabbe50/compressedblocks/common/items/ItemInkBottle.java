@@ -30,9 +30,10 @@ public class ItemInkBottle extends ItemBase {
         this.setMaxDamage(0);
     }
 
-    public String getUnlocalizedName(ItemStack stack) {
+    @Override
+    public String getTranslationKey(ItemStack stack) {
         int i = stack.getMetadata();
-        return super.getUnlocalizedName() + "." + EnumDyeColor.byDyeDamage(i).getUnlocalizedName();
+        return super.getTranslationKey() + "." + EnumDyeColor.byDyeDamage(i).getTranslationKey();
     }
 
     @Override
@@ -48,6 +49,7 @@ public class ItemInkBottle extends ItemBase {
         return EnumActionResult.FAIL;
     }
 
+    @Override
     public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer playerIn, EntityLivingBase target, EnumHand hand) {
         if (target instanceof EntitySheep) {
             EntitySheep entitysheep = (EntitySheep)target;

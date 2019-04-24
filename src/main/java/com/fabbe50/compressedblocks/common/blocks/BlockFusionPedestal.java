@@ -1,6 +1,7 @@
 package com.fabbe50.compressedblocks.common.blocks;
 
 import com.fabbe50.compressedblocks.common.blocks.base.BlockBase;
+import com.fabbe50.compressedblocks.common.entities.EntityCorgi;
 import com.fabbe50.compressedblocks.core.lib.recipes.EndgameRecipes;
 import com.fabbe50.compressedblocks.core.registry.ModRegistry;
 import com.fabbe50.compressedblocks.core.utils.helper.CraftingHelper;
@@ -9,9 +10,12 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemMonsterPlacer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumBlockRenderType;
@@ -22,6 +26,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import org.codehaus.plexus.util.StringUtils;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -64,14 +69,18 @@ public class BlockFusionPedestal extends BlockBase {
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        return doCrafting(worldIn, pos);
+        if (doCrafting(worldIn, pos, playerIn)) {
+            doEffects(worldIn, pos);
+            return true;
+        }
+        return false;
     }
 
     @Override
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-        if (!worldIn.isRemote) {
-            if (worldIn.isBlockPowered(pos)) {
-                doCrafting(worldIn, pos);
+        if (worldIn.isBlockPowered(pos)) {
+            if (doCrafting(worldIn, pos, null)) {
+                doEffects(worldIn, pos);
             }
         }
     }
@@ -79,14 +88,15 @@ public class BlockFusionPedestal extends BlockBase {
     @Override
     @SuppressWarnings("deprecation")
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
-        if (!worldIn.isRemote) {
-            if (worldIn.isBlockPowered(pos)) {
-                doCrafting(worldIn, pos);
+        if (worldIn.isBlockPowered(pos)) {
+            if (doCrafting(worldIn, pos, null)) {
+                doEffects(worldIn, pos);
             }
         }
     }
 
-    private boolean doCrafting(World worldIn, BlockPos pos) {
+    private boolean doCrafting(World worldIn, BlockPos pos, EntityPlayer player) {
+        System.out.println("test");
         if (!worldIn.isRemote) {
             AxisAlignedBB checkingBounds = new AxisAlignedBB(pos.getX(), pos.getY() + 0.75, pos.getZ(), pos.getX() + 0.9375, pos.getY() + 1.5, pos.getZ() + 0.9375);
             if (!worldIn.getEntitiesWithinAABB(EntityItem.class, checkingBounds).isEmpty()) {
@@ -94,7 +104,7 @@ public class BlockFusionPedestal extends BlockBase {
                 List<ItemStack> items = entities.stream().map(EntityItem::getItem).collect(Collectors.toList());
 
                 for(EndgameRecipes recipes : ModRegistry.endgameRecipes) {
-                    if (CraftingHelper.compareItemsFromListedStacks(items, recipes.recipeItems) || Block.getBlockFromItem(recipes.getRecipeOutput().getItem()) instanceof BlockSuperShulkerBox) {
+                    if (CraftingHelper.compareItemsFromListedStacks(items, recipes.recipeItems) /*|| Block.getBlockFromItem(recipes.getRecipeOutput().getItem()) instanceof BlockSuperShulkerBox*/) {
                         if (Block.getBlockFromItem(recipes.getRecipeOutput().getItem()) instanceof BlockSuperShulkerBox) {
                             EntityItem outputItem = new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5);
                             ItemStack output = recipes.getRecipeOutput();
@@ -103,15 +113,29 @@ public class BlockFusionPedestal extends BlockBase {
                             outputItem.setItem(output);
                             outputItem.addVelocity(-outputItem.motionX, -outputItem.motionY, -outputItem.motionZ);
                             worldIn.spawnEntity(outputItem);
-                            doEffects(worldIn, pos);
+                            //doEffects(worldIn, pos);
                             entities.forEach(EntityItem::setDead);
                             return true;
+                        } else if (recipes.getRecipeOutput().getItem() instanceof ItemMonsterPlacer && player != null) {
+                            if (worldIn.getEntitiesWithinAABB(EntityLiving.class, checkingBounds).isEmpty()) {
+                                System.out.println(recipes.recipeItems + " : " + entities);
+                                Entity entity = ItemMonsterPlacer.spawnCreature(worldIn, ItemMonsterPlacer.getNamedIdFrom(recipes.getRecipeOutput()), pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5);
+                                if (entity instanceof EntityCorgi) {
+                                    entity.setCustomNameTag(StringUtils.capitalizeFirstLetter(((EntityCorgi) entity).getCorgiType().getName()) + " Corgi");
+                                    ((EntityCorgi) entity).setOwnerId(player.getUniqueID());
+                                    ((EntityCorgi) entity).setTamed(true);
+                                    ((EntityCorgi) entity).setHealth(60f);
+                                }
+                                //doEffects(worldIn, pos);
+                                entities.forEach(EntityItem::setDead);
+                                return true;
+                            }
                         } else {
                             EntityItem outputItem = new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5);
                             outputItem.setItem(recipes.getRecipeOutput());
                             outputItem.addVelocity(-outputItem.motionX, -outputItem.motionY, -outputItem.motionZ);
                             worldIn.spawnEntity(outputItem);
-                            doEffects(worldIn, pos);
+                            //doEffects(worldIn, pos);
                             entities.forEach(EntityItem::setDead);
                             return true;
                         }

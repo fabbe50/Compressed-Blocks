@@ -35,6 +35,11 @@ version = "${mod_version}-${mod_state}${build_number}"
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+compileJava {
+    sourceCompatibility = targetCompatibility = '1.8'
+}
+
 minecraft {
     version = "${mc_version}-${forge_version}"
     runDir = "run"

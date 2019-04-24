@@ -29,6 +29,7 @@ public class BlockLeaves extends BlockBase {
         super(material, mapColor, blockName, hardness, resistance, tab);
         this.setLightOpacity(1);
         this.setSoundType(SoundType.PLANT);
+        this.setCreativeTab(CreativeTabs.DECORATIONS);
     }
 
     @Override
@@ -37,7 +38,7 @@ public class BlockLeaves extends BlockBase {
     }
 
     @Override
-    public BlockRenderLayer getBlockLayer() {
+    public BlockRenderLayer getRenderLayer() {
         return Minecraft.getMinecraft().gameSettings.fancyGraphics ? BlockRenderLayer.CUTOUT_MIPPED : BlockRenderLayer.SOLID;
     }
 

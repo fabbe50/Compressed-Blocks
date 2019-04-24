@@ -99,6 +99,11 @@ public class ConfigurationHandler {
             prop.setComment("Disable drinking milk from buckets, allows for increased stack size if 'Stack Sizes' are enabled.");
             Configs.undrinkableBuckets = prop.getBoolean();
             propOrder.add(prop.getName());
+
+            prop = configFile.get(cat, "Custom bucket behaviour", Configs.customBucketBehaviour);
+            prop.setComment("[EXPERIMENTAL] Setting this to false will allow for stackable buckets, but will also change bucket behaviour.");
+            Configs.customBucketBehaviour = prop.getBoolean();
+            propOrder.add(prop.getName());
         }
 
         if(configFile.hasChanged()) {

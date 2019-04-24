@@ -1,12 +1,14 @@
 package com.fabbe50.compressedblocks.core.registry;
 
 import com.fabbe50.compressedblocks.core.lib.recipes.EndgameRecipes;
+import com.fabbe50.compressedblocks.core.lib.recipes.MiniBeaconRecipes;
 import com.fabbe50.compressedblocks.core.lib.recipes.RecipeReturnItem;
 import com.fabbe50.compressedblocks.core.reference.Reference;
 import com.google.common.collect.Lists;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.registries.GameData;
 
 import java.util.ArrayList;
@@ -18,6 +20,8 @@ import java.util.Objects;
  */
 public class ModRegistry {
     public static List<EndgameRecipes> endgameRecipes = new ArrayList<>();
+    public static List<IRecipe> returnRecipes = new ArrayList<>();
+    public static List<IRecipe> beaconRecipes = new ArrayList<>();
 
     public static void addEndgameRecipe(ItemStack stack, Object... recipeComponents) {
         List<ItemStack> list = Lists.newArrayList();
@@ -56,6 +60,30 @@ public class ModRegistry {
             }
         }
 
-        GameData.register_impl(new RecipeReturnItem(stack, list).setRegistryName(Reference.MOD_ID + ":recipeReturn." + Objects.requireNonNull(stack.getItem().getRegistryName()).getResourcePath()));
+        IRecipe recipe = new RecipeReturnItem(stack, list).setRegistryName(Reference.MOD_ID + ":recipeReturn." + Objects.requireNonNull(stack.getItem().getRegistryName()).getPath());
+        returnRecipes.add(recipe);
+        GameData.register_impl(recipe);
+    }
+
+    public static void addBeaconRecipe(Item item, ItemStack stack, Object... recipeComponents) {
+        List<ItemStack> list = Lists.newArrayList();
+
+        for (Object object : recipeComponents) {
+            if (object instanceof ItemStack) {
+                list.add(((ItemStack) object).copy());
+            } else if (object instanceof Item) {
+                list.add(new ItemStack((Item) object));
+            } else {
+                if (!(object instanceof Block)) {
+                    throw new IllegalArgumentException("Invalid beacon recipe: unknown type " + object.getClass().getName() + "!");
+                }
+
+                list.add(new ItemStack((Block) object));
+            }
+        }
+
+        IRecipe recipe = new MiniBeaconRecipes(stack, list, item).setRegistryName(Reference.MOD_ID + ":minibeaconrec." + Objects.requireNonNull(stack.getItem().getRegistryName()).getPath());
+        beaconRecipes.add(recipe);
+        GameData.register_impl(recipe);
     }
 }

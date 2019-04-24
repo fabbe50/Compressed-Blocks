@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 public class BlockWorkbenchTest extends BlockWorkbench {
     public BlockWorkbenchTest() {
         this.setRegistryName(Reference.MOD_ID, "test_workbench");
-        this.setUnlocalizedName(this.getRegistryName().toString());
+        this.setTranslationKey(this.getRegistryName().toString());
         this.setCreativeTab(CBTab.blockTab);
     }
 

@@ -14,6 +14,7 @@ public class SmeltingRegistry {
 
     private static void addSmeltingRecipes() {
         GameRegistry.addSmelting(new ItemStack(BlockRegistry.COMPRESSED_COBBLESTONE, 1, 7), new ItemStack(ItemRegistry.BEDROCK_INGOT, 1, 0), 0);
+        GameRegistry.addSmelting(new ItemStack(ItemRegistry.MASHEDFOOD, 1), new ItemStack(ItemRegistry.ITEM_FOOD, 1), 20);
 
         if (Loader.isModLoaded("ExtraUtils2")) {
             GameRegistry.addSmelting(new ItemStack(ModItemRegistry.EU2_COBBLE, 1, 7), new ItemStack(ItemRegistry.BEDROCK_INGOT, 1, 0), 0);

@@ -38,7 +38,7 @@ public class ItemStaff extends ItemTool {
 
     private void setItemName(Item item, String name) {
         item.setRegistryName(name);
-        item.setUnlocalizedName(item.getRegistryName().toString());
+        item.setTranslationKey(item.getRegistryName().toString());
     }
 
     @Override

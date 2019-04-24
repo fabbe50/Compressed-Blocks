@@ -41,7 +41,7 @@ public class BlockSurprise extends BlockBase {
     }
 
     @Override
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+    public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
         if (!worldIn.isRemote) {
             if (entityIn instanceof EntityPlayer) {
                 int i = rand.nextInt(99);

@@ -5,7 +5,7 @@ package com.fabbe50.compressedblocks.core.reference;
  */
 public class Dependencies {
     public static final String dependencies =
-            "required-after:forge@[14.23.1,);" +
+            "required-after:forge@[14.23.5,);" +
             "after:ExtraUtils2;" +
             "after:brandonscore;" +
             "after:draconicevolution;";

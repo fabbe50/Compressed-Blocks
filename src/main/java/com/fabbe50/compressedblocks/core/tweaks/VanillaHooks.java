@@ -1,4 +1,4 @@
-package com.fabbe50.compressedblocks.core.utils;
+package com.fabbe50.compressedblocks.core.tweaks;
 
 import com.fabbe50.compressedblocks.core.lib.Configs;
 import com.fabbe50.compressedblocks.core.utils.helper.ChatHelper;
@@ -66,8 +66,10 @@ public class VanillaHooks {
             //Items.RABBIT_STEW.setMaxStackSize(16);
 
             Items.BUCKET.setMaxStackSize(64);
-            Items.WATER_BUCKET.setMaxStackSize(16);
-            Items.LAVA_BUCKET.setMaxStackSize(16);
+            if (Configs.customBucketBehaviour) {
+                Items.WATER_BUCKET.setMaxStackSize(16);
+                Items.LAVA_BUCKET.setMaxStackSize(16);
+            }
 
             if (Configs.undrinkableBuckets) Items.MILK_BUCKET.setMaxStackSize(16);
 
@@ -78,18 +80,13 @@ public class VanillaHooks {
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent(priority = EventPriority.HIGH)
-    public void applyReplacementTooltips(ItemTooltipEvent event) {
-        if (items.contains(event.getItemStack().getItem())) {
-            event.getToolTip().add(ChatHelper.MAGENTA + "Replaced by Compressed Blocks");
-        }
-    }
-
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent(priority = EventPriority.HIGH)
     public void applyTooltips(ItemTooltipEvent event) {
         if (event.getItemStack().getItem() == Items.MILK_BUCKET && Configs.undrinkableBuckets) {
             event.getToolTip().add("Who even drinks a cubic meter of milk?");
             event.getToolTip().add("Pour it into bottles first!");
+        }
+        if (items.contains(event.getItemStack().getItem())) {
+            event.getToolTip().add(ChatHelper.MAGENTA + "Replaced by Compressed Blocks");
         }
     }
 
